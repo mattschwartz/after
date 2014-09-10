@@ -5,7 +5,6 @@ using System.Collections.Generic;
 public class HandleController : MonoBehaviour
 {
 
-    public GameObject ButtonObject;
     public List<GameObject> SewerGrateObjects;
 
     private bool Entered = false;
@@ -21,23 +20,11 @@ public class HandleController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Entered = true;
-
-        Vector3 buttonPosition = ButtonObject.transform.position;
-        buttonPosition.x = transform.position.x;
-        buttonPosition.y = transform.position.y + 1;
-
-        ButtonObject.transform.position = buttonPosition;
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
         Entered = false;
-
-        Vector3 buttonPosition = ButtonObject.transform.position;
-        buttonPosition.x = -5000;
-        buttonPosition.y = -5000;
-
-        ButtonObject.transform.position = buttonPosition;
     }
 
     void Update()
