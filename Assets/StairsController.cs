@@ -5,7 +5,6 @@ public class StairsController : MonoBehaviour {
 
     public float Height;
     public GameObject PlayerObject;
-    private bool FinishedClimbing = false;
     private bool Entered = false;
     public BoxCollider2D Top;
     public BoxCollider2D StepCollision;
@@ -24,8 +23,6 @@ public class StairsController : MonoBehaviour {
     void OnTriggerExit2D(Collider2D other)
     {
         Entered = false;
-        Top.enabled = true;
-        StepCollision.enabled = false;
     }
 
     // Update is called once per frame
