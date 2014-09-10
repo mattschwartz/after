@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
             float vmove = Input.GetAxis("Vertical");
             float hmove = Input.GetAxis("Horizontal");
             rigidbody2D.velocity = new Vector2(hmove * Speed , vmove * Speed);
+            anim.SetFloat("Speed", Mathf.Max(Mathf.Abs(vmove), Mathf.Abs(vmove)));
         } else {
             // Check collision bounds within a circle body
             Grounded = Physics2D.OverlapCircle(GroundCheck.position, GroundRadius, GroundLayerMask);
@@ -87,6 +88,10 @@ public class PlayerController : MonoBehaviour
         } else {
             rigidbody2D.gravityScale = 8;
         }
-        anim.SetBool("Climbing", Climbing);
+        if (Climbing) {
+            anim.SetTrigger("StartClimbing");
+        } else {
+            anim.SetTrigger("StopClimbing");
+        }
     }
 }
