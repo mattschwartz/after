@@ -403,6 +403,10 @@ Prefab:
       propertyPath: m_Name
       value: SewerGrate3
       objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: 4e4201e0d63ea4d7da576202955f9ab9, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 259ade44c366f4fea9ad9f850e4fdb96, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e4201e0d63ea4d7da576202955f9ab9, type: 2}
   m_RootGameObject: {fileID: 1444903402}
@@ -416,7 +420,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 961411371}
-  - 212: {fileID: 961411370}
   - 95: {fileID: 961411369}
   - 114: {fileID: 961411368}
   - 82: {fileID: 961411367}
@@ -527,29 +530,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!212 &961411370
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 21200000, guid: 4e4201e0d63ea4d7da576202955f9ab9,
-    type: 2}
-  m_PrefabInternal: {fileID: 2014544555}
-  m_GameObject: {fileID: 961411365}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300006, guid: c7d9602343de40a40868c8fa6628397d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &961411371
 Transform:
   m_ObjectHideFlags: 0
@@ -557,7 +537,7 @@ Transform:
   m_PrefabInternal: {fileID: 2014544555}
   m_GameObject: {fileID: 961411365}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.11244845, y: 1.6652745, z: 0}
+  m_LocalPosition: {x: .506303787, y: 1.93487537, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -682,7 +662,7 @@ AudioSource:
   m_GameObject: {fileID: 1346099893}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 59262f58b1af24bf7a2f9953d2521302, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 30800112d3c384ba3a7e96dfec59d337, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -741,7 +721,7 @@ AudioSource:
   m_GameObject: {fileID: 1346099893}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 850b123aebd5a4343969f9031a1e55bc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d10c4493863c14e88afa3f6cdca2f4f9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -800,7 +780,7 @@ AudioSource:
   m_GameObject: {fileID: 1346099893}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: d9cfff28632494ed8a789023f08e836d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c74b42674e1f8433a94b1fd854ea3a9e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -859,7 +839,7 @@ AudioSource:
   m_GameObject: {fileID: 1346099893}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: a42cf31f7fae64c27aa2ac291946f885, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 31a9e0bdfaeca404a84dcb52be5f86ed, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1008,7 +988,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a5d7f669b0850fb489e45a75355f4784, type: 3}
+  m_Sprite: {fileID: 21300002, guid: d75b1875cb90e4d56beb60dd13996a3d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1426529639
 Transform:
@@ -1030,7 +1010,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1444903407}
-  - 212: {fileID: 1444903406}
   - 95: {fileID: 1444903405}
   - 114: {fileID: 1444903404}
   - 82: {fileID: 1444903403}
@@ -1051,7 +1030,7 @@ AudioSource:
   m_GameObject: {fileID: 1444903402}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: f348181901c4c4a299ce8f8d942bc369, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 259ade44c366f4fea9ad9f850e4fdb96, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1129,29 +1108,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!212 &1444903406
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 21200000, guid: 4e4201e0d63ea4d7da576202955f9ab9,
-    type: 2}
-  m_PrefabInternal: {fileID: 691026206}
-  m_GameObject: {fileID: 1444903402}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300006, guid: c7d9602343de40a40868c8fa6628397d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1444903407
 Transform:
   m_ObjectHideFlags: 0
@@ -1260,7 +1216,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 1991201617
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5065cf585e956460b8b1cc40d317e07c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d660d332df6ee430a9cd035ab06b373d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1506481531
 Transform:
@@ -1282,7 +1238,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1512250473}
-  - 212: {fileID: 1512250472}
   - 95: {fileID: 1512250471}
   - 114: {fileID: 1512250470}
   - 82: {fileID: 1512250469}
@@ -1393,29 +1348,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!212 &1512250472
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 21200000, guid: 4e4201e0d63ea4d7da576202955f9ab9,
-    type: 2}
-  m_PrefabInternal: {fileID: 1470400651}
-  m_GameObject: {fileID: 1512250467}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300006, guid: c7d9602343de40a40868c8fa6628397d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1512250473
 Transform:
   m_ObjectHideFlags: 0
@@ -1600,7 +1532,7 @@ AudioSource:
   m_GameObject: {fileID: 1536674495}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 59262f58b1af24bf7a2f9953d2521302, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 30800112d3c384ba3a7e96dfec59d337, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1659,7 +1591,7 @@ AudioSource:
   m_GameObject: {fileID: 1536674495}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 850b123aebd5a4343969f9031a1e55bc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d10c4493863c14e88afa3f6cdca2f4f9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1718,7 +1650,7 @@ AudioSource:
   m_GameObject: {fileID: 1536674495}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: d9cfff28632494ed8a789023f08e836d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c74b42674e1f8433a94b1fd854ea3a9e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1777,7 +1709,7 @@ AudioSource:
   m_GameObject: {fileID: 1536674495}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: a42cf31f7fae64c27aa2ac291946f885, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 31a9e0bdfaeca404a84dcb52be5f86ed, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1898,7 +1830,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1571765991}
-  - 212: {fileID: 1571765990}
   - 95: {fileID: 1571765989}
   - 114: {fileID: 1571765988}
   - 82: {fileID: 1571765987}
@@ -2009,29 +1940,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!212 &1571765990
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 21200000, guid: 4e4201e0d63ea4d7da576202955f9ab9,
-    type: 2}
-  m_PrefabInternal: {fileID: 1729888996}
-  m_GameObject: {fileID: 1571765985}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300006, guid: c7d9602343de40a40868c8fa6628397d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1571765991
 Transform:
   m_ObjectHideFlags: 0
@@ -2039,7 +1947,7 @@ Transform:
   m_PrefabInternal: {fileID: 1729888996}
   m_GameObject: {fileID: 1571765985}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.42397547, y: -2.99430943, z: 0}
+  m_LocalPosition: {x: 6.46890926, y: -2.85950851, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2216,11 +2124,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 4e4201e0d63ea4d7da576202955f9ab9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6.42397547
+      value: 6.46890926
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4e4201e0d63ea4d7da576202955f9ab9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.99430943
+      value: -2.85950851
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4e4201e0d63ea4d7da576202955f9ab9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2546,7 +2454,7 @@ AudioSource:
   m_GameObject: {fileID: 1870233182}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 59262f58b1af24bf7a2f9953d2521302, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 30800112d3c384ba3a7e96dfec59d337, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2605,7 +2513,7 @@ AudioSource:
   m_GameObject: {fileID: 1870233182}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 850b123aebd5a4343969f9031a1e55bc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d10c4493863c14e88afa3f6cdca2f4f9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2664,7 +2572,7 @@ AudioSource:
   m_GameObject: {fileID: 1870233182}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: d9cfff28632494ed8a789023f08e836d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c74b42674e1f8433a94b1fd854ea3a9e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2723,7 +2631,7 @@ AudioSource:
   m_GameObject: {fileID: 1870233182}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: a42cf31f7fae64c27aa2ac291946f885, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 31a9e0bdfaeca404a84dcb52be5f86ed, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2773,6 +2681,56 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!1 &1958429861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1958429863}
+  - 212: {fileID: 1958429862}
+  m_Layer: 0
+  m_Name: Sewer_Mid_Fog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1958429862
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1958429861}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2121164079
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 6642beffd84f54e7791cb0c6954a6bb4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &1958429863
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1958429861}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
 --- !u!1001 &2014544555
 Prefab:
   m_ObjectHideFlags: 0
@@ -2782,11 +2740,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 4e4201e0d63ea4d7da576202955f9ab9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.11244845
+      value: .506303787
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4e4201e0d63ea4d7da576202955f9ab9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.6652745
+      value: 1.93487537
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4e4201e0d63ea4d7da576202955f9ab9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2885,3 +2843,53 @@ Prefab:
   m_RootGameObject: {fileID: 1870233182}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &2060853371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2060853373}
+  - 212: {fileID: 2060853372}
+  m_Layer: 0
+  m_Name: Sewer_Floor 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &2060853372
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2060853371}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 1991201617
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: b2d44603cc8444aeaa6fa5e616d56a63, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &2060853373
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2060853371}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.444388509, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
