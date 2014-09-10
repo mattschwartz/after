@@ -449,7 +449,7 @@ AudioSource:
   m_GameObject: {fileID: 961411365}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 516bf7bec955ef140ae55041fe2346e1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f348181901c4c4a299ce8f8d942bc369, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1051,7 +1051,7 @@ AudioSource:
   m_GameObject: {fileID: 1444903402}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 516bf7bec955ef140ae55041fe2346e1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f348181901c4c4a299ce8f8d942bc369, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1315,7 +1315,7 @@ AudioSource:
   m_GameObject: {fileID: 1512250467}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 516bf7bec955ef140ae55041fe2346e1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f348181901c4c4a299ce8f8d942bc369, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1931,7 +1931,7 @@ AudioSource:
   m_GameObject: {fileID: 1571765985}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 516bf7bec955ef140ae55041fe2346e1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f348181901c4c4a299ce8f8d942bc369, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2105,7 +2105,7 @@ Camera:
   far clip plane: 1000
   field of view: 36
   orthographic: 1
-  orthographic size: 3.51564312
+  orthographic size: 2.99536896
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2390,7 +2390,7 @@ AudioSource:
   m_GameObject: {fileID: 1824465852}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 9e6a389930633704d9e5535a4a8f6444, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ef103c1a90f11422db44e238f799b7eb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
