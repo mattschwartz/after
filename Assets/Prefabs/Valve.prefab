@@ -15,6 +15,8 @@ GameObject:
   - 82: {fileID: 8200004}
   - 82: {fileID: 8200002}
   - 82: {fileID: 8200000}
+  - 95: {fileID: 9500000}
+  - 114: {fileID: 11400002}
   m_Layer: 9
   m_Name: Valve
   m_TagString: Untagged
@@ -277,6 +279,21 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!95 &9500000
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 53e4cbe0a5e2d0f4089548e1af89fc1d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -288,9 +305,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74ed842b3236ec34593be72f57c01c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonObject: {fileID: 0}
   SewerGrateObjects:
   - {fileID: 0}
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9493288f51b25541924671705ae362d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Directive: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -311,7 +339,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: f320cb3e2fe44074f8a6b509bb1c8760, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b7f387785abb70f41a02e80af90dd3fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

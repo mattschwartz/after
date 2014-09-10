@@ -33,20 +33,20 @@ Transition:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_SrcState: {fileID: 110228862}
+  m_SrcState: {fileID: 110263006}
   m_DstState: {fileID: 110200000}
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: On
+  - m_ConditionMode: 5
+    m_ConditionEvent: 
     m_EventTreshold: 0
     m_ExitTime: 1
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
---- !u!1101 &110186027
+--- !u!1101 &110128178
 Transition:
   serializedVersion: 2
   m_ObjectHideFlags: 3
@@ -54,11 +54,51 @@ Transition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_SrcState: {fileID: 110200000}
-  m_DstState: {fileID: 110228862}
+  m_DstState: {fileID: 110213081}
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 2
+    m_ConditionEvent: On
+    m_EventTreshold: 0
+    m_ExitTime: 1
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1101 &110143450
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110213081}
+  m_DstState: {fileID: 110228862}
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 5
+    m_ConditionEvent: 
+    m_EventTreshold: 0
+    m_ExitTime: 1
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1101 &110179774
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110228862}
+  m_DstState: {fileID: 110263006}
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 1
     m_ConditionEvent: On
     m_EventTreshold: 0
     m_ExitTime: 1
@@ -71,13 +111,28 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Dripping
+  m_Name: On
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 199270c319d89d14d9882000ed6ef9ab, type: 2}
+  - {fileID: 7400000, guid: ad5f655379ee96940a02ac663af486a4, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 132, y: -108, z: 0}
+  m_Position: {x: 108, y: -108, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110213081
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Stop
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 434b21bee71b9864883b04f3ed8e2101, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: -48, y: 0, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -96,6 +151,21 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
+--- !u!1102 &110263006
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Start
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: a9c9aaa47d23dad47bd10b60967d7a93, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: -48, y: -204, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1107 &110700000
 StateMachine:
   serializedVersion: 2
@@ -105,19 +175,32 @@ StateMachine:
   m_Name: Base Layer
   m_DefaultState: {fileID: 110228862}
   m_States:
-  - {fileID: 110200000}
   - {fileID: 110228862}
+  - {fileID: 110200000}
+  - {fileID: 110263006}
+  - {fileID: 110213081}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110228862}
+      first: {fileID: 110213081}
+      second:
+      - {fileID: 110143450}
+    data:
+      first: {fileID: 110263006}
       second:
       - {fileID: 110100000}
     data:
       first: {fileID: 110200000}
       second:
-      - {fileID: 110186027}
+      - {fileID: 110128178}
+    data:
+      first: {fileID: 110228862}
+      second:
+      - {fileID: 110179774}
+    data:
+      first: {fileID: 0}
+      second: []
   m_MotionSetCount: 1
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_AnyStatePosition: {x: 528, y: 0, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
