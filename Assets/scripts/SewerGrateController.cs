@@ -3,30 +3,46 @@ using System.Collections;
 
 public class SewerGrateController : MonoBehaviour {
 
-    private bool On = false;
+    public bool On = false;
+    private AudioSource AudioSource;
     private Animator Anim;
     private BoxCollider2D WaterCollider;
 
     void Start()
     {
         Anim = GetComponent<Animator>();
+        AudioSource = GetComponent<AudioSource>();
         WaterCollider = GetComponent<BoxCollider2D>();
+        WaterCollider.enabled = false;
+
+        if (On) {
+            Debug.Log("Shit's on  yo");
+            TurnOn();
+        } else {
+            TurnOff();
+        }
+    }
+
+    private void TurnOn() {
+        Anim.SetBool("On", true);
+        AudioSource.Play();
+        WaterCollider.enabled = true;
+    }
+
+    private void TurnOff() {
+        Anim.SetBool("On", false);
+        AudioSource.Stop();
         WaterCollider.enabled = false;
     }
 
     public void Toggle()
     {
-        var clip = GetComponent<AudioSource>();
         On = !On;
 
-        Anim.SetBool("On", On);
-
         if (On) {
-            clip.Play();
-            WaterCollider.enabled = true;
+            TurnOn();
         } else {
-            clip.Pause();
-            WaterCollider.enabled = false;
+            TurnOff();
         }
     }
 }
