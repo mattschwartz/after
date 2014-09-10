@@ -580,7 +580,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 595664508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.67388201, z: 0}
+  m_LocalPosition: {x: 0, y: -1.8459034, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1824465855}
@@ -2002,6 +2002,14 @@ Prefab:
       propertyPath: On
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 4e4201e0d63ea4d7da576202955f9ab9, type: 2}
+      propertyPath: m_Size.y
+      value: 3.95000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 4e4201e0d63ea4d7da576202955f9ab9, type: 2}
+      propertyPath: m_Center.y
+      value: .469999999
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e4201e0d63ea4d7da576202955f9ab9, type: 2}
   m_RootGameObject: {fileID: 1512250467}
@@ -2016,6 +2024,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1506481531}
   - 212: {fileID: 1506481530}
+  - 61: {fileID: 1506481534}
+  - 61: {fileID: 1506481533}
+  - 61: {fileID: 1506481532}
   m_Layer: 0
   m_Name: background
   m_TagString: Untagged
@@ -2057,6 +2068,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
+--- !u!61 &1506481532
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506481529}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 19.1999989, y: .25}
+  m_Center: {x: 0, y: 5.48000002}
+--- !u!61 &1506481533
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506481529}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .25, y: 10.7999992}
+  m_Center: {x: 9.68999958, y: 0}
+--- !u!61 &1506481534
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506481529}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .25, y: 10.7999992}
+  m_Center: {x: -9.60000038, y: 0}
 --- !u!1 &1512250467
 GameObject:
   m_ObjectHideFlags: 0
@@ -2088,8 +2132,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 1.64999998, y: 2.19000006}
-  m_Center: {x: -.0900000036, y: -.349999994}
+  m_Size: {x: 1.64999998, y: 3.95000005}
+  m_Center: {x: -.0900000036, y: .469999999}
 --- !u!82 &1512250469
 AudioSource:
   m_ObjectHideFlags: 0

@@ -16,7 +16,6 @@ public class SewerGrateController : MonoBehaviour {
         WaterCollider.enabled = false;
 
         if (On) {
-            Debug.Log("Shit's on  yo");
             TurnOn();
         } else {
             TurnOff();
