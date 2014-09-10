@@ -2,16 +2,19 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class HandleController : MonoBehaviour {
+public class HandleController : MonoBehaviour
+{
 
     public GameObject ButtonObject;
     public List<GameObject> SewerGrateObjects;
 
     private bool Entered = false;
+    private Animator Animator;
     private List<AudioSource> AudioSources;
 
-    void Start() 
+    void Start()
     {
+        Animator = GetComponent<Animator>();
         AudioSources = new List<AudioSource>(GetComponents<AudioSource>());
     }
 
@@ -40,14 +43,15 @@ public class HandleController : MonoBehaviour {
     void Update()
     {
         if (Entered && Input.GetKeyDown(KeyCode.E)) {
-            foreach(var sewerGrate in SewerGrateObjects) {
+            foreach (var sewerGrate in SewerGrateObjects) {
                 PlayRandomSound();
+                Animator.SetTrigger("TurnOn");
                 sewerGrate.SendMessage("Toggle");
             }
         }
     }
 
-    private void PlayRandomSound() 
+    private void PlayRandomSound()
     {
         foreach (var source in AudioSources) {
             source.Stop();
