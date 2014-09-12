@@ -9,6 +9,7 @@
 - Mechanics
 - Git Workflow
 - Git Terminology
+- Git Resources
 
 
 ##About
