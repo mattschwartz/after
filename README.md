@@ -3,32 +3,47 @@
 							Transient Games
 ===============================================================================
 
-[ Sections ]
-	About
-	The Team
-	The Game
-	Story
-	Mechanics
-	Git
 
-[ About ]
-	This is the README file that covers basic details about the After project
-	and Git usage.
+===============================================================================
+                                   Sections
+===============================================================================
+About
+The Team
+The Game
+Story
+Mechanics
+Git
 
-[ The Team ]
-	Transient Games is a coallition of 5 students at the University of Texas at
-	Austin, whose members are listed below (alphabetically):
-		John Dobsom 		Artist director
-		Rob Luckfield 		Sound Engineer
-		Tyler Pixley 		Programmer
-		Matt Schwartz 		Programmer
-		Taylor Womack 		Animator and SCRUM master
 
-[ The Game ]
+===============================================================================
+                                    About
+===============================================================================
+This is the README file that covers basic details about the After project
+and Git usage.
+
+
+===============================================================================
+                                  The  Team
+===============================================================================
+Transient Games is a coallition of 5 students at the University of Texas at
+Austin, whose members are listed below (alphabetically):
+	John Dobsom 		Artist director
+	Rob Luckfield 		Sound Engineer
+	Tyler Pixley 		Programmer
+	Matt Schwartz 		Programmer
+	Taylor Womack 		Animator and SCRUM master
+
+
+===============================================================================
+                                  The  Game
+===============================================================================
 	After is a 2D game in production, written in Unity, for the Game 
 	Development program at the University of Texas at Austin.
 
-[ Story ]
+
+===============================================================================
+                                    Story
+===============================================================================
 	The game takes place in a post-apocalyptic world in which all life is 
 	presumed extinct. The unnamed protagonist, controlled by the player, takes
 	it upon himself to cure the corruption of the world, caused by the 
@@ -40,7 +55,10 @@
 	When the Traveler completes his task, he waits for life to return, though
 	he does not know that it ever will.
 
-[ Mechanics ]
+
+===============================================================================
+                                  Mechanics
+===============================================================================
 	The game is a puzzle platformer, focused on telling a beautifully tragic 
 	story about the revivification of a corrupted and saddened world. The 
 	puzzles will be designed to tell this story through the environment and the
@@ -50,11 +68,17 @@
 	beautification of the environment and a fantastic animation of freeing the 
 	soul.
 
-[ Git ]
+
+===============================================================================
+                                     Git
+===============================================================================
 	Git is a version control software that allows any number of people to 
 	easily manage a project through a series of snapshots.
 
-[ Git Workflow ]
+
+===============================================================================
+                                 Git Workflow
+===============================================================================
 	The Git GUI (Graphical User Interface )is a very powerful tool that works
 	great - when it works. It is important to understand the underlying 
 	workflow to properly use the Git GUI with as little trouble as possible.
@@ -67,7 +91,10 @@
 	what you did in a single sentence, then you are not Syncing often enough. 
 	This will help keep those manual merges small if/when they occur. 
 
-[ Git Terminology ]
+
+===============================================================================
+                               Git  Terminology
+===============================================================================
 	It is important to understand what's going on when you are looking at the 
 	Git GUI and what these terms mean.
 
