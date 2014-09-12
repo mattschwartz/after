@@ -116,4 +116,4 @@ lines you want reflected in the remote repository.
 ##Git Resources
 * [When Git Hits the Fan](http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging#Basic-Merging) - 
 Basic merging and how to fix merge conflicts.
-* [Simple Guide to Git](http://rogerdudler.github.io/git-guide/) - No deep shit!
+* [Simple Guide to Git](http://rogerdudler.github.io/git-guide/) - Guide for using Git in the terminal.
