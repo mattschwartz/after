@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private bool Grounded = false;
     private bool FacingRight = true;
     private float Speed = 5f;
-    private float JumpForce = 700f;
+    private float JumpForce = 400f;
     private float GroundRadius = 0.2f;
     private Animator Animator;
 
@@ -32,7 +32,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        ProcessInput();
+        if (Grounded && Input.GetKeyDown(JumpButton)) {
+            rigidbody2D.AddForce(Vector2.up * JumpForce);
+        }
     }
 
     void FixedUpdate()
@@ -57,13 +59,6 @@ public class PlayerController : MonoBehaviour
     {
         Grounded = Physics2D.OverlapCircle(GroundCheck.position, GroundRadius, GroundLayerMask);
         // Animator.SetBool("Grounded", Grounded); // nyi
-    }
-
-    private void ProcessInput()
-    {
-        if (Input.GetKeyDown(JumpButton)) {
-
-        }
     }
 
     // Cheap animations
