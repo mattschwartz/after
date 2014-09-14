@@ -16,8 +16,8 @@ public class PlayerController : MonoBehaviour
 
     private bool Grounded = false;
     private bool FacingRight = true;
-    private float Speed = 5f;
-    private float JumpForce = 400f;
+    private float Speed = 12f;
+    private float JumpForce = 700f;
     private float GroundRadius = 0.2f;
     private Animator Animator;
 
