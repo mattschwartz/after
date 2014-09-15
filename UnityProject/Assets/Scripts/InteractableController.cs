@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts;
 
 public class InteractableController : MonoBehaviour
 {
     #region Public Members
 
     public KeyCode InteractButton = KeyCode.E;
+    public InteractableConditions Conditions;
     public struct InteractableArgs
     {
         // not sure what might be good to put in here
@@ -23,8 +25,10 @@ public class InteractableController : MonoBehaviour
 
     void Update()
     {
-        if (Entered && Input.GetKeyDown(InteractButton)) {
-            Interact();
+        if (Entered &&  Input.GetKeyDown(InteractButton)) {
+            if (Conditions == null || Conditions.ConditionsMet()) {
+                Interact();
+            }
         }
     }
 
