@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Assets.Scripts;
+using After;
 
 public class InteractableController : MonoBehaviour
 {
