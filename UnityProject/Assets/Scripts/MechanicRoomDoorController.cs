@@ -3,8 +3,11 @@ using System.Collections;
 
 public class MechanicRoomDoorController : InteractableController
 {
+    public SceneLoaderController SceneLoader;
+
     public override void Interact()
     {
-        Debug.Log("do shit");
+        SceneLoader.SaveScene();
+        Application.LoadLevel("Mechanics Room");
     }
 }

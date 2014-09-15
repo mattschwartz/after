@@ -16,8 +16,8 @@ public class SceneLoaderController : MonoBehaviour
         Parameters = SceneManager.SceneParameters;
     }
 
-    void Update()
+    public void SaveScene()
     {
-
+        Parameters = new LevelLoadParameters();
     }
 }
