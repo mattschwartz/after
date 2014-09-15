@@ -20,9 +20,11 @@ public class DirectiveController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (DisplayGUI) {
-            DrawnCharacters = Mathf.Min(DrawnCharacters + 1, DirectiveText.Length);
+        if (!DisplayGUI) {
+            return;
         }
+
+        DrawnCharacters = Mathf.Min(DrawnCharacters + 1, DirectiveText.Length);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -32,7 +34,7 @@ public class DirectiveController : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-            Label.text = DirectiveText.Substring(0, DrawnCharacters);
+        Label.text = DirectiveText.Substring(0, DrawnCharacters);
         DisplayGUI = true;
     }
 

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TextDropShadow : MonoBehaviour {
+public class TextDropShadowController : MonoBehaviour {
 
     public GUIText ShadowText;
     private GUIText Text;
