@@ -14,10 +14,12 @@ public class SceneLoaderController : MonoBehaviour
     void Awake()
     {
         Parameters = SceneManager.SceneParameters;
+        Debug.Log("I come from another world: " + Parameters.SendingSceneName);
     }
 
     public void SaveScene()
     {
         Parameters = new LevelLoadParameters();
+        SceneManager.SceneParameters = Parameters;
     }
 }
