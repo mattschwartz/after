@@ -26,20 +26,28 @@ public class CameraController : MonoBehaviour
     {
         float vertExtent = Camera.main.camera.orthographicSize;
         float horzExtent = vertExtent * Screen.width / Screen.height;
-
-        LeftBounds = (float)(horzExtent - SpriteBounds.sprite.bounds.size.x / 2.0f);
-        RightBounds = (float)(SpriteBounds.sprite.bounds.size.x / 2.0f - horzExtent);
-        BottomBounds = (float)(vertExtent - SpriteBounds.sprite.bounds.size.y / 2.0f);
-        TopBounds = (float)(SpriteBounds.sprite.bounds.size.y / 2.0f - vertExtent);
+        float horzScale = SpriteBounds.transform.localScale.x;
+        float vertScale = SpriteBounds.transform.localScale.y;
+        
+        LeftBounds = (float)(horzExtent - (SpriteBounds.sprite.bounds.size.x * horzScale) / 2.0f);
+        RightBounds = (float)((SpriteBounds.sprite.bounds.size.x * horzScale) / 2.0f - horzExtent);
+        BottomBounds = (float)(vertExtent - (SpriteBounds.sprite.bounds.size.y * vertScale) / 2.0f);
+        TopBounds = (float)((SpriteBounds.sprite.bounds.size.y * vertScale) / 2.0f - vertExtent);
     }
 
     void Update()
     {
+        if (FollowTarget == null) {
+            return;
+        }
+
         Vector3 point = camera.WorldToViewportPoint(FollowTarget.position);
         Vector3 delta = FollowTarget.position - camera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, point.z));
         Vector3 destination = transform.position + delta;
 
         var pos = Vector3.SmoothDamp(transform.position, destination, ref Velocity, DampTime);
+
+
         pos.x = Mathf.Clamp(pos.x, LeftBounds, RightBounds);
         pos.y = Mathf.Clamp(pos.y, BottomBounds, TopBounds);
 
