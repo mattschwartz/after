@@ -16,6 +16,8 @@ namespace Assets.Scripts.Interactable
 
         #region Private Members
 
+        private static float LastInteraction = 2;
+        private float InteractDelay = 1;
         private GameObject Player;
 
         #endregion
@@ -25,9 +27,18 @@ namespace Assets.Scripts.Interactable
             Player = GameObject.Find("Player");
         }
 
+        void Update()
+        {
+            base.Update();
+            LastInteraction += Time.deltaTime;
+        }
+
         public override void Interact()
         {
-            Player.SendMessage("PickupItem", gameObject);
+            if (LastInteraction >= InteractDelay) {
+                Player.SendMessage("PickupItem", gameObject);
+                LastInteraction = 0;
+            }
         }
     }
 }
