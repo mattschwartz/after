@@ -27,7 +27,8 @@ namespace Assets.Scripts.Interactable
             Player = GameObject.Find("Player");
         }
 
-        void Update()
+        // wtf you can do this shit
+        private new void Update()
         {
             base.Update();
             LastInteraction += Time.deltaTime;
