@@ -17,6 +17,7 @@ namespace Assets.Scenes.Sewer_Level.Scripts
 
         public override void OnSceneLoaded()
         {
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("PlayerIgnores"));
             var sceneData = SceneDataManager.dbGet(Application.loadedLevelName);
 
             if (sceneData == null || sceneData.Data.Length == 0) {

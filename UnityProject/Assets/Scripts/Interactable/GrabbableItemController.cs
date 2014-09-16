@@ -27,7 +27,6 @@ namespace Assets.Scripts.Interactable
 
         public override void Interact()
         {
-            transform.position = new Vector2(-5000, -5000);
             Player.SendMessage("PickupItem", gameObject);
         }
     }

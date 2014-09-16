@@ -81,7 +81,6 @@ public class PlayerController : MonoBehaviour
 
     public void PickupItem(GameObject item)
     {
-        HeldItem.GetComponent<SpriteRenderer>().sprite = item.GetComponent<SpriteRenderer>().sprite;
         HeldItem.SendMessage("SetItemHeld", item);
     }
 

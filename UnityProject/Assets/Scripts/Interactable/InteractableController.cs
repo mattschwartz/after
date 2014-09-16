@@ -17,6 +17,10 @@ public class InteractableController : MonoBehaviour
 
     #endregion
 
+    void Start()
+    {
+    }
+
     #region Update
 
     void Update()
@@ -32,14 +36,33 @@ public class InteractableController : MonoBehaviour
 
     #region Triggers
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!InLayerMask(other)) {
+            return;
+        }
+        
+        Entered = true;
+    }
+
     void OnTriggerStay2D(Collider2D other)
     {
+        if (!InLayerMask(other)) {
+            return;
+        }
+
         Entered = true;
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
+        Debug.Log(other.gameObject.layer + " exited");
         Entered = false;
+    }
+
+    bool InLayerMask(Collider2D other)
+    {
+        return other.gameObject.layer == LayerMask.NameToLayer("Player");
     }
 
     #endregion

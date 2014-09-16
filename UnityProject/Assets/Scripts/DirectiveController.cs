@@ -19,10 +19,16 @@ public class DirectiveController : MonoBehaviour
 
     #endregion
 
+    #region Start
+
     void Start()
     {
         IncludeLayers = LayerMask.NameToLayer("Player");
     }
+
+    #endregion
+
+    #region Update
 
     void FixedUpdate()
     {
@@ -32,6 +38,10 @@ public class DirectiveController : MonoBehaviour
 
         DrawnCharacters = Mathf.Min(DrawnCharacters + 1, DirectiveText.Length);
     }
+
+    #endregion
+
+    #region Triggers
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -63,4 +73,6 @@ public class DirectiveController : MonoBehaviour
     {
         return other.gameObject.layer == IncludeLayers;
     }
+
+    #endregion
 }

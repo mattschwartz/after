@@ -23,6 +23,12 @@ public class HeldItemController : MonoBehaviour
 
     public void SetItemHeld(GameObject item)
     {
+        if (ItemHeld != null) {
+            DropItem();
+        }
+
+        GetComponent<SpriteRenderer>().sprite = item.GetComponent<SpriteRenderer>().sprite;
+        item.transform.position = new Vector2(-5000, -5000);
         ItemHeld = item;
     }
 
@@ -32,6 +38,10 @@ public class HeldItemController : MonoBehaviour
             return;
         }
 
-        ItemHeld.transform.position = transform.position;
+        ItemHeld.transform.position = Player.transform.position;
+        ItemHeld.rigidbody2D.velocity = Vector2.zero;
+        ItemHeld.rigidbody2D.AddForce(Vector2.up * 1000f);
+        GetComponent<SpriteRenderer>().sprite = null;
+        ItemHeld = null;
     }
 }
