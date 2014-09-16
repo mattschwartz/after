@@ -13,7 +13,7 @@ public class TextDropShadowController : MonoBehaviour {
         ShadowText.pixelOffset = new Vector2(2, 0);
     }
 
-    void OnGUI()
+    void FixedUpdate()
     {
        ShadowText.text = Text.text;
     }
