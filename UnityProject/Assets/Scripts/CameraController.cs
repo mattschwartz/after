@@ -57,9 +57,6 @@ public class CameraController : MonoBehaviour
         RightBounds = (float)((SpriteBounds.sprite.bounds.size.x * horzScale) / 2.0f - horzExtent) + SpriteBounds.transform.position.x;
         BottomBounds = (float)(vertExtent - (SpriteBounds.sprite.bounds.size.y * vertScale) / 2.0f) + SpriteBounds.transform.position.y;
         TopBounds = (float)((SpriteBounds.sprite.bounds.size.y * vertScale) / 2.0f - vertExtent) + SpriteBounds.transform.position.y;
-
-        Debug.Log("bottom bounds: " + BottomBounds);
-        Debug.Log("top bounds: " + TopBounds);
     }
 
     public void SetSpriteBounds(SpriteRenderer spriteBounds)
