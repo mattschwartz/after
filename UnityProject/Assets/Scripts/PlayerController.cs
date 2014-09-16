@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     private float JumpForce = 700f;
     private float GroundRadius = 0.2f;
     private Animator Animator;
+    private bool Climbing;
 
     #endregion
 
@@ -48,17 +49,29 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        IsGrounded();
+        if (Climbing)
+        {
+            float vMove = Input.GetAxis("Vertical");
+            Animator.SetFloat("Velocity", Mathf.Abs(vMove));
+            rigidbody2D.velocity = new Vector2(0, vMove * Speed * 0.5f);
+        }
+        else
+        {
+            IsGrounded();
 
-        float hMove = Input.GetAxis("Horizontal");
-        Animator.SetFloat("Velocity", Mathf.Abs(hMove));
+            float hMove = Input.GetAxis("Horizontal");
+            Animator.SetFloat("Velocity", Mathf.Abs(hMove));
 
-        rigidbody2D.velocity = new Vector2(hMove * Speed, rigidbody2D.velocity.y);
+            rigidbody2D.velocity = new Vector2(hMove * Speed, rigidbody2D.velocity.y);
 
-        if (hMove > 0 && !FacingRight) {
-            Flip();
-        } else if (hMove < 0 && FacingRight) {
-            Flip();
+            if (hMove > 0 && !FacingRight)
+            {
+                Flip();
+            }
+            else if (hMove < 0 && FacingRight)
+            {
+                Flip();
+            }
         }
     }
 
@@ -96,5 +109,21 @@ public class PlayerController : MonoBehaviour
         result = HeldItem != null;
     }
 
+    public void Climb(bool on)
+    {
+        Climbing = on;
+        if (on)
+        {
+            rigidbody2D.gravityScale = 0;
+        }
+        else
+        {
+            rigidbody2D.gravityScale = 8;
+        }
+        //NYI: animation queues
+    }
+
     #endregion
+
+    
 }
