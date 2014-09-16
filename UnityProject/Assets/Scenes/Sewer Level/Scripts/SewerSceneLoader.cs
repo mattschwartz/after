@@ -12,8 +12,16 @@ namespace Assets.Scenes.Sewer_Level.Scripts
         #region Public Members
 
         public GameObject Player;
+        public List<GameObject> Items;
 
         #endregion
+
+        void Start()
+        {
+            if (Items == null) {
+                Items = new List<GameObject>();
+            }
+        }
 
         public override void OnSceneLoaded()
         {
@@ -26,9 +34,12 @@ namespace Assets.Scenes.Sewer_Level.Scripts
 
             try {
                 Player.transform.position = (Vector3)sceneData.Data[0];
-            } catch (InvalidCastException) {
-                Debug.LogError("Expected player's position but received: " + sceneData.Data[0]);
-            }
+
+                int i = 1;
+                foreach (var item in Items) {
+                    item.transform.position = (Vector3)sceneData.Data[i++];
+                }
+            } catch (InvalidCastException) { } catch (IndexOutOfRangeException) { }
         }
     }
 }

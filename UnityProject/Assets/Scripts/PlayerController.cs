@@ -79,6 +79,8 @@ public class PlayerController : MonoBehaviour
         transform.localScale = scale;
     }
 
+    #region Message Functions
+
     public void PickupItem(GameObject item)
     {
         HeldItem.SendMessage("SetItemHeld", item);
@@ -88,4 +90,11 @@ public class PlayerController : MonoBehaviour
     {
         HeldItem.SendMessage("DropItem");
     }
+
+    public void IsHoldingItem(out bool result)
+    {
+        result = HeldItem != null;
+    }
+
+    #endregion
 }
