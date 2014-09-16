@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
+using After.Scene.SceneManagement;
+using After.Entities;
 
 public class HeldItemController : MonoBehaviour
 {
@@ -30,6 +33,8 @@ public class HeldItemController : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = item.GetComponent<SpriteRenderer>().sprite;
         item.transform.position = new Vector2(-5000, -5000);
         ItemHeld = item;
+
+        SceneHandler.CurrentPlayer.ItemHeld = ItemHeld.name;
     }
 
     public void DropItem()
@@ -44,5 +49,7 @@ public class HeldItemController : MonoBehaviour
         ItemHeld.rigidbody2D.AddForce(Vector2.up * 1000f);
         GetComponent<SpriteRenderer>().sprite = null;
         ItemHeld = null;
+
+        SceneHandler.CurrentPlayer.ItemHeld = String.Empty;
     }
 }

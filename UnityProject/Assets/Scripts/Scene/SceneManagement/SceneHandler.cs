@@ -4,6 +4,6 @@ namespace After.Scene.SceneManagement
 {
 	public static class SceneHandler
 	{
-        public static Player CurrentPlayer;
+        public static Player CurrentPlayer = new Player();
 	}
 }

@@ -16,6 +16,7 @@ namespace After.Interactable
         public override bool ConditionsMet()
         {
         	var itemHeld = SceneHandler.CurrentPlayer.ItemHeld;
+        	Debug.Log("Comparing " + itemHeld + " to " + RequiredItem.name);
             return RequiredItem != null && itemHeld == RequiredItem.name;
         }
 	}
