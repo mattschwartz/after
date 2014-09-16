@@ -38,7 +38,8 @@ public class HeldItemController : MonoBehaviour
             return;
         }
 
-        ItemHeld.transform.position = Player.transform.position;
+        var pos = Player.transform.position;
+        ItemHeld.transform.position = new Vector2(pos.x, pos.y + 2);
         ItemHeld.rigidbody2D.velocity = Vector2.zero;
         ItemHeld.rigidbody2D.AddForce(Vector2.up * 1000f);
         GetComponent<SpriteRenderer>().sprite = null;

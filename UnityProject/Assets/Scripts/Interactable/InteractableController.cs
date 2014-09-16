@@ -23,7 +23,7 @@ public class InteractableController : MonoBehaviour
 
     #region Update
 
-    void Update()
+    protected void Update()
     {
         if (Entered &&  Input.GetKeyDown(InteractButton)) {
             if (Conditions == null || Conditions.ConditionsMet()) {
@@ -56,7 +56,6 @@ public class InteractableController : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log(other.gameObject.layer + " exited");
         Entered = false;
     }
 

@@ -8,18 +8,35 @@ namespace After.Scene.NexusControllers
     {
         #region Public Members
 
-        public string LevelToLoad;
-        public SceneManager SceneManager;
+        public Vector3 ToLocation;
+        public GameObject Player;
+        public SpriteRenderer NewSpriteBounds;
 
         #endregion
 
         public override void Interact()
         {
-            if (SceneManager != null) {
-                SceneManager.SceneUnloader.OnSceneUnloaded();
+            if (NewSpriteBounds != null) {
+                Camera.main.SendMessage("SetSpriteBounds", NewSpriteBounds);
             }
-
-            Application.LoadLevel(LevelToLoad);
+            Player.transform.position = ToLocation;
         }
+
+        // Deprecated
+        //#region Public Members
+
+        //public string LevelToLoad;
+        //public SceneManager SceneManager;
+
+        //#endregion
+
+        //public override void Interact()
+        //{
+        //    if (SceneManager != null) {
+        //        SceneManager.SceneUnloader.OnSceneUnloaded();
+        //    }
+
+        //    Application.LoadLevel(LevelToLoad);
+        //}
     }
 }

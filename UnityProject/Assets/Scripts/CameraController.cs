@@ -24,15 +24,7 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-        float vertExtent = Camera.main.camera.orthographicSize;
-        float horzExtent = vertExtent * Screen.width / Screen.height;
-        float horzScale = SpriteBounds.transform.localScale.x;
-        float vertScale = SpriteBounds.transform.localScale.y;
-        
-        LeftBounds = (float)(horzExtent - (SpriteBounds.sprite.bounds.size.x * horzScale) / 2.0f);
-        RightBounds = (float)((SpriteBounds.sprite.bounds.size.x * horzScale) / 2.0f - horzExtent);
-        BottomBounds = (float)(vertExtent - (SpriteBounds.sprite.bounds.size.y * vertScale) / 2.0f);
-        TopBounds = (float)((SpriteBounds.sprite.bounds.size.y * vertScale) / 2.0f - vertExtent);
+        CalculateBounds();
     }
 
     void Update()
@@ -52,5 +44,24 @@ public class CameraController : MonoBehaviour
         pos.y = Mathf.Clamp(pos.y, BottomBounds, TopBounds);
 
         transform.position = pos;
+    }
+
+    void CalculateBounds()
+    {
+        float vertExtent = Camera.main.camera.orthographicSize;
+        float horzExtent = vertExtent * Screen.width / Screen.height;
+        float horzScale = SpriteBounds.transform.localScale.x;
+        float vertScale = SpriteBounds.transform.localScale.y;
+
+        LeftBounds = (float)(horzExtent - (SpriteBounds.sprite.bounds.size.x * horzScale) / 2.0f) + SpriteBounds.transform.position.x;
+        RightBounds = (float)((SpriteBounds.sprite.bounds.size.x * horzScale) / 2.0f - horzExtent) + SpriteBounds.transform.position.x;
+        BottomBounds = (float)(vertExtent - (SpriteBounds.sprite.bounds.size.y * vertScale) / 2.0f) + SpriteBounds.transform.position.y;
+        TopBounds = (float)((SpriteBounds.sprite.bounds.size.y * vertScale) / 2.0f - vertExtent) + SpriteBounds.transform.position.y;
+    }
+
+    public void SetSpriteBounds(SpriteRenderer spriteBounds)
+    {
+        SpriteBounds = spriteBounds;
+        CalculateBounds();
     }
 }
