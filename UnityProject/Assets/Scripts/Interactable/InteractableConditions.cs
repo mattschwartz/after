@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
-namespace After
+namespace After.Interactable
 {
     // A scriptable object is an asset that is only meant to store data.
-    public class InteractableConditions : ScriptableObject
+    public class InteractableConditions : MonoBehaviour
     {
         public bool ConditionsMet()
         {

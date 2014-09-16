@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public KeyCode JumpButton = KeyCode.Space;
     public Transform GroundCheck;
     public LayerMask GroundLayerMask;
+    public GameObject HeldItem;
     
     #endregion
 
@@ -23,10 +24,14 @@ public class PlayerController : MonoBehaviour
 
     #endregion
 
+    #region Start
+
     void Start()
     {
         Animator = GetComponent<Animator>();
     }
+
+    #endregion
 
     #region Update
 
@@ -34,6 +39,10 @@ public class PlayerController : MonoBehaviour
     {
         if (Grounded && Input.GetKeyDown(JumpButton)) {
             rigidbody2D.AddForce(Vector2.up * JumpForce);
+        }
+
+        if (HeldItem != null && Input.GetKeyDown(KeyCode.X)) {
+            DropItem();
         }
     }
 
@@ -68,5 +77,16 @@ public class PlayerController : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
+    }
+
+    public void PickupItem(GameObject item)
+    {
+        HeldItem.GetComponent<SpriteRenderer>().sprite = item.GetComponent<SpriteRenderer>().sprite;
+        HeldItem.SendMessage("SetItemHeld", item);
+    }
+
+    public void DropItem()
+    {
+        HeldItem.SendMessage("DropItem");
     }
 }

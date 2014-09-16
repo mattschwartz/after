@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using After;
+using After.Interactable;
 
 public class InteractableController : MonoBehaviour
 {
@@ -8,10 +8,6 @@ public class InteractableController : MonoBehaviour
 
     public KeyCode InteractButton = KeyCode.E;
     public InteractableConditions Conditions;
-    public struct InteractableArgs
-    {
-        // not sure what might be good to put in here
-    }
 
     #endregion
 
