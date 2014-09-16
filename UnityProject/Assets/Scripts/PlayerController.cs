@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts.Scene.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -73,6 +74,7 @@ public class PlayerController : MonoBehaviour
                 Flip();
             }
         }
+        PlayerObserver.SetPlayerVel(rigidbody2D.velocity);
     }
 
     #endregion

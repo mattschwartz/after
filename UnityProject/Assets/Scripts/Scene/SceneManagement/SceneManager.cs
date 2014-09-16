@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
 namespace Assets.Scripts.Scene.SceneManagement
 {
@@ -23,6 +20,21 @@ namespace Assets.Scripts.Scene.SceneManagement
             if (SceneUnloader != null) {
                 SceneUnloader.OnSceneUnloaded();
             }
+        }
+    }
+
+    public static class PlayerObserver
+    {
+        public static Vector2 Velocity;
+
+        public static void SetPlayerVel(Vector2 vel)
+        {
+            Velocity = vel;
+        }
+
+        public static Vector2 GetPlayerVel()
+        {
+            return Velocity;
         }
     }
 }
