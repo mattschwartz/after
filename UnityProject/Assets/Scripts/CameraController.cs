@@ -6,6 +6,7 @@ public class CameraController : MonoBehaviour
 
     #region Public Members
 
+    public bool StaticCamera = false;
     public Transform FollowTarget;
     public SpriteRenderer SpriteBounds;
 
@@ -29,7 +30,7 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        if (FollowTarget == null) {
+        if (StaticCamera || FollowTarget == null) {
             return;
         }
 
@@ -57,6 +58,12 @@ public class CameraController : MonoBehaviour
         RightBounds = (float)((SpriteBounds.sprite.bounds.size.x * horzScale) / 2.0f - horzExtent) + SpriteBounds.transform.position.x;
         BottomBounds = (float)(vertExtent - (SpriteBounds.sprite.bounds.size.y * vertScale) / 2.0f) + SpriteBounds.transform.position.y;
         TopBounds = (float)((SpriteBounds.sprite.bounds.size.y * vertScale) / 2.0f - vertExtent) + SpriteBounds.transform.position.y;
+    }
+
+    public void SetStaticCamera(bool value)
+    {
+        Debug.Log("setting static " + value);
+        StaticCamera = value;
     }
 
     public void SetSpriteBounds(SpriteRenderer spriteBounds)
