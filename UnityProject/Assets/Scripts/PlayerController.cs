@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using Assets.Scripts.Scene.SceneManagement;
 
 public class PlayerController : MonoBehaviour
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private float GroundRadius = 0.2f;
     private Animator Animator;
     private bool Climbing;
+    private List<AudioSource> AudioSources;
 
     #endregion
 
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Animator = GetComponent<Animator>();
+        AudioSources = new List<AudioSource>(GetComponents<AudioSource>);
     }
 
     #endregion
@@ -123,4 +126,16 @@ public class PlayerController : MonoBehaviour
     }
 
     #endregion
+    
+        private void PlayRandomSound()
+    {
+        foreach (var source in AudioSources) {
+            source.Stop();
+        }
+
+        System.Random ran = new System.Random();
+        int index = ran.Next(4);
+        var audioSource = AudioSources[index];
+        audioSource.Play();
+    }
 }
