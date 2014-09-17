@@ -3,6 +3,13 @@ using System.Collections;
 
 public class PowerOutageController : MonoBehaviour
 {
+
+	#region Public Members
+
+	public GameObject Generator;
+
+    #endregion
+
     void Awake()
     {
         GetComponent<BoxCollider2D>().enabled = false;
@@ -10,6 +17,7 @@ public class PowerOutageController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+    	Generator.SendMessage("SetPoweredOn", false);
         Destroy(gameObject);
     }
 }

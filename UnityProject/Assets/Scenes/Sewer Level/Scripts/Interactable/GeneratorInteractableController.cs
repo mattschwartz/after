@@ -11,7 +11,12 @@ public class GeneratorInteractableController : InteractableController
 
     public override void Interact()
     {
-    	GetComponent<Animator>().SetBool("PoweredOn", true);
+    	SetPoweredOn(true);
         PowerOutageTrigger.GetComponent<BoxCollider2D>().enabled = true;
+    }
+
+    public void SetPoweredOn(bool on) 
+    {
+    	GetComponent<Animator>().SetBool("PoweredOn", on);
     }
 }
