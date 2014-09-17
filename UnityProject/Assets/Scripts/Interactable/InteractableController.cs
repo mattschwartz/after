@@ -17,10 +17,6 @@ public class InteractableController : MonoBehaviour
 
     #endregion
 
-    void Start()
-    {
-    }
-
     #region Update
 
     protected void Update()
@@ -65,6 +61,13 @@ public class InteractableController : MonoBehaviour
     }
 
     #endregion
+
+    public void MeetConditions()
+    {
+        if (Conditions != null) {
+            Conditions.MeetConditions();
+        }
+    }
 
     public virtual void Interact()
     {

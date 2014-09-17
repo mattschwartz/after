@@ -21,22 +21,5 @@ namespace After.Scene.NexusControllers
             }
             Player.transform.position = ToLocation;
         }
-
-        // Deprecated
-        //#region Public Members
-
-        //public string LevelToLoad;
-        //public SceneManager SceneManager;
-
-        //#endregion
-
-        //public override void Interact()
-        //{
-        //    if (SceneManager != null) {
-        //        SceneManager.SceneUnloader.OnSceneUnloaded();
-        //    }
-
-        //    Application.LoadLevel(LevelToLoad);
-        //}
     }
 }
