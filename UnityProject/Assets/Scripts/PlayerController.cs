@@ -136,6 +136,7 @@ public class PlayerController : MonoBehaviour
         System.Random ran = new System.Random();
         int index = ran.Next(4);
         var audioSource = AudioSources[index];
+        audioSource.pitch = Random.Range(0.9F, 1.1F);
         audioSource.Play();
     }
 }
