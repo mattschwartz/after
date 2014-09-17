@@ -7,11 +7,12 @@ public class PlayerController : MonoBehaviour
     #region Public members
 
     public KeyCode InteractButton = KeyCode.E;
+    public KeyCode DropButton = KeyCode.X;
     public KeyCode JumpButton = KeyCode.Space;
     public Transform GroundCheck;
     public LayerMask GroundLayerMask;
     public GameObject HeldItem;
-    
+
     #endregion
 
     #region Private members
@@ -43,21 +44,18 @@ public class PlayerController : MonoBehaviour
             rigidbody2D.AddForce(Vector2.up * JumpForce);
         }
 
-        if (HeldItem != null && Input.GetKeyDown(KeyCode.X)) {
+        if (HeldItem != null && Input.GetKeyDown(DropButton)) {
             DropItem();
         }
     }
 
     void FixedUpdate()
     {
-        if (Climbing)
-        {
+        if (Climbing) {
             float vMove = Input.GetAxis("Vertical");
             Animator.SetFloat("Velocity", Mathf.Abs(vMove));
             rigidbody2D.velocity = new Vector2(0, vMove * Speed * 0.5f);
-        }
-        else
-        {
+        } else {
             IsGrounded();
 
             float hMove = Input.GetAxis("Horizontal");
@@ -65,12 +63,9 @@ public class PlayerController : MonoBehaviour
 
             rigidbody2D.velocity = new Vector2(hMove * Speed, rigidbody2D.velocity.y);
 
-            if (hMove > 0 && !FacingRight)
-            {
+            if (hMove > 0 && !FacingRight) {
                 Flip();
-            }
-            else if (hMove < 0 && FacingRight)
-            {
+            } else if (hMove < 0 && FacingRight) {
                 Flip();
             }
         }
@@ -114,18 +109,13 @@ public class PlayerController : MonoBehaviour
     public void Climb(bool on)
     {
         Climbing = on;
-        if (on)
-        {
+        if (on) {
             rigidbody2D.gravityScale = 0;
-        }
-        else
-        {
+        } else {
             rigidbody2D.gravityScale = 8;
         }
         //NYI: animation queues
     }
 
     #endregion
-
-    
 }

@@ -13,11 +13,24 @@ namespace After.Interactable
 
     	#endregion
 
+        #region Private Members
+
+        private bool Opened = false;
+
+        #endregion
+
         public override bool ConditionsMet()
         {
-        	var itemHeld = SceneHandler.CurrentPlayer.ItemHeld;
-        	Debug.Log("Comparing " + itemHeld + " to " + RequiredItem.name);
-            return RequiredItem != null && itemHeld == RequiredItem.name;
+            var itemHeld = SceneHandler.CurrentPlayer.ItemHeld;
+            bool playerHasItem = (RequiredItem != null && itemHeld == RequiredItem.name);
+
+            if (playerHasItem) {
+                GameObject.Find("HeldItem").SendMessage("DropItem");
+                Destroy(RequiredItem);
+                Opened = true;
+            }
+
+            return Opened;
         }
 	}
 }
