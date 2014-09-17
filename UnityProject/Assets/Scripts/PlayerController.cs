@@ -41,12 +41,17 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (Grounded && Input.GetKeyDown(JumpButton)) {
-            rigidbody2D.AddForce(Vector2.up * JumpForce);
+        	Animator.SetTrigger("Jump");
         }
 
         if (HeldItem != null && Input.GetKeyDown(DropButton)) {
             DropItem();
         }
+    }
+
+    public void DoJump() 
+	{
+        rigidbody2D.AddForce(Vector2.up * JumpForce);
     }
 
     void FixedUpdate()
