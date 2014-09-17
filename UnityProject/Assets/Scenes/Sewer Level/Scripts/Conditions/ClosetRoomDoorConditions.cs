@@ -17,6 +17,6 @@ public class ClosetRoomDoorConditions : InteractableConditions
 
     public override bool ConditionsMet()
     {
-        return true || HasKeycode;
+        return HasKeycode;
     }
 }

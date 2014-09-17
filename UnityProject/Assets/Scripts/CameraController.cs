@@ -62,7 +62,6 @@ public class CameraController : MonoBehaviour
 
     public void SetStaticCamera(bool value)
     {
-        Debug.Log("setting static " + value);
         StaticCamera = value;
     }
 
