@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Animator = GetComponent<Animator>();
-        AudioSources = new List<AudioSource>(GetComponents<AudioSource>);
+        AudioSources = new List<AudioSource>(GetComponents<AudioSource>());
     }
 
     #endregion
