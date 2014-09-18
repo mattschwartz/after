@@ -6,7 +6,6 @@ namespace After.Audio
 {
 	public class AudioManager : MonoBehaviour
 	{
-		private readonly string SoundPath = Application.dataPath + "/Resources/Sound";
 		public bool Verbose = false;
 		public List<string> MaterialTypes = new List<string>();
 		public List<AudioClip> AudioSources = new List<AudioClip>();
@@ -15,9 +14,11 @@ namespace After.Audio
 		// Implemented as a button in Unity editor
 		public void RefreshSources() 
 		{
+			string soundPath = Application.dataPath + "/Resources/Sound";
+
 			ClearSources();
 
-			var fileList = Directory.GetFiles(SoundPath, "*.ogg", SearchOption.AllDirectories);
+			var fileList = Directory.GetFiles(soundPath, "*.ogg", SearchOption.AllDirectories);
 
 			foreach (var fName in fileList) {
 				var fInfo = new FileInfo(fName);

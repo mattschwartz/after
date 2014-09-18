@@ -141,14 +141,14 @@ public class PlayerController : MonoBehaviour
     
     private void PlayRandomSound()
     {
-        foreach (var source in AudioSources) {
-            source.Stop();
-        }
+        // foreach (var source in AudioSources) {
+        //     source.Stop();
+        // }
 
-        System.Random ran = new System.Random();
-        int index = ran.Next(AudioSources.Count);
-        var audioSource = AudioSources[index];
-        audioSource.pitch = Random.Range(0.9F, 1.1F);
-        audioSource.Play();
+        // // System.Random ran = new System.Random();
+        // // int index = ran.Next(AudioSources.Count);
+        // // var audioSource = AudioSources[index];
+        // // audioSource.pitch = Random.Range(0.9F, 1.1F);
+        // // audioSource.Play();
     }
 }

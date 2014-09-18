@@ -17,6 +17,7 @@ public class PowerOutageController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("entered");
     	Generator.SendMessage("SetPoweredOn", false);
         Destroy(gameObject);
     }
