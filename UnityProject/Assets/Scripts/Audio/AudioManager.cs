@@ -10,7 +10,7 @@ namespace After.Audio
 		public bool Verbose = false;
 		public List<string> MaterialTypes = new List<string>();
 		public List<AudioClip> AudioSources = new List<AudioClip>();
-		public Dictionary<string, AudioClip> MaterialStepSounds = new Dictionary<string, AudioClip>();
+		public Dictionary<string, List<AudioClip>> MaterialStepSounds = new Dictionary<string, List<AudioClip>>();
 
 		// Implemented as a button in Unity editor
 		public void RefreshSources() 
@@ -36,13 +36,19 @@ namespace After.Audio
 				AudioSources.Add(clip);
 				AddMaterialStepSound(fInfo.Name, clip);
 			}
+
+			foreach (var key in MaterialStepSounds.Keys) {
+				foreach (var sound in MaterialStepSounds[key]) {
+					Debug.Log(key + " - " + sound);
+				}
+			}
 		}
 
 		// Implemented as a button in Unity editor
 		public void ClearSources() 
 		{
 			AudioSources = new List<AudioClip>();
-			MaterialStepSounds = new Dictionary<string, AudioClip>();
+			MaterialStepSounds = new Dictionary<string, List<AudioClip>>();
 		}
 
 		private string Relativize(FileInfo fInfo) 
@@ -61,7 +67,12 @@ namespace After.Audio
 		{
 			foreach (var material in MaterialTypes) {
 				if (clipName.Contains(material)) {
-					
+
+					if (!MaterialStepSounds.ContainsKey(material)) {
+						MaterialStepSounds[material] = new List<AudioClip>();
+					}
+
+					MaterialStepSounds[material].Add(clip);
 				}
 			}
 		}
