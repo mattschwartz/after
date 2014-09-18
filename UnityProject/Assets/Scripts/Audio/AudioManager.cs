@@ -8,8 +8,11 @@ namespace After.Audio
 	{
 		private readonly string SoundPath = Application.dataPath + "/Resources/Sound";
 		public bool Verbose = false;
+		public List<string> MaterialTypes = new List<string>();
 		public List<AudioClip> AudioSources = new List<AudioClip>();
+		public Dictionary<string, AudioClip> MaterialStepSounds = new Dictionary<string, AudioClip>();
 
+		// Implemented as a button in Unity editor
 		public void RefreshSources() 
 		{
 			ClearSources();
@@ -31,21 +34,15 @@ namespace After.Audio
 				}
 
 				AudioSources.Add(clip);
+				AddMaterialStepSound(fInfo.Name, clip);
 			}
 		}
 
+		// Implemented as a button in Unity editor
 		public void ClearSources() 
 		{
 			AudioSources = new List<AudioClip>();
-		}
-
-		public static void PlayClipAtPoint(string clipName, Vector2 position) 
-		{
-			// create an empty game object
-			// attach clip to it
-			// positio it
-			// play it
-			// destroy it
+			MaterialStepSounds = new Dictionary<string, AudioClip>();
 		}
 
 		private string Relativize(FileInfo fInfo) 
@@ -58,6 +55,24 @@ namespace After.Audio
 			}
 
 			return fInfo.FullName.Substring(start, end);
+		}
+
+		private void AddMaterialStepSound(string clipName, AudioClip clip) 
+		{
+			foreach (var material in MaterialTypes) {
+				if (clipName.Contains(material)) {
+					
+				}
+			}
+		}
+
+		public static void PlayClipAtPoint(string clipName, Vector2 position) 
+		{
+			// create an empty game object
+			// attach clip to it
+			// positio it
+			// play it
+			// destroy it
 		}
 	}
 }
