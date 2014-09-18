@@ -1,63 +1,44 @@
 using System.IO;
 using UnityEngine;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace After.Audio 
 {
-	public class AudioManager
+	public class AudioManager : MonoBehaviour
 	{
-		public static readonly string AudioDirectoryRoot = "Assets/Sound/";
-		public static Dictionary<string, AudioSource> AudioSources;
+		public readonly string AudioDirectoryRoot = "Assets/Sound/";
+		public Dictionary<string, AudioSource> AudioSources;
 
 		// Implement this as a button
-		public static void RefreshSources() 
+		public void RefreshSources() 
 		{
-			string[] directories = Directory.GetDirectories(AudioDirectoryRoot);
+			DirectoryInfo dInfo = new DirectoryInfo(AudioDirectoryRoot);
+			var fileList = dInfo.GetFiles("*.mp3");
 
-			foreach (var dir in directories) {
-				foreach (var file in dir.Files) {
-
-				}
-				AssetDatabase.ImportAsset(dir, ImportAssetOptions.Default);
+			foreach (var fInfo in fileList) {
+				Debug.Log("Found match: " + fInfo);
 			}
 
 
-			foreach (FileInfo fInfo in dir.GetFiles("*.mp3")) {
-				
-				AssetDatabase.ImportAsset(fInfo, ImportAssetOptions.Default);
-			}
+			// string[] directories = Directory.GetDirectories(AudioDirectoryRoot);
+
+			// foreach (string dir in directories) {
+			// 	Debug.Log("Searching directory named: " + dir);
+
+			// 	Directory.GetFiles(dir)
+			// 		.Where(t => t.Extension == ".mp3")
+			// 		.ForEach(t =>
+			// 			AssetDatabase.ImportAsset(t, ImportAssetOptions.Default),
+			// 				Debug.Log("Found asset: " + (t as fInfo).FullName)
+			// 			);
+			// }
+		}
+
+		// Implement this as a button
+		public void ClearSources() 
+		{
+
 		}
 	}
-
-static List<FileInfo> files = new List<FileInfo>();  // List that will hold the files and subfiles in path
-static List<DirectoryInfo> folders = new List<DirectoryInfo>(); // List that hold direcotries that cannot be accessed
-static void FullDirList(DirectoryInfo dir, string searchPattern)
-{
-    // Console.WriteLine("Directory {0}", dir.FullName);
-    // list the files
-    try
-    {
-        foreach (FileInfo f in dir.GetFiles(searchPattern))
-        {
-            //Console.WriteLine("File {0}", f.FullName);
-            files.Add(f);                    
-        }
-    }
-    catch
-    {
-        Console.WriteLine("Directory {0}  \n could not be accessed!!!!", dir.FullName);                
-        return;  // We alredy got an error trying to access dir so dont try to access it again
-    }
-
-    // process each directory
-    // If I have been able to see the files in the directory I should also be able 
-    // to look at its directories so I dont think I should place this in a try catch block
-    foreach (DirectoryInfo d in dir.GetDirectories())
-    {
-        folders.Add(d);
-        FullDirList(d, searchPattern);                    
-    }
-
-}
-
-
 }
