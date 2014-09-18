@@ -19,20 +19,6 @@ namespace After.Audio
 			foreach (var fInfo in fileList) {
 				Debug.Log("Found match: " + fInfo);
 			}
-
-
-			// string[] directories = Directory.GetDirectories(AudioDirectoryRoot);
-
-			// foreach (string dir in directories) {
-			// 	Debug.Log("Searching directory named: " + dir);
-
-			// 	Directory.GetFiles(dir)
-			// 		.Where(t => t.Extension == ".mp3")
-			// 		.ForEach(t =>
-			// 			AssetDatabase.ImportAsset(t, ImportAssetOptions.Default),
-			// 				Debug.Log("Found asset: " + (t as fInfo).FullName)
-			// 			);
-			// }
 		}
 
 		// Implement this as a button
@@ -41,4 +27,4 @@ namespace After.Audio
 
 		}
 	}
-}
+	}
