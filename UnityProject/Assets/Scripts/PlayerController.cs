@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     private Animator Animator;
     private bool Climbing;
     private List<AudioSource> AudioSources;
+    private SpriteRenderer Sprite;
 
     #endregion
 
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         Animator = GetComponent<Animator>();
         AudioSources = new List<AudioSource>(GetComponents<AudioSource>());
+        Sprite = GetComponent<SpriteRenderer>();
     }
 
     #endregion
@@ -119,8 +121,18 @@ public class PlayerController : MonoBehaviour
         Climbing = on;
         if (on) {
             rigidbody2D.gravityScale = 0;
+            if (Sprite)
+            {
+                //interspace, the space between the default and background layers, where people on ladders go
+                Sprite.sortingLayerName = "Interspace";
+            }
         } else {
             rigidbody2D.gravityScale = 8;
+            if (Sprite)
+            {
+                //the normal player layer
+                Sprite.sortingLayerName = "Player";
+            }
         }
         //NYI: animation queues
     }
