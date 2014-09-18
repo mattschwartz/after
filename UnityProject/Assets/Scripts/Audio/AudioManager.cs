@@ -1,30 +1,63 @@
 using System.IO;
 using UnityEngine;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace After.Audio 
 {
 	public class AudioManager : MonoBehaviour
 	{
-		public readonly string AudioDirectoryRoot = "Assets/Sound/";
-		public Dictionary<string, AudioSource> AudioSources;
+		private readonly string SoundPath = Application.dataPath + "/Resources/Sound";
+		public bool Verbose = false;
+		public List<AudioClip> AudioSources = new List<AudioClip>();
 
-		// Implement this as a button
 		public void RefreshSources() 
 		{
-			DirectoryInfo dInfo = new DirectoryInfo(AudioDirectoryRoot);
-			var fileList = dInfo.GetFiles("*.mp3");
+			ClearSources();
 
-			foreach (var fInfo in fileList) {
-				Debug.Log("Found match: " + fInfo);
+			var fileList = Directory.GetFiles(SoundPath, "*.ogg", SearchOption.AllDirectories);
+
+			foreach (var fName in fileList) {
+				var fInfo = new FileInfo(fName);
+				
+				if (Verbose) {
+					Debug.Log("Found: " + Relativize(fInfo));
+				}
+
+				string asset = Relativize(fInfo);
+				AudioClip clip = Resources.Load<AudioClip>(asset);
+
+				if (clip == null) {
+					Debug.LogError("Failed to load asset: " + asset);
+				}
+
+				AudioSources.Add(clip);
 			}
 		}
 
-		// Implement this as a button
 		public void ClearSources() 
 		{
+			AudioSources = new List<AudioClip>();
+		}
 
+		public static void PlayClipAtPoint(string clipName, Vector2 position) 
+		{
+			// create an empty game object
+			// attach clip to it
+			// positio it
+			// play it
+			// destroy it
+		}
+
+		private string Relativize(FileInfo fInfo) 
+		{
+			int start = fInfo.FullName.IndexOf("Sound");
+			int end = fInfo.FullName.IndexOf(".") - start;
+
+			if (start < 0 || end < 0) {
+				return fInfo.FullName;
+			}
+
+			return fInfo.FullName.Substring(start, end);
 		}
 	}
-	}
+}
