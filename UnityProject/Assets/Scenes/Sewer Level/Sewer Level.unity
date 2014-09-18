@@ -390,6 +390,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 110345828}
+  - 82: {fileID: 110345827}
   m_Layer: 0
   m_Name: Waterfall SFX
   m_TagString: Untagged
@@ -397,6 +398,64 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!82 &110345827
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 110345826}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: c0de6937392e845d0aab515071090448, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .400000006
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 1
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!4 &110345828
 Transform:
   m_ObjectHideFlags: 0
@@ -3171,6 +3230,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1237961437}
+  - 82: {fileID: 1237961438}
   - 82: {fileID: 1237961436}
   m_Layer: 0
   m_Name: Background Sounds
@@ -3187,21 +3247,21 @@ AudioSource:
   m_GameObject: {fileID: 1237961435}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4698a0e60a1e34c848cd41fdccbe5ec6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .0500000007
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassEffects: 1
+  BypassListenerEffects: 1
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -3249,6 +3309,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 320942769}
   m_RootOrder: 1
+--- !u!82 &1237961438
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1237961435}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: f613e182223f6406a958738485cb79b7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .800000012
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 0
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 1
+  BypassListenerEffects: 1
+  BypassReverbZones: 1
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1240995860
 GameObject:
   m_ObjectHideFlags: 0
@@ -6302,6 +6420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Verbose: 0
+<<<<<<< HEAD
   MaterialTypes:
   - concrete
   - metal
@@ -6327,6 +6446,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d46f2cb58b3b54e8286eb6dbb1b934d6, type: 3}
   - {fileID: 8300000, guid: daf98d096fc0941108dca909a57bca0e, type: 3}
   - {fileID: 8300000, guid: c0de6937392e845d0aab515071090448, type: 3}
+=======
+  MaterialTypes: []
+  AudioSources: []
+>>>>>>> d8ca3be8358a84502511a32180f7a0e422708b8e
 --- !u!4 &2069192052
 Transform:
   m_ObjectHideFlags: 0
