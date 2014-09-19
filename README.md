@@ -1,5 +1,5 @@
 #After - Transient Games
-
+![After Logo](https://github.com/Logo.png)
 
 ##Sections
 - About
@@ -20,11 +20,12 @@ and Git usage.
 ##The  Team
 Transient Games is a coallition of 5 students at the University of Texas at
 Austin, whose members are listed below (alphabetically):
-	- John Dodson - Artist director
-	- Rob Luckfield - Sound Engineer
-	- Tyler Pixley - Programmer
-	- Matt Schwartz - Programmer
-	- Taylor Womack - Animator and Scrum master
+
+- John Dodson (Artist director)
+- Rob Luckfield (Sound Engineer)
+- Tyler Pixley (Programmer)
+- Matt Schwartz (Programmer)
+- Taylor Womack (Animator and Scrum master)
 
 
 ##The  Game
