@@ -8,31 +8,61 @@ using System.IO;
 [CustomEditor(typeof(AudioManager))]
 public class AudioManagerEditor : Editor
 {
+    AudioManager manager;
+
     public override void OnInspectorGUI()
     {
+        manager = target as AudioManager;
         DrawDefaultInspector();
 
-        if (GUILayout.Button("Refresh Audio Sources")) {
+        GUILayout.BeginHorizontal();
+        if (GUILayout.Button("Refresh")) {
             RefreshSources();
         }
 
-        if (GUILayout.Button("Clear Audio Sources")) {
+        if (GUILayout.Button("Clear")) {
             ClearSources();
+        }
+        GUILayout.EndHorizontal();
+
+        GUILayout.BeginHorizontal();
+        GUILayout.Label("Material Footstep Sounds");
+        GUILayout.EndHorizontal();
+
+        foreach (var key in manager.MaterialStepSounds.Keys) {
+            foreach (var clip in manager.MaterialStepSounds[key]) {
+                GUILayout.BeginHorizontal();
+                GUILayout.Label(key);
+                GUILayout.FlexibleSpace();
+                EditorGUILayout.ObjectField(clip, typeof(AudioClip));
+                GUILayout.EndHorizontal();
+            }
         }
     }
 
-    private static void RefreshSources()
+    private void RefreshSources()
     {
+        ClearSources();
+
+        // for web deployment, do this
+        //foreach (var clip in Resources.FindObjectsOfTypeAll<AudioClip>()) {
+        //    Debug.Log("Clips? " + clip.name);
+        //    manager.AudioSources.Add(clip);
+        //    AddMaterialStepSound(clip.name, clip);
+        //}
+
+        //Debug.Log("Added " + manager.AudioSources.Count + " files.");
+
         string soundPath = Application.dataPath + "/Resources/Sound";
 
-        AudioManager.ClearSources();
+        ClearSources();
 
         var fileList = Directory.GetFiles(soundPath, "*.ogg", SearchOption.AllDirectories);
 
         foreach (var fName in fileList) {
             var fInfo = new FileInfo(fName);
 
-            if (AudioManager.Verbose) {
+            if (manager.Verbose) {
                 Debug.Log("Found: " + Relativize(fInfo));
             }
 
@@ -40,20 +70,20 @@ public class AudioManagerEditor : Editor
             AudioClip clip = Resources.Load<AudioClip>(asset);
 
             if (clip == null) {
-                Debug.LogError("Failed to load asset: " + asset);
+                Debug.LogWarning("Failed to load asset: " + asset);
             }
 
-            AudioManager.AudioSources.Add(clip);
+            manager.AudioSources.Add(clip);
             AddMaterialStepSound(fInfo.Name, clip);
         }
     }
 
-    private static void ClearSources()
+    private void ClearSources()
     {
-        AudioManager.ClearSources();
+        manager.ClearSources();
     }
 
-    private static string Relativize(FileInfo fInfo)
+    private string Relativize(FileInfo fInfo)
     {
         int start = fInfo.FullName.IndexOf("Sound");
         int end = fInfo.FullName.IndexOf(".") - start;
@@ -65,16 +95,16 @@ public class AudioManagerEditor : Editor
         return fInfo.FullName.Substring(start, end).Replace(@"\", "/");
     }
 
-    public static void AddMaterialStepSound(string clipName, AudioClip clip)
+    public void AddMaterialStepSound(string clipName, AudioClip clip)
     {
-        foreach (var material in AudioManager.MaterialTypes) {
+        foreach (var material in manager.MaterialTypes) {
             if (clipName.Contains(material)) {
 
-                if (!AudioManager.MaterialStepSounds.ContainsKey(material)) {
-                    AudioManager.MaterialStepSounds[material] = new List<AudioClip>();
+                if (!manager.MaterialStepSounds.ContainsKey(material)) {
+                    manager.MaterialStepSounds[material] = new List<AudioClip>();
                 }
 
-                AudioManager.MaterialStepSounds[material].Add(clip);
+                manager.MaterialStepSounds[material].Add(clip);
             }
         }
     }
