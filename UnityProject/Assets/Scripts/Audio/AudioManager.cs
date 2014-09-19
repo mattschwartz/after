@@ -46,5 +46,24 @@ namespace After.Audio
 
             Destroy(gameObject, clip.length);
         }
+
+        public static void PlayMaterialFootstepAtPoint(string material, Vector2 position)
+        {
+            if (!Instance.MaterialStepSounds.ContainsKey(material)) {
+                Debug.LogWarning("No footsteps for material of type " + material + ".");
+                return;
+            }
+
+            var footsteps = Instance.MaterialStepSounds[material];
+            int index = Random.Range(0, footsteps.Count);
+
+            if (index >= footsteps.Count) {
+                Debug.LogWarning("Index was out of range unexpectedly: " + index);
+                return;
+            }
+
+            var clip = footsteps[index];
+            PlayClipAtPoint(clip, position);
+        }
 	}
 }

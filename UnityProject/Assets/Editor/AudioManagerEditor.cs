@@ -44,19 +44,19 @@ public class AudioManagerEditor : Editor
     {
         ClearSources();
 
-        // for web deployment, do this
-        //foreach (var clip in Resources.FindObjectsOfTypeAll<AudioClip>()) {
-        //    Debug.Log("Clips? " + clip.name);
-        //    manager.AudioSources.Add(clip);
-        //    AddMaterialStepSound(clip.name, clip);
+        // This is less capable and has issues sometimes...
+        //if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.WebPlayer) {
+        //    foreach (var clip in Resources.FindObjectsOfTypeAll<AudioClip>()) {
+        //        manager.AudioSources.Add(clip);
+        //        AddMaterialStepSound(clip.name, clip);
+        //    }
+
+        //    Debug.Log("Added " + manager.AudioSources.Count + " files.");
+
+        //    return;
         //}
 
-        //Debug.Log("Added " + manager.AudioSources.Count + " files.");
-
         string soundPath = Application.dataPath + "/Resources/Sound";
-
-        ClearSources();
-
         var fileList = Directory.GetFiles(soundPath, "*.ogg", SearchOption.AllDirectories);
 
         foreach (var fName in fileList) {
