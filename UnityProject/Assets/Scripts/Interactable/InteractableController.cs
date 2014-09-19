@@ -2,75 +2,85 @@
 using System.Collections;
 using After.Interactable;
 
-public class InteractableController : MonoBehaviour
+namespace After.Interactable
 {
-    #region Public Members
-
-    public KeyCode InteractButton = KeyCode.E;
-    public InteractableConditions Conditions;
-
-    #endregion
-
-    #region Private Members
-
-    private bool Entered = false;
-
-    #endregion
-
-    #region Update
-
-    protected void Update()
+    public class InteractableController : MonoBehaviour
     {
-        if (Entered &&  Input.GetKeyDown(InteractButton)) {
-            if (Conditions == null || Conditions.ConditionsMet()) {
-                Interact();
+        #region Public Members
+
+        public KeyCode InteractButton = KeyCode.E;
+        public InteractableConditions Conditions;
+
+        #endregion
+
+        #region Private Members
+
+        private bool Entered = false;
+
+        #endregion
+
+        #region Update
+
+        protected void Update()
+        {
+            if (Entered && Input.GetKeyDown(InteractButton)) {
+                if (Conditions == null || Conditions.ConditionsMet()) {
+                    Interact();
+                } else {
+                    ConditionsFailed();
+                }
             }
         }
-    }
 
-    #endregion
+        #endregion
 
-    #region Triggers
+        #region Triggers
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (!InLayerMask(other)) {
-            return;
-        }
-        
-        Entered = true;
-    }
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (!InLayerMask(other)) {
+                return;
+            }
 
-    void OnTriggerStay2D(Collider2D other)
-    {
-        if (!InLayerMask(other)) {
-            return;
+            Entered = true;
         }
 
-        Entered = true;
-    }
+        void OnTriggerStay2D(Collider2D other)
+        {
+            if (!InLayerMask(other)) {
+                return;
+            }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        Entered = false;
-    }
-
-    bool InLayerMask(Collider2D other)
-    {
-        return other.gameObject.layer == LayerMask.NameToLayer("Player");
-    }
-
-    #endregion
-
-    public void MeetConditions()
-    {
-        if (Conditions != null) {
-            Conditions.MeetConditions();
+            Entered = true;
         }
-    }
 
-    public virtual void Interact()
-    {
-        // Override this function in subclasses
+        void OnTriggerExit2D(Collider2D other)
+        {
+            Entered = false;
+        }
+
+        bool InLayerMask(Collider2D other)
+        {
+            return other.gameObject.layer == LayerMask.NameToLayer("Player");
+        }
+
+        #endregion
+
+        public void MeetConditions()
+        {
+            if (Conditions != null) {
+                Conditions.MeetConditions();
+            }
+        }
+
+        public virtual void Interact()
+        {
+            // Override this function in subclasses
+        }
+
+        public virtual void ConditionsFailed()
+        {
+            // Override this function in subclasses
+        }
     }
 }

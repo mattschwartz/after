@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Assets.Scripts.Scene.SceneManagement;
+using After.Interactable;
 
 namespace After.Scene.NexusControllers
 {

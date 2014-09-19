@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using After.Interactable;
 
 public class ItemSpawnerController : InteractableController
 {

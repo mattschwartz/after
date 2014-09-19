@@ -3,11 +3,8 @@ using After.Entities;
 using After.Scene.SceneManagement;
 using UnityEngine;
 
-public class GeneratorConditions : InteractableConditions
+public class GeneratorConditions : RequiredItemConditions
 {
-
-	public GameObject RequiredItem;
-
 	private bool HasFuel = true;
 	private bool PlayerNeedsFuel = false;
 
@@ -21,13 +18,7 @@ public class GeneratorConditions : InteractableConditions
 			return true;
 		}
 
-		var itemHeld = SceneHandler.CurrentPlayer.ItemHeld;
-        bool playerHasItem = (RequiredItem != null && itemHeld == RequiredItem.name);
-
-        if (playerHasItem) {
-        	// Player has found the fuel!
-            GameObject.Find("HeldItem").SendMessage("DropItem");
-            Destroy(RequiredItem);
+        if (PlayerHasItem()) {
             PlayerNeedsFuel = false;
         }
 
