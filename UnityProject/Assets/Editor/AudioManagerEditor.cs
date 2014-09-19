@@ -8,20 +8,18 @@ using System.IO;
 [CustomEditor(typeof(AudioManager))]
 public class AudioManagerEditor : Editor
 {
-    AudioManager manager;
-
     public override void OnInspectorGUI()
     {
-        manager = target as AudioManager;
+        AudioManager manager = target as AudioManager;
         DrawDefaultInspector();
 
         GUILayout.BeginHorizontal();
         if (GUILayout.Button("Refresh")) {
-            RefreshSources();
+            RefreshSources(manager);
         }
 
         if (GUILayout.Button("Clear")) {
-            ClearSources();
+            ClearSources(manager);
         }
         GUILayout.EndHorizontal();
 
@@ -40,9 +38,9 @@ public class AudioManagerEditor : Editor
         }
     }
 
-    private void RefreshSources()
+    private void RefreshSources(AudioManager manager)
     {
-        ClearSources();
+        ClearSources(manager);
 
         // This is less capable and has issues sometimes...
         //if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.WebPlayer) {
@@ -74,11 +72,11 @@ public class AudioManagerEditor : Editor
             }
 
             manager.AudioSources.Add(clip);
-            AddMaterialStepSound(fInfo.Name, clip);
+            AddMaterialStepSound(manager, fInfo.Name, clip);
         }
     }
 
-    private void ClearSources()
+    private void ClearSources(AudioManager manager)
     {
         manager.ClearSources();
     }
@@ -95,7 +93,7 @@ public class AudioManagerEditor : Editor
         return fInfo.FullName.Substring(start, end).Replace(@"\", "/");
     }
 
-    public void AddMaterialStepSound(string clipName, AudioClip clip)
+    public void AddMaterialStepSound(AudioManager manager, string clipName, AudioClip clip)
     {
         foreach (var material in manager.MaterialTypes) {
             if (clipName.Contains(material)) {

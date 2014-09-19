@@ -12,7 +12,7 @@ namespace After.Audio
 		public List<AudioClip> AudioSources = new List<AudioClip>();
 		public Dictionary<string, List<AudioClip>> MaterialStepSounds = new Dictionary<string, List<AudioClip>>();
 
-        public readonly static AudioManager Instance = (AudioManager)ScriptableObject.CreateInstance("AudioManager");
+        public readonly static AudioManager Instance = ScriptableObject.CreateInstance<AudioManager>();
 
         private AudioManager()
         {
