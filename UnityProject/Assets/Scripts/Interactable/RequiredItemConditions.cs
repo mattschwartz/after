@@ -9,6 +9,7 @@ namespace After.Interactable
 {
     public class RequiredItemConditions : InteractableConditions
     {
+        public bool DestroyItemOnUse = true;
         public GameObject RequiredItem;
 
         public bool PlayerHasItem()
@@ -18,7 +19,10 @@ namespace After.Interactable
 
             if (playerHasItem) {
                 GameObject.Find("HeldItem").SendMessage("DropItem");
-                Destroy(RequiredItem);
+
+                if (DestroyItemOnUse) {
+                    Destroy(RequiredItem);
+                }
             }
 
             return playerHasItem;
