@@ -25,6 +25,8 @@ namespace After.Audio
 
             gameObject.transform.position = position;
             source.PlayOneShot(AudioSources.First(t => t.name == clipName));
+
+            Destroy(gameObject, source.clip.length);
 		}
 
         public static void PlayClipAtPoint(AudioClip clip, Vector2 position)
@@ -34,6 +36,8 @@ namespace After.Audio
 
             gameObject.transform.position = position;
             source.PlayOneShot(clip);
+
+            Destroy(gameObject, clip.length);
         }
 	}
 }
