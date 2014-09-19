@@ -1,27 +1,39 @@
 ﻿using UnityEngine;
 using System.Collections;
+using After.Audio;
 
 public class AudioTriggerController : MonoBehaviour 
 {
 	public bool StopOnExit = false;
-
-	private AudioSource AudioSource;
-
-	void Start()
-	{
-		AudioSource = GetComponent<AudioSource>();
-	}
+    public bool DestroyOnExit = true;
+	public AudioClip Clip;
 
 	void OnTriggerEnter2D(Collider2D other) 
 	{
-		Debug.Log("Playing");
-		AudioSource.Play();
+        AudioManager.PlayClipAtPoint(Clip, transform.position);
+        OnEnter();
 	}
 
 	void OnTriggerExit2D(Collider2D other)
 	{
+        OnExit();
+
+        if (DestroyOnExit) {
+            Destroy(gameObject, 1);
+            return;
+        }
+
 		if (StopOnExit) {
-			AudioSource.Stop();
 		}
 	}
+
+    public virtual void OnEnter()
+    {
+
+    }
+
+    public virtual void OnExit()
+    {
+
+    }
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PowerOutageController : MonoBehaviour
+public class PowerOutageController : AudioTriggerController
 {
 
 	#region Public Members
@@ -15,10 +15,8 @@ public class PowerOutageController : MonoBehaviour
         GetComponent<BoxCollider2D>().enabled = false;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    public override void OnEnter()
     {
-        Debug.Log("entered");
     	Generator.SendMessage("SetPoweredOn", false);
-        Destroy(gameObject);
     }
 }

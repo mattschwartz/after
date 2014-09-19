@@ -7,12 +7,12 @@ namespace After.Audio
 {
 	public class AudioManager : MonoBehaviour
 	{
-		public bool Verbose = false;
-		public List<string> MaterialTypes = new List<string>();
-		public List<AudioClip> AudioSources = new List<AudioClip>();
-		public Dictionary<string, List<AudioClip>> MaterialStepSounds = new Dictionary<string, List<AudioClip>>();
+		public static bool Verbose = false;
+		public static List<string> MaterialTypes = new List<string>();
+		public static List<AudioClip> AudioSources = new List<AudioClip>();
+		public static Dictionary<string, List<AudioClip>> MaterialStepSounds = new Dictionary<string, List<AudioClip>>();
 
-		public void ClearSources() 
+		public static void ClearSources() 
 		{
 			AudioSources = new List<AudioClip>();
 			MaterialStepSounds = new Dictionary<string, List<AudioClip>>();
@@ -20,11 +20,20 @@ namespace After.Audio
 
 		public static void PlayClipAtPoint(string clipName, Vector2 position) 
 		{
-			// create an empty game object
-			// attach clip to it
-			// positio it
-			// play it
-			// destroy it
+            GameObject gameObject = new GameObject();
+            var source = gameObject.AddComponent<AudioSource>();
+
+            gameObject.transform.position = position;
+            source.PlayOneShot(AudioSources.First(t => t.name == clipName));
 		}
+
+        public static void PlayClipAtPoint(AudioClip clip, Vector2 position)
+        {
+            GameObject gameObject = new GameObject();
+            var source = gameObject.AddComponent<AudioSource>();
+
+            gameObject.transform.position = position;
+            source.PlayOneShot(clip);
+        }
 	}
 }

@@ -10,40 +10,29 @@ public class AudioManagerEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        //var list = Resources.FindObjectsOfTypeAll<AudioClip>();
-
-        //foreach (AudioClip clip in list) {
-        //    Debug.Log(":: " + clip.name);
-
-
-        //    AudioSources.Add(clip);
-        //    AddMaterialStepSound(clip.name, clip);
-        //}
-
-
         DrawDefaultInspector();
 
         if (GUILayout.Button("Refresh Audio Sources")) {
-            RefreshSources(target as AudioManager);
+            RefreshSources();
         }
 
         if (GUILayout.Button("Clear Audio Sources")) {
-            ClearSources(target as AudioManager);
+            ClearSources();
         }
     }
 
-    private void RefreshSources(AudioManager manager)
+    private static void RefreshSources()
     {
         string soundPath = Application.dataPath + "/Resources/Sound";
 
-        manager.ClearSources();
+        AudioManager.ClearSources();
 
         var fileList = Directory.GetFiles(soundPath, "*.ogg", SearchOption.AllDirectories);
 
         foreach (var fName in fileList) {
             var fInfo = new FileInfo(fName);
 
-            if (manager.Verbose) {
+            if (AudioManager.Verbose) {
                 Debug.Log("Found: " + Relativize(fInfo));
             }
 
@@ -54,17 +43,17 @@ public class AudioManagerEditor : Editor
                 Debug.LogError("Failed to load asset: " + asset);
             }
 
-            manager.AudioSources.Add(clip);
-            AddMaterialStepSound(manager, fInfo.Name, clip);
+            AudioManager.AudioSources.Add(clip);
+            AddMaterialStepSound(fInfo.Name, clip);
         }
     }
 
-    private void ClearSources(AudioManager manager)
+    private static void ClearSources()
     {
-        manager.ClearSources();
+        AudioManager.ClearSources();
     }
 
-    private string Relativize(FileInfo fInfo)
+    private static string Relativize(FileInfo fInfo)
     {
         int start = fInfo.FullName.IndexOf("Sound");
         int end = fInfo.FullName.IndexOf(".") - start;
@@ -76,16 +65,16 @@ public class AudioManagerEditor : Editor
         return fInfo.FullName.Substring(start, end).Replace(@"\", "/");
     }
 
-    public void AddMaterialStepSound(AudioManager manager, string clipName, AudioClip clip)
+    public static void AddMaterialStepSound(string clipName, AudioClip clip)
     {
-        foreach (var material in manager.MaterialTypes) {
+        foreach (var material in AudioManager.MaterialTypes) {
             if (clipName.Contains(material)) {
 
-                if (!manager.MaterialStepSounds.ContainsKey(material)) {
-                    manager.MaterialStepSounds[material] = new List<AudioClip>();
+                if (!AudioManager.MaterialStepSounds.ContainsKey(material)) {
+                    AudioManager.MaterialStepSounds[material] = new List<AudioClip>();
                 }
 
-                manager.MaterialStepSounds[material].Add(clip);
+                AudioManager.MaterialStepSounds[material].Add(clip);
             }
         }
     }

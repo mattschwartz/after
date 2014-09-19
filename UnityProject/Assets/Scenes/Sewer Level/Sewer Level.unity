@@ -985,7 +985,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2631936957
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 29aacc410ee386143ac475b95f15a53f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: .270588249}
@@ -1109,7 +1109,6 @@ Transform:
   - {fileID: 1556437017}
   - {fileID: 1725100881}
   - {fileID: 1089036315}
-  - {fileID: 1505941359}
   - {fileID: 320942769}
   - {fileID: 1203043684}
   - {fileID: 1671277518}
@@ -1438,7 +1437,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 260634086}
-  m_RootOrder: 25
+  m_RootOrder: 24
 --- !u!1 &287223999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,7 +1506,7 @@ Transform:
   - {fileID: 110345828}
   - {fileID: 1237961437}
   m_Father: {fileID: 260634086}
-  m_RootOrder: 22
+  m_RootOrder: 21
 --- !u!1 &329331880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,7 +1736,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 260634086}
-  m_RootOrder: 26
+  m_RootOrder: 25
 --- !u!1 &389064767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1772,7 +1771,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2631936957
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 29aacc410ee386143ac475b95f15a53f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: .270588249}
@@ -1835,7 +1834,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 2631936957
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: facc921c8813b4d3b97e5fd385468d02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &419237405
@@ -3105,7 +3104,7 @@ Transform:
   m_Children:
   - {fileID: 361593587}
   m_Father: {fileID: 260634086}
-  m_RootOrder: 23
+  m_RootOrder: 22
 --- !u!212 &1203043685
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3268,7 +3267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 1714228954}
-  PowerOutageTrigger: {fileID: 1505941358}
+  PowerOutageTrigger: {fileID: 1233475531}
   PlayOnFailure: {fileID: 8300000, guid: 8b61bb08540cf41908a6ecf51fe03050, type: 3}
   PlayOnSuccess: {fileID: 0}
 --- !u!95 &1208153049
@@ -3286,6 +3285,63 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1233475529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: ee36b385428159c43988c5df679695d7, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1233475532}
+  - 61: {fileID: 1233475531}
+  - 114: {fileID: 1233475530}
+  m_Layer: 0
+  m_Name: Power Outage Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 1319202362, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1233475530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: ee36b385428159c43988c5df679695d7,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1233475529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e0c65b5adb91d4dbe706064505afc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StopOnExit: 0
+  DestroyOnExit: 1
+  Clip: {fileID: 8300000, guid: 3880f3bb4c7ae42aeb50c3d83d57902a, type: 3}
+  Generator: {fileID: 1208153043}
+--- !u!61 &1233475531
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100000, guid: ee36b385428159c43988c5df679695d7,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1233475529}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 1, y: 7.42000008}
+  m_Center: {x: 0, y: 0}
+--- !u!4 &1233475532
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: ee36b385428159c43988c5df679695d7, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1233475529}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.01813269, y: 10.1522207, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
 --- !u!1 &1237961435
 GameObject:
   m_ObjectHideFlags: 0
@@ -3990,117 +4046,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 1, y: 8.76571083}
   m_Center: {x: 0, y: 0}
---- !u!1 &1505941356
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1505941359}
-  - 61: {fileID: 1505941358}
-  - 114: {fileID: 1505941357}
-  - 82: {fileID: 1505941360}
-  m_Layer: 0
-  m_Name: Power Outage Trigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 1319202362, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1505941357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1505941356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72e0c65b5adb91d4dbe706064505afc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Generator: {fileID: 1208153043}
---- !u!61 &1505941358
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1505941356}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 1, y: 8.36999989}
-  m_Center: {x: 0, y: 0}
---- !u!4 &1505941359
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1505941356}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.99257076, y: 10.6424809, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 260634086}
-  m_RootOrder: 21
---- !u!82 &1505941360
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1505941356}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 3880f3bb4c7ae42aeb50c3d83d57902a, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!1 &1556437015
 GameObject:
   m_ObjectHideFlags: 0
@@ -4531,7 +4476,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 260634086}
-  m_RootOrder: 24
+  m_RootOrder: 23
 --- !u!68 &1671277519
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -4872,7 +4817,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 260634086}
-  m_RootOrder: 27
+  m_RootOrder: 26
 --- !u!212 &1816749791
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5070,7 +5015,7 @@ Transform:
   - {fileID: 1580375715}
   - {fileID: 329331881}
   m_Father: {fileID: 260634086}
-  m_RootOrder: 28
+  m_RootOrder: 27
 --- !u!212 &1918864476
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6628,9 +6573,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 504cf559a2aef449ea8b13e7b81f28bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Verbose: 0
-  MaterialTypes: []
-  AudioSources: []
 --- !u!4 &2069192052
 Transform:
   m_ObjectHideFlags: 0
