@@ -823,6 +823,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -855,6 +859,94 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: Verbose
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f613e182223f6406a958738485cb79b7, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4698a0e60a1e34c848cd41fdccbe5ec6, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 805dc8f99fa59498a90716ee8bc94005, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: b1504d58811f8494893223c4cd1e94ef, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8b61bb08540cf41908a6ecf51fe03050, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 294c2572969cc4e91b744f86e5f63d43, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3880f3bb4c7ae42aeb50c3d83d57902a, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 145898131f0fb49928f9935e8a665431, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: e862af059df554c2093cebc016d0bb2f, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[13]
+      value: 
+      objectReference: {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[14]
+      value: 
+      objectReference: {fileID: 8300000, guid: d844be863eda14edd925b80bf089004d, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[15]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5b6f43e90a3746428d4278631f9e799, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[16]
+      value: 
+      objectReference: {fileID: 8300000, guid: d75e84e6b728846ccb2141667549ebff, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[17]
+      value: 
+      objectReference: {fileID: 8300000, guid: c637e3247c13d423ab6261bcbbd119e8, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[18]
+      value: 
+      objectReference: {fileID: 8300000, guid: d46f2cb58b3b54e8286eb6dbb1b934d6, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[19]
+      value: 
+      objectReference: {fileID: 8300000, guid: daf98d096fc0941108dca909a57bca0e, type: 3}
+    - target: {fileID: 11400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
+      propertyPath: AudioSources.Array.data[20]
+      value: 
+      objectReference: {fileID: 8300000, guid: c0de6937392e845d0aab515071090448, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
   m_RootGameObject: {fileID: 2069192050}
@@ -2801,7 +2893,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 21200000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
       propertyPath: m_Sprite
