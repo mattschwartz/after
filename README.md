@@ -1,5 +1,5 @@
 #After - Transient Games
-![After Logo](https://github.com/Logo.png)
+![After Logo](https://github.com/mattschwartz/after/blob/master/Logo.png)
 
 ##Sections
 - About
