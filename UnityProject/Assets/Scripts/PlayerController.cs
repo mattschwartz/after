@@ -111,11 +111,6 @@ public class PlayerController : MonoBehaviour
         HeldItem.SendMessage("DropItem");
     }
 
-    public void IsHoldingItem(out bool result)
-    {
-        result = HeldItem != null;
-    }
-
     public void Climb(bool on)
     {
         Climbing = on;
@@ -134,21 +129,17 @@ public class PlayerController : MonoBehaviour
                 Sprite.sortingLayerName = "Player";
             }
         }
-        //NYI: animation queues
+        //NYI: animation cues
+    }
+
+    public void PlayFootstep()
+    {
+        // Get overlapping platform
+        var collider = Physics2D.OverlapCircle(GroundCheck.position, GroundRadius, GroundLayerMask);
+
+        // Send message to platform that it needs to play footstep
+        collider.gameObject.SendMessage("PlayFootstep");
     }
 
     #endregion
-    
-    private void PlayRandomSound()
-    {
-        // foreach (var source in AudioSources) {
-        //     source.Stop();
-        // }
-
-        // // System.Random ran = new System.Random();
-        // // int index = ran.Next(AudioSources.Count);
-        // // var audioSource = AudioSources[index];
-        // // audioSource.pitch = Random.Range(0.9F, 1.1F);
-        // // audioSource.Play();
-    }
 }
