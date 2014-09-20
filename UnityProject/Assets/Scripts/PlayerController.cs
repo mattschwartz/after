@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 
     #region Private members
 
+    private bool PlayerLocked = false;
     private bool Grounded = false;
     private bool FacingRight = true;
     private float Speed = 12f;
@@ -45,8 +46,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (PlayerLocked) {
+            return;
+        }
+
         if (Grounded && Input.GetKeyDown(JumpButton)) {
-        	Animator.SetTrigger("Jump");
+            rigidbody2D.AddForce(Vector2.up * JumpForce);
         }
 
         if (HeldItem != null && Input.GetKeyDown(DropButton)) {
@@ -54,13 +59,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void DoJump() 
-	{
-        rigidbody2D.AddForce(Vector2.up * JumpForce);
-    }
-
     void FixedUpdate()
     {
+        if (PlayerLocked) {
+            return;
+        }
+
         if (Climbing) {
             float vMove = Input.GetAxis("Vertical");
             Animator.SetFloat("Velocity", Mathf.Abs(vMove));
@@ -87,7 +91,7 @@ public class PlayerController : MonoBehaviour
     private void IsGrounded()
     {
         Grounded = Physics2D.OverlapCircle(GroundCheck.position, GroundRadius, GroundLayerMask);
-        // Animator.SetBool("Grounded", Grounded); // nyi
+        Animator.SetBool("Grounded", Grounded);
     }
 
     // Cheap animations
@@ -101,8 +105,22 @@ public class PlayerController : MonoBehaviour
 
     #region Message Functions
 
+    // Locking animation begins
+    public void LockPlayer()
+    {
+        rigidbody2D.velocity = Vector2.zero;
+        PlayerLocked = true;
+    }
+
+    // Locking animation ends
+    public void FreePlayer()
+    {
+        PlayerLocked = false;
+    }
+
     public void PickupItem(GameObject item)
     {
+        Animator.SetTrigger("PickupItemLow");
         HeldItem.SendMessage("SetItemHeld", item);
     }
 
