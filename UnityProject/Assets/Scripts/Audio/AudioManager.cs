@@ -21,6 +21,12 @@ namespace After.Audio
         public static void PlayMaterialFootstepAtPoint(List<AudioClip> stepSounds, Vector2 position)
         {
             int index = Random.Range(0, stepSounds.Count);
+
+            if (index < 0 || index >= stepSounds.Count 
+                || stepSounds[index] == null) {
+                return;
+            }
+
             PlayClipAtPoint(stepSounds[index], position);
         }
 	}

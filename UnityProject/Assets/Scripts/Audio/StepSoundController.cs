@@ -13,7 +13,6 @@ public class StepSoundController : MonoBehaviour
 
     public void PlayFootstep()
     {
-        Debug.Log("Playing footstep sound");
         AudioManager.PlayMaterialFootstepAtPoint(StepSounds, transform.position);
     }
 }

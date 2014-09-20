@@ -137,6 +137,10 @@ public class PlayerController : MonoBehaviour
         // Get overlapping platform
         var collider = Physics2D.OverlapCircle(GroundCheck.position, GroundRadius, GroundLayerMask);
 
+        if (!collider) {
+            return;
+        }
+
         // Send message to platform that it needs to play footstep
         collider.gameObject.SendMessage("PlayFootstep");
     }
