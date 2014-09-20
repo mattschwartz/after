@@ -21,6 +21,13 @@ namespace After.Scene.NexusControllers
                 Camera.main.SendMessage("SetSpriteBounds", NewSpriteBounds);
             }
             Player.transform.position = ToLocation;
+
+            OnInteract();
+        }
+
+        public virtual void OnInteract()
+        {
+            // Override this in base classes
         }
     }
 }

@@ -4643,6 +4643,7 @@ GameObject:
   - 61: {fileID: 1663295811}
   - 114: {fileID: 1663295810}
   - 212: {fileID: 1663295809}
+  - 95: {fileID: 1663295813}
   m_Layer: 0
   m_Name: Elevator Door
   m_TagString: Untagged
@@ -4682,7 +4683,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1663295808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2adc444741a79b94da16ee1312a906aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e82512b3dc36d94797eae30d9e61fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   InteractButton: 101
@@ -4690,7 +4691,7 @@ MonoBehaviour:
   PlayOnFailure: {fileID: 0}
   PlayOnSuccess: {fileID: 0}
   ToLocation: {x: 0, y: 0, z: 0}
-  Player: {fileID: 194404990}
+  Player: {fileID: 0}
   NewSpriteBounds: {fileID: 0}
 --- !u!61 &1663295811
 BoxCollider2D:
@@ -4702,7 +4703,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 6.03999996, y: 5.94000006}
+  m_Size: {x: 7, y: 7}
   m_Center: {x: 0, y: 0}
 --- !u!4 &1663295812
 Transform:
@@ -4711,12 +4712,27 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1663295808}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.2022266, y: 9.78054905, z: 1.35205078}
+  m_LocalPosition: {x: 11.1380558, y: 10.0115643, z: 1.35205078}
   m_LocalScale: {x: .520173192, y: .520173192, z: 1}
   m_Children:
   - {fileID: 2050666274}
   m_Father: {fileID: 260634086}
   m_RootOrder: 0
+--- !u!95 &1663295813
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1663295808}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f6c7bb8cdb20f45daa840929ada8393e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1679095466
 GameObject:
   m_ObjectHideFlags: 0

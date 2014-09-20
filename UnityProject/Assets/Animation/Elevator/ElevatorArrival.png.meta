@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 25ba3280e02bd4149a41aad542c06043
+guid: e9c2cd3b7933f614ca5cc1431657afb5
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Elevator_00008
+    21300000: ElevatorArrival
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

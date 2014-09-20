@@ -6,6 +6,6 @@ public class ElevatorDoorConditions : InteractableConditions
 {
     public override bool OnConditionsMet()
     {
-        return false;
+        return true;
     }
 }
