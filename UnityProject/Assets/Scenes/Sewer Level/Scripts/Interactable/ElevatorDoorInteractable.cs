@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using After.Scene.NexusControllers;
+using After.Interactable;
 
-public class ElevatorDoorInteractable : NexusController
+public class ElevatorDoorInteractable : InteractableController
 {
-    public override void OnInteract()
+    public override void Interact()
     {
         GetComponent<Animator>().SetTrigger("Arrival");
     }

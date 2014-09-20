@@ -141,7 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2410601bd054774e907e83a074e3470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FailureMessage: 
+  ThoughtsOnFailure: 
+  ThoughtsOnSuccess: 
 --- !u!4 &19550494
 Transform:
   m_ObjectHideFlags: 0
@@ -368,7 +369,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb2eb2dca70cf141b438b8ca3c0c48b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FailureMessage: <play door locked audio>
+  ThoughtsOnFailure: <play door locked audio>
+  ThoughtsOnSuccess: 
   DestroyItemOnUse: 1
   RequiredItem: {fileID: 419237405}
 --- !u!1001 &69558203
@@ -1795,7 +1797,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb2eb2dca70cf141b438b8ca3c0c48b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FailureMessage: <play door locked audio>
+  ThoughtsOnFailure: <play door locked audio>
+  ThoughtsOnSuccess: 
   DestroyItemOnUse: 1
   RequiredItem: {fileID: 0}
 --- !u!4 &361593587
@@ -2620,7 +2623,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2410601bd054774e907e83a074e3470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FailureMessage: 
+  ThoughtsOnFailure: 
+  ThoughtsOnSuccess: 
 --- !u!4 &741789505
 Transform:
   m_ObjectHideFlags: 0
@@ -4690,9 +4694,6 @@ MonoBehaviour:
   Conditions: {fileID: 2050666275}
   PlayOnFailure: {fileID: 0}
   PlayOnSuccess: {fileID: 0}
-  ToLocation: {x: 0, y: 0, z: 0}
-  Player: {fileID: 0}
-  NewSpriteBounds: {fileID: 0}
 --- !u!61 &1663295811
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4890,7 +4891,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f39aea559ef7c48dd953257784861c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FailureMessage: 
+  ThoughtsOnFailure: 
+  ThoughtsOnSuccess: 
   DestroyItemOnUse: 1
   RequiredItem: {fileID: 1614624034}
 --- !u!4 &1714228955
@@ -5276,7 +5278,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2410601bd054774e907e83a074e3470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FailureMessage: 
+  ThoughtsOnFailure: 
+  ThoughtsOnSuccess: 
 --- !u!4 &1855991096
 Transform:
   m_ObjectHideFlags: 0
@@ -6946,7 +6949,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb2eb2dca70cf141b438b8ca3c0c48b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FailureMessage: I cannot move him with my bare hands.
+  ThoughtsOnFailure: I cannot move him with my bare hands.
+  ThoughtsOnSuccess: 
   DestroyItemOnUse: 0
   RequiredItem: {fileID: 1305626017}
 --- !u!1 &2004789011
@@ -7038,7 +7042,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc6da6de93460aa4892605578aa03b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FailureMessage: Shit needs power yo.
+  ThoughtsOnFailure: The elevator isn't powered.
+  ThoughtsOnSuccess: <play arrival ding>
 --- !u!1 &2052403241
 GameObject:
   m_ObjectHideFlags: 0
@@ -7281,7 +7286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2410601bd054774e907e83a074e3470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FailureMessage: 
+  ThoughtsOnFailure: 
+  ThoughtsOnSuccess: 
 --- !u!4 &2134684969
 Transform:
   m_ObjectHideFlags: 0

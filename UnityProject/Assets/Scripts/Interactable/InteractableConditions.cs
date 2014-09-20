@@ -5,7 +5,8 @@ namespace After.Interactable
 {
     public class InteractableConditions : MonoBehaviour
     {
-        public string FailureMessage;
+        public string ThoughtsOnFailure;
+        public string ThoughtsOnSuccess;
 
         public virtual void MeetConditions()
         {
@@ -16,8 +17,10 @@ namespace After.Interactable
         {
             var result = OnConditionsMet();
 
-            if (!result && !String.IsNullOrEmpty(FailureMessage)) {
-                GameObject.Find("Player Thoughts").SendMessage("SetThought", FailureMessage);
+            if (result && !String.IsNullOrEmpty(ThoughtsOnSuccess)) {
+                GameObject.Find("Player Thoughts").SendMessage("SetThought", ThoughtsOnSuccess);
+            } else if (!result && !String.IsNullOrEmpty(ThoughtsOnFailure)) {
+                GameObject.Find("Player Thoughts").SendMessage("SetThought", ThoughtsOnFailure);
             }
 
             return result;
