@@ -10,6 +10,8 @@ namespace After.Interactable
 
         public KeyCode InteractButton = KeyCode.E;
         public InteractableConditions Conditions;
+        public AudioClip PlayOnFailure;
+        public AudioClip PlayOnSuccess;
 
         #endregion
 

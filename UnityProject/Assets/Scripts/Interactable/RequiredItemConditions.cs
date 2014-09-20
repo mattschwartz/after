@@ -12,10 +12,19 @@ namespace After.Interactable
         public bool DestroyItemOnUse = true;
         public GameObject RequiredItem;
 
+        private bool CompletedTask = false;
+
         public bool PlayerHasItem()
         {
+            // Player has already completed this task 
+            if (CompletedTask) {
+                return true;
+            }
+
             var itemHeld = SceneHandler.CurrentPlayer.ItemHeld;
             bool playerHasItem = (RequiredItem != null && itemHeld == RequiredItem.name);
+
+            CompletedTask = playerHasItem;
 
             if (playerHasItem) {
                 GameObject.Find("HeldItem").SendMessage("DropItem");
@@ -25,10 +34,11 @@ namespace After.Interactable
                 }
             }
 
+
             return playerHasItem;
         }
 
-        public override bool ConditionsMet()
+        public override bool OnConditionsMet()
         {
             return PlayerHasItem();
         }

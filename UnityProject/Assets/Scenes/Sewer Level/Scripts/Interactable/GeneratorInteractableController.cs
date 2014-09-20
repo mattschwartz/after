@@ -7,8 +7,6 @@ public class GeneratorInteractableController : InteractableController
     #region Public Members
 
     public BoxCollider2D PowerOutageTrigger;
-    public AudioClip PlayOnFailure;
-    public AudioClip PlayOnSuccess;
 
     #endregion
 
