@@ -15,19 +15,45 @@ namespace After.Scene.NexusControllers
 
         #endregion
 
-        public override void Interact()
+        #region Overridden Methods
+
+        public sealed override void Interact()
+        {
+            OnInteract();
+        }
+
+        public sealed override void ConditionsFailed()
+        {
+            OnConditionsFailed();
+        }
+
+        #endregion
+
+        #region Overrideable Methods
+
+        public virtual void OnInteract()
+        {
+            // Override this in function in subclasses
+            MovePlayer();
+        }
+
+        public virtual void OnConditionsFailed()
+        {
+            // Override this in function in subclasses
+        }
+
+        #endregion
+
+        /* 
+         * This gets called by default when conditions are met.
+         * Otherwise, subclasses will decide when this gets called.
+         */
+        public void MovePlayer()
         {
             if (NewSpriteBounds != null) {
                 Camera.main.SendMessage("SetSpriteBounds", NewSpriteBounds);
             }
             Player.transform.position = ToLocation;
-
-            OnInteract();
-        }
-
-        public virtual void OnInteract()
-        {
-            // Override this in base classes
         }
     }
 }

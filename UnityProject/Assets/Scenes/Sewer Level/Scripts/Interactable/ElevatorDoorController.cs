@@ -3,7 +3,7 @@ using System.Collections;
 using After.Scene.NexusControllers;
 using After.Interactable;
 
-public class ElevatorDoorInteractable : InteractableController
+public class ElevatorDoorController : InteractableController
 {
     public override void Interact()
     {

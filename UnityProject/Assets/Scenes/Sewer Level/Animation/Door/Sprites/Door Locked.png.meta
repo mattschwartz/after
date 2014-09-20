@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: a703f3765eea445a58ae404a4649654f
+guid: 74b99a4056546be499bc1d194112b49f
 TextureImporter:
   fileIDToRecycleName:
-    21300000: ElevatorIdle
+    21300000: Door Locked
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
