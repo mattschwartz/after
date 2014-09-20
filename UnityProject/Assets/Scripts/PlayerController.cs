@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
         if (Climbing) {
             float vMove = Input.GetAxis("Vertical");
-            Animator.SetFloat("Velocity", Mathf.Abs(vMove));
+            Animator.SetFloat("vMove", Mathf.Abs(vMove));
             rigidbody2D.velocity = new Vector2(0, vMove * Speed * 0.5f);
         } else {
             IsGrounded();
@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
     private void IsGrounded()
     {
         Grounded = Physics2D.OverlapCircle(GroundCheck.position, GroundRadius, GroundLayerMask);
-        Animator.SetBool("Grounded", Grounded);
+        // Animator.SetBool("Grounded", Grounded);
     }
 
     // Cheap animations
@@ -134,20 +134,19 @@ public class PlayerController : MonoBehaviour
         Climbing = on;
         if (on) {
             rigidbody2D.gravityScale = 0;
-            if (Sprite)
-            {
+            if (Sprite) {
                 //interspace, the space between the default and background layers, where people on ladders go
                 Sprite.sortingLayerName = "Interspace";
             }
         } else {
             rigidbody2D.gravityScale = 8;
-            if (Sprite)
-            {
+            if (Sprite) {
                 //the normal player layer
                 Sprite.sortingLayerName = "Player";
             }
         }
-        //NYI: animation cues
+
+        Animator.SetBool("Climbing", Climbing);
     }
 
     public void PlayFootstep()
