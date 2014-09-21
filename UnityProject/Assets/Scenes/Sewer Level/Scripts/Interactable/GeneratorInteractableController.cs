@@ -37,6 +37,11 @@ public class GeneratorInteractableController : InteractableController
         }
     }
 
+    public bool IsPoweredOn()
+    {
+        return PoweredOn;
+    }
+
     public void SetPoweredOn(bool on) 
     {
         PoweredOn = on;

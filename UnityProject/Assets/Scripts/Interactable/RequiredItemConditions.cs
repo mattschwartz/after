@@ -9,20 +9,26 @@ namespace After.Interactable
 {
     public class RequiredItemConditions : InteractableConditions
     {
+        #region Public Members
+
         public bool DestroyItemOnUse = true;
         public GameObject RequiredItem;
 
+        #endregion
+
+        public override bool TestConditionsMet()
+        {
+            return PlayerHasItem();
+        }
+
         public bool PlayerHasItem()
         {
-            // Player has already completed this task 
-            if (CompletedTask) {
-                return true;
-            }
+            if (TaskCompleted) { return true; }
 
             var itemHeld = SceneHandler.CurrentPlayer.ItemHeld;
             bool playerHasItem = (RequiredItem != null && itemHeld == RequiredItem.name);
 
-            CompletedTask = playerHasItem;
+            TaskCompleted = playerHasItem;
 
             if (playerHasItem) {
                 GameObject.Find("HeldItem").SendMessage("DropItem");
@@ -32,13 +38,7 @@ namespace After.Interactable
                 }
             }
 
-
-            return playerHasItem;
-        }
-
-        public override bool OnConditionsMet()
-        {
-            return PlayerHasItem();
+            return TaskCompleted;
         }
     }
 }

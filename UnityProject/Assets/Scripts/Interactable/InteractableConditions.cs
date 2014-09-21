@@ -9,30 +9,34 @@ namespace After.Interactable
         public string ThoughtsOnFailure;
         public string ThoughtsOnSuccess;
 
-        protected bool CompletedTask = false;
+        protected bool TaskCompleted = false;
 
         public virtual void MeetConditions()
         {
             
         }
 
+        // Don't override this method
         public bool ConditionsMet()
         {
-            if (CompletedTask && !RepeatSuccess) { return true; }
+            if (TaskCompleted && !RepeatSuccess) {
+                return true;
+            }
 
-            CompletedTask = OnConditionsMet();
+            var result = TestConditionsMet();
 
-            if (CompletedTask && !String.IsNullOrEmpty(ThoughtsOnSuccess)) {
+            if (result && !String.IsNullOrEmpty(ThoughtsOnSuccess)) {
                 GameObject.Find("Player Thoughts").SendMessage("SetThought", ThoughtsOnSuccess);
-            } else if (!CompletedTask && !String.IsNullOrEmpty(ThoughtsOnFailure)) {
+            } else if (!result && !String.IsNullOrEmpty(ThoughtsOnFailure)) {
                 GameObject.Find("Player Thoughts").SendMessage("SetThought", ThoughtsOnFailure);
             }
 
-            return CompletedTask;
+            return result;
         }
 
-        public virtual bool OnConditionsMet()
+        public virtual bool TestConditionsMet()
         {
+            // Override this method in subclasses
             return true;
         }
     }

@@ -8,13 +8,15 @@ public class GeneratorConditions : RequiredItemConditions
 	private bool HasFuel = true;
 	private bool PlayerNeedsFuel = false;
 
-	public override bool OnConditionsMet() 
+	public override bool TestConditionsMet() 
 	{
 		// Generator has enough fuel reserve the first time
 		if (HasFuel) {
 			// Player needs to get fuel for next time
 			HasFuel = false;
 			PlayerNeedsFuel = true;
+            TaskCompleted = false;
+
 			return true;
 		}
 

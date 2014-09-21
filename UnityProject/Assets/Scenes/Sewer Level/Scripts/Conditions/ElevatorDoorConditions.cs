@@ -4,7 +4,7 @@ using After.Interactable;
 
 public class ElevatorDoorConditions : InteractableConditions
 {
-    public override bool OnConditionsMet()
+    public override bool TestConditionsMet()
     {
         return false;
     }

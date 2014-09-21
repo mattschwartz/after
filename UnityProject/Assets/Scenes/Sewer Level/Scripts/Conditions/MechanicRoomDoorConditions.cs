@@ -19,7 +19,7 @@ namespace After.Interactable
 
         #endregion
 
-        public override bool OnConditionsMet()
+        public override bool TestConditionsMet()
         {
             var itemHeld = SceneHandler.CurrentPlayer.ItemHeld;
             bool playerHasItem = (RequiredItem != null && itemHeld == RequiredItem.name);

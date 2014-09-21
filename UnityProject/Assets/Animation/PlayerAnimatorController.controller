@@ -541,36 +541,6 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
---- !u!1102 &110206487
-State:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Exit Room 0
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Motions:
-  - {fileID: 7400000, guid: 62b8fe204cea9844890aac7925fade3e, type: 2}
-  m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: -1, y: 41, z: 0}
-  m_IKOnFeet: 0
-  m_Mirror: 0
-  m_Tag: 
---- !u!1102 &110220655
-State:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Enter Room 0
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Motions:
-  - {fileID: 7400000, guid: 84083bab64ba77a45bbed9f31e6fcfc2, type: 2}
-  m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 34, y: 106, z: 0}
-  m_IKOnFeet: 0
-  m_Mirror: 0
-  m_Tag: 
 --- !u!1102 &110243527
 State:
   m_ObjectHideFlags: 3
@@ -678,18 +648,9 @@ StateMachine:
   - {fileID: 110254474}
   - {fileID: 110248405}
   - {fileID: 110203844}
-  - {fileID: 110206487}
-  - {fileID: 110220655}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
-    data:
-      first: {fileID: 110203844}
-      second:
-      - {fileID: 110164466}
-    data:
-      first: {fileID: 110248405}
-      second: []
     data:
       first: {fileID: 0}
       second:
@@ -711,9 +672,6 @@ StateMachine:
       second:
       - {fileID: 110128264}
     data:
-      first: {fileID: 0}
-      second: []
-    data:
       first: {fileID: 110243909}
       second:
       - {fileID: 110141122}
@@ -727,6 +685,13 @@ StateMachine:
       first: {fileID: 110254474}
       second:
       - {fileID: 110124710}
+    data:
+      first: {fileID: 110248405}
+      second: []
+    data:
+      first: {fileID: 110203844}
+      second:
+      - {fileID: 110164466}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -264, y: -96, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
