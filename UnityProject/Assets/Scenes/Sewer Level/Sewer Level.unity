@@ -761,11 +761,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.41089785
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.41090047
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -2771,7 +2771,7 @@ Transform:
   m_GameObject: {fileID: 653709347}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.03009701, y: -.609151363, z: 0}
-  m_LocalScale: {x: 1.41089785, y: 1.41090047, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 154248524}
   m_Father: {fileID: 1348473377}
@@ -7467,9 +7467,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc6da6de93460aa4892605578aa03b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RepeatSuccess: 1
+  RepeatSuccess: 0
   ThoughtsOnFailure: The elevator isn't powered.
-  ThoughtsOnSuccess: <play arrival ding>
+  ThoughtsOnSuccess: 
   LiftController: {fileID: 59513653}
 --- !u!1 &2052403241
 GameObject:
