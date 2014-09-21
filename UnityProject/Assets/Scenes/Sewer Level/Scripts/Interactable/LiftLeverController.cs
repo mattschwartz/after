@@ -31,4 +31,9 @@ public class LiftLeverController : InteractableController
         Enabled = !Enabled;
         Animator.SetBool("Enabled", Enabled);
     }
+
+    public bool IsEnabled()
+    {
+        return Enabled;
+    }
 }

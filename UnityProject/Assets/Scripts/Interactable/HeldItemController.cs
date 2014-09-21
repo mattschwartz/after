@@ -38,6 +38,7 @@ public class HeldItemController : MonoBehaviour
 
     public void ShowItemHeld()
     {
+        transform.localScale = ItemHeld.transform.localScale;
         GetComponent<SpriteRenderer>().sprite = ItemHeld.GetComponent<SpriteRenderer>().sprite;
     }
 
