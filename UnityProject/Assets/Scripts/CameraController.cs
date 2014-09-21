@@ -14,10 +14,11 @@ public class CameraController : MonoBehaviour
 
     #region Private Members
 
+    public bool CameraFits = false;
     public float DampTime = 0.15f;
     private Vector3 Velocity = Vector3.zero;
-    private float LeftBounds; 
-    private float RightBounds; 
+    private float LeftBounds;
+    private float RightBounds;
     private float BottomBounds;
     private float TopBounds;
 
@@ -39,8 +40,6 @@ public class CameraController : MonoBehaviour
         Vector3 destination = transform.position + delta;
 
         var pos = Vector3.SmoothDamp(transform.position, destination, ref Velocity, DampTime);
-
-
         pos.x = Mathf.Clamp(pos.x, LeftBounds, RightBounds);
         pos.y = Mathf.Clamp(pos.y, BottomBounds, TopBounds);
 
