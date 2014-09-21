@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Access Granted
+  m_Name: Enter Room
   serializedVersion: 4
   m_AnimationType: 2
   m_Compressed: 0
@@ -18,18 +18,20 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300002, guid: 52e10c4c7504d774db3effdea2775fc1, type: 3}
-    - time: .25
-      value: {fileID: 21300004, guid: 52e10c4c7504d774db3effdea2775fc1, type: 3}
-    - time: .5
-      value: {fileID: 21300006, guid: 52e10c4c7504d774db3effdea2775fc1, type: 3}
-    - time: .75
-      value: {fileID: 21300008, guid: 52e10c4c7504d774db3effdea2775fc1, type: 3}
+      value: {fileID: 21300000, guid: 1c32088a2a776b84386eb9d8db82317f, type: 3}
+    - time: 1
+      value: {fileID: 21300000, guid: 1c32088a2a776b84386eb9d8db82317f, type: 3}
+    - time: 2
+      value: {fileID: 21300000, guid: 1c32088a2a776b84386eb9d8db82317f, type: 3}
+    - time: 3.01666665
+      value: {fileID: 21300000, guid: 1c32088a2a776b84386eb9d8db82317f, type: 3}
+    - time: 3.98333335
+      value: {fileID: 21300000, guid: 1c32088a2a776b84386eb9d8db82317f, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 4
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -43,14 +45,15 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300002, guid: 52e10c4c7504d774db3effdea2775fc1, type: 3}
-    - {fileID: 21300004, guid: 52e10c4c7504d774db3effdea2775fc1, type: 3}
-    - {fileID: 21300006, guid: 52e10c4c7504d774db3effdea2775fc1, type: 3}
-    - {fileID: 21300008, guid: 52e10c4c7504d774db3effdea2775fc1, type: 3}
+    - {fileID: 21300000, guid: 1c32088a2a776b84386eb9d8db82317f, type: 3}
+    - {fileID: 21300000, guid: 1c32088a2a776b84386eb9d8db82317f, type: 3}
+    - {fileID: 21300000, guid: 1c32088a2a776b84386eb9d8db82317f, type: 3}
+    - {fileID: 21300000, guid: 1c32088a2a776b84386eb9d8db82317f, type: 3}
+    - {fileID: 21300000, guid: 1c32088a2a776b84386eb9d8db82317f, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 4
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -67,8 +70,15 @@ AnimationClip:
   m_EditorCurves: []
   m_EulerEditorCurves: []
   m_Events:
-  - time: .75
-    functionName: OpenDoor
+  - time: 0
+    functionName: LockPlayer
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 4
+    functionName: FreePlayer
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

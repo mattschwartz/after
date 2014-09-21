@@ -12,8 +12,6 @@ namespace After.Interactable
         public bool DestroyItemOnUse = true;
         public GameObject RequiredItem;
 
-        private bool CompletedTask = false;
-
         public bool PlayerHasItem()
         {
             // Player has already completed this task 

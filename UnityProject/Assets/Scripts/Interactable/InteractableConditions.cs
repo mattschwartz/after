@@ -5,8 +5,11 @@ namespace After.Interactable
 {
     public class InteractableConditions : MonoBehaviour
     {
+        public bool RepeatSuccess = true;
         public string ThoughtsOnFailure;
         public string ThoughtsOnSuccess;
+
+        protected bool CompletedTask = false;
 
         public virtual void MeetConditions()
         {
@@ -15,15 +18,17 @@ namespace After.Interactable
 
         public bool ConditionsMet()
         {
-            var result = OnConditionsMet();
+            if (CompletedTask && !RepeatSuccess) { return true; }
 
-            if (result && !String.IsNullOrEmpty(ThoughtsOnSuccess)) {
+            CompletedTask = OnConditionsMet();
+
+            if (CompletedTask && !String.IsNullOrEmpty(ThoughtsOnSuccess)) {
                 GameObject.Find("Player Thoughts").SendMessage("SetThought", ThoughtsOnSuccess);
-            } else if (!result && !String.IsNullOrEmpty(ThoughtsOnFailure)) {
+            } else if (!CompletedTask && !String.IsNullOrEmpty(ThoughtsOnFailure)) {
                 GameObject.Find("Player Thoughts").SendMessage("SetThought", ThoughtsOnFailure);
             }
 
-            return result;
+            return CompletedTask;
         }
 
         public virtual bool OnConditionsMet()

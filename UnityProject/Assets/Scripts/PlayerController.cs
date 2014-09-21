@@ -124,9 +124,19 @@ public class PlayerController : MonoBehaviour
         HeldItem.SendMessage("SetItemHeld", item);
     }
 
+    public void ShowHeldItem()
+    {
+        HeldItem.SendMessage("ShowItemHeld");
+    }
+
     public void DropItem()
     {
         HeldItem.SendMessage("DropItem");
+    }
+
+    public void ShowDroppedItem()
+    {
+        HeldItem.SendMessage("ShowItemDropped");
     }
 
     public void Climb(bool on)
@@ -160,6 +170,16 @@ public class PlayerController : MonoBehaviour
 
         // Send message to platform that it needs to play footstep
         collider.gameObject.SendMessage("PlayFootstep");
+    }
+
+    public void ExitRoom()
+    {
+        Animator.SetTrigger("ExitRoom");
+    }
+
+    public void EnterRoom()
+    {
+        Animator.SetTrigger("EnterRoom");
     }
 
     #endregion

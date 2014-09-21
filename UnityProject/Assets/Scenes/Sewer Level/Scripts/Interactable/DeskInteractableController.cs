@@ -2,7 +2,7 @@
 using System.Collections;
 using After.Interactable;
 
-public class DeskInteractableController : InteractableController
+public class DeskInteractableController : ItemSpawnerController
 {
     #region Public Members
 
@@ -10,7 +10,7 @@ public class DeskInteractableController : InteractableController
 
     #endregion
 
-    public override void Interact()
+    public override void OnInteract()
     {
         ClosetRoomDoor.SendMessage("MeetConditions");
     }

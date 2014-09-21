@@ -26,7 +26,6 @@ GameObject:
   - 4: {fileID: 400002}
   - 212: {fileID: 21200000}
   - 61: {fileID: 6100002}
-  - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
   - 50: {fileID: 5000000}
   m_Layer: 13
@@ -111,20 +110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 0}
+  PlayOnFailure: {fileID: 0}
+  PlayOnSuccess: {fileID: 0}
   ItemName: 
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97644fa43f25d9e4ea17e13cac1bfe6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DirectiveText: A seemingly uninteresting item.
-  Label: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

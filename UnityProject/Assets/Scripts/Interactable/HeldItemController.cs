@@ -30,11 +30,15 @@ public class HeldItemController : MonoBehaviour
             DropItem();
         }
 
-        GetComponent<SpriteRenderer>().sprite = item.GetComponent<SpriteRenderer>().sprite;
         item.transform.position = new Vector2(-5000, -5000);
         ItemHeld = item;
 
         SceneHandler.CurrentPlayer.ItemHeld = ItemHeld.name;
+    }
+
+    public void ShowItemHeld()
+    {
+        GetComponent<SpriteRenderer>().sprite = ItemHeld.GetComponent<SpriteRenderer>().sprite;
     }
 
     public void DropItem()

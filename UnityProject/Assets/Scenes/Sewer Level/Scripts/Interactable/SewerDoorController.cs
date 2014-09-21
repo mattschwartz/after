@@ -11,13 +11,22 @@ public class SewerDoorController : NexusController
         Animator = GetComponent<Animator>();
     }
 
+    // Door is unlocked and player can walk through it
     public override void OnInteract()
     {
         Animator.SetBool("Locked", false);
         Animator.SetTrigger("TryEnter");
+    }
 
-        // Figure out how to sync this up with player walkthrough animation
+    public void OpenDoor()
+    {
+        Player.SendMessage("ExitRoom");
         MovePlayer();
+    }
+
+    public override void AfterPlayerMoved()
+    {
+        Player.SendMessage("EnterRoom");
     }
 
     public override void OnConditionsFailed()
