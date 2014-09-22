@@ -7,18 +7,18 @@ namespace After.Audio
 {
 	public class AudioManager : ScriptableObject
     {
-        public static void PlayClipAtPoint(AudioClip clip, Vector2 position)
+        public static void PlayClipAtPoint(AudioClip clip, Vector2 position, float volume = 1.0f)
         {
             GameObject gameObject = new GameObject();
             var source = gameObject.AddComponent<AudioSource>();
 
             gameObject.transform.position = position;
-            source.PlayOneShot(clip);
+            source.PlayOneShot(clip, volume);
 
             Destroy(gameObject, clip.length);
         }
 
-        public static void PlayMaterialFootstepAtPoint(List<AudioClip> stepSounds, Vector2 position)
+        public static void PlayMaterialFootstepAtPoint(List<AudioClip> stepSounds, Vector2 position, float volume = 1.0f)
         {
             int index = Random.Range(0, stepSounds.Count);
 
@@ -27,7 +27,7 @@ namespace After.Audio
                 return;
             }
 
-            PlayClipAtPoint(stepSounds[index], position);
+            PlayClipAtPoint(stepSounds[index], position, volume);
         }
 	}
 }
