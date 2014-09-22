@@ -107,26 +107,6 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
---- !u!1101 &110101491
-Transition:
-  serializedVersion: 2
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110296774}
-  m_DstState: {fileID: 110254474}
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: Climbing
-    m_EventTreshold: 0
-    m_ExitTime: 1
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
-  m_CanTransitionToSelf: 0
 --- !u!1101 &110101950
 Transition:
   serializedVersion: 2
@@ -203,26 +183,6 @@ Transition:
     m_ConditionEvent: PickupItemLow
     m_EventTreshold: 0
     m_ExitTime: .899999976
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
-  m_CanTransitionToSelf: 0
---- !u!1101 &110124710
-Transition:
-  serializedVersion: 2
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110254474}
-  m_DstState: {fileID: 110246278}
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: ExitRoom
-    m_EventTreshold: 0
-    m_ExitTime: 1
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -367,26 +327,6 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
---- !u!1101 &110153412
-Transition:
-  serializedVersion: 2
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110243909}
-  m_DstState: {fileID: 110254474}
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: Climbing
-    m_EventTreshold: 0
-    m_ExitTime: 1
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
-  m_CanTransitionToSelf: 0
 --- !u!1101 &110159347
 Transition:
   serializedVersion: 2
@@ -521,6 +461,46 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: ElevatorCall
+    m_EventTreshold: 0
+    m_ExitTime: 1
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1101 &110180376
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110296774}
+  m_DstState: {fileID: 110246278}
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Climbing
+    m_EventTreshold: 0
+    m_ExitTime: 1
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1101 &110193279
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110296774}
+  m_DstState: {fileID: 110246278}
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Climbing
     m_EventTreshold: 0
     m_ExitTime: 1
   m_Atomic: 1
@@ -682,21 +662,6 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
---- !u!1102 &110254474
-State:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Ladder Dismount
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Motions:
-  - {fileID: 7400000, guid: a17814b4f49871640bd0a12ecade1a77, type: 2}
-  m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: -108, y: -312, z: 0}
-  m_IKOnFeet: 0
-  m_Mirror: 0
-  m_Tag: 
 --- !u!1102 &110296774
 State:
   m_ObjectHideFlags: 3
@@ -708,7 +673,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 13e95198e92394d40b822ba32044a6af, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 84, y: -408, z: 0}
+  m_Position: {x: -132, y: -276, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -726,7 +691,6 @@ StateMachine:
   - {fileID: 110243527}
   - {fileID: 110243909}
   - {fileID: 110296774}
-  - {fileID: 110254474}
   - {fileID: 110248405}
   - {fileID: 110203844}
   - {fileID: 110220679}
@@ -763,16 +727,15 @@ StateMachine:
       first: {fileID: 110243909}
       second:
       - {fileID: 110141122}
-      - {fileID: 110153412}
     data:
       first: {fileID: 110296774}
       second:
       - {fileID: 110150833}
-      - {fileID: 110101491}
+      - {fileID: 110193279}
+      - {fileID: 110180376}
     data:
-      first: {fileID: 110254474}
-      second:
-      - {fileID: 110124710}
+      first: {fileID: 0}
+      second: []
     data:
       first: {fileID: 110248405}
       second: []
