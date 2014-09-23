@@ -11,8 +11,8 @@ public class StepSoundController : MonoBehaviour
 
     #endregion
 
-    public void PlayFootstep()
+    public void PlayFootstep(float volume=1.0F)
     {
-        AudioManager.PlayMaterialFootstepAtPoint(StepSounds, transform.position);
+        AudioManager.PlayMaterialFootstepAtPoint(StepSounds, transform.position, volume);
     }
 }

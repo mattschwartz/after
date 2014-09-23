@@ -1713,7 +1713,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
   - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
   - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
-  - {fileID: 8300000, guid: d844be863eda14edd925b80bf089004d, type: 3}
+  - {fileID: 0}
 --- !u!4 &314771620
 Transform:
   m_ObjectHideFlags: 0
@@ -3025,7 +3025,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
   - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
   - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
-  - {fileID: 8300000, guid: d844be863eda14edd925b80bf089004d, type: 3}
+  - {fileID: 0}
 --- !u!4 &714622629
 Transform:
   m_ObjectHideFlags: 0
@@ -3984,7 +3984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StopOnExit: 0
   DestroyOnExit: 1
-  Clip: {fileID: 8300000, guid: 3880f3bb4c7ae42aeb50c3d83d57902a, type: 3}
+  Clip: {fileID: 8300000, guid: a2c5a430282254221b102cdfd252d602, type: 3}
   Generator: {fileID: 1208153043}
 --- !u!61 &1233475531
 BoxCollider2D:
@@ -4020,6 +4020,7 @@ GameObject:
   - 4: {fileID: 1237961437}
   - 82: {fileID: 1237961438}
   - 82: {fileID: 1237961436}
+  - 82: {fileID: 1237961439}
   m_Layer: 0
   m_Name: Background Sounds
   m_TagString: Untagged
@@ -4112,6 +4113,64 @@ AudioSource:
   Loop: 1
   Mute: 0
   Priority: 0
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 1
+  BypassListenerEffects: 1
+  BypassReverbZones: 1
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &1237961439
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1237961435}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: b1504d58811f8494893223c4cd1e94ef, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -5198,7 +5257,7 @@ MonoBehaviour:
   InteractButton: 101
   Conditions: {fileID: 2050666275}
   PlayOnFailure: {fileID: 0}
-  PlayOnSuccess: {fileID: 0}
+  PlayOnSuccess: {fileID: 8300000, guid: 66e46042f0a8b4efaa9774160a04d249, type: 3}
 --- !u!61 &1663295811
 BoxCollider2D:
   m_ObjectHideFlags: 0

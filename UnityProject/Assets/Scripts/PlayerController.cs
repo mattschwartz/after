@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Scene.SceneManagement;
@@ -169,7 +169,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Send message to platform that it needs to play footstep
-        collider.gameObject.SendMessage("PlayFootstep");
+        collider.gameObject.SendMessage("PlayFootstep", 0.25F);
     }
 
     public void ExitRoom()
