@@ -166,7 +166,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: e82eaea6f0ae6b348a1fa49b294be11b, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 432, y: -48, z: 0}
+  m_Position: {x: 444, y: -12, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -182,6 +182,21 @@ State:
   - {fileID: 7400000, guid: eb025c3e06e796b458f81947555e7866, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: 144, y: -144, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110255588
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: DoorOpen
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 0f8c36a141b85444cbe3dbf4661f8027, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: 444, y: 72, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -213,32 +228,33 @@ StateMachine:
   - {fileID: 110220148}
   - {fileID: 110250812}
   - {fileID: 110281125}
+  - {fileID: 110255588}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 0}
+      first: {fileID: 110255588}
       second: []
     data:
-      first: {fileID: 110281125}
-      second:
-      - {fileID: 110111054}
-    data:
-      first: {fileID: 110250812}
-      second:
-      - {fileID: 110126927}
-    data:
-      first: {fileID: 110220148}
-      second:
-      - {fileID: 110180297}
+      first: {fileID: 0}
+      second: []
     data:
       first: {fileID: 110200000}
       second:
       - {fileID: 110100000}
       - {fileID: 110156397}
     data:
-      first: {fileID: 0}
-      second: []
+      first: {fileID: 110220148}
+      second:
+      - {fileID: 110180297}
+    data:
+      first: {fileID: 110250812}
+      second:
+      - {fileID: 110126927}
+    data:
+      first: {fileID: 110281125}
+      second:
+      - {fileID: 110111054}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 696, y: 48, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
