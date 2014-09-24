@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
     private void IsGrounded()
     {
         Grounded = Physics2D.OverlapCircle(GroundCheck.position, GroundRadius, GroundLayerMask);
-        Animator.SetBool("Grounded", Grounded);
+        // Animator.SetBool("Grounded", Grounded);
     }
 
     // Cheap animations

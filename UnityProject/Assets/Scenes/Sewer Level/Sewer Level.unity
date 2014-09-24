@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RepeatSuccess: 1
-  ThoughtsOnFailure: <play door locked audio>
+  ThoughtsOnFailure: 
   ThoughtsOnSuccess: 
   DestroyItemOnUse: 1
   RequiredItem: {fileID: 419237405}
@@ -3827,6 +3827,10 @@ Prefab:
       propertyPath: PlayOnSuccess
       value: 
       objectReference: {fileID: 8300000, guid: b8f5eb70626994b1fac278bcf169a665, type: 3}
+    - target: {fileID: 11400000, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
+      propertyPath: ThoughtsOnFailure
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
   m_RootGameObject: {fileID: 2103563476}
