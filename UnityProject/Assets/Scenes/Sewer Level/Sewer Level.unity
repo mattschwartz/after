@@ -349,6 +349,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 1855991095}
+  SuccessOneShot: 1
+  FailureOneShot: 1
   PlayOnFailure: {fileID: 8300000, guid: 1626e3aa84e354c8a9c04c61dab3d59d, type: 3}
   PlayOnSuccess: {fileID: 8300000, guid: 1626e3aa84e354c8a9c04c61dab3d59d, type: 3}
 --- !u!212 &59513654
@@ -760,6 +762,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 674526957}
+  SuccessOneShot: 1
+  FailureOneShot: 1
   PlayOnFailure: {fileID: 8300000, guid: 029d0663880d8498aae6dc43c578df32, type: 3}
   PlayOnSuccess: {fileID: 8300000, guid: b8f5eb70626994b1fac278bcf169a665, type: 3}
   ToLocation: {x: .480440408, y: -32.7609787, z: 0}
@@ -1379,7 +1383,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 1343960909
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8ba313e1195cc4138a86de3a14ca916d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 78ad6b40997694928b29da3c011de7e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &260634086
 Transform:
@@ -1419,6 +1423,7 @@ Transform:
   - {fileID: 714622629}
   - {fileID: 1947084504}
   - {fileID: 139879937}
+  - {fileID: 1256895606}
   m_Father: {fileID: 0}
   m_RootOrder: 6
 --- !u!1 &262035512
@@ -2376,6 +2381,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 0}
+  SuccessOneShot: 1
+  FailureOneShot: 1
   PlayOnFailure: {fileID: 0}
   PlayOnSuccess: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
   ItemName: KeyCard
@@ -2649,6 +2656,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 741789504}
+  SuccessOneShot: 1
+  FailureOneShot: 1
   PlayOnFailure: {fileID: 0}
   PlayOnSuccess: {fileID: 0}
 --- !u!212 &553273770
@@ -2712,6 +2721,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 0}
+  SuccessOneShot: 1
+  FailureOneShot: 1
   PlayOnFailure: {fileID: 0}
   PlayOnSuccess: {fileID: 0}
   ItemToSpawn: {fileID: 1614624034}
@@ -2897,6 +2908,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 0}
+  SuccessOneShot: 1
+  FailureOneShot: 1
   PlayOnFailure: {fileID: 0}
   PlayOnSuccess: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
   ItemName: 
@@ -3610,7 +3623,7 @@ GameObject:
   - 212: {fileID: 1089036314}
   - 95: {fileID: 1089036316}
   m_Layer: 0
-  m_Name: Large_Pipe_2
+  m_Name: Large Pipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3636,7 +3649,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 1343960909
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: ad1320ab9cf084583be8ea78942707df, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f60ca60c916240d43a2122d2e94a6272, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1089036315
 Transform:
@@ -3645,7 +3658,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1089036313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.08820724, y: 2.09008098, z: -1}
+  m_LocalPosition: {x: 6.08485222, y: 2.37528396, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 260634086}
@@ -3745,6 +3758,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 19550493}
+  SuccessOneShot: 1
+  FailureOneShot: 1
   PlayOnFailure: {fileID: 8300000, guid: 9c1446f38d89245bdb76ca6ebf52575d, type: 3}
   PlayOnSuccess: {fileID: 8300000, guid: f0991c5c2efbc4125b0522799fa8a8e0, type: 3}
   ItemToSpawn: {fileID: 653709347}
@@ -4044,6 +4059,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 1714228954}
+  SuccessOneShot: 1
+  FailureOneShot: 1
   PlayOnFailure: {fileID: 8300000, guid: 8b61bb08540cf41908a6ecf51fe03050, type: 3}
   PlayOnSuccess: {fileID: 0}
   PowerOutageTrigger: {fileID: 1233475531}
@@ -4414,6 +4431,56 @@ Prefab:
   m_RootGameObject: {fileID: 329743548}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1256895605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1256895606}
+  - 212: {fileID: 1256895607}
+  m_Layer: 0
+  m_Name: Sewer_Grate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1256895606
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1256895605}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.69119239, y: 9.53276539, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 260634086}
+  m_RootOrder: 28
+--- !u!212 &1256895607
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1256895605}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 1343960909
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 0d0643acdbb0744cf8a2b4fa3ce926fc, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1261924172
 GameObject:
   m_ObjectHideFlags: 0
@@ -4505,6 +4572,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 0}
+  SuccessOneShot: 1
+  FailureOneShot: 1
   PlayOnFailure: {fileID: 0}
   PlayOnSuccess: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
   ItemName: RebarCrowbar
@@ -4851,6 +4920,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 2134684968}
+  SuccessOneShot: 1
+  FailureOneShot: 1
   PlayOnFailure: {fileID: 0}
   PlayOnSuccess: {fileID: 8300000, guid: 708d9e97b416b4e96ad46f1949ad716b, type: 3}
   ToLocation: {x: -5.83382797, y: 9.34014988, z: 0}
@@ -5052,6 +5123,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 0}
+  SuccessOneShot: 1
+  FailureOneShot: 1
   PlayOnFailure: {fileID: 0}
   PlayOnSuccess: {fileID: 8300000, guid: 708d9e97b416b4e96ad46f1949ad716b, type: 3}
   ToLocation: {x: -8.29884148, y: 0, z: 0}
@@ -5258,6 +5331,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 0}
+  SuccessOneShot: 1
+  FailureOneShot: 1
   PlayOnFailure: {fileID: 0}
   PlayOnSuccess: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
   ItemName: Generator Fuel
@@ -5365,6 +5440,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 2050666275}
+  SuccessOneShot: 1
+  FailureOneShot: 1
   PlayOnFailure: {fileID: 0}
   PlayOnSuccess: {fileID: 8300000, guid: 66e46042f0a8b4efaa9774160a04d249, type: 3}
 --- !u!61 &1663295811
@@ -7519,6 +7596,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 1999162820}
+  SuccessOneShot: 1
+  FailureOneShot: 1
   PlayOnFailure: {fileID: 0}
   PlayOnSuccess: {fileID: 0}
   ItemToSpawn: {fileID: 419237405}
@@ -7939,6 +8018,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 60333055}
+  SuccessOneShot: 1
+  FailureOneShot: 1
   PlayOnFailure: {fileID: 8300000, guid: 029d0663880d8498aae6dc43c578df32, type: 3}
   PlayOnSuccess: {fileID: 8300000, guid: b8f5eb70626994b1fac278bcf169a665, type: 3}
   ToLocation: {x: -.854716778, y: 33.3883018, z: 0}
