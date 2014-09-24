@@ -6,16 +6,23 @@ public class RopeSwingController : MonoBehaviour {
 
 	public GameObject PlayerObject;
 	public float Length;
-	public float MaxRotation;
+    //public float Tension;
 	private Transform Trans;
     private bool Active;
     private bool Entered;
+    //private float Displace;  //in radians
+    public Rigidbody2D Handle;
+    public Rigidbody2D Anchor;
 
 	// Use this for initialization
 	void Start () {
 		Active = false;
+		//Displace = 0f;
+		Entered = false;
 
 		Trans = GetComponent<Transform>();
+		Handle = GetComponent<Rigidbody2D>();
+
 	}
 
 	void OnTriggerEnter2D ()
@@ -27,20 +34,58 @@ public class RopeSwingController : MonoBehaviour {
 	{
 		Entered = false;
 	}
+
+	void FixedUpdate ()
+	{
+		if (Active)
+		{
+			/* if (Length < Vector2.Distance(PlayerObject.rigidbody2D.transform.position, Trans.position))
+			{
+				//coming off the rope, pull player back
+				Vector2 norm = Anchor.transform.position - PlayerObject.rigidbody2D.transform.position;
+				norm.Normalize();
+				PlayerObject.rigidbody2D.transform.position = norm * Length;
+			} */
+			//PlayerObject.rigidbody2D.transform.position = new Vector3(Handle.transform.position.x, Handle.transform.position.y, Handle.transform.position.z);
+		}
+	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Entered && !Active)
 		{
 			Active = true;
+			//PlayerObject.SendMessage("Swing");
+
+			//determines which way the player is headed
+			float xSign;
+			if (PlayerObserver.GetPlayerVel().x != 0f)
+			{
+				xSign = PlayerObserver.GetPlayerVel().x / Mathf.Abs(PlayerObserver.GetPlayerVel().x);
+			}
+			else
+			{
+				//we don't want to divide by zero
+				xSign = 1f;
+			}
+
+			//snaps player to rope
+			PlayerObject.rigidbody2D.transform.position = Handle.transform.position;
+			PlayerObject.rigidbody2D.gravityScale = 0f;
+
+			//applies an initial swinging force to the player and rope
+			PlayerObject.rigidbody2D.AddForce(new Vector2(500f * xSign, 0));
+			Handle.AddForce(new Vector2(500f * xSign, 0));
 		}
-		else if (Entered && Active && Input.GetKeyDown(KeyCode.Space))
+		else if (Active && Input.GetKeyDown(KeyCode.Space))
 		{
 			Active = false;
+			PlayerObject.rigidbody2D.gravityScale = 8f;
 		}
-		else if (Entered && Active)
+		//Physics stuff will be found in FixedUpdate()
+		else if (Active)
 		{
-			//Physics shit goes here
+			PlayerObject.rigidbody2D.transform.position = Handle.transform.position;
 		}
 	}
 }

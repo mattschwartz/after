@@ -25,7 +25,7 @@ namespace Assets.Scripts.Scene.SceneManagement
 
     public static class PlayerObserver
     {
-        public static Vector2 Velocity;
+        private static Vector2 Velocity;
 
         public static void SetPlayerVel(Vector2 vel)
         {
