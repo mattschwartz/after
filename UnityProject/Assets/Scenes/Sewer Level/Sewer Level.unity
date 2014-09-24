@@ -349,8 +349,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 1855991095}
-  PlayOnFailure: {fileID: 0}
-  PlayOnSuccess: {fileID: 0}
+  PlayOnFailure: {fileID: 8300000, guid: 1626e3aa84e354c8a9c04c61dab3d59d, type: 3}
+  PlayOnSuccess: {fileID: 8300000, guid: 1626e3aa84e354c8a9c04c61dab3d59d, type: 3}
 --- !u!212 &59513654
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -760,8 +760,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 674526957}
-  PlayOnFailure: {fileID: 0}
-  PlayOnSuccess: {fileID: 0}
+  PlayOnFailure: {fileID: 8300000, guid: 029d0663880d8498aae6dc43c578df32, type: 3}
+  PlayOnSuccess: {fileID: 8300000, guid: b8f5eb70626994b1fac278bcf169a665, type: 3}
   ToLocation: {x: .480440408, y: -32.7609787, z: 0}
   Player: {fileID: 194404990}
   NewSpriteBounds: {fileID: 1334897912}
@@ -833,6 +833,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: PlayOnSuccess
+      value: 
+      objectReference: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
@@ -2359,7 +2363,7 @@ MonoBehaviour:
   InteractButton: 101
   Conditions: {fileID: 0}
   PlayOnFailure: {fileID: 0}
-  PlayOnSuccess: {fileID: 0}
+  PlayOnSuccess: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
   ItemName: KeyCard
 --- !u!50 &419237411
 Rigidbody2D:
@@ -2473,6 +2477,10 @@ Prefab:
       propertyPath: m_Size.y
       value: 1.90999997
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: PlayOnSuccess
+      value: 
+      objectReference: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
@@ -2753,6 +2761,10 @@ Prefab:
       propertyPath: ItemName
       value: KeyCard
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: PlayOnSuccess
+      value: 
+      objectReference: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
@@ -2872,7 +2884,7 @@ MonoBehaviour:
   InteractButton: 101
   Conditions: {fileID: 0}
   PlayOnFailure: {fileID: 0}
-  PlayOnSuccess: {fileID: 0}
+  PlayOnSuccess: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
   ItemName: 
 --- !u!61 &653709352
 BoxCollider2D:
@@ -3378,6 +3390,14 @@ Prefab:
       propertyPath: ToLocation.y
       value: -32.7609787
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
+      propertyPath: PlayOnFailure
+      value: 
+      objectReference: {fileID: 8300000, guid: 029d0663880d8498aae6dc43c578df32, type: 3}
+    - target: {fileID: 11400002, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
+      propertyPath: PlayOnSuccess
+      value: 
+      objectReference: {fileID: 8300000, guid: b8f5eb70626994b1fac278bcf169a665, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
   m_RootGameObject: {fileID: 139879936}
@@ -3711,8 +3731,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 19550493}
-  PlayOnFailure: {fileID: 0}
-  PlayOnSuccess: {fileID: 0}
+  PlayOnFailure: {fileID: 8300000, guid: 9c1446f38d89245bdb76ca6ebf52575d, type: 3}
+  PlayOnSuccess: {fileID: 8300000, guid: f0991c5c2efbc4125b0522799fa8a8e0, type: 3}
   ItemToSpawn: {fileID: 653709347}
   ClosetRoomDoor: {fileID: 139879936}
 --- !u!1001 &1136279672
@@ -3782,6 +3802,14 @@ Prefab:
       propertyPath: m_Size.y
       value: 5.96000004
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
+      propertyPath: PlayOnFailure
+      value: 
+      objectReference: {fileID: 8300000, guid: 029d0663880d8498aae6dc43c578df32, type: 3}
+    - target: {fileID: 11400002, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
+      propertyPath: PlayOnSuccess
+      value: 
+      objectReference: {fileID: 8300000, guid: b8f5eb70626994b1fac278bcf169a665, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
   m_RootGameObject: {fileID: 2103563476}
@@ -4463,7 +4491,7 @@ MonoBehaviour:
   InteractButton: 101
   Conditions: {fileID: 0}
   PlayOnFailure: {fileID: 0}
-  PlayOnSuccess: {fileID: 0}
+  PlayOnSuccess: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
   ItemName: RebarCrowbar
 --- !u!61 &1305626021
 BoxCollider2D:
@@ -4809,7 +4837,7 @@ MonoBehaviour:
   InteractButton: 101
   Conditions: {fileID: 2134684968}
   PlayOnFailure: {fileID: 0}
-  PlayOnSuccess: {fileID: 0}
+  PlayOnSuccess: {fileID: 8300000, guid: 708d9e97b416b4e96ad46f1949ad716b, type: 3}
   ToLocation: {x: -5.83382797, y: 9.34014988, z: 0}
   Player: {fileID: 194404990}
   NewSpriteBounds: {fileID: 260634085}
@@ -5010,7 +5038,7 @@ MonoBehaviour:
   InteractButton: 101
   Conditions: {fileID: 0}
   PlayOnFailure: {fileID: 0}
-  PlayOnSuccess: {fileID: 0}
+  PlayOnSuccess: {fileID: 8300000, guid: 708d9e97b416b4e96ad46f1949ad716b, type: 3}
   ToLocation: {x: -8.29884148, y: 0, z: 0}
   Player: {fileID: 194404990}
   NewSpriteBounds: {fileID: 260634085}
@@ -5216,7 +5244,7 @@ MonoBehaviour:
   InteractButton: 101
   Conditions: {fileID: 0}
   PlayOnFailure: {fileID: 0}
-  PlayOnSuccess: {fileID: 0}
+  PlayOnSuccess: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
   ItemName: Generator Fuel
 --- !u!61 &1614624038
 BoxCollider2D:
@@ -5623,6 +5651,10 @@ Prefab:
       propertyPath: m_Center.x
       value: -.765261352
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: PlayOnSuccess
+      value: 
+      objectReference: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
@@ -7892,8 +7924,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 60333055}
-  PlayOnFailure: {fileID: 0}
-  PlayOnSuccess: {fileID: 0}
+  PlayOnFailure: {fileID: 8300000, guid: 029d0663880d8498aae6dc43c578df32, type: 3}
+  PlayOnSuccess: {fileID: 8300000, guid: b8f5eb70626994b1fac278bcf169a665, type: 3}
   ToLocation: {x: -.854716778, y: 33.3883018, z: 0}
   Player: {fileID: 194404990}
   NewSpriteBounds: {fileID: 1348473378}
@@ -8084,6 +8116,10 @@ Prefab:
       propertyPath: NewSpriteBounds
       value: 
       objectReference: {fileID: 260634085}
+    - target: {fileID: 11400000, guid: cb55a0da60ec141419c765c70beafb0f, type: 2}
+      propertyPath: PlayOnSuccess
+      value: 
+      objectReference: {fileID: 8300000, guid: 708d9e97b416b4e96ad46f1949ad716b, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb55a0da60ec141419c765c70beafb0f, type: 2}
   m_RootGameObject: {fileID: 1502376132}
