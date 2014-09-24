@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour
     private float GroundRadius = 0.2f;
     private Animator Animator;
     private bool Climbing;
-    private List<AudioSource> AudioSources;
     private SpriteRenderer Sprite;
 
     #endregion
@@ -36,7 +35,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Animator = GetComponent<Animator>();
-        AudioSources = new List<AudioSource>(GetComponents<AudioSource>());
         Sprite = GetComponent<SpriteRenderer>();
     }
 
@@ -124,19 +122,9 @@ public class PlayerController : MonoBehaviour
         HeldItem.SendMessage("SetItemHeld", item);
     }
 
-    public void ShowHeldItem()
-    {
-        HeldItem.SendMessage("ShowItemHeld");
-    }
-
     public void DropItem()
     {
         HeldItem.SendMessage("DropItem");
-    }
-
-    public void ShowDroppedItem()
-    {
-        HeldItem.SendMessage("ShowItemDropped");
     }
 
     public void Climb(bool on)
@@ -170,16 +158,6 @@ public class PlayerController : MonoBehaviour
 
         // Send message to platform that it needs to play footstep
         collider.gameObject.SendMessage("PlayFootstep", 0.25F);
-    }
-
-    public void ExitRoom()
-    {
-        Animator.SetTrigger("ExitRoom");
-    }
-
-    public void EnterRoom()
-    {
-        Animator.SetTrigger("EnterRoom");
     }
 
     #endregion
