@@ -23,6 +23,18 @@ namespace After.Audio
             Destroy(gameObject, clip.length);
         }
 
+        public static void PlayClipAtPoint(AudioClip clip, float pitch, Vector2 position, float volume = 1.0f)
+        {
+            GameObject gameObject = new GameObject();
+            var source = gameObject.AddComponent<AudioSource>();
+
+            gameObject.transform.position = position;
+            source.pitch = pitch;
+            source.PlayOneShot(clip, volume);
+
+            Destroy(gameObject, clip.length);
+        }
+
         public static void PlayMaterialFootstepAtPoint(List<AudioClip> stepSounds, Vector2 position, float volume = 1.0f)
         {
             int index = Random.Range(0, stepSounds.Count);
@@ -33,6 +45,18 @@ namespace After.Audio
             }
 
             PlayClipAtPoint(stepSounds[index], position, volume);
+        }
+
+        public static void PlayMaterialFootstepAtPoint(List<AudioClip> stepSounds, float pitch, Vector2 position, float volume = 1.0f)
+        {
+            int index = Random.Range(0, stepSounds.Count);
+
+            if (index < 0 || index >= stepSounds.Count 
+                || stepSounds[index] == null) {
+                return;
+            }
+
+            PlayClipAtPoint(stepSounds[index], pitch, position, volume);
         }
 	}
 }

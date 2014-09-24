@@ -6122,6 +6122,8 @@ MonoBehaviour:
   - {fileID: 496130012}
   - {fileID: 1031190156}
   PlayerObject: {fileID: 194404990}
+  StepClips:
+  - {fileID: 0}
 --- !u!61 &1918864478
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6141,6 +6143,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 260634086}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: StepClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: FloorGates.Array.size
       value: 2
