@@ -1339,10 +1339,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StepSounds:
-  - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
-  - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
-  - {fileID: 8300000, guid: 145898131f0fb49928f9935e8a665431, type: 3}
-  - {fileID: 8300000, guid: e862af059df554c2093cebc016d0bb2f, type: 3}
+  - {fileID: 8300000, guid: f62ccc640ea8f4d0fb25e2880efa442c, type: 3}
+  - {fileID: 8300000, guid: c23cc0203bb0d4c56ad3f5e42f60bc7c, type: 3}
+  - {fileID: 8300000, guid: 3ac2e98a57eeb4a65823ac96ad2c6e25, type: 3}
 --- !u!1 &260634084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1798,7 +1797,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
   - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
   - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
-  - {fileID: 0}
 --- !u!4 &314771620
 Transform:
   m_ObjectHideFlags: 0
@@ -3022,7 +3020,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 510a644432cca4c7cb264c096723c926, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3133,7 +3131,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
   - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
   - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
-  - {fileID: 0}
 --- !u!4 &714622629
 Transform:
   m_ObjectHideFlags: 0
@@ -5397,10 +5394,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StepSounds:
-  - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
-  - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
-  - {fileID: 8300000, guid: 145898131f0fb49928f9935e8a665431, type: 3}
-  - {fileID: 8300000, guid: e862af059df554c2093cebc016d0bb2f, type: 3}
+  - {fileID: 8300000, guid: f62ccc640ea8f4d0fb25e2880efa442c, type: 3}
+  - {fileID: 8300000, guid: c23cc0203bb0d4c56ad3f5e42f60bc7c, type: 3}
+  - {fileID: 8300000, guid: 3ac2e98a57eeb4a65823ac96ad2c6e25, type: 3}
 --- !u!1 &1691590066
 GameObject:
   m_ObjectHideFlags: 0
@@ -5621,6 +5617,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 260634086}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
+      propertyPath: StepSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.095209
@@ -6209,6 +6209,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 260634086}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
+      propertyPath: StepSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.09520924
