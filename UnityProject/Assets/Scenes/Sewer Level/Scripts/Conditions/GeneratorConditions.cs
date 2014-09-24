@@ -6,8 +6,12 @@ using UnityEngine;
 public class GeneratorConditions : RequiredItemConditions
 {
 	private bool HasFuel = true;
-	private bool PlayerNeedsFuel = false;
 	private bool PoweredOn = false;
+
+	void Start()
+	{
+		TaskCompleted = false;
+	}
 
 	public override bool TestConditionsMet() 
 	{
@@ -15,16 +19,16 @@ public class GeneratorConditions : RequiredItemConditions
 		if (HasFuel) {
 			// Player needs to get fuel for next time
 			HasFuel = false;
-			PlayerNeedsFuel = true;
             TaskCompleted = false;
 
 			return true;
 		}
 
         if (PlayerHasItem()) {
-            PlayerNeedsFuel = false;
+            HasFuel = true;
+            TaskCompleted = true;
         }
 
-		return !PlayerNeedsFuel;
+		return HasFuel;
 	}
 }
