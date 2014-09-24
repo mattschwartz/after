@@ -14,12 +14,6 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: Jump
-    m_Type: 9
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
   - m_Name: PickupItemLow
     m_Type: 9
     m_DefaultFloat: 0
@@ -70,6 +64,12 @@ AnimatorController:
     m_Controller: {fileID: 9100000}
   - m_Name: PourFuel
     m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: Grounded
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -257,26 +257,6 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
---- !u!1101 &110123459
-Transition:
-  serializedVersion: 2
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110200000}
-  m_DstState: {fileID: 110246481}
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Jump
-    m_EventTreshold: 0
-    m_ExitTime: 1
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
-  m_CanTransitionToSelf: 0
 --- !u!1101 &110123602
 Transition:
   serializedVersion: 2
@@ -335,6 +315,26 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: PickupItemLow
+    m_EventTreshold: 0
+    m_ExitTime: .899999976
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1101 &110139882
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 0}
+  m_DstState: {fileID: 110246481}
+  m_TransitionDuration: .100000001
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Grounded
     m_EventTreshold: 0
     m_ExitTime: .899999976
   m_Atomic: 1
@@ -434,7 +434,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: Grounded
     m_EventTreshold: 0
     m_ExitTime: 1
   m_Atomic: 1
@@ -601,7 +601,7 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
---- !u!1101 &110188217
+--- !u!1101 &110190171
 Transition:
   serializedVersion: 2
   m_ObjectHideFlags: 3
@@ -609,14 +609,14 @@ Transition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_SrcState: {fileID: 110246481}
-  m_DstState: {fileID: 110200000}
+  m_DstState: {fileID: 110246278}
   m_TransitionDuration: .642857194
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 1
+    m_ConditionEvent: Grounded
     m_EventTreshold: 0
-    m_ExitTime: 1
+    m_ExitTime: .357142806
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -807,7 +807,7 @@ State:
   m_Motions:
   - {fileID: 20600000}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 324, y: 82, z: 0}
+  m_Position: {x: -60, y: -48, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -854,12 +854,12 @@ StateMachine:
       - {fileID: 110163952}
       - {fileID: 110105831}
       - {fileID: 110160985}
+      - {fileID: 110139882}
     data:
       first: {fileID: 110200000}
       second:
       - {fileID: 110147285}
       - {fileID: 110163276}
-      - {fileID: 110123459}
     data:
       first: {fileID: 0}
       second: []
@@ -893,7 +893,7 @@ StateMachine:
     data:
       first: {fileID: 110246481}
       second:
-      - {fileID: 110188217}
+      - {fileID: 110190171}
     data:
       first: {fileID: 0}
       second: []

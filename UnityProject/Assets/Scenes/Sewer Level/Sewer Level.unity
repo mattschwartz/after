@@ -1646,7 +1646,7 @@ Prefab:
     - target: {fileID: 21200000, guid: 2bc5e6a4fc5ad704081c0b84d911ce4e, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2e9a9b985def94496b4214f32bd45c59,
+      objectReference: {fileID: 21300000, guid: 2f919608ae02e445aa40fd03a45b170d,
         type: 3}
     - target: {fileID: 6100000, guid: 2bc5e6a4fc5ad704081c0b84d911ce4e, type: 2}
       propertyPath: m_IsTrigger
@@ -2658,6 +2658,7 @@ GameObject:
   - 212: {fileID: 553273770}
   - 114: {fileID: 553273769}
   - 114: {fileID: 553273774}
+  - 95: {fileID: 553273771}
   m_Layer: 0
   m_Name: Shelves
   m_TagString: Untagged
@@ -2702,8 +2703,23 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2e9a9b985def94496b4214f32bd45c59, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2f919608ae02e445aa40fd03a45b170d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &553273771
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 553273768}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b1796ee9c1cfa4f3e8433c515bd3b987, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!61 &553273772
 BoxCollider2D:
   m_ObjectHideFlags: 0
