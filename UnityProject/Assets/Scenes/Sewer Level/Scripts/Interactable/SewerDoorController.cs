@@ -20,7 +20,6 @@ public class SewerDoorController : NexusController
 
     public void OpenDoor()
     {
-        
         MovePlayer();
     }
 
