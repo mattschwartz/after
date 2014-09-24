@@ -20,13 +20,13 @@ public class SewerDoorController : NexusController
 
     public void OpenDoor()
     {
-        Player.SendMessage("ExitRoom");
+        
         MovePlayer();
     }
 
     public override void AfterPlayerMoved()
     {
-        Player.SendMessage("EnterRoom");
+
     }
 
     public override void OnConditionsFailed()

@@ -955,6 +955,7 @@ GameObject:
   - 114: {fileID: 194404992}
   - 58: {fileID: 194404991}
   - 95: {fileID: 194404997}
+  - 114: {fileID: 194404998}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -1075,6 +1076,18 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &194404998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 194404990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 292176852755e46fd8652975f0f24eb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerController: {fileID: 194404992}
 --- !u!1001 &216817156
 Prefab:
   m_ObjectHideFlags: 0
@@ -3734,6 +3747,7 @@ MonoBehaviour:
   PlayOnFailure: {fileID: 8300000, guid: 9c1446f38d89245bdb76ca6ebf52575d, type: 3}
   PlayOnSuccess: {fileID: 8300000, guid: f0991c5c2efbc4125b0522799fa8a8e0, type: 3}
   ItemToSpawn: {fileID: 653709347}
+  Player: {fileID: 194404990}
   ClosetRoomDoor: {fileID: 139879936}
 --- !u!1001 &1136279672
 Prefab:

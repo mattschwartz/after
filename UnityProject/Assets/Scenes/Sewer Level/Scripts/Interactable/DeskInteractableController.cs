@@ -6,12 +6,14 @@ public class DeskInteractableController : ItemSpawnerController
 {
     #region Public Members
 
+	public GameObject Player;
     public GameObject ClosetRoomDoor;
 
     #endregion
 
     public override void OnInteract()
     {
+    	Player.SendMessage("OpenDesk", transform.position);
         ClosetRoomDoor.SendMessage("MeetConditions");
     }
 }
