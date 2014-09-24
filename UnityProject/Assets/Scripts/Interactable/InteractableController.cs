@@ -11,8 +11,6 @@ namespace After.Interactable
 
         public KeyCode InteractButton = KeyCode.E;
         public InteractableConditions Conditions;
-        public bool SuccessOneShot = true;
-        public bool FailureOneShot = true;
         public AudioClip PlayOnFailure;
         public AudioClip PlayOnSuccess;
 

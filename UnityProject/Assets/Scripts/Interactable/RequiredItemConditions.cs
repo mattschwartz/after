@@ -28,17 +28,17 @@ namespace After.Interactable
             var itemHeld = SceneHandler.CurrentPlayer.ItemHeld;
             bool playerHasItem = (RequiredItem != null && itemHeld == RequiredItem.name);
 
-            TaskCompleted = playerHasItem;
-
             if (playerHasItem) {
                 GameObject.Find("HeldItem").SendMessage("DropItem");
+                TaskCompleted = playerHasItem;
 
                 if (DestroyItemOnUse) {
+                    SceneHandler.CurrentPlayer.ItemHeld = string.Empty;
                     Destroy(RequiredItem);
                 }
             }
 
-            return TaskCompleted;
+            return playerHasItem;
         }
     }
 }

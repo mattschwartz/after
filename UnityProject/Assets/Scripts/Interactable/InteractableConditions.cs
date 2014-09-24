@@ -19,8 +19,8 @@ namespace After.Interactable
         // Don't override this method
         public bool ConditionsMet()
         {
-            if (TaskCompleted && !RepeatSuccess) {
-                return true;
+            if (TaskCompleted) {
+                return RepeatSuccess;
             }
 
             var result = TestConditionsMet();

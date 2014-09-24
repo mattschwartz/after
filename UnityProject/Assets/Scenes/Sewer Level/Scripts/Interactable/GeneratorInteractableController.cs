@@ -6,6 +6,7 @@ public class GeneratorInteractableController : InteractableController
 {
     #region Public Members
 
+    public GameObject GeneratorSoundLoop;
     public BoxCollider2D PowerOutageTrigger;
 
     #endregion
@@ -28,9 +29,7 @@ public class GeneratorInteractableController : InteractableController
 
     public override void ConditionsFailed()
     {
-        if (!PoweredOn && PlayOnFailure) {
-            AudioSource.PlayClipAtPoint(PlayOnFailure, gameObject.transform.position);
-        }
+        
     }
 
     public bool IsPoweredOn()
