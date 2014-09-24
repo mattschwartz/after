@@ -7,6 +7,7 @@ public class GeneratorConditions : RequiredItemConditions
 {
 	private bool HasFuel = true;
 	private bool PlayerNeedsFuel = false;
+	private bool PoweredOn = false;
 
 	public override bool TestConditionsMet() 
 	{

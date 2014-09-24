@@ -13,7 +13,7 @@ namespace After.Interactable
 
         public virtual void MeetConditions()
         {
-            
+            // Can use this to cause conditions to become true
         }
 
         // Don't override this method

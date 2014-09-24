@@ -7,6 +7,11 @@ namespace After.Audio
 {
 	public class AudioManager : ScriptableObject
     {
+        public static void LoopClipAtPoint(AudioClip clip, Vector2 position, float volume = 1.0f)
+        {
+            
+        }
+
         public static void PlayClipAtPoint(AudioClip clip, Vector2 position, float volume = 1.0f)
         {
             GameObject gameObject = new GameObject();

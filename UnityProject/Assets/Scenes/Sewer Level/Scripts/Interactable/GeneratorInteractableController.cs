@@ -20,10 +20,6 @@ public class GeneratorInteractableController : InteractableController
     {
     	SetPoweredOn(true);
 
-        if (PlayOnSuccess) {
-            AudioSource.PlayClipAtPoint(PlayOnSuccess, gameObject.transform.position);
-        }
-
         if (PowerOutageTrigger != null) {
             PowerOutageTrigger.GetComponent<BoxCollider2D>().enabled = true;
             PowerOutageTrigger = null;   

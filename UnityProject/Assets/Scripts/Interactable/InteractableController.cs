@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using After.Interactable;
+using After.Audio;
 
 namespace After.Interactable
 {
@@ -10,6 +11,8 @@ namespace After.Interactable
 
         public KeyCode InteractButton = KeyCode.E;
         public InteractableConditions Conditions;
+        public bool SuccessOneShot = true;
+        public bool FailureOneShot = true;
         public AudioClip PlayOnFailure;
         public AudioClip PlayOnSuccess;
 
@@ -27,11 +30,31 @@ namespace After.Interactable
         {
             if (Entered && Input.GetKeyDown(InteractButton)) {
                 if (Conditions == null || Conditions.ConditionsMet()) {
+                    PlaySuccess();
                     Interact();
                 } else {
+                    PlayFailure();
                     ConditionsFailed();
                 }
             }
+        }
+
+        #endregion
+
+        #region Sound Clips
+
+        public virtual void PlaySuccess() 
+        {
+            if (!PlayOnSuccess) { return; }
+     
+            AudioManager.PlayClipAtPoint(PlayOnSuccess, transform.position);
+        }
+
+        public virtual void PlayFailure() 
+        {
+            if (!PlayOnFailure) { return; }
+            
+            AudioManager.PlayClipAtPoint(PlayOnFailure, transform.position);
         }
 
         #endregion
