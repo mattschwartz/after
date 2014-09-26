@@ -995,6 +995,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   HeldItem: {fileID: 1456273195}
+  Speed: 7
 --- !u!61 &194404993
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1419,6 +1420,7 @@ Transform:
   - {fileID: 1947084504}
   - {fileID: 139879937}
   - {fileID: 1256895606}
+  - {fileID: 2025917682}
   m_Father: {fileID: 0}
   m_RootOrder: 6
 --- !u!1 &262035512
@@ -3224,7 +3226,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1 &741789503
 GameObject:
   m_ObjectHideFlags: 0
@@ -3969,6 +3971,10 @@ Prefab:
     - target: {fileID: 21200002, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
       propertyPath: m_SortingLayerID
       value: 2631936957
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
+      propertyPath: Speed
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
@@ -5379,7 +5385,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1 &1663295808
 GameObject:
   m_ObjectHideFlags: 0
@@ -7812,11 +7818,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2025917679}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.22815895, y: 4.1480093, z: -.31640625}
+  m_LocalPosition: {x: 6.22815895, y: 4.15255642, z: -.31640625}
   m_LocalScale: {x: .420747101, y: .420747101, z: .420747101}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 260634086}
+  m_RootOrder: 29
 --- !u!1 &2050666273
 GameObject:
   m_ObjectHideFlags: 0
