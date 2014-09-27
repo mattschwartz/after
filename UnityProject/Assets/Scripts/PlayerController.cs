@@ -96,15 +96,12 @@ public class PlayerController : MonoBehaviour
     {
         Bounds bounds = GetComponent<BoxCollider2D>().bounds;
         CircleCollider2D circle = GetComponent<CircleCollider2D>();
-        var boundsMin = bounds.min;
-        var boundsMax = bounds.max;
-        var center = circle.bounds.center;
-        var radius = circle.radius;
 
-        List<Collider2D> colliderResults = new List<Collider2D>(Physics2D.OverlapAreaAll(boundsMin, boundsMax));
-        colliderResults = colliderResults.Union(Physics2D.OverlapCircleAll(center, radius)).ToList();
-
-        colliderResults.FindAll(t => t.GetComponent("InteractableController"))
+        Physics2D.OverlapAreaAll(bounds.min, bounds.max)
+            .ToList()
+            .Union(Physics2D.OverlapCircleAll(circle.bounds.center, circle.radius))
+            .ToList()
+            .FindAll(t => t.GetComponent("InteractableController"))
             .ForEach(t => t.gameObject.SendMessage("Interact"));
     }
 
