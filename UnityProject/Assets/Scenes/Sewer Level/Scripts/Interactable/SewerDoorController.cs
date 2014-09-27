@@ -14,17 +14,27 @@ public class SewerDoorController : NexusController
     // Door is unlocked and player can walk through it
     public override void OnInteract()
     {
+        Player.SendMessage("LockPlayer");
+        Invoke("FreePlayer", 1.5f);
+        Invoke("MovePlayer", 0.8f);
         Animator.SetBool("Locked", false);
         Animator.SetTrigger("TryEnter");
     }
 
     public override void ConditionsFailed()
     {
+        Player.SendMessage("LockPlayer");
+        Invoke("FreePlayer", 1.659f);
         Animator.SetBool("Locked", true);
         Animator.SetTrigger("TryEnter");
     }
 
     #region Animator Methods
+
+    public void FreePlayer()
+    {
+        Player.SendMessage("FreePlayer");
+    }
 
     public void OpenDoor()
     {
