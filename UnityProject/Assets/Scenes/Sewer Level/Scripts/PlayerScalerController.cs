@@ -16,7 +16,6 @@ public class PlayerScalerController : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Returning to normal...");
         if (other.name != "Player") { return; }
         var scale = other.transform.localScale;
         other.transform.localScale = new Vector2(OriginalTransform.x * Mathf.Sign(scale.x), OriginalTransform.y);

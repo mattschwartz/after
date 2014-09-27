@@ -101,12 +101,10 @@ public class PlayerController : MonoBehaviour
         var center = circle.bounds.center;
         var radius = circle.radius;
 
-        new List<Collider2D>(Physics2D.OverlapAreaAll(boundsMin, boundsMax))
-            .FindAll(t => t.GetComponent("InteractableController"))
-            .ForEach(t => t.gameObject.SendMessage("Interact"));
+        List<Collider2D> colliderResults = new List<Collider2D>(Physics2D.OverlapAreaAll(boundsMin, boundsMax));
+        colliderResults = colliderResults.Union(Physics2D.OverlapCircleAll(center, radius)).ToList();
 
-        new List<Collider2D>(Physics2D.OverlapCircleAll(center, radius))
-            .FindAll(t => t.GetComponent("InteractableController"))
+        colliderResults.FindAll(t => t.GetComponent("InteractableController"))
             .ForEach(t => t.gameObject.SendMessage("Interact"));
     }
 
