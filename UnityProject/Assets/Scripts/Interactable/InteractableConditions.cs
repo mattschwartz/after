@@ -23,7 +23,6 @@ namespace After.Interactable
             return false;
         }
 
-        // Don't override this method
         public bool ConditionsMet()
         {
             if (TaskCompleted) {
