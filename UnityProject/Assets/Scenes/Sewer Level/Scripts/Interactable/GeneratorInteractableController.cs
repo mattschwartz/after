@@ -6,7 +6,7 @@ public class GeneratorInteractableController : InteractableController
 {
     #region Public Members
 
-    public GameObject GeneratorSoundLoop;
+    public AudioClip GeneratorSoundLoop;
     public BoxCollider2D PowerOutageTrigger;
 
     #endregion
@@ -21,15 +21,14 @@ public class GeneratorInteractableController : InteractableController
     {
     	SetPoweredOn(true);
 
-        if (PowerOutageTrigger != null) {
+        if (PowerOutageTrigger) {
             PowerOutageTrigger.GetComponent<BoxCollider2D>().enabled = true;
-            PowerOutageTrigger = null;   
         }
     }
 
-    public override void ConditionsFailed()
+    public void DestroyAudioTrigger()
     {
-        
+        Destroy(PowerOutageTrigger.gameObject);
     }
 
     public bool IsPoweredOn()

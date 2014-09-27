@@ -5637,6 +5637,7 @@ MonoBehaviour:
   ThoughtsOnSuccess: 
   DestroyItemOnUse: 1
   RequiredItem: {fileID: 1614624034}
+  Generator: {fileID: 1208153048}
 --- !u!4 &1714228955
 Transform:
   m_ObjectHideFlags: 0

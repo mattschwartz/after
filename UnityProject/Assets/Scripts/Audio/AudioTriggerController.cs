@@ -19,7 +19,7 @@ public class AudioTriggerController : MonoBehaviour
         OnExit();
 
         if (DestroyOnExit) {
-            Destroy(gameObject, 1);
+            Destroy(gameObject, Clip.length);
             return;
         }
 

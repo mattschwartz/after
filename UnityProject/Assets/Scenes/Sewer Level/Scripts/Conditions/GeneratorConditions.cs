@@ -7,7 +7,8 @@ public class GeneratorConditions : RequiredItemConditions
 {
 	private bool HasFuel = true;
 	private bool PoweredOn = false;
-
+    public GeneratorInteractableController Generator;
+    
 	void Start()
 	{
 		TaskCompleted = false;
@@ -25,10 +26,12 @@ public class GeneratorConditions : RequiredItemConditions
 		}
 
         if (PlayerHasItem()) {
+            Generator.DestroyAudioTrigger();
             HasFuel = true;
             TaskCompleted = true;
         }
 
-		return HasFuel;
+        Debug.Log("Returning: " + (Generator.IsPoweredOn() || HasFuel));
+		return Generator.IsPoweredOn() || HasFuel;
 	}
 }

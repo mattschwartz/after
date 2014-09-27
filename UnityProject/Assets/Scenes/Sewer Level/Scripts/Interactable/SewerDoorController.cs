@@ -24,7 +24,7 @@ public class SewerDoorController : NexusController
     public override void ConditionsFailed()
     {
         Player.SendMessage("LockPlayer");
-        Invoke("FreePlayer", 1.659f);
+        Invoke("FreePlayer", 0.8f);
         Animator.SetBool("Locked", true);
         Animator.SetTrigger("TryEnter");
     }
