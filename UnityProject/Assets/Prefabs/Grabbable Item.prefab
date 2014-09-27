@@ -110,8 +110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 0}
-  PlayOnFailure: {fileID: 0}
-  PlayOnSuccess: {fileID: 0}
+  PlayWhenFailure: {fileID: 0}
+  PlayFirstSuccess: {fileID: 0}
+  PlayWhenSuccess: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
   ItemName: 
 --- !u!212 &21200000
 SpriteRenderer:

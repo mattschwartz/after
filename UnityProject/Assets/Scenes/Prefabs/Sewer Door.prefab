@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb2eb2dca70cf141b438b8ca3c0c48b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RepeatSuccess: 1
   ThoughtsOnFailure: <play door locked audio>
   ThoughtsOnSuccess: 
   DestroyItemOnUse: 1
@@ -114,8 +115,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractButton: 101
   Conditions: {fileID: 11400000}
-  PlayOnFailure: {fileID: 0}
-  PlayOnSuccess: {fileID: 0}
+  PlayWhenFailure: {fileID: 8300000, guid: 029d0663880d8498aae6dc43c578df32, type: 3}
+  PlayFirstSuccess: {fileID: 0}
+  PlayWhenSuccess: {fileID: 8300000, guid: b8f5eb70626994b1fac278bcf169a665, type: 3}
   ToLocation: {x: -.854716778, y: 33.3883018, z: 0}
   Player: {fileID: 0}
   NewSpriteBounds: {fileID: 0}

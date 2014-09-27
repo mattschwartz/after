@@ -52,7 +52,9 @@ public class PlayerController : MonoBehaviour
 
         if (Grounded && Input.GetKeyDown(JumpButton)) {
             rigidbody2D.AddForce(Vector2.up * JumpForce);
-        } else if (Input.GetKeyDown(InteractButton)) {
+        }
+        
+        if (Input.GetKeyDown(InteractButton)) {
             Interact();
         }
 
@@ -94,12 +96,16 @@ public class PlayerController : MonoBehaviour
     {
         Bounds bounds = GetComponent<BoxCollider2D>().bounds;
         CircleCollider2D circle = GetComponent<CircleCollider2D>();
+        var boundsMin = bounds.min;
+        var boundsMax = bounds.max;
+        var center = circle.bounds.center;
+        var radius = circle.radius;
 
-        new List<Collider2D>(Physics2D.OverlapAreaAll(bounds.min, bounds.max))
+        new List<Collider2D>(Physics2D.OverlapAreaAll(boundsMin, boundsMax))
             .FindAll(t => t.GetComponent("InteractableController"))
             .ForEach(t => t.gameObject.SendMessage("Interact"));
 
-         new List<Collider2D>(Physics2D.OverlapCircleAll(circle.bounds.center, circle.radius))
+        new List<Collider2D>(Physics2D.OverlapCircleAll(center, radius))
             .FindAll(t => t.GetComponent("InteractableController"))
             .ForEach(t => t.gameObject.SendMessage("Interact"));
     }

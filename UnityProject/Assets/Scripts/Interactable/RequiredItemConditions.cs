@@ -16,17 +16,6 @@ namespace After.Interactable
 
         #endregion
 
-        #region Private Members
-
-        private GameObject HeldItemObject;
-
-        #endregion
-
-        void Start()
-        {
-            HeldItemObject = GameObject.Find("HeldItem");
-        }
-
         public override bool TestConditionsMet()
         {
             return PlayerHasItem();
@@ -39,7 +28,7 @@ namespace After.Interactable
 
             // Use the item, possibly destroying it
             if (playerHasItem) {
-                HeldItemObject.SendMessage("DropItem");
+                GameObject.Find("HeldItem").SendMessage("DropItem");
                 TaskCompleted = playerHasItem;
 
                 if (DestroyItemOnUse) {
