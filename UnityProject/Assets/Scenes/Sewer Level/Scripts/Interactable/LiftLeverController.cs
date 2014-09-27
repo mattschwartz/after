@@ -25,7 +25,7 @@ public class LiftLeverController : InteractableController
         }
     }
 
-    public override void Interact()
+    public override void OnInteract()
     {
         // If generator is powered on
         Enabled = !Enabled;

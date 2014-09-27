@@ -13,8 +13,10 @@ public class DeskInteractableController : ItemSpawnerController
 
     public override void OnInteract()
     {
-    	PlayOnFailure = null;
-    	PlayOnSuccess = null;
+        base.OnInteract();
+
+    	PlayWhenFailure = null;
+    	PlayWhenSuccess = null;
     	Player.SendMessage("OpenDesk", transform.position);
         ClosetRoomDoor.SendMessage("MeetConditions");
     }

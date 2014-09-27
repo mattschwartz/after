@@ -11,8 +11,9 @@ namespace After.Interactable
 
         public KeyCode InteractButton = KeyCode.E;
         public InteractableConditions Conditions;
-        public AudioClip PlayOnFailure;
-        public AudioClip PlayOnSuccess;
+        public AudioClip PlayWhenFailure;
+        public AudioClip PlayFirstSuccess;
+        public AudioClip PlayWhenSuccess;
 
         #endregion
 
@@ -22,18 +23,24 @@ namespace After.Interactable
 
         #endregion
 
-        #region Update
+        #region Interact
 
-        protected void Update()
+        //protected void Update()
+        //{
+        //    // Player is within reach of the interactable and invokes InteractButton
+        //    if (Entered && Input.GetKeyDown(InteractButton)) {
+        //    }
+        //}
+
+        public void Interact()
         {
-            if (Entered && Input.GetKeyDown(InteractButton)) {
-                if (Conditions == null || Conditions.ConditionsMet()) {
-                    PlaySuccess();
-                    Interact();
-                } else {
-                    PlayFailure();
-                    ConditionsFailed();
-                }
+            // Conditions met?
+            if (Conditions == null || Conditions.ConditionsMet()) {
+                PlaySuccess();
+                OnInteract();
+            } else {
+                PlayFailure();
+                ConditionsFailed();
             }
         }
 
@@ -43,16 +50,22 @@ namespace After.Interactable
 
         public virtual void PlaySuccess() 
         {
-            if (!PlayOnSuccess) { return; }
-     
-            AudioManager.PlayClipAtPoint(PlayOnSuccess, transform.position);
+            // Clip plays only once
+            if (PlayFirstSuccess) {
+                AudioManager.PlayClipAtPoint(PlayFirstSuccess, transform.position);
+                PlayFirstSuccess = null;
+            }
+
+            if (PlayWhenSuccess) {
+                AudioManager.PlayClipAtPoint(PlayWhenSuccess, transform.position);
+            }
         }
 
         public virtual void PlayFailure() 
         {
-            if (!PlayOnFailure) { return; }
-            
-            AudioManager.PlayClipAtPoint(PlayOnFailure, transform.position);
+            if (PlayWhenFailure) {
+                AudioManager.PlayClipAtPoint(PlayWhenFailure, transform.position);
+            }
         }
 
         #endregion
@@ -96,7 +109,7 @@ namespace After.Interactable
             }
         }
 
-        public virtual void Interact()
+        public virtual void OnInteract()
         {
             // Override this function in subclasses
         }

@@ -28,14 +28,12 @@ namespace Assets.Scripts.Interactable
             Player = GameObject.Find("Player");
         }
 
-        // wtf you can do this shit
         private new void Update()
         {
-            base.Update();
             LastInteraction += Time.deltaTime;
         }
 
-        public override void Interact()
+        public override void OnInteract()
         {
             if (LastInteraction >= InteractDelay) {
                 Player.SendMessage("PickupItem", gameObject);

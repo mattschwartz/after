@@ -16,7 +16,7 @@ public class ItemSpawnerController : InteractableController
         ItemToSpawn.transform.position = new Vector2(5000, 5000);
     }
 
-    public sealed override void Interact()
+    public override void OnInteract()
     {
         if (ItemToSpawn == null) {
             return;
@@ -27,12 +27,5 @@ public class ItemSpawnerController : InteractableController
         ItemToSpawn.rigidbody2D.velocity = Vector2.zero;
         ItemToSpawn.rigidbody2D.AddForce(Vector2.up * 1000f);
         ItemToSpawn = null;
-
-        OnInteract();
-    }
-
-    public virtual void OnInteract()
-    {
-        // Override this method in subclasses
     }
 }

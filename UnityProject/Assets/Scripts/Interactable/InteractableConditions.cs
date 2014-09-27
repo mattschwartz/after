@@ -13,7 +13,14 @@ namespace After.Interactable
 
         public virtual void MeetConditions()
         {
-            // Can use this to cause conditions to become true
+            // Can be used to force conditions to be true
+        }
+
+        // If true, the controllers will not attempt to check conditions and 
+        // will not re-execute failure or success code
+        public bool ConditionsSpent()
+        {
+            return false;
         }
 
         // Don't override this method
@@ -24,20 +31,24 @@ namespace After.Interactable
             }
 
             var result = TestConditionsMet();
-
-            if (result && !String.IsNullOrEmpty(ThoughtsOnSuccess)) {
-                GameObject.Find("Player Thoughts").SendMessage("SetThought", ThoughtsOnSuccess);
-            } else if (!result && !String.IsNullOrEmpty(ThoughtsOnFailure)) {
-                GameObject.Find("Player Thoughts").SendMessage("SetThought", ThoughtsOnFailure);
-            }
+            SetThoughts(result);
 
             return result;
         }
 
+        // Override this method in subclasses
         public virtual bool TestConditionsMet()
         {
-            // Override this method in subclasses
             return true;
+        }
+
+        private void SetThoughts(bool conditionsMet)
+        {
+            if (conditionsMet && !String.IsNullOrEmpty(ThoughtsOnSuccess)) {
+                GameObject.Find("Player Thoughts").SendMessage("SetThought", ThoughtsOnSuccess);
+            } else if (!conditionsMet && !String.IsNullOrEmpty(ThoughtsOnFailure)) {
+                GameObject.Find("Player Thoughts").SendMessage("SetThought", ThoughtsOnFailure);
+            }
         }
     }
 }

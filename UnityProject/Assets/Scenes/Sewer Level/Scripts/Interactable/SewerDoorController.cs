@@ -18,19 +18,18 @@ public class SewerDoorController : NexusController
         Animator.SetTrigger("TryEnter");
     }
 
+    public override void ConditionsFailed()
+    {
+        Animator.SetBool("Locked", true);
+        Animator.SetTrigger("TryEnter");
+    }
+
+    #region Animator Methods
+
     public void OpenDoor()
     {
         MovePlayer();
     }
 
-    public override void AfterPlayerMoved()
-    {
-
-    }
-
-    public override void OnConditionsFailed()
-    {
-        Animator.SetBool("Locked", true);
-        Animator.SetTrigger("TryEnter");
-    }
+    #endregion
 }

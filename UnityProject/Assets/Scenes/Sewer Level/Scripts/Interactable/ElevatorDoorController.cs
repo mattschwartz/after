@@ -7,7 +7,7 @@ public class ElevatorDoorController : InteractableController
 {
 	private bool Spent = false;
 
-    public override void Interact()
+    public override void OnInteract()
     {
     	if (Spent) { return; }
         GetComponent<Animator>().SetTrigger("Arrival");

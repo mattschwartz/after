@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Scene.SceneManagement;
+using After.Interactable;
+using System.Linq;
 
 public class PlayerController : MonoBehaviour
 {
@@ -50,6 +52,8 @@ public class PlayerController : MonoBehaviour
 
         if (Grounded && Input.GetKeyDown(JumpButton)) {
             rigidbody2D.AddForce(Vector2.up * JumpForce);
+        } else if (Input.GetKeyDown(InteractButton)) {
+            Interact();
         }
 
         if (HeldItem != null && Input.GetKeyDown(DropButton)) {
@@ -85,6 +89,20 @@ public class PlayerController : MonoBehaviour
     }
 
     #endregion
+
+    private void Interact()
+    {
+        Bounds bounds = GetComponent<BoxCollider2D>().bounds;
+        CircleCollider2D circle = GetComponent<CircleCollider2D>();
+
+        new List<Collider2D>(Physics2D.OverlapAreaAll(bounds.min, bounds.max))
+            .FindAll(t => t.GetComponent("InteractableController"))
+            .ForEach(t => t.gameObject.SendMessage("Interact"));
+
+         new List<Collider2D>(Physics2D.OverlapCircleAll(circle.bounds.center, circle.radius))
+            .FindAll(t => t.GetComponent("InteractableController"))
+            .ForEach(t => t.gameObject.SendMessage("Interact"));
+    }
 
     private void IsGrounded()
     {
@@ -152,12 +170,10 @@ public class PlayerController : MonoBehaviour
         // Get overlapping platform
         var collider = Physics2D.OverlapCircle(GroundCheck.position, GroundRadius, GroundLayerMask);
 
-        if (!collider) {
-            return;
-        }
-
         // Send message to platform that it needs to play footstep
-        collider.gameObject.SendMessage("PlayFootstep", 0.25F);
+        if (collider) {
+            collider.gameObject.SendMessage("PlayFootstep", 0.25F);
+        }
     }
 
     #endregion

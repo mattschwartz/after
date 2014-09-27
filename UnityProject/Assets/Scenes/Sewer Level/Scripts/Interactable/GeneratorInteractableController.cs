@@ -17,7 +17,7 @@ public class GeneratorInteractableController : InteractableController
 
     #endregion
 
-    public override void Interact()
+    public override void OnInteract()
     {
     	SetPoweredOn(true);
 
