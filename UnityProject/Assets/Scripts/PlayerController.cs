@@ -126,6 +126,7 @@ public class PlayerController : MonoBehaviour
     public void LockPlayer()
     {
         rigidbody2D.velocity = Vector2.zero;
+        Animator.SetFloat("Velocity", 0);
         PlayerLocked = true;
     }
 
