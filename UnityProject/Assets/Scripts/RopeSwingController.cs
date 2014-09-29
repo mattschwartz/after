@@ -10,8 +10,9 @@ public class RopeSwingController : MonoBehaviour {
 	private Transform Trans;
     private bool Active;
     private bool Entered;
+    private bool Dismount;
     //private float Displace;  //in radians
-    public Rigidbody2D Handle;
+    public Rigidbody2D Body;
     public Rigidbody2D Anchor;
 
 	// Use this for initialization
@@ -19,9 +20,10 @@ public class RopeSwingController : MonoBehaviour {
 		Active = false;
 		//Displace = 0f;
 		Entered = false;
+        Dismount = false;
 
 		Trans = GetComponent<Transform>();
-		Handle = GetComponent<Rigidbody2D>();
+		Body = GetComponent<Rigidbody2D>();
 
 	}
 
@@ -33,26 +35,12 @@ public class RopeSwingController : MonoBehaviour {
 	void OnTriggerExit2D ()
 	{
 		Entered = false;
-	}
-
-	void FixedUpdate ()
-	{
-		if (Active)
-		{
-			/* if (Length < Vector2.Distance(PlayerObject.rigidbody2D.transform.position, Trans.position))
-			{
-				//coming off the rope, pull player back
-				Vector2 norm = Anchor.transform.position - PlayerObject.rigidbody2D.transform.position;
-				norm.Normalize();
-				PlayerObject.rigidbody2D.transform.position = norm * Length;
-			} */
-			//PlayerObject.rigidbody2D.transform.position = new Vector3(Handle.transform.position.x, Handle.transform.position.y, Handle.transform.position.z);
-		}
+        Dismount = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Entered && !Active)
+		if (Entered && !Active && !Dismount)
 		{
 			Active = true;
 			//PlayerObject.SendMessage("Swing");
@@ -74,19 +62,49 @@ public class RopeSwingController : MonoBehaviour {
             hToA = Trans.rotation * hToA;
             PlayerObject.rigidbody2D.transform.position = Trans.position + hToA;
 
-			//applies an initial swinging force to the rope
-			Handle.AddForce(new Vector2(750f * xSign, 0));
+            //rotates player model with rope
+            PlayerObject.rigidbody2D.transform.rotation = Trans.rotation;
+
+			//applies an initial swinging force to the rope if it's stationary
+            Body.AddForce(new Vector2(750f * xSign, 0));
+
+            //suspends player gravity
+            PlayerObject.rigidbody2D.gravityScale = 0;
 		}
 		else if (Active && Input.GetKeyDown(KeyCode.Space))
 		{
-			Active = false;
+            Dismount = true;
+            Active = false;
+
+            //reset player rotation
+            PlayerObject.rigidbody2D.transform.rotation = Quaternion.identity;
+
+            //reapplies gravity to player
+            PlayerObject.rigidbody2D.gravityScale = 8;
+
+            //apply force to player coming off rope
+            float xSign;
+            if (Trans.rotation.z > 180f)
+                xSign = -1;
+            else
+                xSign = 1;
+            PlayerObject.rigidbody2D.AddForce(new Vector2(1000f * xSign, 500f));
+
+            //rope active status will be changed upon player leaving trigger box
 		}
 		//Physics stuff will be found in FixedUpdate()
 		else if (Active)
 		{
+            //ensure player gravity stays disabled
+            if (PlayerObject.rigidbody2D.gravityScale != 0)
+                PlayerObject.rigidbody2D.gravityScale = 0;
+
+            //keep player on rope
             Vector3 hToA = new Vector3(0f, 0f - Length, 0f);
             hToA = Trans.rotation * hToA;
             PlayerObject.rigidbody2D.transform.position = Trans.position + hToA;
+            //rotate player with rope
+            PlayerObject.rigidbody2D.transform.rotation = Trans.rotation;
 		}
 	}
 }
