@@ -145,6 +145,7 @@ MonoBehaviour:
   ThoughtsOnFailure: I'll need some leverage to pry these open.
   ThoughtsOnSuccess: Something is written on this paper.
   DestroyItemOnUse: 1
+  HeldItem: {fileID: 1456273195}
   RequiredItem: {fileID: 1305626017}
 --- !u!4 &19550494
 Transform:
@@ -459,6 +460,7 @@ MonoBehaviour:
   ThoughtsOnFailure: 
   ThoughtsOnSuccess: 
   DestroyItemOnUse: 1
+  HeldItem: {fileID: 1456273195}
   RequiredItem: {fileID: 419237405}
 --- !u!1001 &69558203
 Prefab:
@@ -3041,6 +3043,7 @@ MonoBehaviour:
   ThoughtsOnFailure: I'll need to find the key code.
   ThoughtsOnSuccess: 
   DestroyItemOnUse: 1
+  HeldItem: {fileID: 1456273195}
   RequiredItem: {fileID: 653709347}
 --- !u!1 &682843631
 GameObject:
@@ -3523,6 +3526,10 @@ Prefab:
       propertyPath: PlayOnSuccess
       value: 
       objectReference: {fileID: 8300000, guid: b8f5eb70626994b1fac278bcf169a665, type: 3}
+    - target: {fileID: 11400000, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
+      propertyPath: HeldItem
+      value: 
+      objectReference: {fileID: 1456273195}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
   m_RootGameObject: {fileID: 139879936}
@@ -3906,6 +3913,10 @@ Prefab:
       propertyPath: ToLocation.y
       value: 33.3847198
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
+      propertyPath: HeldItem
+      value: 
+      objectReference: {fileID: 1456273195}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
   m_RootGameObject: {fileID: 2103563476}
@@ -5746,6 +5757,7 @@ MonoBehaviour:
   ThoughtsOnFailure: 
   ThoughtsOnSuccess: 
   DestroyItemOnUse: 1
+  HeldItem: {fileID: 1456273195}
   RequiredItem: {fileID: 1614624034}
   Generator: {fileID: 1208153048}
 --- !u!4 &1714228955
@@ -5998,7 +6010,7 @@ GameObject:
   - 212: {fileID: 1816749791}
   - 58: {fileID: 1816749793}
   - 58: {fileID: 1816749792}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7793,6 +7805,7 @@ MonoBehaviour:
   ThoughtsOnFailure: I cannot move him with my bare hands.
   ThoughtsOnSuccess: 
   DestroyItemOnUse: 0
+  HeldItem: {fileID: 1456273195}
   RequiredItem: {fileID: 1305626017}
 --- !u!1 &2004789011
 GameObject:

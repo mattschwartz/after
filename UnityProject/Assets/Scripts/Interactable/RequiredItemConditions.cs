@@ -12,6 +12,7 @@ namespace After.Interactable
         #region Public Members
 
         public bool DestroyItemOnUse = true;
+        public GameObject HeldItem;
         public GameObject RequiredItem;
 
         #endregion
@@ -24,11 +25,11 @@ namespace After.Interactable
         public bool PlayerHasItem()
         {
             string itemHeld = SceneHandler.CurrentPlayer.ItemHeld;
-            bool playerHasItem = (RequiredItem != null && itemHeld == RequiredItem.name);
+            bool playerHasItem = (RequiredItem && itemHeld == RequiredItem.name);
 
             // Use the item, possibly destroying it
             if (playerHasItem) {
-                GameObject.Find("HeldItem").SendMessage("DropItem");
+                HeldItem.SendMessage("DropItem");
                 TaskCompleted = playerHasItem;
 
                 if (DestroyItemOnUse) {

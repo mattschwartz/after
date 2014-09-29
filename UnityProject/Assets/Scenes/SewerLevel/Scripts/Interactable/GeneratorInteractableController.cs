@@ -28,7 +28,10 @@ public class GeneratorInteractableController : InteractableController
 
     public void DestroyAudioTrigger()
     {
-        Destroy(PowerOutageTrigger.gameObject);
+        if (PowerOutageTrigger) {
+            Destroy(PowerOutageTrigger.gameObject);
+            PowerOutageTrigger = null;
+        }
     }
 
     public bool IsPoweredOn()

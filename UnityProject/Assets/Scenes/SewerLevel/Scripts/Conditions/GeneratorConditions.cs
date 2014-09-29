@@ -16,22 +16,22 @@ public class GeneratorConditions : RequiredItemConditions
 
 	public override bool TestConditionsMet() 
 	{
+		bool result = false;
 		// Generator has enough fuel reserve the first time
 		if (HasFuel) {
+			result = true;
 			// Player needs to get fuel for next time
 			HasFuel = false;
             TaskCompleted = false;
-
-			return true;
 		}
 
         if (PlayerHasItem()) {
+        	result = true;
             Generator.DestroyAudioTrigger();
             HasFuel = true;
             TaskCompleted = true;
         }
 
-        Debug.Log("Returning: " + (Generator.IsPoweredOn() || HasFuel));
-		return Generator.IsPoweredOn() || HasFuel;
+		return Generator.IsPoweredOn() || result;
 	}
 }
