@@ -70,22 +70,23 @@ public class RopeSwingController : MonoBehaviour {
 			}
 
 			//snaps player to rope
-			PlayerObject.rigidbody2D.transform.position = Handle.transform.position;
-			PlayerObject.rigidbody2D.gravityScale = 0f;
+            Vector3 hToA = new Vector3(0f, 0f - Length, 0f);
+            hToA = Trans.rotation * hToA;
+            PlayerObject.rigidbody2D.transform.position = Trans.position + hToA;
 
-			//applies an initial swinging force to the player and rope
-			PlayerObject.rigidbody2D.AddForce(new Vector2(500f * xSign, 0));
-			Handle.AddForce(new Vector2(500f * xSign, 0));
+			//applies an initial swinging force to the rope
+			Handle.AddForce(new Vector2(750f * xSign, 0));
 		}
 		else if (Active && Input.GetKeyDown(KeyCode.Space))
 		{
 			Active = false;
-			PlayerObject.rigidbody2D.gravityScale = 8f;
 		}
 		//Physics stuff will be found in FixedUpdate()
 		else if (Active)
 		{
-			PlayerObject.rigidbody2D.transform.position = Handle.transform.position;
+            Vector3 hToA = new Vector3(0f, 0f - Length, 0f);
+            hToA = Trans.rotation * hToA;
+            PlayerObject.rigidbody2D.transform.position = Trans.position + hToA;
 		}
 	}
 }
