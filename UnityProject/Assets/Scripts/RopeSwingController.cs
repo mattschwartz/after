@@ -43,7 +43,7 @@ public class RopeSwingController : MonoBehaviour {
 		if (Entered && !Active && !Dismount)
 		{
 			Active = true;
-			//PlayerObject.SendMessage("Swing");
+			PlayerObject.SendMessage("Swing", true);
 
 			//determines which way the player is headed
 			float xSign;
@@ -89,6 +89,8 @@ public class RopeSwingController : MonoBehaviour {
             else
                 xSign = 1;
             PlayerObject.rigidbody2D.AddForce(new Vector2(1000f * xSign, 500f));
+
+            PlayerObject.SendMessage("Swing", false);
 
             //rope active status will be changed upon player leaving trigger box
 		}
