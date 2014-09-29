@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (PlayerLocked) {
+        if (PlayerLocked || Climbing) {
             return;
         }
 
@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
             Interact();
         }
 
-        if (HeldItem != null && Input.GetKeyDown(DropButton)) {
+        if (HeldItem && Input.GetKeyDown(DropButton)) {
             DropItem();
         }
     }
@@ -183,7 +183,7 @@ public class PlayerController : MonoBehaviour
         var collider = Physics2D.OverlapCircle(GroundCheck.position, GroundRadius, GroundLayerMask);
 
         // Send message to platform that it needs to play footstep
-        if (collider) {
+        if (collider && collider.GetComponent("StepSoundController")) {
             collider.gameObject.SendMessage("PlayFootstep", 0.25F);
         }
     }
