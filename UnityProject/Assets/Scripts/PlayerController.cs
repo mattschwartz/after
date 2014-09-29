@@ -150,8 +150,13 @@ public class PlayerController : MonoBehaviour
     public void Climb(bool on)
     {
         Climbing = on;
-        if (on) {
+
+        if (Climbing) {
+        	rigidbody2D.velocity = Vector2.zero;
             rigidbody2D.gravityScale = 0;
+            Animator.SetFloat("Velocity", 0);
+            Animator.SetFloat("vMove", 0);
+
             if (Sprite) {
                 //interspace, the space between the default and background layers, where people on ladders go
                 Sprite.sortingLayerName = "Interspace";
