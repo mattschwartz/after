@@ -27,6 +27,8 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         CalculateBounds();
+
+        Screen.showCursor = false;
     }
 
     void Update()
