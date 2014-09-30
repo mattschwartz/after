@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using Assets.Scripts.Scene.SceneManagement;
 
@@ -6,11 +6,14 @@ public class RopeSwingController : MonoBehaviour {
 
 	public GameObject PlayerObject;
 	public float Length;
+	public float MaxLength;
+	public float FallRate;
     //public float Tension;
 	private Transform Trans;
     private bool Active;
     private bool Entered;
     private bool Dismount;
+    private bool Falling;
     //private float Displace;  //in radians
     public Rigidbody2D Body;
     public Rigidbody2D Anchor;
@@ -21,6 +24,7 @@ public class RopeSwingController : MonoBehaviour {
 		//Displace = 0f;
 		Entered = false;
         Dismount = false;
+        Falling = false;
 
 		Trans = GetComponent<Transform>();
 		Body = GetComponent<Rigidbody2D>();
@@ -36,6 +40,18 @@ public class RopeSwingController : MonoBehaviour {
 	{
 		Entered = false;
         Dismount = false;
+	}
+
+	void FixedUpdate ()
+	{
+		if (Falling && Length < MaxLength)
+		{
+			Length += FallRate;
+		}
+		else if (Falling)
+		{
+			Falling = false;
+		}
 	}
 	
 	// Update is called once per frame
@@ -94,7 +110,6 @@ public class RopeSwingController : MonoBehaviour {
 
             //rope active status will be changed upon player leaving trigger box
 		}
-		//Physics stuff will be found in FixedUpdate()
 		else if (Active)
 		{
             //ensure player gravity stays disabled
@@ -107,6 +122,12 @@ public class RopeSwingController : MonoBehaviour {
             PlayerObject.rigidbody2D.transform.position = Trans.position + hToA;
             //rotate player with rope
             PlayerObject.rigidbody2D.transform.rotation = Trans.rotation;
+		}
+		
+		//the following is for the purposes of testing the functionality
+		if (Active && Input.GetKeyDown(KeyCode.P))
+		{
+			Falling = true;
 		}
 	}
 }
