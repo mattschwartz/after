@@ -22,16 +22,15 @@ public class GeneratorConditions : RequiredItemConditions
 			result = true;
 			// Player needs to get fuel for next time
 			HasFuel = false;
-            TaskCompleted = false;
 		}
 
         if (PlayerHasItem()) {
         	result = true;
             Generator.DestroyAudioTrigger();
             HasFuel = true;
-            TaskCompleted = true;
         }
 
+        Debug.Log("Returning " + (Generator.IsPoweredOn() || result));
 		return Generator.IsPoweredOn() || result;
 	}
 }
