@@ -25,14 +25,7 @@ namespace After.Interactable
 
         #region Interact
 
-        //protected void Update()
-        //{
-        //    // Player is within reach of the interactable and invokes InteractButton
-        //    if (Entered && Input.GetKeyDown(InteractButton)) {
-        //    }
-        //}
-
-        public void Interact()
+        public virtual void Interact()
         {
             // Conditions met?
             if (Conditions == null || Conditions.ConditionsMet()) {
