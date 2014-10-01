@@ -8,7 +8,7 @@ public class DisableSoulParticlesTransition : Transition
 
 	public override bool Read(StateType fromState, StateType toState)
 	{
-		ParticleSystem.particleEmitter.emit = false;
+		ParticleSystem.emissionRate = 0;
 		return false;
 	}
 }
