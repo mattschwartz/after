@@ -6,6 +6,10 @@ using System.Text;
 
 public class LiftLeverController : InteractableController
 {
+    public bool IsEnabled()
+    {
+        return CurrentState == StateType.Unlocked;
+    }
 
     public void Disable()
     {
