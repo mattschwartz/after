@@ -474,6 +474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 0
   To: 0
+  Volume: 1
   Clip: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
 --- !u!1 &50385861
 GameObject:
@@ -569,6 +570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 1
   To: 1
+  Volume: 1
   Clip: {fileID: 8300000, guid: 9c1446f38d89245bdb76ca6ebf52575d, type: 3}
 --- !u!1 &56571148
 GameObject:
@@ -820,6 +822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 1
   To: 2
+  Volume: 1
   Clip: {fileID: 8300000, guid: 66e46042f0a8b4efaa9774160a04d249, type: 3}
 --- !u!1 &91949438
 GameObject:
@@ -2289,6 +2292,7 @@ Transform:
   - {fileID: 1393763595}
   - {fileID: 1890551971}
   - {fileID: 1113004631}
+  - {fileID: 520467743}
   m_Father: {fileID: 260634086}
   m_RootOrder: 34
 --- !u!198 &300403325
@@ -3418,6 +3422,7 @@ MonoBehaviour:
   - {fileID: 1966995613}
   - {fileID: 1393763596}
   - {fileID: 1890551972}
+  - {fileID: 520467744}
 --- !u!61 &300403329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4652,7 +4657,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 0
   To: 2
+  Volume: 1
   Clip: {fileID: 8300000, guid: b8f5eb70626994b1fac278bcf169a665, type: 3}
+--- !u!1 &520467742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 520467743}
+  - 114: {fileID: 520467744}
+  m_Layer: 0
+  m_Name: Soulsplosion Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &520467743
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 520467742}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 300403324}
+  m_RootOrder: 7
+--- !u!114 &520467744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 520467742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  From: 1
+  To: 2
+  Volume: 1
+  Clip: {fileID: 8300000, guid: c3faee0af37b34aa1bed8c2d7b3d44d8, type: 3}
 --- !u!1 &547926204
 GameObject:
   m_ObjectHideFlags: 0
@@ -5535,6 +5584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 0
   To: 0
+  Volume: 1
   Clip: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
 --- !u!1 &732994798
 GameObject:
@@ -5993,6 +6043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 0
   To: 0
+  Volume: 1
   Clip: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
 --- !u!1 &904609771
 GameObject:
@@ -6146,6 +6197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 1
   To: 2
+  Volume: 1
   Clip: {fileID: 8300000, guid: f0991c5c2efbc4125b0522799fa8a8e0, type: 3}
 --- !u!1 &914862582
 GameObject:
@@ -7217,6 +7269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 0
   To: 2
+  Volume: 1
   Clip: {fileID: 8300000, guid: d46f2cb58b3b54e8286eb6dbb1b934d6, type: 3}
 --- !u!1 &1186940442
 GameObject:
@@ -7305,6 +7358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 1
   To: 1
+  Volume: 1
   Clip: {fileID: 8300000, guid: 1626e3aa84e354c8a9c04c61dab3d59d, type: 3}
 --- !u!1 &1208047001
 GameObject:
@@ -8016,6 +8070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 0
   To: 0
+  Volume: 1
   Clip: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
 --- !u!1 &1289120091
 GameObject:
@@ -8059,6 +8114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 1
   To: 1
+  Volume: 1
   Clip: {fileID: 8300000, guid: 029d0663880d8498aae6dc43c578df32, type: 3}
 --- !u!1 &1305626017
 GameObject:
@@ -8516,6 +8572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 0
   To: 1
+  Volume: 1
   Clip: {fileID: 8300000, guid: d75e84e6b728846ccb2141667549ebff, type: 3}
 --- !u!1 &1430619693
 GameObject:
@@ -8547,6 +8604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 1
   To: 2
+  Volume: 1
   Clip: {fileID: 8300000, guid: 3e565b472809d468dab2974ae0f9ed2f, type: 3}
 --- !u!4 &1430619695
 Transform:
@@ -8776,6 +8834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 0
   To: 0
+  Volume: 1
   Clip: {fileID: 8300000, guid: 708d9e97b416b4e96ad46f1949ad716b, type: 3}
 --- !u!1 &1456273195
 GameObject:
@@ -8901,6 +8960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 0
   To: 0
+  Volume: 1
   Clip: {fileID: 8300000, guid: 708d9e97b416b4e96ad46f1949ad716b, type: 3}
 --- !u!1 &1492477876
 GameObject:
@@ -10755,6 +10815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 1
   To: 2
+  Volume: 1
   Clip: {fileID: 8300000, guid: 1626e3aa84e354c8a9c04c61dab3d59d, type: 3}
 --- !u!1 &1659056172
 GameObject:
@@ -11225,6 +11286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 0
   To: 2
+  Volume: 1
   Clip: {fileID: 8300000, guid: b8f5eb70626994b1fac278bcf169a665, type: 3}
 --- !u!1 &1760594706
 GameObject:
@@ -12234,6 +12296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 1
   To: 1
+  Volume: 1
   Clip: {fileID: 8300000, guid: 5a17f44f9f3b4461ba71b1f87fe6b2d5, type: 3}
 --- !u!4 &1910817938
 Transform:
@@ -12289,6 +12352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 1
   To: 1
+  Volume: 1
   Clip: {fileID: 8300000, guid: 029d0663880d8498aae6dc43c578df32, type: 3}
 --- !u!1 &1918864474
 GameObject:
@@ -12759,6 +12823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   From: 0
   To: 0
+  Volume: 1
   Clip: {fileID: 0}
 --- !u!1 &1970734645
 GameObject:
