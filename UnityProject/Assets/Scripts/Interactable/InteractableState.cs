@@ -10,7 +10,7 @@ namespace After.Interactable
         public StateType To;
         public InteractableConditions Conditions;
 
-        public StateType? Transition()
+        public virtual StateType? Transition()
         {
             if (Conditions == null || Conditions.ConditionsMet()) {
                 return To;
