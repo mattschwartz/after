@@ -7009,7 +7009,7 @@ SpriteRenderer:
   m_SortingLayerID: 2631936957
   m_SortingOrder: 1000
   m_Sprite: {fileID: 21300000, guid: 3afeb89f75b5ae9468ddf0294cb45c13, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: .53725493}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1168216547
 MonoBehaviour:
   m_ObjectHideFlags: 0
