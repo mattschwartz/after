@@ -16,9 +16,11 @@ namespace After.Interactable.Transitions
             PlayerThoughts = GameObject.Find("Player Thoughts");
         }
 
-        public override void Read(StateType fromState, StateType toState)
+        public override bool Read(StateType fromState, StateType toState)
         {
             PlayerThoughts.SendMessage("SetThought", Observations);
+
+            return true;
         }
     }
 }

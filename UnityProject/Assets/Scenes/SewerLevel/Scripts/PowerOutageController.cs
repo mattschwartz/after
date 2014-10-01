@@ -3,10 +3,10 @@ using System.Collections;
 
 public class PowerOutageController : AudioTriggerController
 {
-
 	#region Public Members
 
 	public GameObject Generator;
+    public GameObject LiftLever;
 
     #endregion
 
@@ -17,6 +17,7 @@ public class PowerOutageController : AudioTriggerController
 
     public override void OnEnter()
     {
-    	Generator.SendMessage("SetPoweredOn", false);
+    	Generator.SendMessage("ExpendFuel");
+        LiftLever.SendMessage("Disable");
     }
 }

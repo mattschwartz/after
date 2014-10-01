@@ -12,19 +12,14 @@ namespace After.Interactable
     {
         #region Members
 
-        public StateType CurrentState { get; private set; }
+        public StateType CurrentState = StateType.Locked;
         public InteractableState LockedState;
         public InteractableState UnlockedState;
         public List<Transition> TransitionScripts;
 
         #endregion
 
-        void Start()
-        {
-            CurrentState = StateType.Locked;
-        }
-
-        public void Interact()
+        public virtual void Interact()
         {
             StateType? newState = null;
 
@@ -49,7 +44,11 @@ namespace After.Interactable
         {
             TransitionScripts
                 .FindAll(t => t.Legible(from, to))
-                .ForEach(t => t.Read(from, to));
+                .ForEach(t => {
+                    if (!t.Read(from, to)) { 
+                        TransitionScripts.Remove(t); 
+                    } 
+                });
         }
     }
 }

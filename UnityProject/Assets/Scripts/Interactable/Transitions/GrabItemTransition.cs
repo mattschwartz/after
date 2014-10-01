@@ -28,12 +28,14 @@ namespace After.Interactable.Transitions
             LastInteraction += Time.deltaTime;
         }
 
-        public override void Read(StateType fromState, StateType toState)
+        public override bool Read(StateType fromState, StateType toState)
         {
             if (LastInteraction >= InteractDelay) {
                 Player.SendMessage("PickupItem", gameObject);
                 LastInteraction = 0;
             }
+
+            return true;
         }
     }
 }

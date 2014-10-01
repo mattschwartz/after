@@ -17,13 +17,15 @@ namespace After.Interactable.Transitions
             ItemToSpawn.transform.position = new Vector2(5000, 5000);
         }
 
-        public override void Read(StateType fromState, StateType toState)
+        public override bool Read(StateType fromState, StateType toState)
         {
             ItemToSpawn.GetComponent<SpriteRenderer>().enabled = true;
             ItemToSpawn.transform.position = transform.position;
             ItemToSpawn.rigidbody2D.velocity = Vector2.zero;
             ItemToSpawn.rigidbody2D.AddForce(Vector2.up * 1000f);
             ItemToSpawn = null;
+
+            return true;
         }
     }
 }

@@ -8,7 +8,7 @@ AnimatorController:
   m_Name: LiftLeverAnimatorController
   serializedVersion: 2
   m_AnimatorParameters:
-  - m_Name: Enabled
+  - m_Name: UnlockedState
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -39,7 +39,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: Enabled
+    m_ConditionEvent: UnlockedState
     m_EventTreshold: 0
     m_ExitTime: .899999976
   m_Atomic: 1
@@ -59,7 +59,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Enabled
+    m_ConditionEvent: UnlockedState
     m_EventTreshold: 0
     m_ExitTime: .899999976
   m_Atomic: 1
@@ -111,16 +111,16 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110200289}
-      second: []
-    data:
-      first: {fileID: 110200000}
-      second: []
-    data:
       first: {fileID: 0}
       second:
       - {fileID: 110100000}
       - {fileID: 110154048}
+    data:
+      first: {fileID: 110200000}
+      second: []
+    data:
+      first: {fileID: 110200289}
+      second: []
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 120, y: 36, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

@@ -8,19 +8,21 @@ namespace After.Interactable.Transitions
 {
     public class AnimatorTransition : Transition
     {
-        private Animator Animator;
+        protected Animator Animator;
 
         void Start()
         {
             Animator = GetComponentInParent<Animator>();
         }
 
-        public override void Read(StateType fromState, StateType toState)
+        public override bool Read(StateType fromState, StateType toState)
         {
             Animator.SetTrigger("Interact");
-            Animator.SetBool("LockedState", fromState == StateType.Locked);
-            Animator.SetBool("UnlockedState", fromState == StateType.Unlocked);
-            Animator.SetBool("SpentState", fromState == StateType.Spent);
+            Animator.SetBool("LockedState", toState == StateType.Locked);
+            Animator.SetBool("UnlockedState", toState == StateType.Unlocked);
+            Animator.SetBool("SpentState", toState == StateType.Spent);
+
+            return true;
         }
     }
 }

@@ -11,9 +11,11 @@ namespace After.Interactable.Transitions
     {
         public AudioClip Clip;
 
-        public override void Read(StateType fromState, StateType toState)
+        public override bool Read(StateType fromState, StateType toState)
         {
             AudioManager.PlayClipAtPoint(Clip, transform.position);
+
+            return true;
         }
     }
 }

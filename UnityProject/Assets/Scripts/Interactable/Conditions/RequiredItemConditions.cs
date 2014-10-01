@@ -19,6 +19,11 @@ namespace After.Interactable.Conditions
 
         public override bool ConditionsMet()
         {
+            return PlayerHasItem();
+        }
+
+        protected bool PlayerHasItem()
+        {
             string itemHeld = SceneHandler.CurrentPlayer.ItemHeld;
             bool playerHasItem = (RequiredItem && itemHeld == RequiredItem.name);
 

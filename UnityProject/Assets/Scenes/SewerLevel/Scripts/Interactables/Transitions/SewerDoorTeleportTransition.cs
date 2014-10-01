@@ -15,7 +15,7 @@ public class SewerDoorTeleportTransition : TeleportTransition
         Animator = GetComponentInParent<Animator>();
     }
 
-    public override void Read(StateType fromState, StateType toState)
+    public override bool Read(StateType fromState, StateType toState)
     {
         if (toState == StateType.Locked) {
             Player.SendMessage("LockPlayer");
@@ -29,6 +29,8 @@ public class SewerDoorTeleportTransition : TeleportTransition
             Animator.SetBool("Locked", false);
             Animator.SetTrigger("TryEnter");
         }
+
+        return true;
     }
 
     private void FreePlayer()
