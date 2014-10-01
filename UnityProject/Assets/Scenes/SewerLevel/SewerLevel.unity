@@ -7564,7 +7564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnEntrance: 1
-  Clip: {fileID: 8300000, guid: a2c5a430282254221b102cdfd252d602, type: 3}
+  Clip: {fileID: 8300000, guid: 294c2572969cc4e91b744f86e5f63d43, type: 3}
   Generator: {fileID: 875245102}
   LiftLever: {fileID: 1908786332}
 --- !u!61 &1233475531
@@ -12499,7 +12499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StepSounds:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: ce446eaad76004ac68432fd9b039fcee, type: 3}
 --- !u!1 &1926738289
 GameObject:
   m_ObjectHideFlags: 0
