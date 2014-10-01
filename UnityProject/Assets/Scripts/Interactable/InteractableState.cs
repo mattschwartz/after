@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Interactable
+namespace After.Interactable
 {
     public class InteractableState : MonoBehaviour
     {

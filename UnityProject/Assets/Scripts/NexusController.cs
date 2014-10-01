@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Assets.Scripts.Scene.SceneManagement;
-using After.Interactable;
 
 namespace After.Scene.NexusControllers
 {
-    public class NexusController : InteractableController
+    public class NexusController : MonoBehaviour
     {
         #region Public Members
 
@@ -17,12 +16,12 @@ namespace After.Scene.NexusControllers
 
         #region Overrideable Methods
 
-        public override void OnInteract()
+        public void OnInteract()
         {
             MovePlayer();
         }
 
-        public override void ConditionsFailed()
+        public void ConditionsFailed()
         {
 
         }

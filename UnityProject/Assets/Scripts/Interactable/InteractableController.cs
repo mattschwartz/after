@@ -1,115 +1,54 @@
-﻿using UnityEngine;
-using System.Collections;
-using After.Interactable;
-using After.Audio;
+﻿using After.Interactable.Transitions;
+using Assets.Utility;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using UnityEngine;
 
 namespace After.Interactable
 {
     public class InteractableController : MonoBehaviour
     {
-        #region Public Members
+        #region Members
 
-        public KeyCode InteractButton = KeyCode.E;
-        public InteractableConditions Conditions;
-        public AudioClip PlayWhenFailure;
-        public AudioClip PlayFirstSuccess;
-        public AudioClip PlayWhenSuccess;
-
-        #endregion
-
-        #region Private Members
-
-        private bool Entered = false;
+        public StateType CurrentState { get; private set; }
+        public InteractableState LockedState;
+        public InteractableState UnlockedState;
+        public List<Transition> TransitionScripts;
 
         #endregion
 
-        #region Interact
-
-        public virtual void Interact()
+        void Start()
         {
-            // Conditions met?
-            if (Conditions == null || Conditions.ConditionsMet()) {
-                PlaySuccess();
-                OnInteract();
-            } else {
-                PlayFailure();
-                ConditionsFailed();
-            }
+            CurrentState = StateType.Locked;
         }
 
-        #endregion
-
-        #region Sound Clips
-
-        public virtual void PlaySuccess() 
+        public void Interact()
         {
-            // Clip plays only once
-            if (PlayFirstSuccess) {
-                AudioManager.PlayClipAtPoint(PlayFirstSuccess, transform.position);
-                PlayFirstSuccess = null;
+            StateType? newState = null;
+
+            switch (CurrentState) {
+                case StateType.Locked:
+                    newState = LockedState.Transition();
+                    break;
+                case StateType.Unlocked:
+                    newState = UnlockedState.Transition();
+                    break;
             }
 
-            if (PlayWhenSuccess) {
-                AudioManager.PlayClipAtPoint(PlayWhenSuccess, transform.position);
-            }
+            newState = newState == null ? CurrentState : newState;
+            CurrentState = (StateType)newState;
+
+            // Lookup transition hook for (currentstate, newstate) transition
+            ReadTransition(CurrentState, (StateType)newState);
         }
 
-        public virtual void PlayFailure() 
+        private void ReadTransition(StateType from, StateType to)
         {
-            if (PlayWhenFailure) {
-                AudioManager.PlayClipAtPoint(PlayWhenFailure, transform.position);
-            }
-        }
-
-        #endregion
-
-        #region Triggers
-
-        void OnTriggerEnter2D(Collider2D other)
-        {
-            if (!InLayerMask(other)) {
-                return;
-            }
-
-            Entered = true;
-        }
-
-        void OnTriggerStay2D(Collider2D other)
-        {
-            if (!InLayerMask(other)) {
-                return;
-            }
-
-            Entered = true;
-        }
-
-        void OnTriggerExit2D(Collider2D other)
-        {
-            Entered = false;
-        }
-
-        bool InLayerMask(Collider2D other)
-        {
-            return other.gameObject.layer == LayerMask.NameToLayer("Player");
-        }
-
-        #endregion
-
-        public void MeetConditions()
-        {
-            if (Conditions != null) {
-                Conditions.MeetConditions();
-            }
-        }
-
-        public virtual void OnInteract()
-        {
-            // Override this function in subclasses
-        }
-
-        public virtual void ConditionsFailed()
-        {
-            // Override this function in subclasses
+            TransitionScripts
+                .FindAll(t => t.Legible(from, to))
+                .ForEach(t => t.Read(CurrentState));
         }
     }
 }
