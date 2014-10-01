@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace After.Interactable
+namespace After.Interactable.Conditions
 {
     public class InteractableConditions : MonoBehaviour
     {

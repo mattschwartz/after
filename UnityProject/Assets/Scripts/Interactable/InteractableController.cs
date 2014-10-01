@@ -38,17 +38,18 @@ namespace After.Interactable
             }
 
             newState = newState == null ? CurrentState : newState;
-            CurrentState = (StateType)newState;
 
             // Lookup transition hook for (currentstate, newstate) transition
             ReadTransition(CurrentState, (StateType)newState);
+
+            CurrentState = (StateType)newState;
         }
 
         protected void ReadTransition(StateType from, StateType to)
         {
             TransitionScripts
                 .FindAll(t => t.Legible(from, to))
-                .ForEach(t => t.Read(CurrentState));
+                .ForEach(t => t.Read(from, to));
         }
     }
 }

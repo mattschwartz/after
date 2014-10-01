@@ -28,7 +28,7 @@ namespace After.Interactable.Transitions
             LastInteraction += Time.deltaTime;
         }
 
-        public override void Read(StateType currentState)
+        public override void Read(StateType fromState, StateType toState)
         {
             if (LastInteraction >= InteractDelay) {
                 Player.SendMessage("PickupItem", gameObject);

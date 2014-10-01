@@ -8,25 +8,13 @@ AnimatorController:
   m_Name: Sewer Door Controller
   serializedVersion: 2
   m_AnimatorParameters:
-  - m_Name: Interact
+  - m_Name: TryEnter
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: LockedState
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: UnlockedState
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: SpentState
+  - m_Name: Locked
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -56,12 +44,12 @@ Transition:
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: UnlockedState
+  - m_ConditionMode: 2
+    m_ConditionEvent: Locked
     m_EventTreshold: 0
     m_ExitTime: 1
   - m_ConditionMode: 1
-    m_ConditionEvent: Interact
+    m_ConditionEvent: TryEnter
     m_EventTreshold: 0
     m_ExitTime: 1
   m_Atomic: 1
@@ -81,7 +69,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: Interact
+    m_ConditionEvent: TryEnter
     m_EventTreshold: 0
     m_ExitTime: 1
   m_Atomic: 1
@@ -101,7 +89,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: Interact
+    m_ConditionEvent: TryEnter
     m_EventTreshold: 0
     m_ExitTime: 1
   m_Atomic: 1
@@ -121,11 +109,11 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: LockedState
+    m_ConditionEvent: Locked
     m_EventTreshold: 0
     m_ExitTime: 1
   - m_ConditionMode: 1
-    m_ConditionEvent: Interact
+    m_ConditionEvent: TryEnter
     m_EventTreshold: 0
     m_ExitTime: 1
   m_Atomic: 1
@@ -145,7 +133,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Interact
+    m_ConditionEvent: TryEnter
     m_EventTreshold: 0
     m_ExitTime: 1
   m_Atomic: 1

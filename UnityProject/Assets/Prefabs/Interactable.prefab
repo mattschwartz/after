@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
+  - 61: {fileID: 6100000}
   m_Layer: 0
   m_Name: Interactable
   m_TagString: Untagged
@@ -260,6 +261,17 @@ Transform:
   - {fileID: 400012}
   m_Father: {fileID: 400000}
   m_RootOrder: 0
+--- !u!61 &6100000
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -318,7 +330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   From: 0
-  To: 1
+  To: 2
   Observations: 
 --- !u!114 &11400008
 MonoBehaviour:
@@ -331,8 +343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a984b51c54e3b424f9482d28fe64771b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  From: 0
-  To: 0
+  From: 1
+  To: 1
   Observations: 
 --- !u!114 &11400010
 MonoBehaviour:
@@ -367,7 +379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd4db1c4c14614439e01019b2bd2ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  To: 1
+  To: 2
   Conditions: {fileID: 11400012}
 --- !u!114 &11400016
 MonoBehaviour:
@@ -380,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd4db1c4c14614439e01019b2bd2ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  To: 1
+  To: 2
   Conditions: {fileID: 11400010}
 --- !u!1001 &100100000
 Prefab:

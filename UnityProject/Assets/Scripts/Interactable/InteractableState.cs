@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using After.Interactable.Conditions;
 using UnityEngine;
 
 namespace After.Interactable

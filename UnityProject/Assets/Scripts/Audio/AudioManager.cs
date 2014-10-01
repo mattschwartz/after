@@ -14,6 +14,8 @@ namespace After.Audio
 
         public static void PlayClipAtPoint(AudioClip clip, Vector2 position, float volume = 1.0f)
         {
+            if (clip == null) { return; }
+
             GameObject gameObject = new GameObject();
             var source = gameObject.AddComponent<AudioSource>();
 
@@ -25,6 +27,8 @@ namespace After.Audio
 
         public static void PlayClipAtPoint(AudioClip clip, float pitch, Vector2 position, float volume = 1.0f)
         {
+            if (clip == null) { return; }
+
             GameObject gameObject = new GameObject();
             var source = gameObject.AddComponent<AudioSource>();
 

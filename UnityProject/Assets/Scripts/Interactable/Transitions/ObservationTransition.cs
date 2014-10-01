@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace After.Interactable.Transitions
 {
-    public class ObservatoryTransition : Transition
+    public class ObservationTransition : Transition
     {
         public string Observations;
         private GameObject PlayerThoughts;
@@ -16,7 +16,7 @@ namespace After.Interactable.Transitions
             PlayerThoughts = GameObject.Find("Player Thoughts");
         }
 
-        public override void Read(StateType currentState)
+        public override void Read(StateType fromState, StateType toState)
         {
             PlayerThoughts.SendMessage("SetThought", Observations);
         }

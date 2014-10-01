@@ -16,12 +16,14 @@ namespace After.Interactable.Transitions
 
         #endregion
 
-        public override void Read(StateType currentState)
+        public override void Read(StateType fromState, StateType toState)
         {
-            if (NewSpriteBounds != null) {
-                Camera.main.SendMessage("SetSpriteBounds", NewSpriteBounds);
-            }
+            MovePlayer();
+        }
 
+        protected void MovePlayer()
+        {
+            Camera.main.SendMessage("SetSpriteBounds", NewSpriteBounds);
             Player.transform.position = ToLocation;
         }
     }

@@ -15,12 +15,12 @@ namespace After.Interactable.Transitions
             Animator = GetComponentInParent<Animator>();
         }
 
-        public override void Read(StateType currentState)
+        public override void Read(StateType fromState, StateType toState)
         {
             Animator.SetTrigger("Interact");
-            Animator.SetBool("LockedState", currentState == StateType.Locked);
-            Animator.SetBool("UnlockedState", currentState == StateType.Unlocked);
-            Animator.SetBool("SpentState", currentState == StateType.Spent);
+            Animator.SetBool("LockedState", fromState == StateType.Locked);
+            Animator.SetBool("UnlockedState", fromState == StateType.Unlocked);
+            Animator.SetBool("SpentState", fromState == StateType.Spent);
         }
     }
 }

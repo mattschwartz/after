@@ -7,11 +7,11 @@ using UnityEngine;
 
 namespace After.Interactable.Transitions
 {
-    public class AuditoryTransition : Transition
+    public class AudioTransition : Transition
     {
         public AudioClip Clip;
 
-        public override void Read(StateType currentState)
+        public override void Read(StateType fromState, StateType toState)
         {
             AudioManager.PlayClipAtPoint(Clip, transform.position);
         }
