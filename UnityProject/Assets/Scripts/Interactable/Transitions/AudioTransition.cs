@@ -9,11 +9,12 @@ namespace After.Interactable.Transitions
 {
     public class AudioTransition : Transition
     {
+    	public float Volume = 1.0f;
         public AudioClip Clip;
 
         public override bool Read(StateType fromState, StateType toState)
         {
-            AudioManager.PlayClipAtPoint(Clip, transform.position);
+            AudioManager.PlayClipAtPoint(Clip, 1.0f, transform.position, Volume);
 
             return true;
         }
