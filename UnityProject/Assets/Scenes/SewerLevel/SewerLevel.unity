@@ -3617,7 +3617,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 329331881}
   - 212: {fileID: 329331882}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LadderSprite3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3812,7 +3812,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 358117381}
   - 212: {fileID: 358117382}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LadderSprite1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9407,7 +9407,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1580375715}
   - 212: {fileID: 1580375716}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LadderSprite2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12409,7 +12409,8 @@ GameObject:
   - 61: {fileID: 1918864478}
   - 114: {fileID: 1918864477}
   - 212: {fileID: 1918864476}
-  m_Layer: 0
+  - 114: {fileID: 1918864479}
+  m_Layer: 8
   m_Name: Ladder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12486,6 +12487,19 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 2, y: 17}
   m_Center: {x: 0, y: 0}
+--- !u!114 &1918864479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1918864474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StepSounds:
+  - {fileID: 0}
 --- !u!1 &1926738289
 GameObject:
   m_ObjectHideFlags: 0
@@ -12606,6 +12620,10 @@ Prefab:
       value: .0537729263
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
