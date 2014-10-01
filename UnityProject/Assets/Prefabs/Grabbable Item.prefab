@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.6946869, y: -13.3149824, z: 0}
+  m_LocalPosition: {x: -16.9607468, y: 1.72006011, z: 0}
   m_LocalScale: {x: .927992642, y: .927992761, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -108,11 +108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c76ea56eb68ddf4bbbe9d43f6e835ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractButton: 101
-  Conditions: {fileID: 0}
-  PlayWhenFailure: {fileID: 0}
-  PlayFirstSuccess: {fileID: 0}
-  PlayWhenSuccess: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
+  LockedState: {fileID: 0}
+  UnlockedState: {fileID: 0}
+  TransitionScripts: []
   ItemName: 
 --- !u!212 &21200000
 SpriteRenderer:

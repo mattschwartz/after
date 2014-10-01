@@ -44,7 +44,7 @@ namespace After.Interactable
             ReadTransition(CurrentState, (StateType)newState);
         }
 
-        private void ReadTransition(StateType from, StateType to)
+        protected void ReadTransition(StateType from, StateType to)
         {
             TransitionScripts
                 .FindAll(t => t.Legible(from, to))
