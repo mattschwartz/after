@@ -73,3 +73,7 @@ TagManager:
     userID: 5
     uniqueID: 3106866321
     locked: 0
+  - name: Camera Transition
+    userID: 9
+    uniqueID: 1894618561
+    locked: 1
