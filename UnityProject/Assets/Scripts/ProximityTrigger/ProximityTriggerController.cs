@@ -1,6 +1,7 @@
 ﻿using After.Interactable;
 using After.Interactable.Transitions;
 using System.Collections.Generic;
+using After.ProximityTrigger.ProximityTransitions;
 using UnityEngine;
 
 namespace After.ProximityTrigger
@@ -13,14 +14,7 @@ namespace After.ProximityTrigger
         public ProximityState Locked;
         public ProximityState Unlocked;
         public ProximityState Spent;
-        public List<Transition> TransitionScripts;
-
-        enum TriggerType
-        {
-            Enter,
-            Remain,
-            Exit
-        }
+        public List<ProximityTransition> TransitionScripts;
 
         #endregion
 
@@ -61,6 +55,8 @@ namespace After.ProximityTrigger
                     break;
             }
 
+            if (state == null) { return; }
+
             switch (type) {
                 case TriggerType.Enter:
                     newState = state.OnEnter(other);
@@ -77,16 +73,16 @@ namespace After.ProximityTrigger
             }
 
             newState = newState ?? CurrentState;
-            ReadTransition(CurrentState, (StateType)newState);
+            ReadTransition(CurrentState, (StateType)newState, type);
             CurrentState = (StateType)newState;
         }
 
         #endregion
 
-        protected void ReadTransition(StateType from, StateType to)
+        protected void ReadTransition(StateType from, StateType to, TriggerType type)
         {
             TransitionScripts
-                .FindAll(t => t.Legible(from, to))
+                .FindAll(t => t.Legible(CurrentState, type))
                 .ForEach(t => {
                     if (!t.Read(from, to)) {
                         TransitionScripts.Remove(t);

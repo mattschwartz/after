@@ -7,9 +7,29 @@ namespace After.Audio
 {
 	public class AudioManager : ScriptableObject
     {
+        public static GameObject CreateAudioObject(AudioClip clip, Vector2 position, float volume = 1.0f)
+        {
+            GameObject gameObject = new GameObject();
+            var source = gameObject.AddComponent<AudioSource>();
+
+            source.volume = volume;
+            source.playOnAwake = false;
+            source.clip = clip;
+            gameObject.transform.position = position;
+
+            return gameObject;
+        }
+
         public static void LoopClipAtPoint(AudioClip clip, Vector2 position, float volume = 1.0f)
         {
-            
+            GameObject gameObject = new GameObject();
+            var source = gameObject.AddComponent<AudioSource>();
+
+            source.loop = true;
+            source.volume = volume;
+            source.playOnAwake = true;
+            source.clip = clip;
+            gameObject.transform.position = position;
         }
 
         public static void PlayClipAtPoint(AudioClip clip, Vector2 position, float volume = 1.0f)
