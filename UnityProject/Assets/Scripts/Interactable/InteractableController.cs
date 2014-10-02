@@ -32,7 +32,7 @@ namespace After.Interactable
                     break;
             }
 
-            newState = newState == null ? CurrentState : newState;
+            newState = newState ?? CurrentState;
 
             // Lookup transition hook for (currentstate, newstate) transition
             ReadTransition(CurrentState, (StateType)newState);
