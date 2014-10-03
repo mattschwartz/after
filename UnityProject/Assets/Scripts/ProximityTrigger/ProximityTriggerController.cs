@@ -26,7 +26,7 @@ namespace After.ProximityTrigger
             Trigger(TriggerType.Enter, other);
         }
 
-        void OnTriggerRemain2D(Collider2D other)
+        void OnTriggerStay2D(Collider2D other)
         {
             if (other.name != "Player") { return; }
             Trigger(TriggerType.Remain, other);

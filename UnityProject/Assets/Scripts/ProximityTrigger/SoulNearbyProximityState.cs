@@ -32,6 +32,14 @@ namespace After.ProximityTrigger
                 return To;
             }
 
+            var distance = Vector2.Distance(transform.position, PlayerSoulGlow.transform.position);
+            var opacity = Mathf.Clamp(1 - (distance / 8.33f) + 0.17f, 0, 1);
+            var cl = PlayerSoulGlow.renderer.material.color;
+            cl.a = opacity;
+            PlayerSoulGlow.renderer.material.color = cl;
+
+            AmbienceLoop.GetComponent<AudioSource>().volume = opacity;
+
             return null;
         }
 

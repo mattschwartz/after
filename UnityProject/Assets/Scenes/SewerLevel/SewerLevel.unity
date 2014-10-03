@@ -6272,7 +6272,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: d46f2cb58b3b54e8286eb6dbb1b934d6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .147
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -11364,8 +11364,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 8.42578793, y: 5.08713818}
-  m_Center: {x: -2.60003519, y: .681190729}
+  m_Size: {x: 14.7947121, y: 5.08713818}
+  m_Center: {x: -.49162674, y: .681190729}
 --- !u!114 &1760594709
 MonoBehaviour:
   m_ObjectHideFlags: 0
