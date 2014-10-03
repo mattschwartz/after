@@ -2086,6 +2086,7 @@ Transform:
   - {fileID: 300403324}
   - {fileID: 1830161834}
   - {fileID: 1760594707}
+  - {fileID: 848560088}
   m_Father: {fileID: 0}
   m_RootOrder: 6
 --- !u!1 &262035512
@@ -4043,7 +4044,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 409256785}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.4569912, y: -3.73186255, z: 0}
+  m_LocalPosition: {x: -15.8000002, y: -3.73186255, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1348473377}
@@ -5919,11 +5920,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 848560086}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.981245, y: 10.4400997, z: 0}
+  m_LocalPosition: {x: -10.981245, y: 10.4446468, z: 0}
   m_LocalScale: {x: .51630795, y: .516307473, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 260634086}
+  m_RootOrder: 38
 --- !u!1 &861338309
 GameObject:
   m_ObjectHideFlags: 0
@@ -11817,8 +11818,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1816749790}
   - 212: {fileID: 1816749791}
-  - 58: {fileID: 1816749793}
-  - 58: {fileID: 1816749792}
+  - 61: {fileID: 1816749793}
+  - 114: {fileID: 1816749792}
+  - 68: {fileID: 1816749794}
   m_Layer: 8
   m_Name: Rock
   m_TagString: Untagged
@@ -11860,8 +11862,24 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c12b6178eb746496f845c177054672b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!58 &1816749792
-CircleCollider2D:
+--- !u!114 &1816749792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1816749789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StepSounds:
+  - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
+  - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
+  - {fileID: 8300000, guid: 145898131f0fb49928f9935e8a665431, type: 3}
+  - {fileID: 8300000, guid: e862af059df554c2093cebc016d0bb2f, type: 3}
+--- !u!61 &1816749793
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -11869,10 +11887,10 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.26689339
-  m_Center: {x: -2.51999998, y: -.239999995}
---- !u!58 &1816749793
-CircleCollider2D:
+  m_Size: {x: 4.01258945, y: 2.95722747}
+  m_Center: {x: .568704605, y: -.0963954926}
+--- !u!68 &1816749794
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -11880,8 +11898,10 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.74568367
-  m_Center: {x: .49000001, y: 0}
+  m_Points:
+  - {x: -4.57918882, y: -1.39544392}
+  - {x: -2.89545441, y: .845326424}
+  - {x: -1.2118969, y: .593062401}
 --- !u!1 &1816937070
 GameObject:
   m_ObjectHideFlags: 0
