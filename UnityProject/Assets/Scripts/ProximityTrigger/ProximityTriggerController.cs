@@ -84,7 +84,9 @@ namespace After.ProximityTrigger
             TransitionScripts
                 .FindAll(t => t.Legible(CurrentState, type))
                 .ForEach(t => {
-                    if (!t.Read(from, to)) {
+                    t.Read(from, to);
+
+                    if (t.DestroyOnRead) {
                         TransitionScripts.Remove(t);
                     }
                 });

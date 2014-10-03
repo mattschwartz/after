@@ -1,6 +1,7 @@
 ﻿using After.Interactable.Transitions;
 using Assets.Utility;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,20 +36,21 @@ namespace After.Interactable
             newState = newState ?? CurrentState;
 
             // Lookup transition hook for (currentstate, newstate) transition
-            ReadTransition(CurrentState, (StateType)newState);
+            StartCoroutine(ReadTransition(CurrentState, (StateType)newState));
 
             CurrentState = (StateType)newState;
         }
 
-        protected void ReadTransition(StateType from, StateType to)
+        protected IEnumerator ReadTransition(StateType from, StateType to)
         {
-            TransitionScripts
-                .FindAll(t => t.Legible(from, to))
-                .ForEach(t => {
-                    if (!t.Read(from, to)) { 
-                        TransitionScripts.Remove(t); 
-                    } 
-                });
+            foreach (var script in TransitionScripts.FindAll(t => t.Legible(from, to))) {
+                script.Read(from, to);
+                if (script.DestroyOnRead) {
+                    TransitionScripts.Remove(script);
+                }
+                Debug.Log("waiting for " + script.WaitSecondsAfterRead);
+                yield return new WaitForSeconds(script.WaitSecondsAfterRead);
+            }
         }
     }
 }

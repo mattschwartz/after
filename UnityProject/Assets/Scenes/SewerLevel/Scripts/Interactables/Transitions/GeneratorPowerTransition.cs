@@ -1,6 +1,7 @@
 ﻿using After.Interactable;
 using After.Interactable.Transitions;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,11 +11,9 @@ public class GeneratorPowerTransition : AnimatorTransition
 {
     public GeneratorInteractableController GeneratorController;
 
-    public override bool Read(StateType fromState, StateType toState)
+    public override void Read(StateType fromState, StateType toState)
     {
         GeneratorController.SetPoweredOn(toState != StateType.Locked);
         Animator.SetBool("Running", toState != StateType.Locked);
-
-        return true;
     }
 }

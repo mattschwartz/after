@@ -1,6 +1,7 @@
 ﻿using After.Interactable;
 using After.Interactable.Transitions;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,7 @@ public class SewerDoorTeleportTransition : TeleportTransition
         Animator = GetComponentInParent<Animator>();
     }
 
-    public override bool Read(StateType fromState, StateType toState)
+    public override void Read(StateType fromState, StateType toState)
     {
         if (toState == StateType.Locked) {
             Player.SendMessage("LockPlayer");
@@ -29,8 +30,6 @@ public class SewerDoorTeleportTransition : TeleportTransition
             Animator.SetBool("Locked", false);
             Animator.SetTrigger("TryEnter");
         }
-
-        return true;
     }
 
     private void FreePlayer()

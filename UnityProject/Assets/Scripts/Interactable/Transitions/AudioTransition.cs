@@ -1,5 +1,6 @@
 ﻿using After.Audio;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,11 +13,9 @@ namespace After.Interactable.Transitions
     	public float Volume = 1.0f;
         public AudioClip Clip;
 
-        public override bool Read(StateType fromState, StateType toState)
+        public override void Read(StateType fromState, StateType toState)
         {
             AudioManager.PlayClipAtPoint(Clip, 1.0f, transform.position, Volume);
-
-            return true;
         }
     }
 }

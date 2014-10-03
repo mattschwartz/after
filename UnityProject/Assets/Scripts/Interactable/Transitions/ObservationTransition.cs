@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,11 +17,9 @@ namespace After.Interactable.Transitions
             PlayerThoughts = GameObject.Find("Player Thoughts");
         }
 
-        public override bool Read(StateType fromState, StateType toState)
+        public override void Read(StateType fromState, StateType toState)
         {
             PlayerThoughts.SendMessage("SetThought", Observations);
-
-            return true;
         }
     }
 }

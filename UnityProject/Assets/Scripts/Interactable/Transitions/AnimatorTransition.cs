@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,14 +16,12 @@ namespace After.Interactable.Transitions
             Animator = GetComponentInParent<Animator>();
         }
 
-        public override bool Read(StateType fromState, StateType toState)
+        public override void Read(StateType fromState, StateType toState)
         {
             Animator.SetTrigger("Interact");
             Animator.SetBool("LockedState", toState == StateType.Locked);
             Animator.SetBool("UnlockedState", toState == StateType.Unlocked);
             Animator.SetBool("SpentState", toState == StateType.Spent);
-
-            return true;
         }
     }
 }

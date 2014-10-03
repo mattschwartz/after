@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace After.Interactable.Transitions
@@ -6,11 +7,11 @@ namespace After.Interactable.Transitions
 	{
 		public Sprite TransitionSprite;
 
-		public override bool Read(StateType fromState, StateType toState)
+		public override void Read(StateType fromState, StateType toState)
 		{
 			GetComponentInParent<SpriteRenderer>().sprite = TransitionSprite;
 			GetComponentInParent<SpriteRenderer>().transform.localScale = new Vector3(1, 1, 1);
-			return false;
+            DestroyOnRead = true;
 		}
 	}
 }

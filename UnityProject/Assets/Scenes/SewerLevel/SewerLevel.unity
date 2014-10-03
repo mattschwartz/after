@@ -240,6 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a984b51c54e3b424f9482d28fe64771b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 1
   Observations: This door requires a numeric code.
@@ -429,6 +431,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a984b51c54e3b424f9482d28fe64771b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 1
   Observations: The elevator isn't powered.
@@ -472,6 +476,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 0
   Volume: 1
@@ -568,6 +574,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 1
   Volume: 1
@@ -695,6 +703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e426758a62323804abf7453f7682b758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 0
   ToLocation: {x: -8.34854603, y: -6.20292521, z: 0}
@@ -820,6 +830,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 2
   Volume: 1
@@ -909,6 +921,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a984b51c54e3b424f9482d28fe64771b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 2
   Observations: 
@@ -952,6 +966,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e426758a62323804abf7453f7682b758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 0
   ToLocation: {x: -5.9161768, y: 9.30348015, z: 0}
@@ -1423,6 +1439,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a984b51c54e3b424f9482d28fe64771b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 2
   To: 2
   Observations: The generator is running.
@@ -1477,6 +1495,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de107453ae0bc10459b725b49d8e4bd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 2
   GeneratorController: {fileID: 875245103}
@@ -1919,6 +1939,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a984b51c54e3b424f9482d28fe64771b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 1
   Observations: I'll need to pry these open with something.
@@ -3414,7 +3436,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 300403323}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cc467e36c16f4a3aa586e4ce5740c6e, type: 3}
+  m_Script: {fileID: 11500000, guid: b00bb5dfbeb4dc74b8807ffbbe5d4a26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentState: 1
@@ -3776,6 +3798,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a984b51c54e3b424f9482d28fe64771b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 1
   Observations: This door requires a card.
@@ -4203,6 +4227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b0d6a9dd37d40b786dbe52b4494467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 2
   TransitionSprite: {fileID: 21300000, guid: aefe433d4b5524de8a1ed6f8af529808, type: 3}
@@ -4675,6 +4701,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 2
   Volume: 1
@@ -4718,6 +4746,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 2
   Volume: 1
@@ -4804,6 +4834,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea781f3809d95e249bc81e38c4ddcbc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 0
 --- !u!1 &589357459
@@ -4938,6 +4970,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458a2776d4c9f428e9bb86c95418e560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 2
   ParticleSystem: {fileID: 300403325}
@@ -5062,6 +5096,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbf4c2fb688929043b5b54f594d911e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 2
   ItemToSpawn: {fileID: 653709347}
@@ -5647,6 +5683,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 0
   Volume: 1
@@ -5765,6 +5803,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef050c4a4736db54eb49afc7e0eba262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 0
   GeneratorController: {fileID: 875245103}
@@ -6036,6 +6076,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 0
   Volume: 1
@@ -6190,6 +6232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 2
   Volume: 1
@@ -6803,6 +6847,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a984b51c54e3b424f9482d28fe64771b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 2
   Observations: 
@@ -6977,6 +7023,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb537c0b087dd4efdb5e64c4fda7303d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 2
   Animator: {fileID: 2025917680}
@@ -7393,6 +7441,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 1
   Volume: 1
@@ -8105,6 +8155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 0
   Volume: 1
@@ -8149,6 +8201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 1
   Volume: 1
@@ -8353,6 +8407,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a984b51c54e3b424f9482d28fe64771b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 2
   Observations: 
@@ -8562,6 +8618,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e061b33df58d3e64bb8644ab7c4f23bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 0
   ToLocation: {x: 1.67767799, y: -33.1497917, z: 0}
@@ -8607,6 +8665,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 1
   Volume: 1
@@ -8639,6 +8699,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 2
   Volume: 1
@@ -8737,6 +8799,10 @@ Prefab:
     - target: {fileID: 11400020, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
       propertyPath: CurrentState
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400012, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
+      propertyPath: WaitSecondsAfterRead
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
@@ -8869,6 +8935,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 0
   Volume: 1
@@ -8995,6 +9063,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 0
   Volume: 1
@@ -9164,6 +9234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a984b51c54e3b424f9482d28fe64771b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 2
   Observations: 
@@ -9296,6 +9368,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbf4c2fb688929043b5b54f594d911e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 2
   ItemToSpawn: {fileID: 1614624034}
@@ -10706,6 +10780,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea781f3809d95e249bc81e38c4ddcbc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 0
 --- !u!1 &1614624034
@@ -10850,6 +10926,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 2
   Volume: 1
@@ -11321,6 +11399,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 2
   Volume: 1
@@ -11411,6 +11491,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a984b51c54e3b424f9482d28fe64771b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 1
   Observations: It won't start.
@@ -11466,6 +11548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a984b51c54e3b424f9482d28fe64771b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 1
   Observations: I cannot move him with my bare hands.
@@ -11775,6 +11859,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e061b33df58d3e64bb8644ab7c4f23bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 0
   ToLocation: {x: .659506321, y: 32.98386, z: 0}
@@ -12038,6 +12124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbf4c2fb688929043b5b54f594d911e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 2
   ItemToSpawn: {fileID: 419237405}
@@ -12325,6 +12413,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 1
   Volume: 1
@@ -12381,6 +12471,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 1
   Volume: 1
@@ -12658,6 +12750,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2769688080b88c042a95af8c8cbdbb51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 2
 --- !u!1001 &1938850234
@@ -12870,6 +12964,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 0
   To: 0
   Volume: 1
@@ -12914,6 +13010,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a984b51c54e3b424f9482d28fe64771b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsAfterRead: 0
   From: 1
   To: 1
   Observations: Nothing interesting happens.
