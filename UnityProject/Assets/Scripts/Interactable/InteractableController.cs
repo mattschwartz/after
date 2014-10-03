@@ -36,21 +36,26 @@ namespace After.Interactable
             newState = newState ?? CurrentState;
 
             // Lookup transition hook for (currentstate, newstate) transition
-            StartCoroutine(ReadTransition(CurrentState, (StateType)newState));
+            ReadTransitions(CurrentState, (StateType)newState);
 
             CurrentState = (StateType)newState;
         }
 
-        protected IEnumerator ReadTransition(StateType from, StateType to)
+        protected void ReadTransitions(StateType from, StateType to)
         {
             foreach (var script in TransitionScripts.FindAll(t => t.Legible(from, to))) {
-                script.Read(from, to);
+                StartCoroutine(Read(script, from, to));
+
                 if (script.DestroyOnRead) {
                     TransitionScripts.Remove(script);
                 }
-                Debug.Log("waiting for " + script.WaitSecondsAfterRead);
-                yield return new WaitForSeconds(script.WaitSecondsAfterRead);
             }
+        }
+
+        private IEnumerator Read(Transition script, StateType from, StateType to)
+        {
+            yield return new WaitForSeconds(script.WaitSecondsBeforeRead);
+            script.Read(from, to);
         }
     }
 }

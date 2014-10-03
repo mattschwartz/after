@@ -12,7 +12,7 @@ namespace After.Interactable.Transitions
         #region Members
 
         public bool DestroyOnRead = false;
-        public float WaitSecondsAfterRead = 0f;
+        public float WaitSecondsBeforeRead = 0f;
         public StateType From;
         public StateType To;
 

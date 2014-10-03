@@ -35,7 +35,7 @@ namespace After.Interactable
         public new void Interact()
         {
             if (LastInteraction >= InteractDelay) {
-                ReadTransition(StateType.Any, StateType.Any);
+                ReadTransitions(StateType.Any, StateType.Any);
                 Player.SendMessage("PickupItem", gameObject);
                 LastInteraction = 0;
             }

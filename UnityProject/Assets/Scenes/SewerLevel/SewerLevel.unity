@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 1
   Observations: This door requires a numeric code.
@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 1
   Observations: The elevator isn't powered.
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 0
   Volume: 1
@@ -575,7 +575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 1
   Volume: 1
@@ -704,7 +704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 0
   ToLocation: {x: -8.34854603, y: -6.20292521, z: 0}
@@ -831,7 +831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 2
   Volume: 1
@@ -922,7 +922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 2
   Observations: 
@@ -967,7 +967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 0
   ToLocation: {x: -5.9161768, y: 9.30348015, z: 0}
@@ -1440,7 +1440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 2
   To: 2
   Observations: The generator is running.
@@ -1496,7 +1496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 2
   GeneratorController: {fileID: 875245103}
@@ -1940,7 +1940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 1
   Observations: I'll need to pry these open with something.
@@ -2314,10 +2314,10 @@ Transform:
   - {fileID: 1783385869}
   - {fileID: 1966995612}
   - {fileID: 1393763595}
-  - {fileID: 1890551971}
   - {fileID: 1113004631}
   - {fileID: 520467743}
   - {fileID: 618332388}
+  - {fileID: 1890551971}
   - {fileID: 416764883}
   m_Father: {fileID: 260634086}
   m_RootOrder: 35
@@ -3444,13 +3444,13 @@ MonoBehaviour:
   UnlockedState: {fileID: 1538208845}
   TransitionScripts:
   - {fileID: 1783385870}
-  - {fileID: 1113004632}
   - {fileID: 1966995613}
   - {fileID: 1393763596}
-  - {fileID: 1890551972}
+  - {fileID: 1113004632}
   - {fileID: 520467744}
   - {fileID: 618332389}
   - {fileID: 416764884}
+  - {fileID: 1890551972}
 --- !u!61 &300403329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3799,7 +3799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 1
   Observations: This door requires a card.
@@ -4228,7 +4228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 15
   From: 1
   To: 2
   TransitionSprite: {fileID: 21300000, guid: aefe433d4b5524de8a1ed6f8af529808, type: 3}
@@ -4702,7 +4702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 2
   Volume: 1
@@ -4734,7 +4734,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 300403324}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!114 &520467744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4747,7 +4747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 2
   Volume: 1
@@ -4835,7 +4835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 0
 --- !u!1 &589357459
@@ -4958,7 +4958,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 300403324}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!114 &618332389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4971,7 +4971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 2
   ParticleSystem: {fileID: 300403325}
@@ -5097,7 +5097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 2
   ItemToSpawn: {fileID: 653709347}
@@ -5684,7 +5684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 0
   Volume: 1
@@ -5804,7 +5804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 0
   GeneratorController: {fileID: 875245103}
@@ -6077,7 +6077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 0
   Volume: 1
@@ -6233,7 +6233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 2
   Volume: 1
@@ -6848,7 +6848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 2
   Observations: 
@@ -7011,7 +7011,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 300403324}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!114 &1113004632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7024,7 +7024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 2
   Animator: {fileID: 2025917680}
@@ -7442,7 +7442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 1
   Volume: 1
@@ -8156,7 +8156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 0
   Volume: 1
@@ -8202,7 +8202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 1
   Volume: 1
@@ -8408,7 +8408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 2
   Observations: 
@@ -8619,7 +8619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 0
   ToLocation: {x: 1.67767799, y: -33.1497917, z: 0}
@@ -8666,7 +8666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 1
   Volume: 1
@@ -8700,7 +8700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 2
   Volume: 1
@@ -8936,7 +8936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 0
   Volume: 1
@@ -9064,7 +9064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 0
   Volume: 1
@@ -9235,7 +9235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 2
   Observations: 
@@ -9369,7 +9369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 2
   ItemToSpawn: {fileID: 1614624034}
@@ -10781,7 +10781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 0
 --- !u!1 &1614624034
@@ -10927,7 +10927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 2
   Volume: 1
@@ -11400,7 +11400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 2
   Volume: 1
@@ -11492,7 +11492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 1
   Observations: It won't start.
@@ -11549,7 +11549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 1
   Observations: I cannot move him with my bare hands.
@@ -11860,7 +11860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 0
   ToLocation: {x: .659506321, y: 32.98386, z: 0}
@@ -12112,7 +12112,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 300403324}
-  m_RootOrder: 5
+  m_RootOrder: 8
 --- !u!114 &1890551972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12125,7 +12125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 1
   From: 1
   To: 2
   ItemToSpawn: {fileID: 419237405}
@@ -12414,7 +12414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 1
   Volume: 1
@@ -12472,7 +12472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 1
   Volume: 1
@@ -12751,7 +12751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 2
 --- !u!1001 &1938850234
@@ -12965,7 +12965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 0
   To: 0
   Volume: 1
@@ -13011,7 +13011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsAfterRead: 0
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 1
   Observations: Nothing interesting happens.
