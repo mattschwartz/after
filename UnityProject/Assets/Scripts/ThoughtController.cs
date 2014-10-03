@@ -41,7 +41,7 @@ public class ThoughtController : MonoBehaviour
     {
         Thought = thought;
         DisplayTime = 0;
-        FadeTime = (Thought.Split(' ').Length) * 0.25f;
+        FadeTime = (Thought.Split(' ').Length) * 0.30f;
 
         ShowThought = true;
     }
