@@ -10,6 +10,5 @@ public class DisableSoulParticlesTransition : Transition
 	public override void Read(StateType fromState, StateType toState)
 	{
 		ParticleSystem.emissionRate = 0;
-		DestroyOnRead = true;
 	}
 }

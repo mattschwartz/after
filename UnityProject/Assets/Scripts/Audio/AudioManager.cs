@@ -31,6 +31,7 @@ namespace After.Audio
             source.playOnAwake = true;
             source.clip = clip;
             gameObject.transform.position = position;
+            source.Play();
         }
 
         public static void PlayClipAtPoint(AudioClip clip, Vector2 position, float volume = 1.0f)

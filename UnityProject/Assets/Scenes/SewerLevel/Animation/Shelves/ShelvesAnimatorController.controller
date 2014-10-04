@@ -8,8 +8,8 @@ AnimatorController:
   m_Name: ShelvesAnimatorController
   serializedVersion: 2
   m_AnimatorParameters:
-  - m_Name: UnlockedState
-    m_Type: 4
+  - m_Name: StealGasCan
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -39,7 +39,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: UnlockedState
+    m_ConditionEvent: StealGasCan
     m_EventTreshold: 0
     m_ExitTime: 1
   m_Atomic: 1

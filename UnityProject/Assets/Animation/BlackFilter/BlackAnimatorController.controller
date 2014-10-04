@@ -8,8 +8,8 @@ AnimatorController:
   m_Name: BlackAnimatorController
   serializedVersion: 2
   m_AnimatorParameters:
-  - m_Name: Enabled
-    m_Type: 4
+  - m_Name: LightsOn
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -38,8 +38,8 @@ Transition:
   m_TransitionDuration: .25
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: Enabled
+  - m_ConditionMode: 1
+    m_ConditionEvent: LightsOn
     m_EventTreshold: 0
     m_ExitTime: .75
   m_Atomic: 1
@@ -111,13 +111,12 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110241320}
-      second:
-      - {fileID: 110145360}
-    data:
       first: {fileID: 110200000}
       second:
       - {fileID: 110100000}
+    data:
+      first: {fileID: 110241320}
+      second: []
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -144, y: 24, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

@@ -1,10 +1,10 @@
 ﻿using After.Interactable;
 using After.Interactable.Transitions;
 
-public class GeneratorAnimationTransition : AnimationTransition
+public class LiftLeverAnimationTransition : AnimationTransition
 {
     public override void Read(StateType fromState, StateType toState)
     {
-        Animator.SetBool("Running", true);
+        Animator.SetBool("Enabled", true);
     }
 }
