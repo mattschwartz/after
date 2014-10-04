@@ -158,6 +158,7 @@ MonoBehaviour:
   CurrentState: 1
   LockedState: {fileID: 1256472308}
   UnlockedState: {fileID: 732994800}
+  SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 1465563291}
   - {fileID: 109274125}
@@ -1243,6 +1244,7 @@ MonoBehaviour:
   CurrentState: 1
   LockedState: {fileID: 1141132279}
   UnlockedState: {fileID: 711705602}
+  SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 16400120}
   - {fileID: 1545107352}
@@ -3354,6 +3356,7 @@ MonoBehaviour:
   CurrentState: 1
   LockedState: {fileID: 1601522912}
   UnlockedState: {fileID: 1538208845}
+  SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 1783385870}
   - {fileID: 1113004632}
@@ -4303,6 +4306,7 @@ MonoBehaviour:
   CurrentState: 1
   LockedState: {fileID: 0}
   UnlockedState: {fileID: 0}
+  SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 37619331}
   ItemName: KeyCard
@@ -5381,6 +5385,7 @@ MonoBehaviour:
   CurrentState: 1
   LockedState: {fileID: 0}
   UnlockedState: {fileID: 0}
+  SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 1272377025}
   ItemName: KeyCode
@@ -6325,6 +6330,7 @@ MonoBehaviour:
   CurrentState: 1
   LockedState: {fileID: 1210460436}
   UnlockedState: {fileID: 410122494}
+  SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 356458788}
   - {fileID: 101834834}
@@ -6683,6 +6689,7 @@ MonoBehaviour:
   CurrentState: 1
   LockedState: {fileID: 1816937072}
   UnlockedState: {fileID: 62738187}
+  SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 1440870700}
   - {fileID: 68676873}
@@ -8541,6 +8548,7 @@ MonoBehaviour:
   CurrentState: 1
   LockedState: {fileID: 0}
   UnlockedState: {fileID: 0}
+  SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 878753111}
   ItemName: Rebar
@@ -9606,6 +9614,7 @@ MonoBehaviour:
   CurrentState: 1
   LockedState: {fileID: 1680484993}
   UnlockedState: {fileID: 693829731}
+  SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 258426507}
   - {fileID: 1065970022}
@@ -11024,6 +11033,7 @@ MonoBehaviour:
   CurrentState: 1
   LockedState: {fileID: 0}
   UnlockedState: {fileID: 0}
+  SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 728401012}
   ItemName: Generator Fuel
@@ -12177,6 +12187,7 @@ MonoBehaviour:
   CurrentState: 1
   LockedState: {fileID: 1585797339}
   UnlockedState: {fileID: 1709066025}
+  SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 37478667}
   - {fileID: 88328289}
@@ -12441,6 +12452,7 @@ MonoBehaviour:
   CurrentState: 1
   LockedState: {fileID: 134424517}
   UnlockedState: {fileID: 2094666294}
+  SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 1565447189}
   - {fileID: 1610951399}
@@ -12547,6 +12559,7 @@ MonoBehaviour:
   CurrentState: 1
   LockedState: {fileID: 1217937169}
   UnlockedState: {fileID: 589357461}
+  SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 1970734647}
   - {fileID: 1195238256}
@@ -13154,6 +13167,7 @@ MonoBehaviour:
   CurrentState: 1
   LockedState: {fileID: 706397054}
   UnlockedState: {fileID: 2115693025}
+  SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 1988546399}
   - {fileID: 2146414119}

@@ -16,6 +16,7 @@ namespace After.Interactable
         public StateType CurrentState = StateType.Locked;
         public InteractableState LockedState;
         public InteractableState UnlockedState;
+        public InteractableState SpentState;
         public List<Transition> TransitionScripts;
 
         #endregion
@@ -26,11 +27,20 @@ namespace After.Interactable
 
             switch (CurrentState) {
                 case StateType.Locked:
-                    newState = LockedState.Transition();
+                	if (LockedState != null) {
+	                    newState = LockedState.Transition();
+                	}
                     break;
                 case StateType.Unlocked:
-                    newState = UnlockedState.Transition();
+                	if (UnlockedState != null) {
+	                    newState = UnlockedState.Transition();
+                	}
                     break;
+                case StateType.Spent:
+                	if (SpentState != null) {
+	                	newState = SpentState.Transition();
+                	}
+                	break;
             }
 
             newState = newState ?? CurrentState;
