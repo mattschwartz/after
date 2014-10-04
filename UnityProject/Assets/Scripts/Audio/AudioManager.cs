@@ -84,7 +84,7 @@ namespace After.Audio
             PlayClipAtPoint(stepSounds[index], pitch, position, volume);
         }
 
-        // Call from coroutine
+        // Must call using StartCoroutine
         public static IEnumerator FadeMusic(AudioSource audioSource)
         {
             while (audioSource.volume > .1F) {

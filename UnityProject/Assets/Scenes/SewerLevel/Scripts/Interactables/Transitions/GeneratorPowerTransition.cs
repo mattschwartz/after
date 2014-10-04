@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-public class GeneratorPowerTransition : AnimatorTransition
+public class GeneratorPowerTransition : AnimationTransition
 {
     public GeneratorInteractableController GeneratorController;
 
