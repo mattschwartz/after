@@ -9,7 +9,7 @@ public class PourFuelAnimationTransition : Transition
 
     public override void Read(StateType fromState, StateType toState)
     {
-        Player.transform.position = new Vector2(transform.position.x - 1.4f, transform.position.y);
+        Player.transform.position = new Vector2(transform.position.x - 1.6f, transform.position.y);
         Player.SendMessage("LockPlayer");
         Invoke("FreePlayer", 2.4f);
         PlayerAnimator.SetTrigger("PourFuel");

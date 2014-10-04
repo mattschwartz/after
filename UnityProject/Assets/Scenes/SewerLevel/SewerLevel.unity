@@ -9526,12 +9526,12 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1581451905}
-  lengthInSec: .5
+  lengthInSec: .200000003
   startDelay: 0
   speed: 1
   randomSeed: 0
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   moveWithTransform: 1
   InitialModule:
@@ -9684,8 +9684,8 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4294967295
-      minMaxState: 1
+        rgba: 4280300819
+      minMaxState: 0
     startSize:
       scalar: 6.01999998
       maxCurve:
@@ -9754,7 +9754,7 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: 0
     inheritVelocity: 0
-    maxNumParticles: 5000
+    maxNumParticles: 1000
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -9772,7 +9772,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 1518
+      scalar: 300
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -9799,7 +9799,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    cnt0: 30
+    cnt0: 1000
     cnt1: 30
     cnt2: 30
     cnt3: 30
@@ -9874,10 +9874,10 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 4287466896
+          rgba: 4286952485
         key1:
           serializedVersion: 2
-          rgba: 4278190080
+          rgba: 3308463895
         key2:
           serializedVersion: 2
           rgba: 0
@@ -9917,10 +9917,10 @@ ParticleSystem:
       minGradient:
         key0:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 4287772972
         key1:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 4282737440
         key2:
           serializedVersion: 2
           rgba: 0
