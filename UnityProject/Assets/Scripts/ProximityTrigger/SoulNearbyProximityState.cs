@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using After.Interactable;
 using UnityEngine;
+using After.Audio;
 
 namespace After.ProximityTrigger
 {
     public class SoulNearbyProximityState : ProximityState
     {
         public Animator PlayerSoulGlow;
-        public GameObject AmbienceLoop;
         public SoulController Soul;
+        public AudioSource AmbienceLoop;
 
         public override StateType? OnEnter(UnityEngine.Collider2D other)
         {
@@ -20,7 +21,7 @@ namespace After.ProximityTrigger
             }
 
             PlayerSoulGlow.SetBool("Glowing", true);
-            AmbienceLoop.GetComponent<AudioSource>().Play();
+            AmbienceLoop.Play();
             return null;
         }
 
@@ -28,7 +29,7 @@ namespace After.ProximityTrigger
         {
             if (Soul.Freed) {
                 PlayerSoulGlow.SetBool("Glowing", false);
-                AmbienceLoop.GetComponent<AudioSource>().Stop();
+                AmbienceLoop.Stop();
                 return To;
             }
 
@@ -38,7 +39,7 @@ namespace After.ProximityTrigger
             cl.a = opacity;
             PlayerSoulGlow.renderer.material.color = cl;
 
-            AmbienceLoop.GetComponent<AudioSource>().volume = opacity;
+            AmbienceLoop.volume = opacity;
 
             return null;
         }
@@ -46,7 +47,7 @@ namespace After.ProximityTrigger
         public override StateType? OnExit(Collider2D other)
         {
             PlayerSoulGlow.SetBool("Glowing", false);
-            AmbienceLoop.GetComponent<AudioSource>().Stop();
+            StartCoroutine(AudioManager.FadeMusic(AmbienceLoop));
             return null;
         }
     }

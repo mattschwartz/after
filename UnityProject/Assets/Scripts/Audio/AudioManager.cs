@@ -2,6 +2,7 @@ using System.IO;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using System.Collections;
 
 namespace After.Audio 
 {
@@ -81,6 +82,16 @@ namespace After.Audio
             }
 
             PlayClipAtPoint(stepSounds[index], pitch, position, volume);
+        }
+
+        // Call from coroutine
+        public static IEnumerator FadeMusic(AudioSource audioSource)
+        {
+            while (audioSource.volume > .1F) {
+                audioSource.volume = Mathf.Lerp(audioSource.volume, 0F, Time.deltaTime);
+                yield return 0;
+            }
+            audioSource.volume = 0;
         }
 	}
 }

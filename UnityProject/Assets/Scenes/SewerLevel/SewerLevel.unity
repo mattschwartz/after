@@ -5533,8 +5533,8 @@ MonoBehaviour:
   To: 2
   Conditions: {fileID: 2144129185}
   PlayerSoulGlow: {fileID: 27133715}
-  AmbienceLoop: {fileID: 927005167}
   Soul: {fileID: 300403330}
+  AmbienceLoop: {fileID: 927005169}
 --- !u!1 &711705600
 GameObject:
   m_ObjectHideFlags: 0
