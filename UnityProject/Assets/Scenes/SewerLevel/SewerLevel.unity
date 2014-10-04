@@ -5220,6 +5220,53 @@ MonoBehaviour:
   From: 1
   To: 2
   ItemToSpawn: {fileID: 653709347}
+--- !u!1 &633985743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 633985744}
+  - 114: {fileID: 633985745}
+  m_Layer: 0
+  m_Name: Elevator Call Animation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &633985744
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 633985743}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1830161834}
+  m_RootOrder: 5
+--- !u!114 &633985745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 633985743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfbe2d8181808b944a7bd1e1fc5a2b95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 1
+  To: 1
+  LockDuration: .670000017
+  Player: {fileID: 194404990}
+  PlayerAnimator: {fileID: 194404997}
+  x: 2.43000007
 --- !u!1 &641821344
 GameObject:
   m_ObjectHideFlags: 0
@@ -8764,92 +8811,6 @@ Prefab:
   m_RootGameObject: {fileID: 904609771}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &1440334533
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1440334535}
-  - 82: {fileID: 1440334534}
-  m_Layer: 0
-  m_Name: Generator Sound Loop
-  m_TagString: Untagged
-  m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!82 &1440334534
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1440334533}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 22bad280e28d1473baa12f335fd21da6, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 0
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
---- !u!4 &1440334535
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1440334533}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.8598461, y: 34.6110077, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
 --- !u!1 &1440870698
 GameObject:
   m_ObjectHideFlags: 0
@@ -11917,6 +11878,8 @@ Transform:
   - {fileID: 37478666}
   - {fileID: 88328288}
   - {fileID: 1937524257}
+  - {fileID: 633985744}
+  - {fileID: 2014015041}
   m_Father: {fileID: 260634086}
   m_RootOrder: 35
 --- !u!95 &1830161835
@@ -11966,8 +11929,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 7, y: 7}
-  m_Center: {x: 0, y: 0}
+  m_Size: {x: 4.80639505, y: 7}
+  m_Center: {x: -2.7992425, y: 0}
 --- !u!114 &1830161838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11987,6 +11950,8 @@ MonoBehaviour:
   - {fileID: 37478667}
   - {fileID: 88328289}
   - {fileID: 1937524258}
+  - {fileID: 633985745}
+  - {fileID: 2014015042}
 --- !u!1 &1856396326
 GameObject:
   m_ObjectHideFlags: 0
@@ -13192,6 +13157,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1334897913}
   m_RootOrder: 4
+--- !u!1 &2014015040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2014015041}
+  - 114: {fileID: 2014015042}
+  m_Layer: 0
+  m_Name: Elevator Call Animation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2014015041
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2014015040}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1830161834}
+  m_RootOrder: 6
+--- !u!114 &2014015042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2014015040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfbe2d8181808b944a7bd1e1fc5a2b95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 1
+  To: 3
+  LockDuration: 0
+  Player: {fileID: 194404990}
+  PlayerAnimator: {fileID: 194404997}
+  x: 3
 --- !u!1 &2025917679
 GameObject:
   m_ObjectHideFlags: 0
