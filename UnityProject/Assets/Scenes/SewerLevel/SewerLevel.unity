@@ -877,7 +877,7 @@ MonoBehaviour:
   DestroyOnRead: 1
   WaitSecondsBeforeRead: 0
   From: 1
-  To: 3
+  To: 2
   Volume: 1
   Clip: {fileID: 8300000, guid: 66e46042f0a8b4efaa9774160a04d249, type: 3}
 --- !u!1 &101834832
@@ -10812,7 +10812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd4db1c4c14614439e01019b2bd2ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  To: 3
+  To: 2
   Conditions: {fileID: 1980510729}
 --- !u!1 &1598676429
 GameObject:
@@ -12933,7 +12933,7 @@ MonoBehaviour:
   DestroyOnRead: 1
   WaitSecondsBeforeRead: 0
   From: 1
-  To: 3
+  To: 2
 --- !u!1001 &1938850234
 Prefab:
   m_ObjectHideFlags: 0
@@ -13444,7 +13444,7 @@ MonoBehaviour:
   DestroyOnRead: 0
   WaitSecondsBeforeRead: 0
   From: 1
-  To: 3
+  To: 2
   LockDuration: 0
   Player: {fileID: 194404990}
   PlayerAnimator: {fileID: 194404997}
