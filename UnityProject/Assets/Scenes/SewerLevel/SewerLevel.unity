@@ -3347,7 +3347,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 300403323}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b00bb5dfbeb4dc74b8807ffbbe5d4a26, type: 3}
+  m_Script: {fileID: 11500000, guid: f7ee47c2431dcdd4c8488e578ad6b3d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentState: 1
@@ -5266,7 +5266,6 @@ MonoBehaviour:
   LockDuration: .670000017
   Player: {fileID: 194404990}
   PlayerAnimator: {fileID: 194404997}
-  x: 2.43000007
 --- !u!1 &641821344
 GameObject:
   m_ObjectHideFlags: 0
@@ -5744,7 +5743,7 @@ MonoBehaviour:
   To: 2
   Conditions: {fileID: 2144129185}
   PlayerSoulGlow: {fileID: 27133715}
-  Soul: {fileID: 300403330}
+  SoulController: {fileID: 300403328}
   AmbienceLoop: {fileID: 927005169}
 --- !u!1 &711705600
 GameObject:
@@ -13203,7 +13202,6 @@ MonoBehaviour:
   LockDuration: 0
   Player: {fileID: 194404990}
   PlayerAnimator: {fileID: 194404997}
-  x: 3
 --- !u!1 &2025917679
 GameObject:
   m_ObjectHideFlags: 0

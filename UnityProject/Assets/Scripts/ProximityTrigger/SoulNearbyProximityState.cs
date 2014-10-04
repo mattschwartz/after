@@ -11,12 +11,12 @@ namespace After.ProximityTrigger
     public class SoulNearbyProximityState : ProximityState
     {
         public Animator PlayerSoulGlow;
-        public SoulController Soul;
+        public InteractableController SoulController;
         public AudioSource AmbienceLoop;
 
         public override StateType? OnEnter(UnityEngine.Collider2D other)
         {
-            if (Soul.Freed) {
+            if (SoulController.CurrentState == StateType.Unlocked) {
                 return To;
             }
 
@@ -27,7 +27,7 @@ namespace After.ProximityTrigger
 
         public override StateType? OnRemain(Collider2D other)
         {
-            if (Soul.Freed) {
+            if (SoulController.CurrentState == StateType.Unlocked) {
                 PlayerSoulGlow.SetBool("Glowing", false);
                 AmbienceLoop.Stop();
                 return To;
