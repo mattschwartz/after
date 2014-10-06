@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: 325e099864ffe478f86160dcd436ae65
+guid: bea10cecccc144dac9e491e986a79176
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Handrails 1
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

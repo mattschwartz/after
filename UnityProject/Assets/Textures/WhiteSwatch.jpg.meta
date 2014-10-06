@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 0e9c5383ac67a4ac79179712faa9cf98
+guid: 49e80583dec4ab44f93a0d164195501c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Handrail2
+    21300000: WhiteSwatch
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,9 +26,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
