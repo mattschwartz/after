@@ -10,23 +10,37 @@ public class SceneFaderController : MonoBehaviour {
 	void Start () {
 		// Set the texture so that it is the the size of the screen and covers it.
         guiTexture.pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);
+        StartCoroutine(FadeIn());
 	}
 
 	public IEnumerator FadeOut ()
 	{
 		// Lerp the colour of the texture between itself and black.
-    	guiTexture.color = Color.Lerp(guiTexture.color, Color.black, FadeRate * Time.deltaTime);
-    	yield return 1.0f / FadeRate;
-    	if (NextLevel == 0)
-    		Application.Quit();
-    	else
-    		Application.LoadLevel(NextLevel);
-    	yield return 0;
+        while (true)
+        {
+            guiTexture.color = Color.Lerp(guiTexture.color, Color.black, FadeRate * Time.deltaTime);
+            yield return null;
+            if (guiTexture.color.a >= .95)
+            {
+                if (NextLevel == 0)
+                    Application.Quit();
+                else
+                    Application.LoadLevel(NextLevel);
+                break;
+            }
+        }
+        yield return null;
 	}
 
 	public IEnumerator FadeIn ()
 	{
-		guiTexture.color = Color.Lerp(guiTexture.color, Color.clear, FadeRate * Time.deltaTime);
-		yield return 1.0f / FadeRate;
+        while (true)
+        {
+            guiTexture.color = Color.Lerp(guiTexture.color, Color.clear, FadeRate * Time.deltaTime);
+            yield return null;
+            if (guiTexture.color.a <= .05)
+                break;
+        }
+        yield return null;
 	}
 }
