@@ -714,67 +714,6 @@ MonoBehaviour:
   SpriteBounds: {fileID: 1772618811}
   CameraFits: 0
   DampTime: .150000006
---- !u!1 &325291465
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 325291468}
-  - 114: {fileID: 325291467}
-  - 131: {fileID: 325291466}
-  m_Layer: 0
-  m_Name: Flasher
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!131 &325291466
-GUITexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 325291465}
-  m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: 49e80583dec4ab44f93a0d164195501c, type: 3}
-  m_Color: {r: .5, g: .5, b: .5, a: .501960814}
-  m_PixelInset:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
-  m_LeftBorder: 0
-  m_RightBorder: 0
-  m_TopBorder: 0
-  m_BottomBorder: 0
---- !u!114 &325291467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 325291465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd4362ff723cb64c97dcded69f6dee1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FlashRate: 4
-  guiTexture: {fileID: 325291466}
---- !u!4 &325291468
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 325291465}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
 --- !u!1001 &326789914
 Prefab:
   m_ObjectHideFlags: 0
@@ -1338,7 +1277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeRate: 1.5
-  NextLevel: 0
+  NextLevel: Skyscraper
   guiTexture: {fileID: 1007987592}
 --- !u!4 &1007987591
 Transform:
@@ -2111,7 +2050,7 @@ Transform:
   - {fileID: 736592395}
   - {fileID: 1305536076}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1 &1887413728
 GameObject:
   m_ObjectHideFlags: 0

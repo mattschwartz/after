@@ -7040,7 +7040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeRate: 1.5
-  NextLevel: 0
+  NextLevel: PowerStation
   guiTexture: {fileID: 1007987592}
 --- !u!4 &1007987591
 Transform:
