@@ -10,6 +10,7 @@ namespace After.Interactable
     {
         #region Public Members
 
+        public GameObject Camera;
         public GameObject Player;
 
         #endregion
@@ -22,8 +23,8 @@ namespace After.Interactable
 
         void Update()
         {
-            var pos = Player.transform.position;
-            transform.position = new Vector2(pos.x, pos.y + 2);
+            var pos = Camera.transform.position;
+            transform.position = new Vector2(pos.x + 5.71f, pos.y - 3.71f);
         }
 
         public void SetItemHeld(GameObject item)
