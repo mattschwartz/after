@@ -150,7 +150,7 @@ BlendTree:
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
-  m_BlendParameter: vMove
+  m_BlendParameter: Velocity
   m_BlendParameterY: Velocity
   m_MinThreshold: -10
   m_MaxThreshold: 2
