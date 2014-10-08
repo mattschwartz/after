@@ -41,7 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   screenPosition: {x: 0, y: 0, z: 0}
-  Thought: The door is shut.  It is kept by those who are...wait
+  Thought: Penny for your thoughts
   opaCustomStyle:
     m_Name: 
     m_Normal:
@@ -96,7 +96,7 @@ MonoBehaviour:
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
-    m_ContentOffset: {x: 0, y: -135}
+    m_ContentOffset: {x: 0, y: -105}
     m_FixedWidth: 0
     m_FixedHeight: 0
     m_StretchWidth: 1
