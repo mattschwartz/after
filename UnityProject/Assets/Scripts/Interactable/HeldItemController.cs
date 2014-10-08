@@ -10,23 +10,31 @@ namespace After.Interactable
     {
         #region Members
 
-        public GameObject Camera;
+        public float ItemHeldSize = 100;
+        public float BackpackSize = 175;
         public GameObject Player;
+        public Texture BackpackTexture;
 
         private GameObject ItemHeld;
-        private SpriteRenderer Renderer;
+        private Texture ItemHeldTexture;
 
         #endregion
 
-        void Start()
+        void OnGUI()
         {
-            Renderer = GetComponent<SpriteRenderer>();
-        }
+            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(1, 1, 0));
+            Rect BackpackPosition = new Rect(camPos.x - BackpackSize, camPos.y - BackpackSize, BackpackSize, BackpackSize);
 
-        void Update()
-        {
-            var pos = Camera.transform.position;
-            transform.position = new Vector2(pos.x + 5.71f, pos.y - 3.71f);
+            // render backpack
+            GUI.DrawTexture(BackpackPosition, BackpackTexture);
+
+            if (ItemHeld != null) {
+                float scale = ItemHeldSize / Mathf.Max(ItemHeldTexture.width, ItemHeldTexture.height);
+                float itemWidth = ItemHeldTexture.width * scale;
+                float itemHeight = ItemHeldTexture.height * scale;
+                Rect ItemPosition = new Rect(camPos.x - itemWidth - (BackpackSize - itemWidth) / 2, camPos.y - itemHeight - (BackpackSize - itemHeight) / 2, itemWidth, itemHeight);
+                GUI.DrawTexture(ItemPosition, ItemHeldTexture);
+            }
         }
 
         public void SetItemHeld(GameObject item)
@@ -38,14 +46,13 @@ namespace After.Interactable
             item.transform.position = new Vector2(-5000, -5000);
             ItemHeld = item;
 
+            ItemHeldTexture = ItemHeld.GetComponent<SpriteRenderer>().sprite.texture;
             SceneHandler.CurrentPlayer.ItemHeld = ItemHeld.name;
         }
 
         public void ShowItemHeld()
         {
-            ItemHeld.transform.localScale = new Vector3(1, 1, 1);
-            transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-            Renderer.sprite = ItemHeld.GetComponent<SpriteRenderer>().sprite;
+            Debug.LogWarning("ShowItemHeld is deprecated.");
         }
 
         public void DropItem()
@@ -58,7 +65,6 @@ namespace After.Interactable
             ItemHeld.transform.position = new Vector2(pos.x, pos.y + 2);
             ItemHeld.rigidbody2D.velocity = Vector2.zero;
             ItemHeld.rigidbody2D.AddForce(Vector2.up * 1000f);
-            Renderer.sprite = null;
             ItemHeld = null;
 
             SceneHandler.CurrentPlayer.ItemHeld = String.Empty;
