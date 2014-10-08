@@ -177,6 +177,11 @@ public class PlayerController : MonoBehaviour
         Animator.SetBool("Swinging", swinging);
     }
 
+    public void Lift(bool lifting)
+    {
+        Animator.SetBool("Lifiting", lifting);
+    }
+
     public void PlayFootstep()
     {
         // Get overlapping platform
