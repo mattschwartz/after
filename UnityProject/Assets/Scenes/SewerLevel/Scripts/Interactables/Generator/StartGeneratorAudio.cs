@@ -20,9 +20,7 @@ public class StartGeneratorAudio : Transition
     {
         AudioManager.PlayClipAtPoint(GeneratorStart, 1.0f, transform.position,
             GeneratorStartVolume);
-        Debug.Log("Waiting for " + GeneratorStart.length);
         yield return new WaitForSeconds(GeneratorStart.length);
-        Debug.Log("Loopin time");
         AudioManager.LoopClipAtPoint(GeneratorLoop, transform.position,
             GeneratorLoopVolume);
     }
