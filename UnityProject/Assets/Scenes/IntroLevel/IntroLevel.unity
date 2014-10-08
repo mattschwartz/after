@@ -375,7 +375,7 @@ MonoBehaviour:
   DestroyOnRead: 0
   WaitSecondsBeforeRead: 0
   From: 2
-  To: 3
+  To: 1
   LockDuration: 1
   Player: {fileID: 750317700}
   PlayerAnimator: {fileID: 750317702}
@@ -2854,7 +2854,7 @@ MonoBehaviour:
   DestroyOnRead: 0
   WaitSecondsBeforeRead: 0
   From: 1
-  To: 2
+  To: 1
   LockDuration: 1.95000005
   Player: {fileID: 750317700}
   PlayerAnimator: {fileID: 750317702}
@@ -3762,7 +3762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd4db1c4c14614439e01019b2bd2ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  To: 2
+  To: 1
   Conditions: {fileID: 0}
 --- !u!1 &2112241110
 GameObject:
