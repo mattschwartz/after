@@ -78,6 +78,7 @@ public class PlayerController : MonoBehaviour
 
             float hMove = Input.GetAxis("Horizontal");
             Animator.SetFloat("Velocity", Mathf.Abs(hMove));
+            Animator.SetFloat("vMove", rigidbody2D.velocity.y);
 
             rigidbody2D.velocity = new Vector2(hMove * Speed, rigidbody2D.velocity.y);
 
@@ -175,6 +176,11 @@ public class PlayerController : MonoBehaviour
     public void Swing(bool swinging)
     {
         Animator.SetBool("Swinging", swinging);
+    }
+
+    public void Lift(bool lifting)
+    {
+        Animator.SetBool("Lifiting", lifting);
     }
 
     public void PlayFootstep()
