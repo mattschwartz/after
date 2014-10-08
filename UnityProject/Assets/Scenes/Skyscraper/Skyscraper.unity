@@ -305,7 +305,7 @@ MonoBehaviour:
   GroundLayerMask:
     serializedVersion: 2
     m_Bits: 256
-  HeldItem: {fileID: 1456273195}
+  Backpack: {fileID: 0}
   Speed: 7
 --- !u!61 &194404993
 BoxCollider2D:
@@ -872,8 +872,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd4362ff723cb64c97dcded69f6dee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FlashRate: 4
-  guiTexture: {fileID: 325291466}
 --- !u!4 &325291468
 Transform:
   m_ObjectHideFlags: 0
@@ -1479,7 +1477,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 1343960909
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3afeb89f75b5ae9468ddf0294cb45c13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &822976148
@@ -2154,8 +2152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 680bd19f594b5dd42b654c5b50bae125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Camera: {fileID: 262035512}
+  ItemHeldSize: 100
+  BackpackSize: 175
   Player: {fileID: 194404990}
+  BackpackTexture: {fileID: 0}
 --- !u!1 &1492477876
 GameObject:
   m_ObjectHideFlags: 0
@@ -2233,7 +2233,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 1343960909
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3afeb89f75b5ae9468ddf0294cb45c13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1538434372
