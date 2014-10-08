@@ -2479,6 +2479,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1022808977}
   - 61: {fileID: 1022808978}
+  - 114: {fileID: 1022808979}
   m_Layer: 8
   m_Name: Road
   m_TagString: Untagged
@@ -2509,6 +2510,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 9.90499878, y: 1}
   m_Center: {x: 2.25250053, y: 0}
+--- !u!114 &1022808979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1022808976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StepSounds: []
 --- !u!1 &1046864342
 GameObject:
   m_ObjectHideFlags: 0
@@ -2763,6 +2776,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1507406060}
   - 68: {fileID: 1507406061}
+  - 114: {fileID: 1507406062}
   m_Layer: 8
   m_Name: Bridge
   m_TagString: Untagged
@@ -2795,6 +2809,18 @@ EdgeCollider2D:
   - {x: -11.2704239, y: 3.87995005}
   - {x: -10.8861217, y: 4.02877426}
   - {x: .559711933, y: -1.85106277}
+--- !u!114 &1507406062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507406059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StepSounds: []
 --- !u!1 &1529304064
 GameObject:
   m_ObjectHideFlags: 0
@@ -2910,6 +2936,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1589868294}
   - 61: {fileID: 1589868295}
+  - 114: {fileID: 1589868296}
   m_Layer: 8
   m_Name: Road
   m_TagString: Untagged
@@ -2940,6 +2967,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 49.9300003, y: 1}
   m_Center: {x: 0, y: 0}
+--- !u!114 &1589868296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1589868293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StepSounds: []
 --- !u!1 &1691906854
 GameObject:
   m_ObjectHideFlags: 0
