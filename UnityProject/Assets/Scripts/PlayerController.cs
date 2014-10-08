@@ -7,18 +7,14 @@ using System.Linq;
 
 public class PlayerController : MonoBehaviour
 {
-    #region Public members
+    #region Members
 
     public KeyCode InteractButton = KeyCode.E;
     public KeyCode DropButton = KeyCode.X;
     public KeyCode JumpButton = KeyCode.Space;
     public Transform GroundCheck;
     public LayerMask GroundLayerMask;
-    public GameObject HeldItem;
-
-    #endregion
-
-    #region Private members
+    public GameObject Backpack;
 
     private bool PlayerLocked = false;
     private bool Grounded = false;
@@ -58,7 +54,7 @@ public class PlayerController : MonoBehaviour
             Interact();
         }
 
-        if (HeldItem && Input.GetKeyDown(DropButton)) {
+        if (Backpack && Input.GetKeyDown(DropButton)) {
             DropItem();
         }
     }
@@ -140,12 +136,12 @@ public class PlayerController : MonoBehaviour
     public void PickupItem(GameObject item)
     {
         Animator.SetTrigger("PickupItemLow");
-        HeldItem.SendMessage("SetItemHeld", item);
+        Backpack.SendMessage("SetItemHeld", item);
     }
 
     public void DropItem()
     {
-        HeldItem.SendMessage("DropItem");
+        Backpack.SendMessage("DropItem");
     }
 
     public void Climb(bool on)

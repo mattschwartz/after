@@ -31,12 +31,12 @@ public class SewerLevelAnimationController : MonoBehaviour
 
     public void ShowHeldItem()
     {
-        PlayerController.HeldItem.SendMessage("ShowItemHeld");
+        PlayerController.Backpack.SendMessage("ShowItemHeld");
     }
 
     public void ShowDroppedItem()
     {
-        PlayerController.HeldItem.SendMessage("ShowItemDropped");
+        PlayerController.Backpack.SendMessage("ShowItemDropped");
     }
 
     #endregion
