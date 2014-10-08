@@ -8,18 +8,20 @@ namespace After.Interactable
 {
     public class HeldItemController : MonoBehaviour
     {
-        #region Public Members
+        #region Members
 
         public GameObject Camera;
         public GameObject Player;
 
-        #endregion
-
-        #region Private Members
-
         private GameObject ItemHeld;
+        private SpriteRenderer Renderer;
 
         #endregion
+
+        void Start()
+        {
+            Renderer = GetComponent<SpriteRenderer>();
+        }
 
         void Update()
         {
@@ -41,8 +43,9 @@ namespace After.Interactable
 
         public void ShowItemHeld()
         {
-            transform.localScale = ItemHeld.transform.localScale;
-            GetComponent<SpriteRenderer>().sprite = ItemHeld.GetComponent<SpriteRenderer>().sprite;
+            ItemHeld.transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            Renderer.sprite = ItemHeld.GetComponent<SpriteRenderer>().sprite;
         }
 
         public void DropItem()
@@ -55,7 +58,7 @@ namespace After.Interactable
             ItemHeld.transform.position = new Vector2(pos.x, pos.y + 2);
             ItemHeld.rigidbody2D.velocity = Vector2.zero;
             ItemHeld.rigidbody2D.AddForce(Vector2.up * 1000f);
-            GetComponent<SpriteRenderer>().sprite = null;
+            Renderer.sprite = null;
             ItemHeld = null;
 
             SceneHandler.CurrentPlayer.ItemHeld = String.Empty;
