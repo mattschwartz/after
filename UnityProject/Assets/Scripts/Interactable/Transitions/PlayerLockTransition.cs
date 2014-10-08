@@ -12,7 +12,7 @@ namespace After.Interactable.Transitions
         public GameObject Player;
         public Animator PlayerAnimator;
 
-        protected void FreePlayer()
+        protected virtual void FreePlayer()
         {
             Player.SendMessage("FreePlayer");
         }
