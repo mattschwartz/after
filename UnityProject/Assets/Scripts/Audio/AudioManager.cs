@@ -89,7 +89,7 @@ namespace After.Audio
         public static IEnumerator FadeMusic(AudioSource audioSource)
         {
             while (audioSource.volume > .1F) {
-                audioSource.volume = Mathf.Lerp(audioSource.volume, 0F, Time.deltaTime);
+                audioSource.volume = Mathf.Lerp(audioSource.volume, 0, Time.deltaTime);
                 yield return 0;
             }
             audioSource.volume = 0;

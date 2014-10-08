@@ -9,6 +9,16 @@ public class DisableSoulParticlesTransition : Transition
 
 	public override void Read(StateType fromState, StateType toState)
 	{
-		ParticleSystem.emissionRate = 0;
+        StartCoroutine(FadeEmission());
 	}
+
+    private IEnumerator FadeEmission()
+    {
+        while (ParticleSystem.emissionRate > 0.1f) {
+            ParticleSystem.emissionRate = Mathf.Lerp(ParticleSystem.emissionRate, 0, Time.deltaTime);
+            yield return 0;
+        }
+
+        Destroy(ParticleSystem);
+    }
 }

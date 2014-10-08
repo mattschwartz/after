@@ -2251,6 +2251,7 @@ Transform:
   - {fileID: 618332388}
   - {fileID: 1890551971}
   - {fileID: 416764883}
+  - {fileID: 698481736}
   m_Father: {fileID: 260634086}
   m_RootOrder: 35
 --- !u!198 &300403325
@@ -3382,6 +3383,7 @@ MonoBehaviour:
   - {fileID: 618332389}
   - {fileID: 1890551972}
   - {fileID: 416764884}
+  - {fileID: 698481737}
 --- !u!61 &300403329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3513,7 +3515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!131 &325291466
 GUITexture:
   m_ObjectHideFlags: 0
@@ -3544,7 +3546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd4362ff723cb64c97dcded69f6dee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FlashRate: 4
+  FlashRate: 0
   guiTexture: {fileID: 325291466}
 --- !u!4 &325291468
 Transform:
@@ -4910,7 +4912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 1
-  WaitSecondsBeforeRead: 0
+  WaitSecondsBeforeRead: .5
   From: 1
   To: 2
   Volume: 1
@@ -5104,7 +5106,7 @@ GameObject:
   - 4: {fileID: 618332388}
   - 114: {fileID: 618332389}
   m_Layer: 0
-  m_Name: Disable Particle System
+  m_Name: Stop Soul Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5741,6 +5743,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   To: 2
   Conditions: {fileID: 163337027}
+--- !u!1 &698481735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 698481736}
+  - 114: {fileID: 698481737}
+  m_Layer: 0
+  m_Name: Clear Fog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &698481736
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 698481735}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 300403324}
+  m_RootOrder: 8
+--- !u!114 &698481737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 698481735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 458a2776d4c9f428e9bb86c95418e560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 1
+  WaitSecondsBeforeRead: 3
+  From: 1
+  To: 2
+  ParticleSystem: {fileID: 1581451907}
 --- !u!1 &706397052
 GameObject:
   m_ObjectHideFlags: 0
@@ -7455,6 +7501,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1113004631}
   - 114: {fileID: 1113004632}
+  - 131: {fileID: 1113004633}
   m_Layer: 0
   m_Name: Soulsplosion
   m_TagString: Untagged
@@ -7485,12 +7532,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb537c0b087dd4efdb5e64c4fda7303d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyOnRead: 1
-  WaitSecondsBeforeRead: 0
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: .5
   From: 1
   To: 2
   Animator: {fileID: 2025917680}
-  Flash: {fileID: 325291467}
+  FlashTexture: {fileID: 1113004633}
+--- !u!131 &1113004633
+GUITexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1113004630}
+  m_Enabled: 1
+  m_Texture: {fileID: 2800000, guid: 49e80583dec4ab44f93a0d164195501c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: .501960814}
+  m_PixelInset:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
 --- !u!1 &1132882465
 GameObject:
   m_ObjectHideFlags: 0
@@ -12336,8 +12402,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 4.80639505, y: 7}
-  m_Center: {x: -2.7992425, y: 0}
+  m_Size: {x: 8.70774364, y: 7}
+  m_Center: {x: -.84856087, y: 0}
 --- !u!114 &1830161838
 MonoBehaviour:
   m_ObjectHideFlags: 0
