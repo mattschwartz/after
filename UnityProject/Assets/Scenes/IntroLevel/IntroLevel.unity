@@ -375,7 +375,7 @@ MonoBehaviour:
   DestroyOnRead: 0
   WaitSecondsBeforeRead: 0
   From: 2
-  To: 1
+  To: 3
   LockDuration: 1
   Player: {fileID: 750317700}
   PlayerAnimator: {fileID: 750317702}
@@ -2854,7 +2854,7 @@ MonoBehaviour:
   DestroyOnRead: 0
   WaitSecondsBeforeRead: 0
   From: 1
-  To: 1
+  To: 2
   LockDuration: 1.95000005
   Player: {fileID: 750317700}
   PlayerAnimator: {fileID: 750317702}
@@ -3017,7 +3017,6 @@ GameObject:
   - 4: {fileID: 1507406060}
   - 68: {fileID: 1507406061}
   - 114: {fileID: 1507406062}
-  - 50: {fileID: 1507406063}
   m_Layer: 8
   m_Name: Bridge
   m_TagString: Untagged
@@ -3062,21 +3061,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StepSounds: []
---- !u!50 &1507406063
-Rigidbody2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1507406059}
-  m_Mass: 9999
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 0
-  m_FixedAngle: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
 --- !u!1 &1529304064
 GameObject:
   m_ObjectHideFlags: 0
@@ -3762,7 +3746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd4db1c4c14614439e01019b2bd2ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  To: 1
+  To: 2
   Conditions: {fileID: 0}
 --- !u!1 &2112241110
 GameObject:
