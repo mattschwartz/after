@@ -1588,7 +1588,7 @@ MonoBehaviour:
   GroundLayerMask:
     serializedVersion: 2
     m_Bits: 256
-  Backpack: {fileID: 0}
+  Backpack: {fileID: 1456273195}
   Speed: 7
 --- !u!61 &194404993
 BoxCollider2D:
@@ -11189,6 +11189,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
       propertyPath: HeldItem
+      value: 
+      objectReference: {fileID: 1456273195}
+    - target: {fileID: 11400000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
+      propertyPath: Backpack
       value: 
       objectReference: {fileID: 1456273195}
     m_RemovedComponents: []
