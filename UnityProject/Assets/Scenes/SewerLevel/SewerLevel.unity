@@ -1257,7 +1257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ee47c2431dcdd4c8488e578ad6b3d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentState: 2
+  CurrentState: 1
   LockedState: {fileID: 1141132279}
   UnlockedState: {fileID: 711705602}
   SpentState: {fileID: 0}
@@ -1652,7 +1652,7 @@ Transform:
   - {fileID: 1034772426}
   - {fileID: 27133717}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!95 &194404997
 Animator:
   serializedVersion: 3
@@ -2018,7 +2018,7 @@ Transform:
   - {fileID: 848560088}
   - {fileID: 1820955542}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1 &262035512
 GameObject:
   m_ObjectHideFlags: 0
@@ -6892,7 +6892,7 @@ Prefab:
       objectReference: {fileID: 653709347}
     - target: {fileID: 11400020, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
       propertyPath: CurrentState
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
@@ -7056,7 +7056,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 5
 --- !u!131 &1007987592
 GUITexture:
   m_ObjectHideFlags: 0
@@ -7134,11 +7134,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1010989965}
   m_LocalRotation: {x: .254080564, y: 0, z: 0, w: .967183113}
-  m_LocalPosition: {x: .0175442696, y: -30.447319, z: -1.1578989}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: .0443216637, y: 4.40046883, z: -1.1578989}
+  m_LocalScale: {x: 2.52627587, y: 2.15758991, z: 1.36868227}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 1334897913}
+  m_RootOrder: 10
 --- !u!1 &1031190154
 GameObject:
   m_ObjectHideFlags: 0
@@ -7834,7 +7834,7 @@ Transform:
   - {fileID: 1492477878}
   - {fileID: 1261924173}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!114 &1208047003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8791,8 +8791,9 @@ Transform:
   - {fileID: 948626625}
   - {fileID: 1898526269}
   - {fileID: 325751167}
+  - {fileID: 1010989967}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &1348473376
 GameObject:
   m_ObjectHideFlags: 0
@@ -8835,7 +8836,7 @@ Transform:
   - {fileID: 389064769}
   - {fileID: 1947916591}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!212 &1348473378
 SpriteRenderer:
   m_ObjectHideFlags: 0
