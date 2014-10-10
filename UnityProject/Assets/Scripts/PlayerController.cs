@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private Animator Animator;
     private bool Climbing;
     private SpriteRenderer Sprite;
+    private float Gravity;
 
     #endregion
 
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
     {
         Animator = GetComponent<Animator>();
         Sprite = GetComponent<SpriteRenderer>();
+        Gravity = rigidbody2D.gravityScale;
     }
 
     #endregion
@@ -159,7 +161,7 @@ public class PlayerController : MonoBehaviour
                 Sprite.sortingLayerName = "Interspace";
             }
         } else {
-            rigidbody2D.gravityScale = 8;
+            rigidbody2D.gravityScale = Gravity;
             if (Sprite) {
                 //the normal player layer
                 Sprite.sortingLayerName = "Player";
