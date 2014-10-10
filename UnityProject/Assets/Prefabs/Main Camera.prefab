@@ -48,10 +48,10 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: .300000012
+  near clip plane: .00999999978
   far clip plane: 1000
-  field of view: 60
-  orthographic: 1
+  field of view: 53
+  orthographic: 0
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -92,6 +92,7 @@ MonoBehaviour:
   StaticCamera: 0
   FollowTarget: {fileID: 0}
   SpriteBounds: {fileID: 0}
+  CameraFits: 0
   DampTime: .150000006
 --- !u!124 &12400000
 Behaviour:

@@ -1259,7 +1259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ee47c2431dcdd4c8488e578ad6b3d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentState: 2
+  CurrentState: 1
   LockedState: {fileID: 1141132279}
   UnlockedState: {fileID: 711705602}
   SpentState: {fileID: 0}
@@ -1612,7 +1612,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 8
+  m_GravityScale: 10
   m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -2078,10 +2078,10 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0
+  near clip plane: .00999999978
   far clip plane: 1000
-  field of view: 60
-  orthographic: 1
+  field of view: 53
+  orthographic: 0
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -6895,7 +6895,7 @@ Prefab:
       objectReference: {fileID: 653709347}
     - target: {fileID: 11400020, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
       propertyPath: CurrentState
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
       propertyPath: ExitNexus
@@ -11204,6 +11204,10 @@ Prefab:
       propertyPath: Backpack
       value: 
       objectReference: {fileID: 1456273195}
+    - target: {fileID: 5000000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
+      propertyPath: m_GravityScale
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
   m_RootGameObject: {fileID: 194404990}
