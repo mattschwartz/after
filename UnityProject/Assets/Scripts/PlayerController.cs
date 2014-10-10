@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     private bool Grounded = false;
     private bool FacingRight = true;
     public float Speed = 5f;
-    private float JumpForce = 700f;
+    private float JumpForce = 1225f;
     private float GroundRadius = 0.2f;
     private Animator Animator;
     private bool Climbing;
@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
         if (Climbing) {
             float vMove = Input.GetAxis("Vertical");
-            Animator.SetFloat("vMove", Mathf.Abs(vMove));
+            Animator.SetFloat("vMove", vMove);
             rigidbody2D.velocity = new Vector2(0, vMove * Speed * 0.5f);
         } else {
             IsGrounded();

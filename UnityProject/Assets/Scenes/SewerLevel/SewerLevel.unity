@@ -11991,7 +11991,7 @@ GameObject:
   - 212: {fileID: 1816749791}
   - 61: {fileID: 1816749793}
   - 114: {fileID: 1816749792}
-  - 68: {fileID: 1816749794}
+  - 50: {fileID: 1816749794}
   m_Layer: 8
   m_Name: Rock
   m_TagString: Untagged
@@ -12006,7 +12006,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1816749789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.5064554, y: -6.72538376, z: 0}
+  m_LocalPosition: {x: 8.2682848, y: 1.65379477, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 260634086}
@@ -12060,19 +12060,21 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 4.01258945, y: 2.95722747}
   m_Center: {x: .568704605, y: -.0963954926}
---- !u!68 &1816749794
-EdgeCollider2D:
+--- !u!50 &1816749794
+Rigidbody2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1816749789}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Points:
-  - {x: -4.57918882, y: -1.39544392}
-  - {x: -2.89545441, y: .845326424}
-  - {x: -1.2118969, y: .593062401}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &1816937070
 GameObject:
   m_ObjectHideFlags: 0
