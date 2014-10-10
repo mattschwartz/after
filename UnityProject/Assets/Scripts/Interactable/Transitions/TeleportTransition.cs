@@ -11,7 +11,7 @@ namespace After.Interactable.Transitions
     {
         #region Members
 
-        public Vector3 ToLocation;
+        public GameObject ExitNexus;
         public GameObject Player;
         public SpriteRenderer NewSpriteBounds;
 
@@ -25,7 +25,7 @@ namespace After.Interactable.Transitions
         protected void MovePlayer()
         {
             Camera.main.SendMessage("SetSpriteBounds", NewSpriteBounds);
-            Player.transform.position = ToLocation;
+            Player.transform.position = ExitNexus.transform.position;
         }
     }
 }

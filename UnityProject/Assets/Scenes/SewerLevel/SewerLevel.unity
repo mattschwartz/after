@@ -753,7 +753,7 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 0
   To: 0
-  ToLocation: {x: -8.34854603, y: -6.20292521, z: 0}
+  ExitNexus: {fileID: 139879936}
   Player: {fileID: 194404990}
   NewSpriteBounds: {fileID: 260634085}
 --- !u!1001 &69558203
@@ -971,7 +971,7 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 0
   To: 0
-  ToLocation: {x: -5.9161768, y: 9.30348015, z: 0}
+  ExitNexus: {fileID: 904609771}
   Player: {fileID: 194404990}
   NewSpriteBounds: {fileID: 260634085}
 --- !u!1 &110345826
@@ -1195,7 +1195,7 @@ Transform:
   m_PrefabInternal: {fileID: 951039253}
   m_GameObject: {fileID: 139879936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.21192837, y: -5.67876148, z: 0}
+  m_LocalPosition: {x: -5.75933075, y: 9.78509617, z: 0}
   m_LocalScale: {x: .520173192, y: .520172656, z: 1}
   m_Children:
   - {fileID: 1141132278}
@@ -1259,7 +1259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ee47c2431dcdd4c8488e578ad6b3d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentState: 1
+  CurrentState: 2
   LockedState: {fileID: 1141132279}
   UnlockedState: {fileID: 711705602}
   SpentState: {fileID: 0}
@@ -1648,7 +1648,7 @@ Transform:
   m_PrefabInternal: {fileID: 1631026867}
   m_GameObject: {fileID: 194404990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.6345177, y: 9.65595341, z: 0}
+  m_LocalPosition: {x: -11.2877569, y: 9.39277554, z: 0}
   m_LocalScale: {x: 1.154845, y: 1.154845, z: 1}
   m_Children:
   - {fileID: 1034772426}
@@ -3522,7 +3522,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 325751166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.7341876, y: .174727783, z: 0}
+  m_LocalPosition: {x: 5.60753822, y: .174727783, z: 0}
   m_LocalScale: {x: .432367057, y: .432366401, z: 1}
   m_Children: []
   m_Father: {fileID: 1334897913}
@@ -3674,7 +3674,7 @@ MonoBehaviour:
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
-    m_ContentOffset: {x: 0, y: -135}
+    m_ContentOffset: {x: 0, y: -105}
     m_FixedWidth: 0
     m_FixedHeight: 0
     m_StretchWidth: 1
@@ -6331,7 +6331,7 @@ Transform:
   m_PrefabInternal: {fileID: 1435387502}
   m_GameObject: {fileID: 904609771}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.75933075, y: 9.78509617, z: 0}
+  m_LocalPosition: {x: -11.4533749, y: -5.71434593, z: 0}
   m_LocalScale: {x: .520173192, y: .520172656, z: 1}
   m_Children:
   - {fileID: 1210460435}
@@ -6721,7 +6721,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 948626624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.43978214, y: -.505265951, z: 0}
+  m_LocalPosition: {x: 3.66668391, y: -.505265951, z: 0}
   m_LocalScale: {x: 1.31410098, y: 1.31409764, z: 1}
   m_Children:
   - {fileID: 1816937071}
@@ -6770,11 +6770,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -8.21192837
+      value: -5.75933075
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -5.67876148
+      value: 9.78509617
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6894,8 +6894,12 @@ Prefab:
       objectReference: {fileID: 653709347}
     - target: {fileID: 11400020, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
       propertyPath: CurrentState
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
+      propertyPath: ExitNexus
+      value: 
+      objectReference: {fileID: 948626624}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
   m_RootGameObject: {fileID: 139879936}
@@ -8782,7 +8786,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1334897911}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -32.1892014, z: 0}
+  m_LocalPosition: {x: 0, y: 40.9078369, z: 0}
   m_LocalScale: {x: .395839602, y: .395840168, z: 1}
   m_Children:
   - {fileID: 1614624040}
@@ -8821,7 +8825,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1348473376}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 34.2299995, z: 0}
+  m_LocalPosition: {x: -41.3011284, y: -6.40278435, z: 0}
   m_LocalScale: {x: .65773201, y: .657730877, z: 1}
   m_Children:
   - {fileID: 259909125}
@@ -8994,7 +8998,7 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 0
   To: 0
-  ToLocation: {x: 1.67767799, y: -33.1497917, z: 0}
+  ExitNexus: {fileID: 948626624}
   Player: {fileID: 194404990}
   NewSpriteBounds: {fileID: 1334897912}
 --- !u!1001 &1435387502
@@ -9006,11 +9010,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.75933075
+      value: -11.4533749
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 9.78509617
+      value: -5.71434593
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9084,6 +9088,10 @@ Prefab:
       propertyPath: WaitSecondsAfterRead
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
+      propertyPath: ExitNexus
+      value: 
+      objectReference: {fileID: 6748306}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
   m_RootGameObject: {fileID: 904609771}
@@ -11157,11 +11165,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -12.6345177
+      value: -11.2877569
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 9.65595341
+      value: 9.39277554
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
       propertyPath: m_LocalPosition.z
@@ -12201,7 +12209,7 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 0
   To: 0
-  ToLocation: {x: .659506321, y: 32.98386, z: 0}
+  ExitNexus: {fileID: 6748306}
   Player: {fileID: 194404990}
   NewSpriteBounds: {fileID: 1348473378}
 --- !u!1 &1830149003
