@@ -4,15 +4,11 @@ using System.Collections;
 public class CameraController : MonoBehaviour
 {
 
-    #region Public Members
+    #region Members
 
     public bool StaticCamera = false;
     public Transform FollowTarget;
     public SpriteRenderer SpriteBounds;
-
-    #endregion
-
-    #region Private Members
 
     public bool CameraFits = false;
     public float DampTime = 0.15f;
