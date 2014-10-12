@@ -1849,7 +1849,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 590693707}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5, y: -12.350255, z: 0}
+  m_LocalPosition: {x: .170000002, y: -12.350255, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 896387184}
@@ -2976,7 +2976,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5821222fc2d59e64b9a7c38376867198, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 5821222fc2d59e64b9a7c38376867198, type: 2}
       propertyPath: FollowTarget
@@ -3000,6 +3000,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: 5821222fc2d59e64b9a7c38376867198, type: 2}
       propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 5821222fc2d59e64b9a7c38376867198, type: 2}
+      propertyPath: near clip plane
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3139,10 +3143,10 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: .00999999978
+  near clip plane: 0
   far clip plane: 1000
   field of view: 53
-  orthographic: 0
+  orthographic: 1
   orthographic size: 6.29926491
   m_Depth: -1
   m_CullingMask:
@@ -3366,7 +3370,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 04944f694f1d6e84db63af2baa458468, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04944f694f1d6e84db63af2baa458468, type: 2}
@@ -3410,7 +3414,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
