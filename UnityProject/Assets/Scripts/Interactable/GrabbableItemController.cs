@@ -1,4 +1,5 @@
-﻿using System;
+﻿using After.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ namespace After.Interactable
         #region Members
 
         public string ItemName;
+        public string Description;
 
         private static float LastInteraction = 2;
         private float InteractDelay = 1;
@@ -23,6 +25,7 @@ namespace After.Interactable
         void Start()
         {
             Player = GameObject.Find("Player");
+            Description = StringUtility.AorAn(ItemName, true);
         }
 
         void Update()

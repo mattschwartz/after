@@ -12,7 +12,6 @@ public class ThoughtController : MonoBehaviour
     private float DisplayTime;
     private float FadeTime;
 
-    // Update is called once per frame
     void Update()
     {
         screenPosition = Camera.main.WorldToScreenPoint(Player.transform.position);
