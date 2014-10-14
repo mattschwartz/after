@@ -13153,7 +13153,7 @@ MonoBehaviour:
   FloorGates:
   - {fileID: 496130012}
   - {fileID: 1031190156}
-  PlayerObject: {fileID: 194404990}
+  PlayerCon: {fileID: 194404992}
   StepClips:
   - {fileID: 0}
 --- !u!61 &1918864478
@@ -13312,6 +13312,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: PlayerCon
+      value: 
+      objectReference: {fileID: 194404992}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
   m_RootGameObject: {fileID: 1918864474}

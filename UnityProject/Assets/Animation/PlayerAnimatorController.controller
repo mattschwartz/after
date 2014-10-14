@@ -74,6 +74,24 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: LadderDrop
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: LadderLift
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: LadderProfile
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -676,7 +694,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: LadderDrop
     m_EventTreshold: 0
     m_ExitTime: .75
   m_Atomic: 1
@@ -834,7 +852,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 6ca72205ebcdd8d40984b427e60a71e4, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: -458, y: 106, z: 0}
+  m_Position: {x: -456, y: 108, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -1071,6 +1089,12 @@ StateMachine:
       first: {fileID: 110241673}
       second:
       - {fileID: 110175993}
+    data:
+      first: {fileID: 110209385}
+      second: []
+    data:
+      first: {fileID: 110210634}
+      second: []
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -264, y: -96, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
