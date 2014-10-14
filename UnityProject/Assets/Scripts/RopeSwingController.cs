@@ -5,15 +5,18 @@ using Assets.Scripts.Scene.SceneManagement;
 public class RopeSwingController : MonoBehaviour {
 
 	public GameObject PlayerObject;
-	public float Length;
+	public float MinLength;
+    private float Length;
 	public float MaxLength;
 	public float FallRate;
+    public float TimeToFall;
     //public float Tension;
 	private Transform Trans;
     private bool Active;
     private bool Entered;
     private bool Dismount;
     private bool Falling;
+    private float TimeInterval;
     //private float Displace;  //in radians
     public Rigidbody2D Body;
     public Rigidbody2D Anchor;
@@ -25,6 +28,7 @@ public class RopeSwingController : MonoBehaviour {
 		Entered = false;
         Dismount = false;
         Falling = false;
+        Length = MinLength;
 
 		Trans = GetComponent<Transform>();
 		Body = GetComponent<Rigidbody2D>();
@@ -52,6 +56,14 @@ public class RopeSwingController : MonoBehaviour {
 		{
 			Falling = false;
 		}
+        else if (Active && Length < MaxLength)
+        {
+            TimeInterval += Time.deltaTime;
+        }
+        else if (!Active && Length > MinLength)
+        {
+            Length -= FallRate;
+        }
 	}
 	
 	// Update is called once per frame
@@ -125,9 +137,10 @@ public class RopeSwingController : MonoBehaviour {
 		}
 		
 		//the following is for the purposes of testing the functionality
-		if (Active && Input.GetKeyDown(KeyCode.P))
+		if (Active && TimeInterval >= TimeToFall)
 		{
 			Falling = true;
+            TimeInterval = 0f;
 		}
 	}
 }

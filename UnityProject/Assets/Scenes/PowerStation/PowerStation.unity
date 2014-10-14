@@ -736,7 +736,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7261631ddd636cc429882fbb996b583a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 8.33344173
+      value: 9.81562233
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7261631ddd636cc429882fbb996b583a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -760,7 +760,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7261631ddd636cc429882fbb996b583a, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 7261631ddd636cc429882fbb996b583a, type: 2}
       propertyPath: PlayerObject
@@ -770,6 +770,18 @@ Prefab:
       propertyPath: Body
       value: 
       objectReference: {fileID: 1305536077}
+    - target: {fileID: 11400000, guid: 7261631ddd636cc429882fbb996b583a, type: 2}
+      propertyPath: TimeToFall
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7261631ddd636cc429882fbb996b583a, type: 2}
+      propertyPath: MinLength
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7261631ddd636cc429882fbb996b583a, type: 2}
+      propertyPath: MaxLength
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7261631ddd636cc429882fbb996b583a, type: 2}
   m_RootGameObject: {fileID: 1305536075}
@@ -1197,6 +1209,10 @@ Prefab:
       propertyPath: PlayerObject
       value: 
       objectReference: {fileID: 194404990}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: PlayerCon
+      value: 
+      objectReference: {fileID: 194404992}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
   m_RootGameObject: {fileID: 736592394}
@@ -1395,8 +1411,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FloorGates:
   - {fileID: 55785256}
-  PlayerObject: {fileID: 194404990}
+  PlayerCon: {fileID: 194404992}
   StepClips: []
+  Profile: 0
 --- !u!61 &736592398
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1942,7 +1959,7 @@ Transform:
   m_PrefabInternal: {fileID: 326789914}
   m_GameObject: {fileID: 1305536075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.3110456, y: 8.33344173, z: 0}
+  m_LocalPosition: {x: -15.3110456, y: 9.81562233, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1598797834}
@@ -2019,9 +2036,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObject: {fileID: 194404990}
-  Length: 3
-  MaxLength: 6
+  MinLength: 3
+  MaxLength: 9
   FallRate: .5
+  TimeToFall: 5
   Body: {fileID: 1305536077}
   Anchor: {fileID: 229797470}
 --- !u!61 &1305536081
@@ -2199,7 +2217,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1654717064}
   - 212: {fileID: 1654717065}
-  m_Layer: 0
+  - 61: {fileID: 1654717066}
+  m_Layer: 8
   m_Name: Elevator Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2213,7 +2232,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1654717063}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.1758537, y: -9.06440449, z: 0}
+  m_LocalPosition: {x: -18.939167, y: 4.67429352, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1772618812}
@@ -2237,9 +2256,20 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 89d67fcaef92348d8b78f2da7fdb7dc4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!61 &1654717066
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1654717063}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 4.89734793, y: .799628258}
+  m_Center: {x: -1.00212669, y: -.241630077}
 --- !u!1 &1772618810
 GameObject:
   m_ObjectHideFlags: 0
@@ -2512,5 +2542,5 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 31.9282608, y: 1.02999997}
-  m_Center: {x: 15.7547684, y: .199043274}
+  m_Size: {x: 30.3921833, y: 1.02999997}
+  m_Center: {x: 16.5228081, y: .199043274}
