@@ -1,7 +1,8 @@
 fileFormatVersion: 2
-guid: bea10cecccc144dac9e491e986a79176
+guid: b352ac93da839b44d8043fd276bc85bf
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: LadderjumpDown_00030
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
