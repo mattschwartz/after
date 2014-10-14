@@ -1,7 +1,8 @@
 fileFormatVersion: 2
-guid: bea10cecccc144dac9e491e986a79176
+guid: 4a747cc3562f1f842b3245e77a01ebef
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: LadderTop
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
