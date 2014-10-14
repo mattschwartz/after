@@ -1,0 +1,172 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: LadderDrop
+  serializedVersion: 4
+  m_AnimationType: 2
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -11.242713, y: 7.86129379, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 1
+        value: {x: -11.242713, y: 7.86129379, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: 
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: 99c67e51d65c2014c960459e08ed53e5, type: 3}
+    - time: .0833333358
+      value: {fileID: 21300000, guid: b352ac93da839b44d8043fd276bc85bf, type: 3}
+    - time: .166666672
+      value: {fileID: 21300000, guid: 1dbcc0e8eb7403b408b700bdd9438547, type: 3}
+    - time: .25
+      value: {fileID: 21300000, guid: bc86e95ce33ff204aac53114450398da, type: 3}
+    - time: .333333343
+      value: {fileID: 21300000, guid: 8432c9442af57994bbf6294cc1009cd9, type: 3}
+    - time: .416666657
+      value: {fileID: 21300000, guid: 1d0fd7c6d4c82964da17fde781e32f19, type: 3}
+    - time: .5
+      value: {fileID: 21300000, guid: ad3fe87ad96387241984aa06536160d3, type: 3}
+    - time: .583333313
+      value: {fileID: 21300000, guid: e282a3f09c500154db1d5c05131cf211, type: 3}
+    - time: .666666687
+      value: {fileID: 21300000, guid: a98dbc0395ab5444f8cc501f80e98fee, type: 3}
+    - time: .75
+      value: {fileID: 21300000, guid: 0dee82307678c4245aa24caed47c2de3, type: 3}
+    - time: .833333313
+      value: {fileID: 21300000, guid: 446bd34b5217a454eb29a12f8b0f57e9, type: 3}
+    - time: .916666687
+      value: {fileID: 21300000, guid: 0d733718bddd7c640b7580b906791ef2, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 12
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - path: 0
+      attribute: 0
+      script: {fileID: 0}
+      classID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - path: 0
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: 99c67e51d65c2014c960459e08ed53e5, type: 3}
+    - {fileID: 21300000, guid: b352ac93da839b44d8043fd276bc85bf, type: 3}
+    - {fileID: 21300000, guid: 1dbcc0e8eb7403b408b700bdd9438547, type: 3}
+    - {fileID: 21300000, guid: bc86e95ce33ff204aac53114450398da, type: 3}
+    - {fileID: 21300000, guid: 8432c9442af57994bbf6294cc1009cd9, type: 3}
+    - {fileID: 21300000, guid: 1d0fd7c6d4c82964da17fde781e32f19, type: 3}
+    - {fileID: 21300000, guid: ad3fe87ad96387241984aa06536160d3, type: 3}
+    - {fileID: 21300000, guid: e282a3f09c500154db1d5c05131cf211, type: 3}
+    - {fileID: 21300000, guid: a98dbc0395ab5444f8cc501f80e98fee, type: 3}
+    - {fileID: 21300000, guid: 0dee82307678c4245aa24caed47c2de3, type: 3}
+    - {fileID: 21300000, guid: 446bd34b5217a454eb29a12f8b0f57e9, type: 3}
+    - {fileID: 21300000, guid: 0d733718bddd7c640b7580b906791ef2, type: 3}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_StartTime: 0
+    m_StopTime: 1
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -11.242713
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1
+        value: -11.242713
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: 
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 7.86129379
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1
+        value: 7.86129379
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: 
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: 
+    classID: 4
+    script: {fileID: 0}
+  m_EulerEditorCurves: []
+  m_Events: []

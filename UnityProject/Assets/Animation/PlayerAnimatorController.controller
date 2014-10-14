@@ -808,6 +808,36 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
+--- !u!1102 &110209385
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: LadderDrop
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 7df128d9deeb4e34589dc3bedd1f4c15, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: -493, y: 41, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110210634
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: LadderLift
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 6ca72205ebcdd8d40984b427e60a71e4, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: -458, y: 106, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1102 &110220679
 State:
   m_ObjectHideFlags: 3
@@ -978,6 +1008,8 @@ StateMachine:
   - {fileID: 110246481}
   - {fileID: 110246076}
   - {fileID: 110241673}
+  - {fileID: 110209385}
+  - {fileID: 110210634}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
