@@ -146,12 +146,14 @@ public class PlayerController : MonoBehaviour
         Backpack.SendMessage("DropItem");
     }
 
-    public void Climb(bool on)
+    //the variable "x" serves as the ladder's horizontal position in the on=true case
+    //and the horizontal force for ladder dismount in the on=false case
+    public void Climb(bool on, float x)
     {
-        Climbing = on;
 
-        if (Climbing) {
+        if (on) {
         	rigidbody2D.velocity = Vector2.zero;
+            rigidbody2D.position = new Vector2(x, transform.position.y);
             rigidbody2D.gravityScale = 0;
             Animator.SetFloat("Velocity", 0);
             Animator.SetFloat("vMove", 0);
@@ -166,7 +168,18 @@ public class PlayerController : MonoBehaviour
                 //the normal player layer
                 Sprite.sortingLayerName = "Player";
             }
+            if (x != 0.0f)
+            {
+                rigidbody2D.AddForce(new Vector2(x, 200f));
+                Animator.SetBool("LadderDrop", true);
+            }
+            else
+            {
+                Animator.SetBool("LadderLift", true);
+            }
         }
+
+        Climbing = on;
 
         Animator.SetBool("Climbing", Climbing);
     }
