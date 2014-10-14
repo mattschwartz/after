@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
 
     //the variable "x" serves as the ladder's horizontal position in the on=true case
     //and the horizontal force for ladder dismount in the on=false case
-    public void Climb(bool on, float x)
+    public void Climb(bool on, bool profile, float x)
     {
 
         if (on) {
@@ -182,6 +182,7 @@ public class PlayerController : MonoBehaviour
         Climbing = on;
 
         Animator.SetBool("Climbing", Climbing);
+        Animator.SetBool("LadderProfile", profile);
     }
 
     public void Swing(bool swinging)
