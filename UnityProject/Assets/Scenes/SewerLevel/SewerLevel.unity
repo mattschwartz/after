@@ -6714,7 +6714,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: d46f2cb58b3b54e8286eb6dbb1b934d6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: .75
   Loop: 1
   Mute: 0
   Priority: 128
@@ -12486,7 +12486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsBeforeRead: .400000006
+  WaitSecondsBeforeRead: 1
   From: 1
   To: 2
   Volume: 1
