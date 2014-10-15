@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: cb4d31f920a1c4c64b95ee1ad625c206
+guid: 34ec9db8ad70346c78178ebd82a5e073
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: HydroTank
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
