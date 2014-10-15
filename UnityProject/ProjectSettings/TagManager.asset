@@ -42,13 +42,13 @@ TagManager:
     userID: 1
     uniqueID: 1343960909
     locked: 1
-  - name: Interspace
-    userID: 7
-    uniqueID: 1482764551
-    locked: 0
   - name: Jumpable
     userID: 2
     uniqueID: 3056740579
+    locked: 0
+  - name: Interspace
+    userID: 7
+    uniqueID: 1482764551
     locked: 0
   - name: Interactable
     userID: 3
