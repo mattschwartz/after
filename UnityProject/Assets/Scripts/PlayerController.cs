@@ -185,6 +185,11 @@ public class PlayerController : MonoBehaviour
         Animator.SetBool("LadderProfile", profile);
     }
 
+    public void Push (bool push)
+    {
+        Animator.SetBool("Pushing", push);
+    }
+
     public void Swing(bool swinging)
     {
         Animator.SetBool("Swinging", swinging);
