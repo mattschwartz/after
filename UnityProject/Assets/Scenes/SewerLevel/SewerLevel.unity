@@ -6227,11 +6227,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7.49227095
+      value: 7.191576
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -7.20078182
+      value: -6.82492256
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9106,7 +9106,7 @@ Transform:
   m_PrefabInternal: {fileID: 837851185}
   m_GameObject: {fileID: 1305626017}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.49227095, y: -7.20078182, z: 0}
+  m_LocalPosition: {x: 7.191576, y: -6.82492256, z: 0}
   m_LocalScale: {x: .927992642, y: .927992761, z: 1}
   m_Children:
   - {fileID: 20006581}
@@ -12409,7 +12409,7 @@ GameObject:
   - 212: {fileID: 1816749791}
   - 61: {fileID: 1816749793}
   - 114: {fileID: 1816749792}
-  - 50: {fileID: 1816749794}
+  - 68: {fileID: 1816749794}
   m_Layer: 8
   m_Name: Rock
   m_TagString: Untagged
@@ -12424,7 +12424,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1816749789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.5161819, y: -6.53553867, z: 0}
+  m_LocalPosition: {x: 11.4439487, y: -6.5159626, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 260634086}
@@ -12478,21 +12478,19 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 4.01258945, y: 2.95722747}
   m_Center: {x: .568704605, y: -.0963954926}
---- !u!50 &1816749794
-Rigidbody2D:
+--- !u!68 &1816749794
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1816749789}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 1
-  m_FixedAngle: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: -3.81441689, y: -1.62552929}
+  - {x: -2.17367554, y: .258333206}
+  - {x: -1.42492771, y: .0738143921}
 --- !u!1 &1816937070
 GameObject:
   m_ObjectHideFlags: 0
