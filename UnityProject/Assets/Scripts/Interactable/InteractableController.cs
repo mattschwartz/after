@@ -56,16 +56,15 @@ namespace After.Interactable
             foreach (var script in TransitionScripts.FindAll(t => t.Legible(from, to))) {
                 StartCoroutine(Read(script, from, to));
 
-                // if (script.DestroyOnRead) {
-                //     TransitionScripts.Remove(script);
-                // }
+                if (script.DestroyOnRead) {
+                    TransitionScripts.Remove(script);
+                }
             }
         }
 
         private IEnumerator Read(Transition script, StateType from, StateType to)
         {
             yield return new WaitForSeconds(script.WaitSecondsBeforeRead);
-            Debug.Log("Reading script: " + script);
             script.Read(from, to);
         }
     }
