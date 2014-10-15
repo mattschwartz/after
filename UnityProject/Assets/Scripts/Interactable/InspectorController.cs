@@ -12,6 +12,7 @@ namespace After.Interactable
         public GUITexture BlackSwatchTexture;
         public GUIStyle opaCustomStyle;
         public PlayerController Player;
+        public Color ColorOverlay;
 
         private bool ShowInspector;
         private string TitleText;
@@ -51,8 +52,10 @@ namespace After.Interactable
             float itemWidth = ItemTexture.width * scale;
             float itemHeight = ItemTexture.height * scale;
 
-            camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.5f, 0));
+            camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.42f, 0));
             Rect itemPosition = new Rect(camPos.x - itemWidth / 2, camPos.y - itemHeight / 2, itemWidth, itemHeight);
+
+            GUI.color = ColorOverlay;
             GUI.DrawTexture(itemPosition, ItemTexture);
         }
 
@@ -65,6 +68,7 @@ namespace After.Interactable
             BlackSwatchTexture.enabled = true;
             ItemTexture = itemTexture;
             TextureSize = size;
+            ColorOverlay = Color.white;
         }
     }
 }

@@ -9,6 +9,7 @@ namespace After.Interactable.Transitions
 {
     public class InspectableTransition : Transition
     {
+        public Color TextureOverlay;
         public float TextureSize = 550;
         public string Title;
         public string Description;
@@ -18,6 +19,7 @@ namespace After.Interactable.Transitions
         public override void Read(StateType fromState, StateType toState)
         {
             Inspector.InspectItem(Title, Description, InspectableTexture, TextureSize);
+            Inspector.ColorOverlay = TextureOverlay;
         }
     }
 }

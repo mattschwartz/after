@@ -93,16 +93,17 @@ MonoBehaviour:
     m_FontSize: 18
     m_FontStyle: 0
     m_Alignment: 1
-    m_WordWrap: 0
+    m_WordWrap: 1
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
-    m_ContentOffset: {x: 0, y: 0}
-    m_FixedWidth: 0
+    m_ContentOffset: {x: -300, y: 0}
+    m_FixedWidth: 600
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
   Player: {fileID: 0}
+  ColorOverlay: {r: 0, g: 0, b: 0, a: 0}
 --- !u!131 &13100000
 GUITexture:
   m_ObjectHideFlags: 1
