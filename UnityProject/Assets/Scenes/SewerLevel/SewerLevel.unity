@@ -7112,6 +7112,10 @@ Prefab:
       propertyPath: ExitNexus
       value: 
       objectReference: {fileID: 948626624}
+    - target: {fileID: 21200000, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
   m_RootGameObject: {fileID: 139879936}
@@ -11622,6 +11626,10 @@ Prefab:
       propertyPath: InspectorController
       value: 
       objectReference: {fileID: 1071790823}
+    - target: {fileID: 21200000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
   m_RootGameObject: {fileID: 194404990}
@@ -13256,10 +13264,6 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_Points:
   - {x: -.545779824, y: 17.6022015}
-  - {x: -1.96314967, y: 4.6356082}
-  - {x: 1.62634456, y: -7.69506121}
-  - {x: 4.28461075, y: -14.8716402}
-  - {x: 6.3127923, y: -17.1888981}
   - {x: -.723457098, y: -18.9789753}
 --- !u!1 &1913858249
 GameObject:
@@ -14541,7 +14545,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: daa942fb38e058a4f9de4f1dc9743abc, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: daa942fb38e058a4f9de4f1dc9743abc, type: 2}
