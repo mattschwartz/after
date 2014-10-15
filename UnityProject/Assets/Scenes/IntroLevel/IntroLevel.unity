@@ -399,7 +399,7 @@ ParticleSystem:
       minMaxState: 1
     gravityModifier: .0199999996
     inheritVelocity: 0
-    maxNumParticles: 25000
+    maxNumParticles: 500
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -417,7 +417,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 300
+      scalar: 30
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3753,7 +3753,7 @@ SpriteRenderer:
   m_SortingLayerID: 1343960909
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 49e80583dec4ab44f93a0d164195501c, type: 3}
-  m_Color: {r: .264705896, g: .222771764, b: .22188583, a: 1}
+  m_Color: {r: .213235319, g: .179455042, b: .178741366, a: 1}
 --- !u!1 &1015106533
 GameObject:
   m_ObjectHideFlags: 0
