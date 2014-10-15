@@ -40,10 +40,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f00157d9785c6545a818570814000b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowInspector: 1
-  CloseButton: 120
-  InspectedItem: {fileID: 0}
-  Player: {fileID: 0}
+  TextureSize: 200
+  CloseButton: 27
   BlackSwatchTexture: {fileID: 13100000}
   opaCustomStyle:
     m_Name: 
@@ -104,6 +102,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+  Player: {fileID: 0}
 --- !u!131 &13100000
 GUITexture:
   m_ObjectHideFlags: 1

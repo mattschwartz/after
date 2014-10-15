@@ -7,14 +7,13 @@ namespace After.Interactable
     {
         #region Members
 
-
+        public float TextureSize = 200;
         public KeyCode CloseButton = KeyCode.Escape;
         public GUITexture BlackSwatchTexture;
         public GUIStyle opaCustomStyle;
         public PlayerController Player;
 
         private bool ShowInspector;
-        private float ItemHeldSize = 200;
         private string TitleText;
         private string DescriptionText;
         private Texture ItemTexture;
@@ -48,7 +47,7 @@ namespace After.Interactable
             camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.95f, 0));
             GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), "Press Escape to close", opaCustomStyle);
 
-            float scale = ItemHeldSize / Mathf.Max(ItemTexture.width, ItemTexture.height);
+            float scale = TextureSize / Mathf.Max(ItemTexture.width, ItemTexture.height);
             float itemWidth = ItemTexture.width * scale;
             float itemHeight = ItemTexture.height * scale;
 
@@ -57,7 +56,7 @@ namespace After.Interactable
             GUI.DrawTexture(itemPosition, ItemTexture);
         }
 
-        public void InspectItem(string title, string description, Texture itemTexture)
+        public void InspectItem(string title, string description, Texture itemTexture, float size = 200)
         {
             Player.LockPlayer();
             ShowInspector = true;
@@ -65,6 +64,7 @@ namespace After.Interactable
             DescriptionText = description;
             BlackSwatchTexture.enabled = true;
             ItemTexture = itemTexture;
+            TextureSize = size;
         }
     }
 }
