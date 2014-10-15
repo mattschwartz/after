@@ -126,6 +126,7 @@ public class PlayerController : MonoBehaviour
 
     private void InspectItem()
     {
+        if (Backpack.ItemHeld == null) { return; }
         Texture texture = Backpack.ItemHeld.GetComponent<SpriteRenderer>().sprite.texture;
         GrabbableItemController grabbableItem = Backpack.ItemHeld.GetComponent<GrabbableItemController>();
         string name = grabbableItem.ItemName;
