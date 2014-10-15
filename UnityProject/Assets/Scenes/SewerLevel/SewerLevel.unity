@@ -13156,6 +13156,7 @@ MonoBehaviour:
   PlayerCon: {fileID: 194404992}
   StepClips:
   - {fileID: 0}
+  Profile: 0
 --- !u!61 &1918864478
 BoxCollider2D:
   m_ObjectHideFlags: 0
