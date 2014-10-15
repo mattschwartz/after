@@ -6274,7 +6274,7 @@ Prefab:
         type: 3}
     - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: Description
-      value: Steel used for reinforcing concrete that can be used for pyring now.
+      value: Steel used for reinforcing concrete that can be used for prying now.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
@@ -8874,7 +8874,7 @@ MonoBehaviour:
   TransitionScripts:
   - {fileID: 878753111}
   ItemName: Rebar
-  Description: Steel used for reinforcing concrete that can be used for pyring now.
+  Description: Steel used for reinforcing concrete that can be used for prying now.
 --- !u!61 &1305626021
 BoxCollider2D:
   m_ObjectHideFlags: 0
