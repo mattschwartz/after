@@ -185,6 +185,19 @@ public class PlayerController : MonoBehaviour
         Animator.SetBool("LadderProfile", profile);
     }
 
+    public void LadderTop(bool up)
+    {
+
+        if (up)
+        {
+            Animator.SetBool("LadderLift", true);
+        }
+        else
+        {
+            Animator.SetBool("LadderDrop", false);
+        }
+    }
+
     public void Push (bool push)
     {
         Animator.SetBool("Pushing", push);
