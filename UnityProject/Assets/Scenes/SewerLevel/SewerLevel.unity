@@ -3685,6 +3685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46bd61d07c5e6e448b964ceeaf876912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerBoxCollider: {fileID: 194404993}
   Player: {fileID: 194404990}
   screenPosition: {x: 0, y: 0, z: 0}
   Thought: 
@@ -3742,7 +3743,7 @@ MonoBehaviour:
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
-    m_ContentOffset: {x: 0, y: -105}
+    m_ContentOffset: {x: 0, y: 0}
     m_FixedWidth: 0
     m_FixedHeight: 0
     m_StretchWidth: 1
@@ -8430,6 +8431,14 @@ Prefab:
       propertyPath: m_Name
       value: Player Thoughts
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
+      propertyPath: opaCustomStyle.m_ContentOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
+      propertyPath: PlayerBoxCollider
+      value: 
+      objectReference: {fileID: 194404993}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
   m_RootGameObject: {fileID: 329743548}
