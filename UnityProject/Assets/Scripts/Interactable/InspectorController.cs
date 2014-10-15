@@ -37,27 +37,43 @@ namespace After.Interactable
             }
         }
 
+        #region Render GUI
+
         void OnGUI()
         {
             if (!ShowInspector) { return; }
 
+            RenderItem();
+            RenderText();
+        }
+
+        private void RenderItem() 
+        {
+            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.42f, 0));
+            float scale = TextureSize / Mathf.Max(ItemTexture.width, ItemTexture.height);
+            float itemWidth = ItemTexture.width * scale;
+            float itemHeight = ItemTexture.height * scale;
+
+            Rect itemPosition = new Rect(camPos.x - itemWidth / 2, camPos.y - itemHeight / 2, itemWidth, itemHeight);
+        
+            GUI.color = ColorOverlay;
+            GUI.DrawTexture(itemPosition, ItemTexture);
+            GUI.color = Color.white;
+        }
+
+        private void RenderText() 
+        {
             var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.05f, 0));
             GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), TitleText, opaCustomStyle);
             camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.75f, 0));
             GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), DescriptionText, opaCustomStyle);
             camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.95f, 0));
             GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), "Press Escape to close", opaCustomStyle);
-
-            float scale = TextureSize / Mathf.Max(ItemTexture.width, ItemTexture.height);
-            float itemWidth = ItemTexture.width * scale;
-            float itemHeight = ItemTexture.height * scale;
-
-            camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.42f, 0));
-            Rect itemPosition = new Rect(camPos.x - itemWidth / 2, camPos.y - itemHeight / 2, itemWidth, itemHeight);
-
-            GUI.color = ColorOverlay;
-            GUI.DrawTexture(itemPosition, ItemTexture);
         }
+
+        #endregion
+
+        #region Public Methods
 
         public void InspectItem(string title, string description, Texture itemTexture, float size = 200)
         {
@@ -70,5 +86,7 @@ namespace After.Interactable
             TextureSize = size;
             ColorOverlay = Color.white;
         }
+
+        #endregion
     }
 }
