@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         if (Grounded && Input.GetKeyDown(JumpButton)) {
             rigidbody2D.AddForce(Vector2.up * JumpForce);
         }
-        
+
         if (Input.GetKeyDown(InteractButton)) {
             Interact();
         }
@@ -162,7 +162,7 @@ public class PlayerController : MonoBehaviour
     {
 
         if (on) {
-        	rigidbody2D.velocity = Vector2.zero;
+            rigidbody2D.velocity = Vector2.zero;
             rigidbody2D.position = new Vector2(x, transform.position.y);
             rigidbody2D.gravityScale = 0;
             Animator.SetFloat("Velocity", 0);
@@ -178,13 +178,10 @@ public class PlayerController : MonoBehaviour
                 //the normal player layer
                 Sprite.sortingLayerName = "Player";
             }
-            if (x != 0.0f)
-            {
+            if (x != 0.0f) {
                 rigidbody2D.AddForce(new Vector2(x, 200f));
                 Animator.SetBool("LadderDrop", true);
-            }
-            else
-            {
+            } else {
                 Animator.SetBool("LadderLift", true);
             }
         }
@@ -195,7 +192,7 @@ public class PlayerController : MonoBehaviour
         Animator.SetBool("LadderProfile", profile);
     }
 
-    public void Push (bool push)
+    public void Push(bool push)
     {
         Animator.SetBool("Pushing", push);
     }
