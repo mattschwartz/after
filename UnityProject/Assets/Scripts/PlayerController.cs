@@ -10,16 +10,17 @@ public class PlayerController : MonoBehaviour
     #region Members
 
     public KeyCode InteractButton = KeyCode.E;
-    public KeyCode DropButton = KeyCode.X;
+    public KeyCode InspectButton = KeyCode.X;
     public KeyCode JumpButton = KeyCode.Space;
     public Transform GroundCheck;
     public LayerMask GroundLayerMask;
-    public GameObject Backpack;
+    public HeldItemController Backpack;
+    public InspectorController InspectorController;
 
     private bool PlayerLocked = false;
     private bool Grounded = false;
     private bool FacingRight = true;
-    public float Speed = 5f;
+    private float Speed = 7f;
     private float JumpForce = 1225f;
     private float GroundRadius = 0.2f;
     private Animator Animator;
@@ -56,8 +57,8 @@ public class PlayerController : MonoBehaviour
             Interact();
         }
 
-        if (Backpack && Input.GetKeyDown(DropButton)) {
-            DropItem();
+        if (Backpack && Input.GetKeyDown(InspectButton)) {
+            InspectItem();
         }
     }
 
@@ -89,7 +90,24 @@ public class PlayerController : MonoBehaviour
         PlayerObserver.SetPlayerVel(rigidbody2D.velocity);
     }
 
+    private void IsGrounded()
+    {
+        Grounded = Physics2D.OverlapCircle(GroundCheck.position, GroundRadius, GroundLayerMask);
+        Animator.SetBool("Grounded", Grounded);
+    }
+
+    // Cheap animations
+    private void Flip()
+    {
+        FacingRight = !FacingRight;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
+    }
+
     #endregion
+
+    #region Interact
 
     private void Interact()
     {
@@ -104,19 +122,11 @@ public class PlayerController : MonoBehaviour
             .ForEach(t => t.gameObject.SendMessage("Interact"));
     }
 
-    private void IsGrounded()
-    {
-        Grounded = Physics2D.OverlapCircle(GroundCheck.position, GroundRadius, GroundLayerMask);
-        Animator.SetBool("Grounded", Grounded);
-    }
+    #endregion
 
-    // Cheap animations
-    private void Flip()
+    private void InspectItem()
     {
-        FacingRight = !FacingRight;
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
+        InspectorController.InspectItem(Backpack.ItemHeld);
     }
 
     #region Message Functions
@@ -138,12 +148,12 @@ public class PlayerController : MonoBehaviour
     public void PickupItem(GameObject item)
     {
         Animator.SetTrigger("PickupItemLow");
-        Backpack.SendMessage("SetItemHeld", item);
+        Backpack.SetItemHeld(item);
     }
 
     public void DropItem()
     {
-        Backpack.SendMessage("DropItem");
+        Backpack.DropItem();
     }
 
     //the variable "x" serves as the ladder's horizontal position in the on=true case

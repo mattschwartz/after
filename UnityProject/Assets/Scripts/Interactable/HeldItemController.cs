@@ -15,7 +15,7 @@ namespace After.Interactable
         public GameObject Player;
         public Texture BackpackTexture;
 
-        private GameObject ItemHeld;
+        public GameObject ItemHeld { get; private set; }
         private Texture ItemHeldTexture;
 
         #endregion
@@ -32,8 +32,8 @@ namespace After.Interactable
                 float scale = ItemHeldSize / Mathf.Max(ItemHeldTexture.width, ItemHeldTexture.height);
                 float itemWidth = ItemHeldTexture.width * scale;
                 float itemHeight = ItemHeldTexture.height * scale;
-                Rect ItemPosition = new Rect(camPos.x - itemWidth - (BackpackSize - itemWidth) / 2, camPos.y - itemHeight - (BackpackSize - itemHeight) / 2, itemWidth, itemHeight);
-                GUI.DrawTexture(ItemPosition, ItemHeldTexture);
+                Rect itemPosition = new Rect(camPos.x - itemWidth - (BackpackSize - itemWidth) / 2, camPos.y - itemHeight - (BackpackSize - itemHeight) / 2, itemWidth, itemHeight);
+                GUI.DrawTexture(itemPosition, ItemHeldTexture);
             }
         }
 

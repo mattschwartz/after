@@ -25,7 +25,9 @@ namespace After.Interactable
         void Start()
         {
             Player = GameObject.Find("Player");
-            Description = StringUtility.AorAn(ItemName, true);
+            if (string.IsNullOrEmpty(Description)) {
+                Description = StringUtility.AorAn(ItemName, true);
+            }
         }
 
         void Update()
