@@ -4300,7 +4300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 1
-  WaitSecondsBeforeRead: 2.5
+  WaitSecondsBeforeRead: 2
   From: 1
   To: 2
   TransitionTransform: {fileID: 416764883}
