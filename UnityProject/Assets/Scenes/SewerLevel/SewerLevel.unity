@@ -6272,8 +6272,7 @@ Prefab:
         type: 3}
     - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: Description
-      value: Some metal used for reinforcing concrete that can be used for pyring,
-        now.
+      value: Steel used for reinforcing concrete that can be used for pyring now.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
@@ -6516,7 +6515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ee47c2431dcdd4c8488e578ad6b3d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentState: 1
+  CurrentState: 2
   LockedState: {fileID: 1210460436}
   UnlockedState: {fileID: 410122494}
   SpentState: {fileID: 0}
@@ -8963,8 +8962,7 @@ MonoBehaviour:
   TransitionScripts:
   - {fileID: 878753111}
   ItemName: Rebar
-  Description: Some metal used for reinforcing concrete that can be used for pyring,
-    now.
+  Description: Steel used for reinforcing concrete that can be used for pyring now.
 --- !u!61 &1305626021
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9415,7 +9413,7 @@ Prefab:
       objectReference: {fileID: 8300000, guid: b8f5eb70626994b1fac278bcf169a665, type: 3}
     - target: {fileID: 11400020, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
       propertyPath: CurrentState
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400012, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
       propertyPath: WaitSecondsAfterRead
