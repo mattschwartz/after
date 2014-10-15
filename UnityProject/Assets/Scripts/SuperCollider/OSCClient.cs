@@ -21,6 +21,7 @@
 using System;
 using System.Net;
 using System.Net.Sockets;
+using UnityEngine;
 
 namespace UnityOSC
 {
@@ -73,11 +74,12 @@ namespace UnityOSC
 			_udpClient = new UdpClient();
 			try
 			{
+				Debug.Log("Returns: " + Security.PrefetchSocketPolicy(_ipAddress.ToString(), _port));
 				_udpClient.Connect(_ipAddress, _port);	
 			}
-			catch
+			catch (Exception e)
 			{
-				throw new Exception(String.Format("Can't create client at IP address {0} and port {1}.", _ipAddress,_port));
+				throw new Exception(String.Format("Can't create client at IP address {0} and port {1}.", _ipAddress,_port) + e);
 			}
 		}
 		

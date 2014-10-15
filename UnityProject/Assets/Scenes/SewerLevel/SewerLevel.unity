@@ -4963,15 +4963,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 520467742}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c9b5e7c2ca65d14dbf79459414db2ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 1
   WaitSecondsBeforeRead: 0
   From: 1
   To: 2
-  Volume: 1
-  Clip: {fileID: 8300000, guid: a3ac0a035bf7a401f97a229447e8649b, type: 3}
+  StartVolume: 1
+  LoopVolume: 1
+  StartClip: {fileID: 0}
+  LoopClip: {fileID: 0}
 --- !u!1 &547926204
 GameObject:
   m_ObjectHideFlags: 0
@@ -13696,7 +13698,7 @@ MonoBehaviour:
   - {fileID: 418082780}
   - {fileID: 440644557}
   - {fileID: 412851899}
-  - {fileID: 2140344290}
+  - {fileID: 0}
   - {fileID: 1830149005}
 --- !u!1 &1957988695
 GameObject:
@@ -14503,10 +14505,10 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 2
   To: 3
-  GeneratorStartVolume: .25
-  GeneratorLoopVolume: .25
-  GeneratorStart: {fileID: 8300000, guid: 78d3b0bc0ce754319bd9f5a40db93621, type: 3}
-  GeneratorLoop: {fileID: 8300000, guid: 22bad280e28d1473baa12f335fd21da6, type: 3}
+  StartVolume: .25
+  LoopVolume: .25
+  StartClip: {fileID: 8300000, guid: 78d3b0bc0ce754319bd9f5a40db93621, type: 3}
+  LoopClip: {fileID: 8300000, guid: 22bad280e28d1473baa12f335fd21da6, type: 3}
 --- !u!1 &2144129183
 GameObject:
   m_ObjectHideFlags: 0

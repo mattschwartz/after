@@ -3,11 +3,38 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using System.Collections;
+using UnityOSC;
 
 namespace After.Audio 
 {
 	public class AudioManager : ScriptableObject
     {
+        private static readonly string ClientId = "SuperCollider";
+
+        void Start() 
+        {
+            // Initialize OSC
+            Debug.Log("Initializing OSC.");
+            OSCHandler.Instance.Init();
+        }
+
+        public static void Initialize() 
+        {
+            // Initialize OSC
+            Debug.Log("Initializing OSC.");
+            OSCHandler.Instance.Init();
+        }
+
+        public static void SendSCMessage<T>(string oscAddress, T val)
+        {
+            OSCHandler.Instance.SendMessageToClient(ClientId, oscAddress, val);
+        }
+
+        void Update()
+        {
+            OSCHandler.Instance.UpdateLogs();
+        }
+
         public static GameObject CreateAudioObject(AudioClip clip, Vector2 position, float volume = 1.0f)
         {
             GameObject gameObject = new GameObject();
