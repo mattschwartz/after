@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: 065bf401092e7ba4db54742b82bef7b4
+guid: 90266df834bc2374c9e551a41251e8b0
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Backpack
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

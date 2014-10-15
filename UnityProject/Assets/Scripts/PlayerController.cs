@@ -126,7 +126,12 @@ public class PlayerController : MonoBehaviour
 
     private void InspectItem()
     {
-        InspectorController.InspectItem(Backpack.ItemHeld);
+        Texture texture = Backpack.ItemHeld.GetComponent<SpriteRenderer>().sprite.texture;
+        GrabbableItemController grabbableItem = Backpack.ItemHeld.GetComponent<GrabbableItemController>();
+        string name = grabbableItem.ItemName;
+        string description = grabbableItem.Description;
+
+        InspectorController.InspectItem(name, description, texture);
     }
 
     #region Message Functions

@@ -7,15 +7,17 @@ namespace After.Interactable
     {
         #region Members
 
-        public float ItemHeldSize = 200;
 
         public KeyCode CloseButton = KeyCode.Escape;
         public GUITexture BlackSwatchTexture;
         public GUIStyle opaCustomStyle;
+        public PlayerController Player;
 
         private bool ShowInspector;
+        private float ItemHeldSize = 200;
+        private string TitleText;
+        private string DescriptionText;
         private Texture ItemTexture;
-        private GrabbableItemController InspectedItem;
 
         #endregion
 
@@ -29,8 +31,8 @@ namespace After.Interactable
         void Update()
         {
             if (ShowInspector && Input.GetKeyDown(CloseButton)) {
+                Player.FreePlayer();
                 ShowInspector = false;
-                InspectedItem = null;
                 BlackSwatchTexture.enabled = false;
             }
         }
@@ -40,9 +42,9 @@ namespace After.Interactable
             if (!ShowInspector) { return; }
 
             var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.05f, 0));
-            GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), InspectedItem.ItemName, opaCustomStyle);
+            GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), TitleText, opaCustomStyle);
             camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.75f, 0));
-            GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), InspectedItem.Description, opaCustomStyle);
+            GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), DescriptionText, opaCustomStyle);
             camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.95f, 0));
             GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), "Press Escape to close", opaCustomStyle);
 
@@ -51,16 +53,18 @@ namespace After.Interactable
             float itemHeight = ItemTexture.height * scale;
 
             camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.5f, 0));
-            Rect itemPosition = new Rect(camPos.x - itemWidth/2, camPos.y - itemHeight/2, itemWidth, itemHeight);
+            Rect itemPosition = new Rect(camPos.x - itemWidth / 2, camPos.y - itemHeight / 2, itemWidth, itemHeight);
             GUI.DrawTexture(itemPosition, ItemTexture);
         }
 
-        public void InspectItem(GameObject item)
+        public void InspectItem(string title, string description, Texture itemTexture)
         {
+            Player.LockPlayer();
             ShowInspector = true;
-            InspectedItem = item.GetComponent<GrabbableItemController>();
+            TitleText = title;
+            DescriptionText = description;
             BlackSwatchTexture.enabled = true;
-            ItemTexture = item.GetComponent<SpriteRenderer>().sprite.texture;
+            ItemTexture = itemTexture;
         }
     }
 }

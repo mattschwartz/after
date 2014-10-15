@@ -13,7 +13,8 @@ namespace After.Interactable
         public float ItemHeldSize = 100;
         public float BackpackSize = 175;
         public GameObject Player;
-        public Texture BackpackTexture;
+        public Texture BackpackTextureEmpty;
+        public Texture BackpackTextureFull;
 
         public GameObject ItemHeld { get; private set; }
         private Texture ItemHeldTexture;
@@ -25,15 +26,16 @@ namespace After.Interactable
             var camPos = Camera.main.ViewportToScreenPoint(new Vector3(1, 1, 0));
             Rect BackpackPosition = new Rect(camPos.x - BackpackSize, camPos.y - BackpackSize, BackpackSize, BackpackSize);
 
-            // render backpack
-            GUI.DrawTexture(BackpackPosition, BackpackTexture);
-
             if (ItemHeld != null) {
+                GUI.DrawTexture(BackpackPosition, BackpackTextureFull);
+
                 float scale = ItemHeldSize / Mathf.Max(ItemHeldTexture.width, ItemHeldTexture.height);
                 float itemWidth = ItemHeldTexture.width * scale;
                 float itemHeight = ItemHeldTexture.height * scale;
                 Rect itemPosition = new Rect(camPos.x - itemWidth - (BackpackSize - itemWidth) / 2, camPos.y - itemHeight - (BackpackSize - itemHeight) / 2, itemWidth, itemHeight);
                 GUI.DrawTexture(itemPosition, ItemHeldTexture);
+            } else {
+                GUI.DrawTexture(BackpackPosition, BackpackTextureEmpty);
             }
         }
 
