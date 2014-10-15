@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: 3bb036c20d2f74e7591105bc4313481d
+guid: f9026d6cd7cc045e4b83398a28c0fd46
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Cogs
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: f17886ae122c94af9b6a6431449d4323
+guid: 8c230e4cbbfd94df2931d1352c4c578b
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: PowerWall
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
