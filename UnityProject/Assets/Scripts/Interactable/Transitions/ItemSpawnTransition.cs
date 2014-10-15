@@ -10,6 +10,7 @@ namespace After.Interactable.Transitions
     public class ItemSpawnTransition : Transition
     {
         // Should be a Grabbable prefab
+        public Vector2 Velocity = Vector2.up * 1000;
         public GameObject ItemToSpawn;
 
         void Start()
@@ -23,7 +24,7 @@ namespace After.Interactable.Transitions
             ItemToSpawn.GetComponent<SpriteRenderer>().enabled = true;
             ItemToSpawn.transform.position = transform.position;
             ItemToSpawn.rigidbody2D.velocity = Vector2.zero;
-            ItemToSpawn.rigidbody2D.AddForce(Vector2.up * 1000f);
+            ItemToSpawn.rigidbody2D.AddForce(Velocity);
             ItemToSpawn = null;
         }
     }

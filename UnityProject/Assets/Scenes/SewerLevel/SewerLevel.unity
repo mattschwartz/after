@@ -1309,7 +1309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ee47c2431dcdd4c8488e578ad6b3d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentState: 1
+  CurrentState: 2
   LockedState: {fileID: 1141132279}
   UnlockedState: {fileID: 711705602}
   SpentState: {fileID: 0}
@@ -5362,6 +5362,7 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 1.20000005
   From: 1
   To: 2
+  Velocity: {x: 0, y: 1000}
   ItemToSpawn: {fileID: 653709347}
 --- !u!1 &633985743
 GameObject:
@@ -7105,7 +7106,7 @@ Prefab:
       objectReference: {fileID: 653709347}
     - target: {fileID: 11400020, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
       propertyPath: CurrentState
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bcee44684808d1b4cad45fa64775e813, type: 2}
       propertyPath: ExitNexus
@@ -9870,6 +9871,7 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 1
   To: 3
+  Velocity: {x: 100, y: 1000}
   ItemToSpawn: {fileID: 1614624034}
 --- !u!1 &1577908941
 GameObject:
@@ -12819,6 +12821,7 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 2
   From: 1
   To: 2
+  Velocity: {x: 0, y: 1000}
   ItemToSpawn: {fileID: 419237405}
 --- !u!1 &1898526268
 GameObject:
