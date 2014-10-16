@@ -74,7 +74,6 @@ namespace UnityOSC
 			_udpClient = new UdpClient();
 			try
 			{
-				Debug.Log("Returns: " + Security.PrefetchSocketPolicy(_ipAddress.ToString(), _port));
 				_udpClient.Connect(_ipAddress, _port);	
 			}
 			catch (Exception e)
