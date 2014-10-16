@@ -18,9 +18,11 @@ public class StartThenLoopAudioTransition : Transition
 
     private IEnumerator PlayClipsQueued()
     {
+        Debug.Log("Playing start clip with length of: " + StartClip.length);
         AudioManager.PlayClipAtPoint(StartClip, 1.0f, transform.position,
             StartVolume);
         yield return new WaitForSeconds(StartClip.length);
+        Debug.Log("Playing next clip");
         AudioManager.LoopClipAtPoint(LoopClip, transform.position,
             LoopVolume);
     }

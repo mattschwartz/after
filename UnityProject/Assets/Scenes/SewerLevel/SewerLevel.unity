@@ -4300,7 +4300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 1
-  WaitSecondsBeforeRead: 2
+  WaitSecondsBeforeRead: 2.5
   From: 1
   To: 2
   TransitionTransform: {fileID: 416764883}
@@ -4966,14 +4966,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c9b5e7c2ca65d14dbf79459414db2ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyOnRead: 1
+  DestroyOnRead: 0
   WaitSecondsBeforeRead: 0
   From: 1
   To: 2
   StartVolume: 1
   LoopVolume: 1
-  StartClip: {fileID: 0}
-  LoopClip: {fileID: 0}
+  StartClip: {fileID: 8300000, guid: a3ac0a035bf7a401f97a229447e8649b, type: 3}
+  LoopClip: {fileID: 8300000, guid: 0b395caf199b14bda80a26b522f6617a, type: 3}
 --- !u!1 &547926204
 GameObject:
   m_ObjectHideFlags: 0
