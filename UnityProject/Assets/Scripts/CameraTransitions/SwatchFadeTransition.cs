@@ -48,9 +48,10 @@ namespace After.CameraTransitions
 			}
 			if (!Instance.Fading) { return; }
 
-			Instance.SwatchTexture.color = Color.Lerp(Instance.StartColor, Instance.EndColor, t);
+			float x = Instance.t / Instance.Duration;
+			Instance.SwatchTexture.color = Color.Lerp(Instance.StartColor, Instance.EndColor, x);
 
-			Instance.t += Time.deltaTime / Instance.Duration;
+			Instance.t += Time.deltaTime;
 			Debug.Log("t is " + Instance.t);
 
 			if (Instance.t >= Instance.Duration) {
