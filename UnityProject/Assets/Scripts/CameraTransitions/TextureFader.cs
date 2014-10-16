@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace After.CameraTransitions
 {
-	public class SwatchFadeTransition : ScriptableObject
+	public class TextureFader : ScriptableObject
 	{
 		public GUITexture SwatchTexture;
-		public static SwatchFadeTransition Instance;
+		public static TextureFader Instance;
 
 		private bool Fading = false;
 		private float t;
@@ -14,13 +14,13 @@ namespace After.CameraTransitions
 		private Color StartColor;
 		private Color EndColor;
 
-		private SwatchFadeTransition()
+		private TextureFader()
 		{
 		}
 
 		void Start()
 		{
-			Instance = SwatchFadeTransition.CreateInstance<SwatchFadeTransition>();
+			Instance = TextureFader.CreateInstance<TextureFader>();
 			Instance.SwatchTexture = SwatchTexture;
 	        Instance.SwatchTexture.transform.position = new Vector3(0, 0, 0);
 	        Instance.SwatchTexture.pixelInset = new Rect(0, 0, Screen.width, Screen.height);
