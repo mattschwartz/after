@@ -1756,7 +1756,7 @@ Transform:
   - {fileID: 1034772426}
   - {fileID: 27133717}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!95 &194404997
 Animator:
   serializedVersion: 3
@@ -2122,7 +2122,7 @@ Transform:
   - {fileID: 1820955542}
   - {fileID: 17949769}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1 &262035512
 GameObject:
   m_ObjectHideFlags: 0
@@ -2207,9 +2207,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1168216544}
-  - {fileID: 445682461}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
 --- !u!114 &262035518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4775,10 +4774,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 445682459}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.6990643, y: -12.4622812, z: 10}
+  m_LocalPosition: {x: 9.51300335, y: -.845696449, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 262035517}
+  m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!131 &445682462
 GUITexture:
@@ -4787,7 +4786,7 @@ GUITexture:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 445682459}
   m_Enabled: 1
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 49e80583dec4ab44f93a0d164195501c, type: 3}
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
@@ -8196,7 +8195,7 @@ Transform:
   - {fileID: 1492477878}
   - {fileID: 1261924173}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
 --- !u!114 &1208047003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9105,7 +9104,7 @@ Transform:
   - {fileID: 1010989967}
   - {fileID: 2053286136}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &1348473376
 GameObject:
   m_ObjectHideFlags: 0
@@ -9149,7 +9148,7 @@ Transform:
   - {fileID: 1947916591}
   - {fileID: 1649782175}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!212 &1348473378
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9475,7 +9474,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!114 &1456273199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11543,7 +11542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ee47c2431dcdd4c8488e578ad6b3d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentState: 2
+  CurrentState: 1
   LockedState: {fileID: 1053654489}
   UnlockedState: {fileID: 0}
   SpentState: {fileID: 0}
@@ -12747,7 +12746,7 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 1
   To: 1
-  TextureOverlay: {r: .139705896, g: .139705896, b: .139705896, a: 1}
+  TextureOverlay: {r: .0294117928, g: .0294117928, b: .0294117928, a: 1}
   TextureSize: 550
   Title: Corkboard
   Description: The board is too dark to read.
@@ -14225,7 +14224,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &2069975085
 GameObject:
   m_ObjectHideFlags: 0

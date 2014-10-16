@@ -20,31 +20,17 @@ namespace After.CameraTransitions
 
 		void Start()
 		{
-			// var tex = new Texture2D(Screen.height, Screen.width, TextureFormat.ARGB32, false);
-
-			// for (int w = 0; w < tex.width; ++w) {
-			// 	for (int h = 0; h < tex.height; ++h) {
-			// 		tex.SetPixel(w, h, Color.black);
-			// 	}
-			// }
-
 			Instance = SwatchFadeTransition.CreateInstance<SwatchFadeTransition>();
 			Instance.SwatchTexture = SwatchTexture;
-			// tex.Apply();
 	        Instance.SwatchTexture.transform.position = new Vector3(0, 0, 0);
 	        Instance.SwatchTexture.pixelInset = new Rect(0, 0, Screen.width, Screen.height);
-			// Instance.SwatchTexture.texture = tex;
-		}
-
-		public void SetDuration(float seconds) 
-		{
-			Duration = seconds;
+            Instance.SwatchTexture.enabled = false;
 		}
 
 		void Update()
 		{
 			if (Input.GetKeyDown(KeyCode.I)) {
-				Instance.Fade(Color.white, Color.clear, 2);
+				Instance.Fade(Color.white, Color.clear, 1.85f);
 			}
 			if (!Instance.Fading) { return; }
 
@@ -52,7 +38,6 @@ namespace After.CameraTransitions
 			Instance.SwatchTexture.color = Color.Lerp(Instance.StartColor, Instance.EndColor, x);
 
 			Instance.t += Time.deltaTime;
-			Debug.Log("t is " + Instance.t);
 
 			if (Instance.t >= Instance.Duration) {
 				Instance.Fading = false;
@@ -62,7 +47,6 @@ namespace After.CameraTransitions
 
 		public void Fade(Color start, Color end, float duration = 1)
 		{
-			Debug.Log("Start fading from: " + start + " to " + end);
 			Fading = true;
 			SwatchTexture.enabled = true;
 			SwatchTexture.color = start;
