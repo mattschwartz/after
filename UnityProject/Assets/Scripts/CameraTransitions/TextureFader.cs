@@ -43,16 +43,35 @@ namespace After.CameraTransitions
 
 			// Cleanup
 			if (Instance.t >= Instance.Duration) {
-				Instance.Fading = false;
-				Instance.SwatchTexture.enabled = false;
-				Instance.SwatchTexture.texture = Instance.DefaultTexture;
+				Instance.Cleanup();
 			}
 		}
 
-		// Change the texture to something else for 1 fade
+		/// <summary>Perform any necessary resetting of variables after the 
+		/// <para>fade transition completes.</para>
+		/// </summary>
+		public void Cleanup()
+		{
+			Fading = false;
+			SwatchTexture.enabled = false;
+			SwatchTexture.texture = DefaultTexture;
+		}
+
+		/// <summary>Sets the texture to be faded for the next fade
+		/// <param name="texture">The texture to fade</param>
+		/// </summary>
 		public void SetTexture(Texture texture)
 		{
 			SwatchTexture.texture = texture;
+		}
+
+		/// <summary>Sets the texture (from a sprite) to be faded for the next 
+		/// <para>fade</para>
+		/// <param name="sprite">The sprite's texture to fade</param>
+		/// </summary>
+		public void SetTexture(Sprite sprite)
+		{
+			SetTexture(sprite.texture);
 		}
 
 		/// <summary>Fade the current texture from a starting color to an
