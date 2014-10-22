@@ -7,6 +7,8 @@ namespace After.Audio
 	{
 
 		public float Delay;
+		public float OneShotVolume = 1;
+		public float LoopVolume = 1;
 		public AudioClip OneShotClip;
 		public AudioClip LoopClip;
 
@@ -17,9 +19,9 @@ namespace After.Audio
 
 		private IEnumerator PlayThenLoop()
 		{
-			AudioManager.PlayClipAtPoint(OneShotClip, transform.position);
+			AudioManager.PlayClipAtPoint(OneShotClip, transform.position, OneShotVolume);
 			yield return new WaitForSeconds(Delay);
-			AudioManager.LoopClipAtPoint(LoopClip, transform.position);
+			AudioManager.LoopClipAtPoint(LoopClip, transform.position, LoopVolume);
 		}
 	}	
 }

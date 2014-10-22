@@ -2301,9 +2301,9 @@ GameObject:
   - 4: {fileID: 1241012421}
   - 114: {fileID: 1241012420}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Background Music
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2319,6 +2319,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Delay: 42
+  OneShotVolume: .5
+  LoopVolume: .5
   OneShotClip: {fileID: 8300000, guid: 8210e111dd501417180f987f4994c454, type: 3}
   LoopClip: {fileID: 8300000, guid: 94409c3eeb29e4b5f933b0fe1614110b, type: 3}
 --- !u!4 &1241012421
