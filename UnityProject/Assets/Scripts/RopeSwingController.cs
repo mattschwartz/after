@@ -15,7 +15,7 @@ public class RopeSwingController : MonoBehaviour {
     private bool Active;
     private bool Entered;
     private bool Dismount;
-    private bool Falling;
+    //private bool Falling;
     private float TimeInterval;
     //private float Displace;  //in radians
     public Rigidbody2D Body;
@@ -27,7 +27,7 @@ public class RopeSwingController : MonoBehaviour {
 		//Displace = 0f;
 		Entered = false;
         Dismount = false;
-        Falling = false;
+        //Falling = false;
         Length = MinLength;
 
 		Trans = GetComponent<Transform>();
@@ -44,6 +44,8 @@ public class RopeSwingController : MonoBehaviour {
 	{
 		Entered = false;
         Dismount = false;
+
+        Body.angularDrag = 2f;
 	}
 
     /*
@@ -100,6 +102,9 @@ public class RopeSwingController : MonoBehaviour {
 
             //suspends player gravity
             PlayerObject.rigidbody2D.gravityScale = 0;
+
+            //eliminates rope drag
+            Body.angularDrag = 0f;
 		}
 		else if (Active && Input.GetKeyDown(KeyCode.Space))
 		{

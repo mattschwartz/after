@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private float Speed = 7f;
     private float JumpForce = 1225f;
     private float GroundRadius = 0.2f;
+    private float SwingLastX = 0f;
     private Animator Animator;
     private bool Climbing;
     private SpriteRenderer Sprite;
@@ -71,7 +72,9 @@ public class PlayerController : MonoBehaviour
 
         if (Swinging)
         {
-            Animator.SetFloat("Velocity", rigidbody.velocity.x);
+            Animator.SetFloat("Velocity", rigidbody2D.position.x - SwingLastX);
+            print(rigidbody2D.position.x - SwingLastX);
+            SwingLastX = rigidbody2D.position.x;
         }
 
         if (Climbing) {
@@ -218,6 +221,7 @@ public class PlayerController : MonoBehaviour
     {
         Swinging = swinging;
         Animator.SetBool("Swinging", swinging);
+        SwingLastX = rigidbody2D.position.x;
     }
 
     public void Lift(bool lifting)
