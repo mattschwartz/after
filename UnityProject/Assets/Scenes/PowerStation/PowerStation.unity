@@ -2231,7 +2231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bfa641b9e5c746eea3af53637a91475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Delay: 0
+  Delay: 42
   OneShotClip: {fileID: 8300000, guid: 8210e111dd501417180f987f4994c454, type: 3}
   LoopClip: {fileID: 8300000, guid: 94409c3eeb29e4b5f933b0fe1614110b, type: 3}
 --- !u!4 &1241012421
