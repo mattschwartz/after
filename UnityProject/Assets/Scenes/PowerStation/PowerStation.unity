@@ -497,8 +497,8 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1343960909
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f7b59e8a872b143719617efad5bbc753, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &446390045
@@ -780,7 +780,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1343960909
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -798,7 +798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FloorGates:
   - {fileID: 2042305761}
-  PlayerCon: {fileID: 0}
+  PlayerCon: {fileID: 1087088099}
   StepClips: []
   Profile: 0
 --- !u!61 &708300413
@@ -2303,7 +2303,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1343960909
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 90c3ffd0d849e4624ab08209b1748c1b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3018,6 +3018,14 @@ Prefab:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: PlayerCon
+      value: 
+      objectReference: {fileID: 1087088099}
+    - target: {fileID: 21200000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1343960909
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
   m_RootGameObject: {fileID: 708300409}
@@ -3107,7 +3115,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1343960909
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 97386c885109243c7aae32e35300421d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
