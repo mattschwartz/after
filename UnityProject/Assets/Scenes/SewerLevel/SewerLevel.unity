@@ -1680,6 +1680,14 @@ Prefab:
       propertyPath: Player
       value: 
       objectReference: {fileID: 194404992}
+    - target: {fileID: 11400000, guid: 130942ee731155042ab679f46cdec904, type: 2}
+      propertyPath: Size
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 130942ee731155042ab679f46cdec904, type: 2}
+      propertyPath: PercentSize
+      value: 88.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 130942ee731155042ab679f46cdec904, type: 2}
   m_RootGameObject: {fileID: 1620012499}
@@ -13800,7 +13808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e07d075ed2bfe4bbee23d177c18fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Size: 850
+  PercentSize: 88.5
   PreviousPageKey: 276
   NextPageKey: 275
   JournalKey: 106

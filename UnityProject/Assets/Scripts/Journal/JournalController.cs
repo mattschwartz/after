@@ -11,7 +11,7 @@ namespace After.Journal
     {
         #region Members
 
-        public float Size = 500;
+        public float PercentSize = 80;
 
         public KeyCode PreviousPageKey = KeyCode.LeftArrow;
         public KeyCode NextPageKey = KeyCode.RightArrow;
@@ -27,7 +27,9 @@ namespace After.Journal
 
         private bool Visible = false;
         private int EntryIndex = 0;
+        private float Scale;
         private List<Entry> Entries;
+        private Rect JournalBounds;
         private Rect PreviousPageBounds;
         private Rect NextPageBounds;
         private Rect JournalIndexBounds;
@@ -51,14 +53,23 @@ namespace After.Journal
 
         private void DefineClickableRegions()
         {
-            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.10f, 0.79f, 0));
-            PreviousPageBounds = new Rect(camPos.x, camPos.y, 160, 50);
+            Scale = (PercentSize / 100f);
+            IndexEntryStyle.fontSize = (int)(21f * Scale);
 
-            camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.66f, 0.81f, 0));
-            NextPageBounds = new Rect(camPos.x, camPos.y, 125, 35);
+            PreviousPageBounds = GetRelativeByBounds(JournalBounds, 0.04f, 
+                0.82f, 140 * Scale, 35 * Scale);
 
-            camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.15f, 0.08f, 0));
-            JournalIndexBounds = new Rect(camPos.x, camPos.y, 75, 30);
+            NextPageBounds = GetRelativeByBounds(JournalBounds, 0.675f, 0.82f, 
+                100 * Scale, 30 * Scale);
+
+            JournalIndexBounds = GetRelativeByBounds(JournalBounds, 0.11f, 0.04f,
+                50 * Scale, 25 * Scale);
+        }
+
+        private Rect GetRelativeByBounds(Rect bounds, float scaleX, float scaleY, float width, float height) 
+        {
+            return new Rect(bounds.x + bounds.width * scaleX,
+                bounds.y + bounds.height * scaleY, width, height);
         }
         
         #endregion
@@ -154,6 +165,7 @@ namespace After.Journal
         void OnGUI()
         {
             DefineClickableRegions();
+
             if (!Visible) { return; }
 
             RenderBackground();
@@ -162,14 +174,16 @@ namespace After.Journal
 
         private void RenderBackground()
         {
-            float scale = Size / Mathf.Max(JournalBackground.width, JournalBackground.height);
+            float screenScale = (PercentSize / 100f) * Mathf.Max(Screen.width, Screen.height);
+            float scale = screenScale / Mathf.Max(JournalBackground.width, JournalBackground.height);
+
             float width = JournalBackground.width * scale;
             float height = JournalBackground.height * scale;
 
             var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.5f, 0));
-            Rect pos = new Rect(camPos.x - width / 2, camPos.y - height / 2, width, height);
+            JournalBounds = new Rect(camPos.x - width / 2, camPos.y - height / 2, width, height);
 
-            GUI.DrawTexture(pos, JournalBackground);
+            GUI.DrawTexture(JournalBounds, JournalBackground);
         }
 
         private void RenderText()
@@ -203,15 +217,18 @@ namespace After.Journal
         private void RenderIndex()
         {
             var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.46f, 0.16f, 0));
-            GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), "Index", IndexEntryStyle);
+            Rect bounds = GetRelativeByBounds(JournalBounds, 0.46f, 0.11f, 0, 0);
+            GUI.Label(bounds, "Index", IndexEntryStyle);
 
             if (Entries.Count == 1) {
-                GUI.Label(new Rect(camPos.x, camPos.y + 35, 0, 0), "No entries", IndexEntryStyle);
+                bounds.y += 31 * Scale;
+                GUI.Label(bounds, "No entries", IndexEntryStyle);
                 return;
             }
 
             for (int i = 1; i < Mathf.Min(Entries.Count, 8); ++i) {
-                GUI.Label(new Rect(camPos.x, camPos.y + i * 35, 0, 0), Entries[i].Name, IndexEntryStyle);
+                bounds.y += 31 * Scale;
+                GUI.Label(bounds, Entries[i].Name, IndexEntryStyle);
             }
         }
 
