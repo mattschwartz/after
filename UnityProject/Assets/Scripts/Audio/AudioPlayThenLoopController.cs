@@ -6,6 +6,7 @@ namespace After.Audio
 	public class AudioPlayThenLoopController : MonoBehaviour 
 	{
 
+		public float Delay;
 		public AudioClip OneShotClip;
 		public AudioClip LoopClip;
 
@@ -17,7 +18,7 @@ namespace After.Audio
 		private IEnumerator PlayThenLoop()
 		{
 			AudioManager.PlayClipAtPoint(OneShotClip, transform.position);
-			yield return new WaitForSeconds(OneShotClip.length);
+			yield return new WaitForSeconds(Delay);
 			AudioManager.LoopClipAtPoint(LoopClip, transform.position);
 		}
 	}	
