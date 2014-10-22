@@ -27,7 +27,7 @@ namespace After.Journal
         public Texture JournalBackground;
         public GUITexture FadedBackgroundTexture;
         public GUIStyle opaCustomStyle;
-        public GUIStyle IndexEntryStyle;
+        public GUIStyle EntryStyle;
 
         private bool Visible = false;
         private int EntryIndex = 0;
@@ -50,7 +50,8 @@ namespace After.Journal
             Entries.Add(new Entry("Index", "", null));
 
             FadedBackgroundTexture.transform.position = Vector3.zero;
-            FadedBackgroundTexture.pixelInset = new Rect(new Rect(0, 0, Screen.width, Screen.height));
+            FadedBackgroundTexture.pixelInset = new Rect(new Rect(0, 0, 
+                Screen.width, Screen.height));
             FadedBackgroundTexture.enabled = false;
             DefineClickableRegions();
         }
@@ -58,7 +59,7 @@ namespace After.Journal
         private void DefineClickableRegions()
         {
             Scale = (PercentSize / 100f);
-            IndexEntryStyle.fontSize = (int)(21f * Scale);
+            EntryStyle.fontSize = (int)(21f * Scale);
 
             PreviousPageBounds = GetRelativeByBounds(JournalBounds, 0.04f, 
                 0.82f, 140 * Scale, 35 * Scale);
@@ -82,10 +83,6 @@ namespace After.Journal
 
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.H)) {
-                AddEntry(null);
-            }
-
             if (!Player.IsLocked() && Input.GetKeyDown(JournalKey)) {
                 Show();
             }
@@ -149,19 +146,11 @@ namespace After.Journal
 
         private void TurnPage(int direction)
         {
-            int oldIndex = EntryIndex;
-
-            if (direction < 0) {
+            if (direction < 0 && EntryIndex > 0) {
                 --EntryIndex;
-                Debug.Log("Previous page");
-            } else {
+                AudioManager.PlayClipAtPoint(JournalPageFlipClip, Vector2.zero);
+            } else if (EntryIndex < Entries.Count) {
                 ++EntryIndex;
-                Debug.Log("Next page");
-            }
-
-            EntryIndex = Mathf.Clamp(EntryIndex, 0, Entries.Count);
-
-            if (oldIndex != EntryIndex) {
                 AudioManager.PlayClipAtPoint(JournalPageFlipClip, Vector2.zero);
             }
         }
@@ -239,32 +228,45 @@ namespace After.Journal
         {
             var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.46f, 0.16f, 0));
             Rect bounds = GetRelativeByBounds(JournalBounds, 0.46f, 0.11f, 0, 0);
-            GUI.Label(bounds, "Index", IndexEntryStyle);
+            GUI.Label(bounds, "Index", EntryStyle);
 
             if (Entries.Count == 1) {
                 bounds.y += 31 * Scale;
-                GUI.Label(bounds, "No entries", IndexEntryStyle);
+                GUI.Label(bounds, "No entries", EntryStyle);
                 return;
             }
 
             for (int i = 1; i < Mathf.Min(Entries.Count, 8); ++i) {
                 bounds.y += 31 * Scale;
-                GUI.Label(bounds, Entries[i].Name, IndexEntryStyle);
+                GUI.Label(bounds, Entries[i].Name, EntryStyle);
             }
         }
 
         #endregion
 
-        #region Public Methods
-
         public void AddEntry(Entry entry)
         {
+            if (!UniqueAdd(entry)) { return; }
+            // Toast the new entry
             ToastDurationTracker = ToastDuration;
             ShowToast = true;
 
-            // Entries.Add(entry);
+            Entries.Add(entry);
         }
 
-        #endregion
+        /// <summary>Inserts an entry into the journal only if there isn't 
+        /// <para>already an entry in the journal</para>
+        /// <param name="entry">The entry to be added</param>
+        /// </summary>
+        private bool UniqueAdd(Entry entry)
+        {
+            foreach (var jEntry in Entries) {
+                if (jEntry.Name == entry.Name) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
     }
 }

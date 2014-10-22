@@ -40,6 +40,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e07d075ed2bfe4bbee23d177c18fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowToast: 0
+  ToastDuration: 5
+  ToastDurationTracker: 0
+  ToastText: Journal Updated
   PercentSize: 88.5
   PreviousPageKey: 276
   NextPageKey: 275
@@ -109,7 +113,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  IndexEntryStyle:
+  EntryStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
@@ -157,9 +161,9 @@ MonoBehaviour:
       m_Bottom: 0
     m_Font: {fileID: 12800000, guid: 18412cee854d77143a5e17b2ef00f635, type: 3}
     m_FontSize: 21
-    m_FontStyle: 2
+    m_FontStyle: 0
     m_Alignment: 0
-    m_WordWrap: 0
+    m_WordWrap: 1
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0

@@ -8,6 +8,10 @@ namespace After.Journal
         public string Description;
         public Texture Image;
 
+        public Entry()
+        {
+        }
+
         public Entry(string name, string description, Texture image)
         {
             Name = name;

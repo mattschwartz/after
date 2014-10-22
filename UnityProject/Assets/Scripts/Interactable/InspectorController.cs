@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using After.Scene.SceneManagement;
+using After.Journal;
 
 namespace After.Interactable
 {
@@ -14,6 +15,7 @@ namespace After.Interactable
         public GUIStyle opaCustomStyle;
         public PlayerController Player;
         public Color ColorOverlay;
+        public JournalController Journal;
 
         private bool ShowInspector;
         private string TitleText;
@@ -79,6 +81,8 @@ namespace After.Interactable
 
         public void InspectItem(string title, string description, Texture itemTexture, float size = 200)
         {
+            AddToJournal(title, description, itemTexture);
+
             Player.LockPlayer();
             ShowInspector = true;
             SceneHandler.GUILock = true;
@@ -88,6 +92,16 @@ namespace After.Interactable
             ItemTexture = itemTexture;
             TextureSize = size;
             ColorOverlay = Color.white;
+        }
+
+        private void AddToJournal(string title, string description, Texture texture)
+        {
+            Entry entry = new Entry();
+            entry.Name = title;
+            entry.Description = description;
+            entry.Image = texture;
+
+            Journal.AddEntry(entry);
         }
 
         #endregion
