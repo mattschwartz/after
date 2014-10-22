@@ -270,8 +270,6 @@ namespace After.Journal
             // Toast the new entry
             ToastDurationTracker = ToastDuration;
             ShowToast = true;
-
-            Entries.Add(entry);
         }
 
         /// <summary>Inserts an entry into the journal only if there isn't 
@@ -281,11 +279,14 @@ namespace After.Journal
         private bool UniqueAdd(Entry entry)
         {
             foreach (var jEntry in Entries) {
-                if (jEntry.Name == entry.Name) {
+                if (jEntry == entry) {
+                    jEntry.Description = entry.Description;
+                    jEntry.Image = entry.Image;
                     return false;
                 }
             }
 
+            Entries.Add(entry);
             return true;
         }
     }
