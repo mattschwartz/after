@@ -143,6 +143,11 @@ public class PlayerController : MonoBehaviour
 
     #region Message Functions
 
+    public bool IsLocked()
+    {
+        return PlayerLocked;
+    }
+
     // Locking animation begins
     public void LockPlayer()
     {
