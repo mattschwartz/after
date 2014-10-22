@@ -45,6 +45,7 @@ MonoBehaviour:
   ToastDurationTracker: 0
   ToastText: Journal Updated
   PercentSize: 88.5
+  EntryImageSize: 200
   PreviousPageKey: 276
   NextPageKey: 275
   JournalKey: 106

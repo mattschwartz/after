@@ -79,9 +79,11 @@ namespace After.Interactable
 
         #region Public Methods
 
-        public void InspectItem(string title, string description, Texture itemTexture, float size = 200)
+        public void InspectItem(string title, string description, Texture itemTexture, float size = 200, bool addToJournal = true)
         {
-            AddToJournal(title, description, itemTexture);
+            if (addToJournal) {
+                AddToJournal(title, description, itemTexture);
+            }
 
             Player.LockPlayer();
             ShowInspector = true;

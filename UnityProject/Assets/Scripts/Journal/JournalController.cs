@@ -17,7 +17,7 @@ namespace After.Journal
         public string ToastText = "Journal Updated";
 
         public float PercentSize = 88.5f;
-        public float EntryImageSize = 250;
+        public float EntryImageSize = 200;
         public KeyCode PreviousPageKey = KeyCode.LeftArrow;
         public KeyCode NextPageKey = KeyCode.RightArrow;
         public KeyCode JournalKey = KeyCode.J;
