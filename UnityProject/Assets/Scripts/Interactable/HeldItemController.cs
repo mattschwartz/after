@@ -23,6 +23,8 @@ namespace After.Interactable
 
         void OnGUI()
         {
+            if (SceneHandler.GUILock) { return; }
+
             var camPos = Camera.main.ViewportToScreenPoint(new Vector3(1, 1, 0));
             Rect BackpackPosition = new Rect(camPos.x - BackpackSize, camPos.y - BackpackSize, BackpackSize, BackpackSize);
 
