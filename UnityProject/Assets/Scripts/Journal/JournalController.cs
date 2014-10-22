@@ -51,16 +51,16 @@ namespace After.Journal
 
         private void DefineClickableRegions()
         {
-            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.10f, 0.83f, 0));
+            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.10f, 0.79f, 0));
             PreviousPageBounds = new Rect(camPos.x, camPos.y, 160, 50);
 
-            camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.66f, 0.85f, 0));
+            camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.66f, 0.81f, 0));
             NextPageBounds = new Rect(camPos.x, camPos.y, 125, 35);
 
-            camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.15f, 0.12f, 0));
+            camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.15f, 0.08f, 0));
             JournalIndexBounds = new Rect(camPos.x, camPos.y, 75, 30);
         }
-
+        
         #endregion
 
         #region Update
@@ -153,6 +153,7 @@ namespace After.Journal
 
         void OnGUI()
         {
+            DefineClickableRegions();
             if (!Visible) { return; }
 
             RenderBackground();
@@ -201,7 +202,7 @@ namespace After.Journal
 
         private void RenderIndex()
         {
-            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.46f, 0.2f, 0));
+            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.46f, 0.16f, 0));
             GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), "Index", IndexEntryStyle);
 
             if (Entries.Count == 1) {
