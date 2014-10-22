@@ -357,7 +357,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 194404990}
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: 0
   m_GravityScale: 8
   m_FixedAngle: 1
   m_IsKinematic: 0
@@ -815,7 +815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46bd61d07c5e6e448b964ceeaf876912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerBoxCollider: {fileID: 0}
+  PlayerBoxCollider: {fileID: 194404993}
   Player: {fileID: 194404990}
   screenPosition: {x: 0, y: 0, z: 0}
   Thought: 
@@ -1845,6 +1845,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5000000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
   m_RootGameObject: {fileID: 194404990}
@@ -1995,6 +1999,10 @@ Prefab:
       propertyPath: m_Name
       value: Player Thoughts
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
+      propertyPath: PlayerBoxCollider
+      value: 
+      objectReference: {fileID: 194404993}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
   m_RootGameObject: {fileID: 329743548}
