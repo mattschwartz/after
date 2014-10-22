@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private bool PlayerLocked = false;
     private bool Grounded = false;
     private bool FacingRight = true;
+    private bool Swinging = false;
     private float Speed = 7f;
     private float JumpForce = 1225f;
     private float GroundRadius = 0.2f;
@@ -66,6 +67,11 @@ public class PlayerController : MonoBehaviour
     {
         if (PlayerLocked) {
             return;
+        }
+
+        if (Swinging)
+        {
+            Animator.SetFloat("Velocity", rigidbody.velocity.x);
         }
 
         if (Climbing) {
@@ -205,6 +211,7 @@ public class PlayerController : MonoBehaviour
 
     public void Swing(bool swinging)
     {
+        Swinging = swinging;
         Animator.SetBool("Swinging", swinging);
     }
 

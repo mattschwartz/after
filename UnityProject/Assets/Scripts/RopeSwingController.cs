@@ -46,6 +46,7 @@ public class RopeSwingController : MonoBehaviour {
         Dismount = false;
 	}
 
+    /*
 	void FixedUpdate ()
 	{
 		if (Falling && Length < MaxLength)
@@ -65,6 +66,7 @@ public class RopeSwingController : MonoBehaviour {
             Length -= FallRate;
         }
 	}
+     */
 	
 	// Update is called once per frame
 	void Update () {
@@ -137,10 +139,12 @@ public class RopeSwingController : MonoBehaviour {
 		}
 		
 		//the following is for the purposes of testing the functionality
+        /*
 		if (Active && TimeInterval >= TimeToFall)
 		{
 			Falling = true;
             TimeInterval = 0f;
 		}
+         */
 	}
 }
