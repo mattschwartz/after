@@ -3873,7 +3873,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StepSounds: []
+  StepSounds:
+  - {fileID: 8300000, guid: ce9993a47b4d743ca8f2898dfc65dca6, type: 3}
+  - {fileID: 8300000, guid: 3082198931a5745e08145703bb8d85aa, type: 3}
+  - {fileID: 8300000, guid: 59a8c1cff634748ffa695b719c77f91a, type: 3}
 --- !u!1 &1024215836
 GameObject:
   m_ObjectHideFlags: 0
@@ -4272,7 +4275,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StepSounds: []
+  StepSounds:
+  - {fileID: 8300000, guid: ce9993a47b4d743ca8f2898dfc65dca6, type: 3}
+  - {fileID: 8300000, guid: 3082198931a5745e08145703bb8d85aa, type: 3}
+  - {fileID: 8300000, guid: 59a8c1cff634748ffa695b719c77f91a, type: 3}
 --- !u!1 &1529304064
 GameObject:
   m_ObjectHideFlags: 0
@@ -4431,7 +4437,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StepSounds: []
+  StepSounds:
+  - {fileID: 8300000, guid: ce9993a47b4d743ca8f2898dfc65dca6, type: 3}
+  - {fileID: 8300000, guid: 3082198931a5745e08145703bb8d85aa, type: 3}
+  - {fileID: 8300000, guid: 59a8c1cff634748ffa695b719c77f91a, type: 3}
 --- !u!1 &1691906854
 GameObject:
   m_ObjectHideFlags: 0
