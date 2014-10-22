@@ -14,8 +14,8 @@ namespace After.Audio
         void Start() 
         {
             // Initialize OSC
-            Debug.Log("Initializing OSC.");
-            OSCHandler.Instance.Init();
+            // Debug.Log("Initializing OSC.");
+            // OSCHandler.Instance.Init();   
         }
 
         public static void SendSCMessage<T>(string oscAddress, T val)

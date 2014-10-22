@@ -11,8 +11,12 @@ namespace After.Journal
     {
         #region Members
 
-        public float PercentSize = 80;
+        public bool ShowToast = false;
+        public float ToastDuration = 3;
+        public float ToastDurationTracker;
+        public string ToastText = "Journal Updated";
 
+        public float PercentSize = 88.5f;
         public KeyCode PreviousPageKey = KeyCode.LeftArrow;
         public KeyCode NextPageKey = KeyCode.RightArrow;
         public KeyCode JournalKey = KeyCode.J;
@@ -78,6 +82,10 @@ namespace After.Journal
 
         void Update()
         {
+            if (Input.GetKeyDown(KeyCode.H)) {
+                AddEntry(null);
+            }
+
             if (!Player.IsLocked() && Input.GetKeyDown(JournalKey)) {
                 Show();
             }
@@ -164,12 +172,25 @@ namespace After.Journal
 
         void OnGUI()
         {
+            Toast();
             DefineClickableRegions();
 
             if (!Visible) { return; }
 
             RenderBackground();
             RenderText();
+        }
+
+        private void Toast() 
+        {
+            if (!ShowToast) { return; }
+            if (ToastDurationTracker <= 0) {
+                ShowToast = false;
+            }
+
+            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.105f, 0.93f, 0));
+            GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), ToastText, opaCustomStyle);
+            ToastDurationTracker -= Time.deltaTime;
         }
 
         private void RenderBackground()
@@ -190,7 +211,7 @@ namespace After.Journal
         {
             RenderEntry();
 
-            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.95f, 0));
+            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.9f, 0));
             GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), "Press Escape to close", opaCustomStyle);
 
             // dbg
@@ -238,7 +259,10 @@ namespace After.Journal
 
         public void AddEntry(Entry entry)
         {
-            Entries.Add(entry);
+            ToastDurationTracker = ToastDuration;
+            ShowToast = true;
+
+            // Entries.Add(entry);
         }
 
         #endregion
