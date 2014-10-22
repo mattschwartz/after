@@ -120,7 +120,7 @@ namespace After.Journal
             } else if (Input.GetMouseButtonDown(0) && NextPageBounds.Contains(mouse)) {
                 TurnPage(1);
             } else if (Input.GetMouseButtonDown(0) && JournalIndexBounds.Contains(mouse)) {
-                Debug.Log("Going to index page");
+                EntryIndex = 0;
             }
         }
 
@@ -155,7 +155,7 @@ namespace After.Journal
             if (direction < 0 && EntryIndex > 0) {
                 --EntryIndex;
                 AudioManager.PlayClipAtPoint(JournalPageFlipClip, Vector2.zero);
-            } else if (EntryIndex < Entries.Count) {
+            } else if (direction > 0 && EntryIndex < Entries.Count - 1) {
                 ++EntryIndex;
                 AudioManager.PlayClipAtPoint(JournalPageFlipClip, Vector2.zero);
             }
@@ -235,18 +235,13 @@ namespace After.Journal
 
         private void RenderEntryImage(Texture image)
         {
-            float screenScale = (PercentSize / 100f) * Mathf.Max(Screen.width, Screen.height);
-            float scale = screenScale / Mathf.Max(image.width, image.height);
+            float scale = EntryImageSize / Mathf.Max(image.width, image.height);
+            float itemWidth = image.width * scale;
+            float itemHeight = image.height * scale;
 
-            float width = image.width * scale;
-            float height = image.height * scale;
+            Rect bounds = GetRelativeByBounds(JournalBounds, 0.21f, 0.5f, itemWidth * Scale, itemHeight * Scale, true);
 
-            // float width
-
-            // bounds, x, y, w, h
-            // Rect bounds = GetRelativeByBounds(JournalBounds, 0.21f, 0.5f, w * Scale, h * Scale, true);
-
-            // GUI.DrawTexture(bounds, image);
+            GUI.DrawTexture(bounds, image);
         }
 
         private void RenderIndex()
