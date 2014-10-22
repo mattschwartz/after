@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using After.Audio;
 using After.CameraTransitions;
+using After.Scene.SceneManagement;
 
 namespace After.Journal
 {
@@ -22,6 +23,7 @@ namespace After.Journal
         public Texture JournalBackground;
         public GUITexture FadedBackgroundTexture;
         public GUIStyle opaCustomStyle;
+        public GUIStyle IndexEntryStyle;
 
         private bool Visible = false;
         private int EntryIndex = 0;
@@ -39,6 +41,8 @@ namespace After.Journal
             DontDestroyOnLoad(this);
 
             Entries = new List<Entry>();
+            Entries.Add(new Entry("Index", "", null));
+
             FadedBackgroundTexture.transform.position = Vector3.zero;
             FadedBackgroundTexture.pixelInset = new Rect(new Rect(0, 0, Screen.width, Screen.height));
             FadedBackgroundTexture.enabled = false;
@@ -107,6 +111,7 @@ namespace After.Journal
             if (Visible) { return; }
 
             Visible = true;
+            SceneHandler.GUILock = true;
             FadedBackgroundTexture.enabled = true;
             Player.LockPlayer();
             AudioManager.PlayClipAtPoint(OpenJournalClip, Vector2.zero);
@@ -117,6 +122,7 @@ namespace After.Journal
             if (!Visible) { return; }
 
             Visible = false;
+            SceneHandler.GUILock = false;
             FadedBackgroundTexture.enabled = false;
             Player.FreePlayer();
             AudioManager.PlayClipAtPoint(OpenJournalClip, Vector2.zero);
@@ -167,24 +173,45 @@ namespace After.Journal
 
         private void RenderText()
         {
-            Vector3 camPos;
+            RenderEntry();
 
-            if (EntryIndex < Entries.Count) {
-                Entry entry = Entries[EntryIndex];
-
-                camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.05f, 0));
-                GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), entry.Name, opaCustomStyle);
-                camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.75f, 0));
-                GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), entry.Description, opaCustomStyle);
-            }
-
-            camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.95f, 0));
+            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.95f, 0));
             GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), "Press Escape to close", opaCustomStyle);
 
             // dbg
             GUI.Box(PreviousPageBounds, GUIContent.none);
             GUI.Box(NextPageBounds, GUIContent.none);
             GUI.Box(JournalIndexBounds, GUIContent.none);
+        }
+
+        private void RenderEntry()
+        {
+            if (EntryIndex == 0 || EntryIndex >= Entries.Count) {
+                RenderIndex();
+                return;
+            }
+
+            Entry entry = Entries[EntryIndex];
+
+            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.05f, 0));
+            GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), entry.Name, opaCustomStyle);
+            camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.75f, 0));
+            GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), entry.Description, opaCustomStyle);
+        }
+
+        private void RenderIndex()
+        {
+            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.46f, 0.2f, 0));
+            GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), "Index", IndexEntryStyle);
+
+            if (Entries.Count == 1) {
+                GUI.Label(new Rect(camPos.x, camPos.y + 35, 0, 0), "No entries", IndexEntryStyle);
+                return;
+            }
+
+            for (int i = 1; i < Mathf.Min(Entries.Count, 8); ++i) {
+                GUI.Label(new Rect(camPos.x, camPos.y + i * 35, 0, 0), Entries[i].Name, IndexEntryStyle);
+            }
         }
 
         #endregion

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using After.Scene.SceneManagement;
 
 namespace After.Interactable
 {
@@ -32,6 +33,7 @@ namespace After.Interactable
         {
             if (ShowInspector && Input.GetKeyDown(CloseButton)) {
                 Player.FreePlayer();
+                SceneHandler.GUILock = false;
                 ShowInspector = false;
                 BlackSwatchTexture.enabled = false;
             }
@@ -79,6 +81,7 @@ namespace After.Interactable
         {
             Player.LockPlayer();
             ShowInspector = true;
+            SceneHandler.GUILock = true;
             TitleText = title;
             DescriptionText = description;
             BlackSwatchTexture.enabled = true;

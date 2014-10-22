@@ -8,7 +8,7 @@ namespace After.Journal
         public string Description;
         public Texture Image;
 
-        Entry(string name, string description, Texture image)
+        public Entry(string name, string description, Texture image)
         {
             Name = name;
             Description = description;
