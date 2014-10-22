@@ -17,6 +17,7 @@ namespace After.Journal
         public string ToastText = "Journal Updated";
 
         public float PercentSize = 88.5f;
+        public float EntryImageSize = 250;
         public KeyCode PreviousPageKey = KeyCode.LeftArrow;
         public KeyCode NextPageKey = KeyCode.RightArrow;
         public KeyCode JournalKey = KeyCode.J;
@@ -71,8 +72,13 @@ namespace After.Journal
                 50 * Scale, 25 * Scale);
         }
 
-        private Rect GetRelativeByBounds(Rect bounds, float scaleX, float scaleY, float width, float height) 
+        private Rect GetRelativeByBounds(Rect bounds, float scaleX, float scaleY, float width, float height, bool centered = false) 
         {
+            if (centered) {
+                return new Rect(bounds.x + bounds.width * scaleX - width / 2,
+                    bounds.y + bounds.height * scaleY - height / 2, width, height);
+            }
+
             return new Rect(bounds.x + bounds.width * scaleX,
                 bounds.y + bounds.height * scaleY, width, height);
         }
@@ -218,10 +224,29 @@ namespace After.Journal
 
             Entry entry = Entries[EntryIndex];
 
-            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.05f, 0));
-            GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), entry.Name, opaCustomStyle);
-            camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.75f, 0));
-            GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), entry.Description, opaCustomStyle);
+            Rect pos = GetRelativeByBounds(JournalBounds, 0.46f, 0.11f, 210 * Scale, 0);
+
+            GUI.Label(pos, entry.Name, EntryStyle);
+            pos.y += 31 * Scale;
+            GUI.Label(pos, entry.Description, EntryStyle);
+
+            RenderEntryImage(entry.Image);
+        }
+
+        private void RenderEntryImage(Texture image)
+        {
+            float screenScale = (PercentSize / 100f) * Mathf.Max(Screen.width, Screen.height);
+            float scale = screenScale / Mathf.Max(image.width, image.height);
+
+            float width = image.width * scale;
+            float height = image.height * scale;
+
+            // float width
+
+            // bounds, x, y, w, h
+            // Rect bounds = GetRelativeByBounds(JournalBounds, 0.21f, 0.5f, w * Scale, h * Scale, true);
+
+            // GUI.DrawTexture(bounds, image);
         }
 
         private void RenderIndex()
