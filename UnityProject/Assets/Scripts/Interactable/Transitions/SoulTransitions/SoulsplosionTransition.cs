@@ -9,10 +9,6 @@ public class SoulsplosionTransition : Transition
 {
     public Animator Animator;
 
-    void Start()
-    {
-    }
-
     public override void Read(StateType fromState, StateType toState)
     {
         Animator.SetTrigger("SoulRelease");
