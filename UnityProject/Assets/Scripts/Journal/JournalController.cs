@@ -57,6 +57,9 @@ namespace After.Journal
             DefineClickableRegions();
         }
 
+        /// <summary>Determine the size of the rectangles of the clickable 
+        /// regions on the screen. 
+        /// </summary>
         private void DefineClickableRegions()
         {
             Scale = (PercentSize / 100f);
@@ -96,26 +99,25 @@ namespace After.Journal
             float height, 
             bool centered = false) 
         {
-            Rect bounds;
+            Rect result;
 
             if (centered) {
-                bounds = new Rect {
+                result = new Rect {
                     x = bounds.x + bounds.width * scaleX - width / 2,
                     y = bounds.y + bounds.height * scaleY - height / 2,
                     width = width,
                     height = height
                 };
             } else {
-                bounds = new Rect {
+                result = new Rect {
                     x = bounds.x + bounds.width * scaleX,
                     y = bounds.y + bounds.height * scaleY,
                     width = width,
                     height = height
                 };
-
             }
 
-            return bounds;
+            return result;
         }
         
         #endregion
@@ -124,6 +126,7 @@ namespace After.Journal
 
         void Update()
         {
+            DefineClickableRegions();
             if (!Player.IsLocked() && Input.GetKeyDown(JournalKey)) {
                 Show();
             }
@@ -143,6 +146,8 @@ namespace After.Journal
             }
         }
 
+        /// <summary>
+        /// </summary>
         private void ProcessMouse()
         {
             if (!Input.GetMouseButtonDown(0)) { return; }
@@ -185,6 +190,11 @@ namespace After.Journal
             AudioManager.PlayClipAtPoint(OpenJournalClip, Vector2.zero);
         }
 
+        /// <summary>Turn page either left or right, but the method needs to be
+        /// reworked.
+        /// <param name="direction">Negative direction turns left, positive
+        /// direction turns right.</param>
+        /// </summary>
         private void TurnPage(int direction)
         {
             if (direction < 0 && EntryIndex > 0) {
@@ -210,6 +220,9 @@ namespace After.Journal
             RenderText();
         }
 
+        /// <summary>Handles rendering the Toast prompt to the screen, stopping 
+        /// it if the duration has exceeded the Toast duration.
+        /// </summary>
         private void Toast() 
         {
             if (!ShowToast) { return; }
@@ -225,6 +238,8 @@ namespace After.Journal
             ToastDurationTracker -= Time.deltaTime;
         }
 
+        /// <summary>Renders the Journal background texture to the screen.
+        /// </summary>
         private void RenderBackground()
         {
             float screenScale = (PercentSize / 100f) * Mathf.Max(Screen.width, Screen.height);
@@ -233,13 +248,15 @@ namespace After.Journal
             float width = JournalBackground.width * scale;
             float height = JournalBackground.height * scale;
 
-            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.5f, 0));
+            var screenCoords = new Vector3(0.5f, 0.5f, 0);
+            var camPos = Camera.main.ViewportToScreenPoint(screenCoords);
             JournalBounds = new Rect(camPos.x - width / 2, camPos.y - height / 2, width, height);
 
             GUI.DrawTexture(JournalBounds, JournalBackground);
         }
 
-        /// <summary>
+        /// <summary>Render the text of the Journal entry and other UI prompts
+        /// for the journal.
         /// </summary>
         private void RenderText()
         {
