@@ -239,12 +239,16 @@ namespace After.Journal
             GUI.DrawTexture(JournalBounds, JournalBackground);
         }
 
+        /// <summary>
+        /// </summary>
         private void RenderText()
         {
             RenderEntry();
 
-            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.9f, 0));
-            GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), "Press Escape to close", opaCustomStyle);
+            var screenCoords = new Vector3(0.5f, 0.9f, 0);
+            var camPos = Camera.main.ViewportToScreenPoint(screenCoords);
+            var labelCoords = new Rect(camPos.x, camPos.y, 0, 0);
+            GUI.Label(labelCoords, "Press Escape to close", opaCustomStyle);
 
             // dbg
             GUI.Box(PreviousPageBounds, GUIContent.none);
@@ -252,6 +256,9 @@ namespace After.Journal
             GUI.Box(JournalIndexBounds, GUIContent.none);
         }
 
+        /// <summary>Renders the currently selected journal entry or index if
+        /// no valid entry is selected.
+        /// </summary>
         private void RenderEntry()
         {
             if (EntryIndex == 0 || EntryIndex >= Entries.Count) {
@@ -261,7 +268,8 @@ namespace After.Journal
 
             Entry entry = Entries[EntryIndex];
 
-            Rect pos = GetRelativeByBounds(JournalBounds, 0.46f, 0.11f, 210 * Scale, 0);
+            Rect pos = GetRelativeByBounds(JournalBounds, 0.46f, 0.11f, 
+                210 * Scale, 0);
 
             GUI.Label(pos, entry.Name, EntryStyle);
             pos.y += 31 * Scale;
