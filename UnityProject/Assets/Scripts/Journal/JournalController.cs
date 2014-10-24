@@ -260,7 +260,11 @@ namespace After.Journal
         /// </summary>
         private void RenderText()
         {
-            RenderEntry();
+            if (EntryIndex == 0 || EntryIndex >= Entries.Count) {
+                RenderIndex();
+            } else {
+                RenderEntry();
+            }
 
             var screenCoords = new Vector3(0.5f, 0.9f, 0);
             var camPos = Camera.main.ViewportToScreenPoint(screenCoords);
@@ -278,11 +282,6 @@ namespace After.Journal
         /// </summary>
         private void RenderEntry()
         {
-            if (EntryIndex == 0 || EntryIndex >= Entries.Count) {
-                RenderIndex();
-                return;
-            }
-
             Entry entry = Entries[EntryIndex];
 
             Rect pos = GetRelativeByBounds(JournalBounds, 0.46f, 0.11f, 
