@@ -65,18 +65,19 @@ namespace After.Journal
             Scale = (PercentSize / 100f);
             EntryStyle.fontSize = (int)(21f * Scale);
 
-            PreviousPageBounds = GetRelativeByBounds(JournalBounds, 0.04f, 
-                0.82f, 140 * Scale, 35 * Scale);
+            PreviousPageBounds = GetRelativeByBounds(JournalBounds, 0.046f, 
+                0.83f, 180 * Scale, 45 * Scale);
 
-            NextPageBounds = GetRelativeByBounds(JournalBounds, 0.675f, 0.82f, 
-                100 * Scale, 30 * Scale);
+            NextPageBounds = GetRelativeByBounds(JournalBounds, 0.68f, 0.835f, 
+                140 * Scale, 35 * Scale);
 
-            JournalIndexBounds = GetRelativeByBounds(JournalBounds, 0.11f, 0.04f,
-                50 * Scale, 25 * Scale);
+            JournalIndexBounds = GetRelativeByBounds(JournalBounds, 0.109f, 0.05f,
+                77 * Scale, 34 * Scale);
         }
 
         /// <summary>Creates a <c>Rect</c> that is scaled according to the 
         /// specified <paramref name="bounds" />bounds parameter.
+        /// </summary>
         /// <param name="bounds">The containing <c>Rect</c> object.</param>
         /// <param name="scaleX">The x-scale in percent form of the returned
         /// <c>Rect</c> object.</param>
@@ -90,7 +91,6 @@ namespace After.Journal
         /// object. Defaults to false.</param>
         /// <returns>Returns a <c>Rect</c> object that has been scaled according
         /// to the supplied <paramref name="bounds"/>bounds parameter.</returns>
-        /// </summary>
         private Rect GetRelativeByBounds(
             Rect bounds, 
             float scaleX, 
@@ -192,9 +192,9 @@ namespace After.Journal
 
         /// <summary>Turn page either left or right, but the method needs to be
         /// reworked.
+        /// </summary>
         /// <param name="direction">Negative direction turns left, positive
         /// direction turns right.</param>
-        /// </summary>
         private void TurnPage(int direction)
         {
             if (direction < 0 && EntryIndex > 0) {
@@ -296,9 +296,9 @@ namespace After.Journal
         }
 
         /// <summary>Renders a <c>Texture</c> of the entry to the Journal.
+        /// </summary>
         /// <param name="image">The <c>Texture</c> of the entry image to be 
         /// drawn on the Journal.</param>
-        /// </summary>
         private void RenderEntryImage(Texture image)
         {
             float scale = EntryImageSize / Mathf.Max(image.width, image.height);
@@ -316,8 +316,6 @@ namespace After.Journal
         /// </summary>
         private void RenderIndex()
         {
-            var screenCoords = new Vector3(0.46f, 0.16f, 0);
-            var camPos = Camera.main.ViewportToScreenPoint(screenCoords);
             Rect bounds = GetRelativeByBounds(JournalBounds, 0.46f, 0.11f, 0, 0);
             GUI.Label(bounds, "Index", EntryStyle);
 
@@ -335,9 +333,11 @@ namespace After.Journal
 
         #endregion
 
+        #region Add Journal Entry
+
         /// <summary>Public accessor method for adding entries to the Journal.
-        /// <param name="enry">The entry to be added to the Journal.</param>
         /// </summary>
+        /// <param name="enry">The entry to be added to the Journal.</param>
         public void AddEntry(Entry entry)
         {
             if (!UniqueAdd(entry)) { return; }
@@ -347,11 +347,11 @@ namespace After.Journal
         }
 
         /// <summary>Inserts an entry into the journal only if there isn't 
-        /// <para>already an entry in the journal</para>
+        /// already an entry in the journal.
+        /// </summary>
         /// <param name="entry">The entry to be added</param>
         /// <returns>Returns true if the entry was added and should toast the
         /// new entry</returns>
-        /// </summary>
         private bool UniqueAdd(Entry entry)
         {
             foreach (var jEntry in Entries) {
@@ -365,5 +365,7 @@ namespace After.Journal
             Entries.Add(entry);
             return true;
         }
+
+        #endregion
     }
 }
