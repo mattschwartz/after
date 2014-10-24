@@ -72,15 +72,50 @@ namespace After.Journal
                 50 * Scale, 25 * Scale);
         }
 
-        private Rect GetRelativeByBounds(Rect bounds, float scaleX, float scaleY, float width, float height, bool centered = false) 
+        /// <summary>Creates a <c>Rect</c> that is scaled according to the 
+        /// specified <paramref name="bounds" />bounds parameter.
+        /// <param name="bounds">The containing <c>Rect</c> object.</param>
+        /// <param name="scaleX">The x-scale in percent form of the returned
+        /// <c>Rect</c> object.</param>
+        /// <param name="scaleY">The y-scale in percent form of the returned
+        /// <c>Rect</c> object.</param>
+        /// <param name="width">The width of the returned <c>Rect</c> object,
+        /// used also for centering the return.</param>
+        /// <param name="height">The height of the returned <c>Rect</c> object,
+        /// used also for centering the return.</param>
+        /// <param name="centered">If true, will center the returned <c>Rect</c>
+        /// object. Defaults to false.</param>
+        /// <returns>Returns a <c>Rect</c> object that has been scaled according
+        /// to the supplied <paramref name="bounds"/>bounds parameter.</returns>
+        /// </summary>
+        private Rect GetRelativeByBounds(
+            Rect bounds, 
+            float scaleX, 
+            float scaleY, 
+            float width, 
+            float height, 
+            bool centered = false) 
         {
+            Rect bounds;
+
             if (centered) {
-                return new Rect(bounds.x + bounds.width * scaleX - width / 2,
-                    bounds.y + bounds.height * scaleY - height / 2, width, height);
+                bounds = new Rect {
+                    x = bounds.x + bounds.width * scaleX - width / 2,
+                    y = bounds.y + bounds.height * scaleY - height / 2,
+                    width = width,
+                    height = height
+                };
+            } else {
+                bounds = new Rect {
+                    x = bounds.x + bounds.width * scaleX,
+                    y = bounds.y + bounds.height * scaleY,
+                    width = width,
+                    height = height
+                };
+
             }
 
-            return new Rect(bounds.x + bounds.width * scaleX,
-                bounds.y + bounds.height * scaleY, width, height);
+            return bounds;
         }
         
         #endregion
@@ -115,11 +150,11 @@ namespace After.Journal
             Vector3 mouse = Input.mousePosition;
             mouse.y = Screen.height - mouse.y;
 
-            if (Input.GetMouseButtonDown(0) && PreviousPageBounds.Contains(mouse)) {
+            if (PreviousPageBounds.Contains(mouse)) {
                 TurnPage(-1);
-            } else if (Input.GetMouseButtonDown(0) && NextPageBounds.Contains(mouse)) {
+            } else if (NextPageBounds.Contains(mouse)) {
                 TurnPage(1);
-            } else if (Input.GetMouseButtonDown(0) && JournalIndexBounds.Contains(mouse)) {
+            } else if (JournalIndexBounds.Contains(mouse)) {
                 EntryIndex = 0;
             }
         }
@@ -168,7 +203,6 @@ namespace After.Journal
         void OnGUI()
         {
             Toast();
-            DefineClickableRegions();
 
             if (!Visible) { return; }
 
@@ -183,8 +217,11 @@ namespace After.Journal
                 ShowToast = false;
             }
 
-            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.105f, 0.93f, 0));
-            GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), ToastText, opaCustomStyle);
+            var screenCoords = new Vector3(0.105f, 0.93f, 0);
+            var camPos = Camera.main.ViewportToScreenPoint(screenCoords);
+            var labelCoords = new Rect(camPos.x, camPos.y, 0, 0);
+
+            GUI.Label(labelCoords, ToastText, opaCustomStyle);
             ToastDurationTracker -= Time.deltaTime;
         }
 
@@ -233,20 +270,29 @@ namespace After.Journal
             RenderEntryImage(entry.Image);
         }
 
+        /// <summary>Renders a <c>Texture</c> of the entry to the Journal.
+        /// <param name="image">The <c>Texture</c> of the entry image to be 
+        /// drawn on the Journal.</param>
+        /// </summary>
         private void RenderEntryImage(Texture image)
         {
             float scale = EntryImageSize / Mathf.Max(image.width, image.height);
             float itemWidth = image.width * scale;
             float itemHeight = image.height * scale;
 
-            Rect bounds = GetRelativeByBounds(JournalBounds, 0.21f, 0.5f, itemWidth * Scale, itemHeight * Scale, true);
+            Rect bounds = GetRelativeByBounds(JournalBounds, 0.21f, 0.5f, 
+                itemWidth * Scale, itemHeight * Scale, true);
 
             GUI.DrawTexture(bounds, image);
         }
 
+        /// <summary>Renders the index page for the Journal that lists the 
+        /// entries.
+        /// </summary>
         private void RenderIndex()
         {
-            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.46f, 0.16f, 0));
+            var screenCoords = new Vector3(0.46f, 0.16f, 0);
+            var camPos = Camera.main.ViewportToScreenPoint(screenCoords);
             Rect bounds = GetRelativeByBounds(JournalBounds, 0.46f, 0.11f, 0, 0);
             GUI.Label(bounds, "Index", EntryStyle);
 
@@ -264,6 +310,9 @@ namespace After.Journal
 
         #endregion
 
+        /// <summary>Public accessor method for adding entries to the Journal.
+        /// <param name="enry">The entry to be added to the Journal.</param>
+        /// </summary>
         public void AddEntry(Entry entry)
         {
             if (!UniqueAdd(entry)) { return; }
@@ -275,6 +324,8 @@ namespace After.Journal
         /// <summary>Inserts an entry into the journal only if there isn't 
         /// <para>already an entry in the journal</para>
         /// <param name="entry">The entry to be added</param>
+        /// <returns>Returns true if the entry was added and should toast the
+        /// new entry</returns>
         /// </summary>
         private bool UniqueAdd(Entry entry)
         {
