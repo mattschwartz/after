@@ -20,6 +20,8 @@ namespace After.Audio
         {
             if (Instance == null) {
                 Instance = AudioManager.CreateInstance<AudioManager>();
+            } else {
+                DontDestroyOnLoad(this);
             }
 
             foreach (var pac in Instance.PersistentAudioClips) {
