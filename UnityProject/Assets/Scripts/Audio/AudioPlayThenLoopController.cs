@@ -5,12 +5,15 @@ namespace After.Audio
 {
 	public class AudioPlayThenLoopController : MonoBehaviour 
 	{
+		#region Members
 
 		public float Delay;
 		public float OneShotVolume = 1;
 		public float LoopVolume = 1;
 		public AudioClip OneShotClip;
 		public AudioClip LoopClip;
+
+		#endregion
 
 		void Start() 
 		{
