@@ -3,32 +3,62 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using System.Collections;
-using UnityOSC;
 
 namespace After.Audio 
 {
 	public class AudioManager : ScriptableObject
     {
-        private static readonly string ClientId = "SuperCollider";
+        private static List<PersistentAudioClip> PersistentAudioClips = new List<PersistentAudioClip>();
 
-        void Start() 
+        public static AudioManager Instance;
+
+        private AudioManager()
         {
-            // Initialize OSC
-            // Debug.Log("Initializing OSC.");
-            // OSCHandler.Instance.Init();   
         }
 
-        public static void SendSCMessage<T>(string oscAddress, T val)
+        void Awake()
         {
-            OSCHandler.Instance.SendMessageToClient(ClientId, oscAddress, val);
-        }
-
-        void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Y)) {
-                SendSCMessage("penis", 4.1345f);
+            if (Instance == null) {
+                Instance = AudioManager.CreateInstance<AudioManager>();
             }
-            OSCHandler.Instance.UpdateLogs();
+
+            foreach (var pac in Instance.PersistentAudioClips) {
+                DontDestroyOnLoad(pac);
+                // Begin fading out
+                pac.SceneUnloaded = true;
+            }
+        }
+
+        /// <summary>
+        /// Adds a PersistentAudioClip that will not be destroyed when the 
+        /// scene unloads.
+        /// <see cref="After.Audio.PersistentAudioClip" />
+        /// </summary>
+        public static AddPersistentAudioClip(PersistentAudioClip pac)
+        {
+            PersistentAudioClips.Add(pac);
+        }
+
+        /// <summary>
+        /// Creates, plays and adds a PersistentAudioClip that will not be 
+        /// destroyed when the scene is unloaded.
+        /// <see cref="After.Audio.PersistentAudioClip" />
+        /// </summary>
+        public static PlayPersistentAudioClip(
+            AudioClip clip, 
+            Vector2 position, 
+            bool loop = false, 
+            float fadeDuration = 0, 
+            float volume = 1.0f)
+        {
+            var source = new AudioSource();
+            source.clip = clip;
+            source.volume = volume;
+            source.loop = loop;
+            souce.playOnAwake = true;
+
+            var pac = new PersistentAudioClip(source, fadeDuration);
+            PersistentAudioClips.Add(pac);
         }
 
         public static GameObject CreateAudioObject(AudioClip clip, Vector2 position, float volume = 1.0f)
@@ -70,7 +100,11 @@ namespace After.Audio
             Destroy(gameObject, clip.length);
         }
 
-        public static void PlayClipAtPoint(AudioClip clip, float pitch, Vector2 position, float volume = 1.0f)
+        public static void PlayClipAtPoint(
+            AudioClip clip, 
+            float pitch, 
+            Vector2 position, 
+            float volume = 1.0f)
         {
             if (clip == null) { return; }
 
@@ -84,7 +118,10 @@ namespace After.Audio
             Destroy(gameObject, clip.length);
         }
 
-        public static void PlayMaterialFootstepAtPoint(List<AudioClip> stepSounds, Vector2 position, float volume = 1.0f)
+        public static void PlayMaterialFootstepAtPoint(
+            List<AudioClip> stepSounds, 
+            Vector2 position, 
+            float volume = 1.0f)
         {
             int index = Random.Range(0, stepSounds.Count);
 
@@ -96,7 +133,11 @@ namespace After.Audio
             PlayClipAtPoint(stepSounds[index], position, volume);
         }
 
-        public static void PlayMaterialFootstepAtPoint(List<AudioClip> stepSounds, float pitch, Vector2 position, float volume = 1.0f)
+        public static void PlayMaterialFootstepAtPoint(
+            List<AudioClip> stepSounds, 
+            float pitch, 
+            Vector2 position, 
+            float volume = 1.0f)
         {
             int index = Random.Range(0, stepSounds.Count);
 

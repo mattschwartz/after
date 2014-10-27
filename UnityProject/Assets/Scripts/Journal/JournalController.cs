@@ -11,6 +11,8 @@ namespace After.Journal
     {
         #region Members
 
+        private static bool Created = false;
+
         public bool ShowToast = false;
         public float ToastDuration = 3;
         public float ToastDurationTracker;
@@ -43,10 +45,15 @@ namespace After.Journal
 
         #region Start
 
+        void Awake()
+        {
+            if (!Created) {
+                DontDestroyOnLoad(this);
+                Created = true;}
+        }
+
         void Start()
         {
-            DontDestroyOnLoad(this);
-
             Entries = new List<Entry>();
             Entries.Add(new Entry("Index", "", null));
 
@@ -95,8 +102,8 @@ namespace After.Journal
             Rect bounds, 
             float scaleX, 
             float scaleY, 
-            float width, 
-            float height, 
+            float width = 0, 
+            float height = 0, 
             bool centered = false) 
         {
             Rect result;
@@ -315,7 +322,7 @@ namespace After.Journal
         /// </summary>
         private void RenderIndex()
         {
-            Rect bounds = GetRelativeByBounds(JournalBounds, 0.46f, 0.11f, 0, 0);
+            Rect bounds = GetRelativeByBounds(JournalBounds, 0.46f, 0.11f);
             GUI.Label(bounds, "Index", EntryStyle);
 
             if (Entries.Count == 1) {
