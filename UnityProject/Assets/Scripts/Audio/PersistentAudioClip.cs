@@ -6,11 +6,11 @@ namespace After.Audio
 	public class PersistentAudioClip : MonoBehaviour
 	{
 		#region Members
-
-		public bool SceneUnloaded = false;
+		
 		public float PostLoadFadeDuration = 0;
-		public AudioSource Source
+		public AudioSource Source;
 
+		private bool SceneUnloaded = false;
 		private float DurationTracker;
 
 		#endregion
@@ -19,7 +19,12 @@ namespace After.Audio
 		// transition.
 		void Start()
 		{
-			AudioManager.AddPersistentAudioClip(this);
+			AudioManager.Instance.AddPersistentAudioClip(this);
+		}
+
+		void OnLevelWasLoaded(int level)
+		{
+			SceneUnloaded = true;
 		}
 
 		void Update()

@@ -8,7 +8,7 @@ namespace After.Audio
 {
 	public class AudioManager : ScriptableObject
     {
-        private static List<PersistentAudioClip> PersistentAudioClips = new List<PersistentAudioClip>();
+        private List<PersistentAudioClip> PersistentAudioClips = new List<PersistentAudioClip>();
 
         public static AudioManager Instance;
 
@@ -16,18 +16,16 @@ namespace After.Audio
         {
         }
 
-        void Awake()
+        void Start()
         {
-            if (Instance == null) {
-                Instance = AudioManager.CreateInstance<AudioManager>();
+            if (AudioManager.Instance == null) {
+                AudioManager.Instance = AudioManager.CreateInstance<AudioManager>();
             } else {
-                DontDestroyOnLoad(this);
+                DontDestroyOnLoad(AudioManager.Instance);
             }
 
-            foreach (var pac in Instance.PersistentAudioClips) {
+            foreach (var pac in AudioManager.Instance.PersistentAudioClips) {
                 DontDestroyOnLoad(pac);
-                // Begin fading out
-                pac.SceneUnloaded = true;
             }
         }
 
@@ -36,7 +34,7 @@ namespace After.Audio
         /// scene unloads.
         /// <see cref="After.Audio.PersistentAudioClip" />
         /// </summary>
-        public static AddPersistentAudioClip(PersistentAudioClip pac)
+        public void AddPersistentAudioClip(PersistentAudioClip pac)
         {
             PersistentAudioClips.Add(pac);
         }
@@ -46,7 +44,7 @@ namespace After.Audio
         /// destroyed when the scene is unloaded.
         /// <see cref="After.Audio.PersistentAudioClip" />
         /// </summary>
-        public static PlayPersistentAudioClip(
+        public void PlayPersistentAudioClip(
             AudioClip clip, 
             Vector2 position, 
             bool loop = false, 
@@ -57,9 +55,12 @@ namespace After.Audio
             source.clip = clip;
             source.volume = volume;
             source.loop = loop;
-            souce.playOnAwake = true;
+            source.playOnAwake = true;
 
-            var pac = new PersistentAudioClip(source, fadeDuration);
+            var pac = new PersistentAudioClip();
+            pac.Source = source;
+            pac.PostLoadFadeDuration = fadeDuration;
+
             PersistentAudioClips.Add(pac);
         }
 
@@ -72,6 +73,7 @@ namespace After.Audio
             source.playOnAwake = false;
             source.clip = clip;
             gameObject.transform.position = position;
+            gameObject.name = clip.name;
 
             return gameObject;
         }
@@ -86,6 +88,7 @@ namespace After.Audio
             source.playOnAwake = true;
             source.clip = clip;
             gameObject.transform.position = position;
+            gameObject.name = clip.name;
             source.Play();
         }
 
@@ -97,6 +100,7 @@ namespace After.Audio
             var source = gameObject.AddComponent<AudioSource>();
 
             gameObject.transform.position = position;
+            gameObject.name = clip.name;
             source.PlayOneShot(clip, volume);
 
             Destroy(gameObject, clip.length);
@@ -114,6 +118,7 @@ namespace After.Audio
             var source = gameObject.AddComponent<AudioSource>();
 
             gameObject.transform.position = position;
+            gameObject.name = clip.name;
             source.pitch = pitch;
             source.PlayOneShot(clip, volume);
 
