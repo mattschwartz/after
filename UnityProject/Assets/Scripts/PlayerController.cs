@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
     public HeldItemController Backpack;
     public InspectorController InspectorController;
 
+    //Variable multiplier for debugging the rope swing animation
+    public float SwingVelMult = 10f;
+
     private bool PlayerLocked = false;
     private bool Grounded = false;
     private bool FacingRight = true;
@@ -72,7 +75,7 @@ public class PlayerController : MonoBehaviour
 
         if (Swinging)
         {
-            Animator.SetFloat("Velocity", rigidbody2D.position.x - SwingLastX);
+            Animator.SetFloat("Velocity", (rigidbody2D.position.x - SwingLastX) * SwingVelMult);
             SwingLastX = rigidbody2D.position.x;
         }
 
