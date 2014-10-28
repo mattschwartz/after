@@ -76,6 +76,7 @@ public class PlayerController : MonoBehaviour
         if (Swinging)
         {
             Animator.SetFloat("Velocity", (rigidbody2D.position.x - SwingLastX) * SwingVelMult);
+            print((rigidbody2D.position.x - SwingLastX) * SwingVelMult);
             SwingLastX = rigidbody2D.position.x;
         }
 
