@@ -1860,6 +1860,7 @@ MonoBehaviour:
     m_Bits: 256
   Backpack: {fileID: 0}
   InspectorController: {fileID: 0}
+  SwingVelMult: 10
 --- !u!61 &1087088100
 BoxCollider2D:
   m_ObjectHideFlags: 0
