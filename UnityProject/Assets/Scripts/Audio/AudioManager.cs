@@ -29,6 +29,11 @@ namespace After.Audio
             }
         }
 
+        public static void SetVolume(float masterVolume)
+        {
+            AudioListener.volume = masterVolume;
+        }
+
         /// <summary>
         /// Adds a PersistentAudioClip that will not be destroyed when the 
         /// scene unloads.
