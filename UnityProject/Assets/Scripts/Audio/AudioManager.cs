@@ -29,6 +29,10 @@ namespace After.Audio
             }
         }
 
+        /// <summary>
+        /// Change the master volume to the specified float.
+        /// </summary>
+        /// <param name="masterVolume" />
         public static void SetVolume(float masterVolume)
         {
             AudioListener.volume = masterVolume;
