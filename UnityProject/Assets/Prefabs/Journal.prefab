@@ -52,6 +52,7 @@ MonoBehaviour:
   CloseJournal: 27
   JournalPageFlipClip: {fileID: 8300000, guid: b72025a8563aba145babb7df1f071752, type: 3}
   OpenJournalClip: {fileID: 8300000, guid: d42c570911f6672489a79231b0e6dc45, type: 3}
+  CloseJournalClip: {fileID: 0}
   Player: {fileID: 0}
   JournalBackground: {fileID: 2800000, guid: 5d66cb120004bff45bff8d584e4cd26f, type: 3}
   FadedBackgroundTexture: {fileID: 13100000}
@@ -186,8 +187,8 @@ GUITexture:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 640
-    height: 480
+    width: 560
+    height: 350
   m_LeftBorder: 0
   m_RightBorder: 0
   m_TopBorder: 0

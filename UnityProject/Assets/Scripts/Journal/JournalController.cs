@@ -24,6 +24,7 @@ namespace After.Journal
         public KeyCode CloseJournal = KeyCode.Escape;
         public AudioClip JournalPageFlipClip;
         public AudioClip OpenJournalClip;
+        public AudioClip CloseJournalClip;
         public PlayerController Player;
         public Texture JournalBackground;
         public GUITexture FadedBackgroundTexture;
@@ -207,7 +208,7 @@ namespace After.Journal
             SceneHandler.GUILock = false;
             FadedBackgroundTexture.enabled = false;
             Player.FreePlayer();
-            AudioManager.PlayClipAtPoint(OpenJournalClip, Vector2.zero);
+            AudioManager.PlayClipAtPoint(CloseJournalClip, Vector2.zero);
         }
 
         /// <summary>Turn page either left or right, but the method needs to be

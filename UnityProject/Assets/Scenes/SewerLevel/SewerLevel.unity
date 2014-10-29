@@ -14020,7 +14020,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 130942ee731155042ab679f46cdec904, type: 2}
-  m_PrefabInternal: {fileID: 1749738699}
+  m_PrefabInternal: {fileID: 1758708512}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1620012502}
@@ -14038,7 +14038,7 @@ GUITexture:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 13100000, guid: 130942ee731155042ab679f46cdec904,
     type: 2}
-  m_PrefabInternal: {fileID: 1749738699}
+  m_PrefabInternal: {fileID: 1758708512}
   m_GameObject: {fileID: 1620012499}
   m_Enabled: 0
   m_Texture: {fileID: 2800000, guid: 3afeb89f75b5ae9468ddf0294cb45c13, type: 3}
@@ -14047,8 +14047,8 @@ GUITexture:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 764
-    height: 441
+    width: 560
+    height: 350
   m_LeftBorder: 0
   m_RightBorder: 0
   m_TopBorder: 0
@@ -14058,7 +14058,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: 130942ee731155042ab679f46cdec904,
     type: 2}
-  m_PrefabInternal: {fileID: 1749738699}
+  m_PrefabInternal: {fileID: 1758708512}
   m_GameObject: {fileID: 1620012499}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -14077,6 +14077,7 @@ MonoBehaviour:
   CloseJournal: 27
   JournalPageFlipClip: {fileID: 8300000, guid: b72025a8563aba145babb7df1f071752, type: 3}
   OpenJournalClip: {fileID: 8300000, guid: d42c570911f6672489a79231b0e6dc45, type: 3}
+  CloseJournalClip: {fileID: 0}
   Player: {fileID: 194404992}
   JournalBackground: {fileID: 2800000, guid: 5d66cb120004bff45bff8d584e4cd26f, type: 3}
   FadedBackgroundTexture: {fileID: 1620012500}
@@ -14202,7 +14203,7 @@ MonoBehaviour:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 130942ee731155042ab679f46cdec904, type: 2}
-  m_PrefabInternal: {fileID: 1749738699}
+  m_PrefabInternal: {fileID: 1758708512}
   m_GameObject: {fileID: 1620012499}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -15994,7 +15995,7 @@ MonoBehaviour:
   To: 2
   Volume: 1
   Clip: {fileID: 8300000, guid: b8f5eb70626994b1fac278bcf169a665, type: 3}
---- !u!1001 &1749738699
+--- !u!1001 &1758708512
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -16037,18 +16038,6 @@ Prefab:
       propertyPath: Player
       value: 
       objectReference: {fileID: 194404992}
-    - target: {fileID: 13100000, guid: 130942ee731155042ab679f46cdec904, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 13100000, guid: 130942ee731155042ab679f46cdec904, type: 2}
-      propertyPath: m_PixelInset.width
-      value: 764
-      objectReference: {fileID: 0}
-    - target: {fileID: 13100000, guid: 130942ee731155042ab679f46cdec904, type: 2}
-      propertyPath: m_PixelInset.height
-      value: 441
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 130942ee731155042ab679f46cdec904, type: 2}
   m_RootGameObject: {fileID: 1620012499}
