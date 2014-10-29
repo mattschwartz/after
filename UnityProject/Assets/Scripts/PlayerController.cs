@@ -181,7 +181,7 @@ public class PlayerController : MonoBehaviour
 
     //the variable "x" serves as the ladder's horizontal position in the on=true case
     //and the horizontal force for ladder dismount in the on=false case
-    public void Climb(bool on, bool profile, float x)
+    public void Climb(bool on, bool profile, bool top, float x)
     {
 
         if (on) {
@@ -190,6 +190,7 @@ public class PlayerController : MonoBehaviour
             rigidbody2D.gravityScale = 0;
             Animator.SetFloat("Velocity", 0);
             Animator.SetFloat("vMove", 0);
+            Animator.SetBool("LadderDrop", top);
 
             if (Sprite) {
                 //interspace, the space between the default and background layers, where people on ladders go
@@ -201,12 +202,9 @@ public class PlayerController : MonoBehaviour
                 //the normal player layer
                 Sprite.sortingLayerName = "Player";
             }
-            if (x != 0.0f) {
-                rigidbody2D.AddForce(new Vector2(x, 200f));
-                Animator.SetBool("LadderDrop", true);
-            } else {
-                Animator.SetBool("LadderLift", true);
-            }
+
+            Animator.SetBool("LadderLift", top);
+            
         }
 
         Climbing = on;
@@ -241,6 +239,12 @@ public class PlayerController : MonoBehaviour
         if (collider && collider.GetComponent("StepSoundController")) {
             collider.gameObject.SendMessage("PlayFootstep", 0.25F);
         }
+    }
+
+    public void ResetTop()
+    {
+        Animator.SetBool("LadderLift", false);
+        Animator.SetBool("LadderDrop", false);
     }
 
     #endregion
