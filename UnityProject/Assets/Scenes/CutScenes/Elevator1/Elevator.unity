@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fader: {fileID: 479479100}
-  Duration: 10
+  Duration: 30
 --- !u!4 &414765189
 Transform:
   m_ObjectHideFlags: 0
