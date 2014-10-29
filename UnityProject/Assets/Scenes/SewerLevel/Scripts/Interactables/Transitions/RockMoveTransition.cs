@@ -10,7 +10,6 @@ public class RockMoveTransition : Transition
 
 	public override void Read(StateType fromState, StateType toState)
 	{
-		Debug.Log("Adding some force to this bitch.");
 		RockBody.AddForce(AppliedForce);
 	}
 }
