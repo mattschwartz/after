@@ -68,7 +68,7 @@ namespace After.Journal
             FadedBackgroundTexture.transform.position = Vector3.zero;
             FadedBackgroundTexture.pixelInset = new Rect(new Rect(0, 0, 
                 Screen.width, Screen.height));
-            FadedBackgroundTexture.enabled = false;   
+            FadedBackgroundTexture.enabled = false;  
         }
 
         /// <summary>Determine the size of the rectangles of the clickable 

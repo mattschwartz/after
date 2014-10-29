@@ -16,8 +16,6 @@ namespace After.Gui
         public GUIStyle SliderThumbStyle;
         public GUIStyle JournalStyle;
         public GUIStyle MainMenuStyle;
-        public Texture JournalIconTexture;
-        public Texture MainMenuIconTexture;
         public Texture MenuBackgroundTexture;
 
         private bool Visible = false;
@@ -91,19 +89,19 @@ namespace After.Gui
 
             JournalIconBounds = new Rect {
                 x = camPos.x,
-                y = camPos.y - JournalIconTexture.height,
-                width = JournalIconTexture.width,
-                height = JournalIconTexture.height
+                y = camPos.y - 149,
+                width = 146,
+                height = 149
             };
 
             screenCoords = new Vector3(1, 1, 0);
             camPos = Camera.main.ViewportToScreenPoint(screenCoords);
 
             MainMenuBounds = new Rect {
-                x = camPos.x - MainMenuIconTexture.width,
-                y = camPos.y - MainMenuIconTexture.height,
-                width = MainMenuIconTexture.width,
-                height = MainMenuIconTexture.height
+                x = camPos.x - 108,
+                y = camPos.y - 116,
+                width = 108,
+                height = 116
             };
 
             screenCoords = new Vector3(0.5f, 0.1f, 0);
