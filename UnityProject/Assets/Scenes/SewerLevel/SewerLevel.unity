@@ -199,8 +199,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 1, y: 29.1399994}
-  m_Center: {x: 0, y: 0}
+  m_Size: {x: .677063406, y: 29.1399994}
+  m_Center: {x: .161467552, y: 0}
 --- !u!1 &16400118
 GameObject:
   m_ObjectHideFlags: 0
@@ -11888,9 +11888,8 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_Points:
   - {x: -3.61532688, y: -1.63724041}
-  - {x: -2.02143002, y: .129509926}
-  - {x: -1.43684864, y: -.154765129}
-  - {x: -1.27268219, y: -1.7765522}
+  - {x: -2.01211166, y: .0456485748}
+  - {x: -1.70392418, y: -.195854187}
 --- !u!1001 &1435387502
 Prefab:
   m_ObjectHideFlags: 0
@@ -16105,10 +16104,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
   WaitSecondsBeforeRead: 0
-  From: 0
-  To: 0
+  From: 1
+  To: 2
   RockBody: {fileID: 1816749794}
-  AppliedForce: {x: 25000, y: 10000}
+  AppliedForce: {x: 15000, y: 10000}
 --- !u!1001 &1809587378
 Prefab:
   m_ObjectHideFlags: 0
@@ -16275,7 +16274,7 @@ GameObject:
   m_Layer: 8
   m_Name: Rock
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1500306622, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -16286,7 +16285,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1816749789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.37928629, y: 1.17718637, z: 0}
+  m_LocalPosition: {x: 7.8349843, y: 1.42180192, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1653741024}
@@ -16342,8 +16341,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 4.01258945, y: 2.95722747}
-  m_Center: {x: .568704605, y: -.0963954926}
+  m_Size: {x: 3.75239086, y: 2.94000006}
+  m_Center: {x: -.0153932571, y: 0}
 --- !u!50 &1816749794
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -16353,10 +16352,10 @@ Rigidbody2D:
   m_Mass: 90
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_FixedAngle: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
 --- !u!114 &1816749795
