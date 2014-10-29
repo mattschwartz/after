@@ -12,7 +12,13 @@ public class FallingRockSoundController : MonoBehaviour
 	{
 		if (other.gameObject.name == WatchForFallingRock.name) {
 			AudioManager.PlayClipAtPoint(RockLandClip, transform.position, Volume);
-			Destroy(this.gameObject);
+			DestroyAfter(gameObject, RockLandClip.length);
 		}
+	}
+
+	private IEnumerator DestroyAfter(GameObject gameObject, float after)
+	{
+		yield return new WaitForSeconds(after);
+		Destroy(gameObject);
 	}
 }

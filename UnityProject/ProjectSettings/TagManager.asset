@@ -50,13 +50,13 @@ TagManager:
     userID: 7
     uniqueID: 1482764551
     locked: 0
-  - name: Interactable
-    userID: 3
-    uniqueID: 4236500287
-    locked: 0
   - name: Default
     userID: 0
     uniqueID: 0
+    locked: 0
+  - name: Interactable
+    userID: 3
+    uniqueID: 4236500287
     locked: 0
   - name: Player
     userID: 4

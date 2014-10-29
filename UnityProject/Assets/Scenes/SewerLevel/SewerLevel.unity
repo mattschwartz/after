@@ -3507,12 +3507,9 @@ Transform:
   m_Children:
   - {fileID: 1601522911}
   - {fileID: 1538208844}
-  - {fileID: 1113004631}
   - {fileID: 520467743}
   - {fileID: 618332388}
   - {fileID: 1890551971}
-  - {fileID: 416764883}
-  - {fileID: 698481736}
   - {fileID: 517203323}
   - {fileID: 2025917682}
   - {fileID: 668142921}
@@ -4632,13 +4629,11 @@ MonoBehaviour:
   UnlockedState: {fileID: 1538208845}
   SpentState: {fileID: 0}
   TransitionScripts:
-  - {fileID: 517203324}
-  - {fileID: 1113004632}
   - {fileID: 520467744}
   - {fileID: 618332389}
   - {fileID: 1890551972}
-  - {fileID: 416764884}
-  - {fileID: 698481737}
+  - {fileID: 618332389}
+  - {fileID: 517203324}
 --- !u!61 &300403329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5748,51 +5743,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1947916591}
   m_RootOrder: 9
---- !u!1 &416764882
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 416764883}
-  - 114: {fileID: 416764884}
-  m_Layer: 0
-  m_Name: Sprite Transition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &416764883
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 416764882}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.419999987, y: -1.35000002, z: 0}
-  m_LocalScale: {x: .653624177, y: .653624177, z: 1}
-  m_Children: []
-  m_Father: {fileID: 300403324}
-  m_RootOrder: 6
---- !u!114 &416764884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 416764882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5b0d6a9dd37d40b786dbe52b4494467, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestroyOnRead: 1
-  WaitSecondsBeforeRead: 2
-  From: 1
-  To: 2
-  TransitionTransform: {fileID: 416764883}
-  TransitionSprite: {fileID: 21300000, guid: bd88af9d4976446a498942ddc9b45f00, type: 3}
 --- !u!1 &418082778
 GameObject:
   m_ObjectHideFlags: 0
@@ -6504,7 +6454,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 300403324}
-  m_RootOrder: 8
+  m_RootOrder: 5
 --- !u!114 &517203324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6517,7 +6467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsBeforeRead: 6
+  WaitSecondsBeforeRead: 0
   From: 1
   To: 2
   Trigger: SoulRelease
@@ -6552,7 +6502,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 300403324}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &520467744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6778,7 +6728,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 300403324}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!114 &618332389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6790,7 +6740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458a2776d4c9f428e9bb86c95418e560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyOnRead: 1
+  DestroyOnRead: 0
   WaitSecondsBeforeRead: 0
   From: 1
   To: 2
@@ -7298,7 +7248,7 @@ Transform:
   m_Children:
   - {fileID: 719622381}
   m_Father: {fileID: 300403324}
-  m_RootOrder: 10
+  m_RootOrder: 7
 --- !u!1 &674526955
 GameObject:
   m_ObjectHideFlags: 0
@@ -7471,50 +7421,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   To: 2
   Conditions: {fileID: 163337027}
---- !u!1 &698481735
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 698481736}
-  - 114: {fileID: 698481737}
-  m_Layer: 0
-  m_Name: Clear Fog
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &698481736
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 698481735}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 300403324}
-  m_RootOrder: 7
---- !u!114 &698481737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 698481735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 458a2776d4c9f428e9bb86c95418e560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestroyOnRead: 1
-  WaitSecondsBeforeRead: 3
-  From: 1
-  To: 2
-  ParticleSystem: {fileID: 1581451907}
 --- !u!1 &706397052
 GameObject:
   m_ObjectHideFlags: 0
@@ -10689,70 +10595,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 260634086}
   m_RootOrder: 26
---- !u!1 &1113004630
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1113004631}
-  - 114: {fileID: 1113004632}
-  - 131: {fileID: 1113004633}
-  m_Layer: 0
-  m_Name: Soulsplosion
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1113004631
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1113004630}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 300403324}
-  m_RootOrder: 2
---- !u!114 &1113004632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1113004630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb537c0b087dd4efdb5e64c4fda7303d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestroyOnRead: 0
-  WaitSecondsBeforeRead: .5
-  From: 1
-  To: 2
-  Animator: {fileID: 2025917680}
---- !u!131 &1113004633
-GUITexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1113004630}
-  m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: 49e80583dec4ab44f93a0d164195501c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: .501960814}
-  m_PixelInset:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
-  m_LeftBorder: 0
-  m_RightBorder: 0
-  m_TopBorder: 0
-  m_BottomBorder: 0
 --- !u!1 &1132882465
 GameObject:
   m_ObjectHideFlags: 0
@@ -11380,7 +11222,7 @@ Transform:
   m_Children:
   - {fileID: 295699890}
   m_Father: {fileID: 300403324}
-  m_RootOrder: 11
+  m_RootOrder: 8
 --- !u!95 &1240414420
 Animator:
   serializedVersion: 3
@@ -12182,6 +12024,7 @@ GameObject:
   - 4: {fileID: 1423169791}
   - 68: {fileID: 1423169792}
   - 114: {fileID: 1423169793}
+  - 114: {fileID: 1423169794}
   m_Layer: 8
   m_Name: Railing Rubble
   m_TagString: Untagged
@@ -12231,6 +12074,20 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
   - {fileID: 8300000, guid: 145898131f0fb49928f9935e8a665431, type: 3}
   - {fileID: 8300000, guid: e862af059df554c2093cebc016d0bb2f, type: 3}
+--- !u!114 &1423169794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1423169790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dccc8b5dbc8064e55b71dcd70370b93c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Volume: 1
+  WatchForFallingRock: {fileID: 1816749789}
+  RockLandClip: {fileID: 8300000, guid: efec55dae98ea4c0abdbdac88db64d74, type: 3}
 --- !u!1001 &1435387502
 Prefab:
   m_ObjectHideFlags: 0
@@ -16377,8 +16234,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
   WaitSecondsBeforeRead: 0
-  From: 0
-  To: 0
+  From: 1
+  To: 2
   RockBody: {fileID: 1816749794}
   AppliedForce: {x: 20000, y: 10000}
 --- !u!1001 &1809587378
@@ -17211,7 +17068,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 300403324}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!114 &1890551972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18402,7 +18259,7 @@ Transform:
   m_Children:
   - {fileID: 1624531499}
   m_Father: {fileID: 300403324}
-  m_RootOrder: 9
+  m_RootOrder: 6
 --- !u!1 &2052403241
 GameObject:
   m_ObjectHideFlags: 0
