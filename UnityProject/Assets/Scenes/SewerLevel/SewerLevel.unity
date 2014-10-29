@@ -11016,7 +11016,7 @@ AudioSource:
   m_GameObject: {fileID: 1237961435}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: bdb4ab12a2fe647828afa49019bf934a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 24d4d981954a64384bc09ecec652f586, type: 3}
   m_PlayOnAwake: 1
   m_Volume: .75
   m_Pitch: 1
@@ -14040,15 +14040,15 @@ GUITexture:
     type: 2}
   m_PrefabInternal: {fileID: 1749738699}
   m_GameObject: {fileID: 1620012499}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Texture: {fileID: 2800000, guid: 3afeb89f75b5ae9468ddf0294cb45c13, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: .360784322}
   m_PixelInset:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0
-    height: 0
+    width: 629
+    height: 393
   m_LeftBorder: 0
   m_RightBorder: 0
   m_TopBorder: 0
@@ -16037,6 +16037,14 @@ Prefab:
       propertyPath: Player
       value: 
       objectReference: {fileID: 194404992}
+    - target: {fileID: 13100000, guid: 130942ee731155042ab679f46cdec904, type: 2}
+      propertyPath: m_PixelInset.width
+      value: 629
+      objectReference: {fileID: 0}
+    - target: {fileID: 13100000, guid: 130942ee731155042ab679f46cdec904, type: 2}
+      propertyPath: m_PixelInset.height
+      value: 393
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 130942ee731155042ab679f46cdec904, type: 2}
   m_RootGameObject: {fileID: 1620012499}
