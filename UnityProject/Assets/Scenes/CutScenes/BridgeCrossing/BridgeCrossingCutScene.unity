@@ -317,3 +317,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fader: {fileID: 1219387018}
+  Duration: 10
