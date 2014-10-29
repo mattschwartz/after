@@ -13,9 +13,7 @@ public class FallingRockSoundController : MonoBehaviour
 		if (other.gameObject.name == WatchForFallingRock.name) {
 			Debug.Log("Playing sound");
 			AudioManager.PlayClipAtPoint(RockLandClip, transform.position, Volume);
-		} else {
-			Debug.Log("Name1: " + other.gameObject.name);
-			Debug.Log("Name2: " + WatchForFallingRock.name);
+			Destroy(this.gameObject);
 		}
 	}
 }
