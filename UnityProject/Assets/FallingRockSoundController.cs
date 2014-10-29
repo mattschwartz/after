@@ -11,7 +11,6 @@ public class FallingRockSoundController : MonoBehaviour
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.gameObject.name == WatchForFallingRock.name) {
-			Debug.Log("Playing sound");
 			AudioManager.PlayClipAtPoint(RockLandClip, transform.position, Volume);
 			Destroy(this.gameObject);
 		}
