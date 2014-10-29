@@ -153,7 +153,7 @@ namespace After.Journal
             }
 
             if (Input.GetKeyDown(CloseJournal)) {
-                Close();
+                Hide();
             }
 
             if (!Visible) { return; }
@@ -189,7 +189,7 @@ namespace After.Journal
 
         #region Journal Interact Methods
 
-        private void Show()
+        public void Show()
         {
             if (Visible) { return; }
 
@@ -200,7 +200,7 @@ namespace After.Journal
             AudioManager.PlayClipAtPoint(OpenJournalClip, Vector2.zero);
         }
 
-        private void Close()
+        public void Hide()
         {
             if (!Visible) { return; }
 

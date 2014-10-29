@@ -2,6 +2,7 @@ using System.Collections;
 using After.Audio;
 using UnityEngine;
 using After.Scene.SceneManagement;
+using After.Journal;
 
 namespace After.Gui
 {
@@ -13,6 +14,8 @@ namespace After.Gui
         public GUIStyle opaCustomStyle;
         public GUIStyle SliderStyle;
         public GUIStyle SliderThumbStyle;
+        public GUIStyle JournalStyle;
+        public GUIStyle MainMenuStyle;
         public Texture JournalIconTexture;
         public Texture MainMenuIconTexture;
         public Texture MenuBackgroundTexture;
@@ -38,7 +41,6 @@ namespace After.Gui
             if (!Visible && SceneHandler.GUILock) { return; }
 
             ProcessKeyboard();
-            ProcessMouse();
 
             if (!Visible) { return; }
 
@@ -49,23 +51,27 @@ namespace After.Gui
         {
             if (Input.GetKeyDown(KeyCode.Escape)) {
                 Visible = !Visible;
-                SceneHandler.GUILock = Visible;
-                Time.timeScale = Visible ? 0 : 1;
+
+                if (Visible) {
+                    Show();
+                } else {
+                    Hide();
+                }
             }
         }
 
-        private void ProcessMouse()
+        private void Show()
         {
-            if (!Input.GetMouseButtonDown(0)) { return; }
+            Visible = true;
+            SceneHandler.GUILock = true;
+            Time.timeScale = 0;
+        }
 
-            Vector3 mouse = Input.mousePosition;
-            mouse.y = Screen.height - mouse.y;
-
-            if (JournalIconBounds.Contains(mouse)) {
-                Debug.Log("Opening journal.");
-            } else if (MainMenuBounds.Contains(mouse)) {
-                Debug.Log("Returning to main menu.");
-            }
+        private void Hide()
+        {
+            Visible = false;
+            SceneHandler.GUILock = false;
+            Time.timeScale = 1;
         }
 
         private void Resize()
@@ -137,14 +143,34 @@ namespace After.Gui
 
             GUI.DrawTexture(MenuBackgroundBounds, MenuBackgroundTexture);
 
+            RenderSlider();
+            RenderText();
+            RenderButtons();
+        }
+
+        private void RenderSlider()
+        {
             hSliderValue = GUI.HorizontalSlider(SoundSliderBounds,
                 hSliderValue, 0, 100, SliderStyle, SliderThumbStyle);
-            AudioListener.volume = hSliderValue / 100f;
+            AudioListener.volume = hSliderValue / 100f;   
+        }
 
+        private void RenderText()
+        {
             GUI.Label(TitleBounds, "Game Options", opaCustomStyle);
             GUI.Label(LabelBounds, "Game Volume:", opaCustomStyle);
-            GUI.DrawTexture(MainMenuBounds, MainMenuIconTexture);
-            GUI.DrawTexture(JournalIconBounds, JournalIconTexture);
+        }
+
+        private void RenderButtons()
+        {
+            if (GUI.Button(MainMenuBounds, GUIContent.none, MainMenuStyle)) {
+                Debug.Log("Returning to main menu.");
+            }
+
+            if (GUI.Button(JournalIconBounds, GUIContent.none, JournalStyle)) {
+                Hide();
+                JournalController.Instance.Show();
+            }
         }
     }
 }

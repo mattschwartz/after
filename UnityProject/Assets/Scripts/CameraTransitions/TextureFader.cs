@@ -3,8 +3,9 @@ using UnityEngine;
 
 namespace After.CameraTransitions
 {
-	/// <summary>TextureFader is a Singleton that can be used to fade a default
-	/// <para>texture or supplied texture over a specified duration</para>
+	/// <summary>
+	/// TextureFader is a Singleton that can be used to fade a default
+	/// texture or supplied texture over a specified duration.
 	/// </summary>
 	public class TextureFader : ScriptableObject
 	{
