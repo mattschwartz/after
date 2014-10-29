@@ -25,10 +25,8 @@ namespace After.Interactable
 
         void Start()
         {
-            // var camPos = Camera.main.ViewportToScreenPoint(new Vector3(1, 1, 0));
-            // BackpackPosition = new Rect(camPos.x - BackpackSize, camPos.y - BackpackSize, BackpackSize, BackpackSize);
             var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0, 0, 0));
-            BackpackPosition = new Rect(camPos.x - 25, camPos.y, BackpackSize, BackpackSize);
+            BackpackPosition = new Rect(camPos.x, camPos.y, BackpackSize, BackpackSize);
         }
 
         void OnGUI()
@@ -55,7 +53,7 @@ namespace After.Interactable
             ItemHeldTexture = ItemHeld.GetComponent<SpriteRenderer>().sprite.texture;
             SceneHandler.CurrentPlayer.ItemHeld = ItemHeld.name;
 
-            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(1, 1, 0));
+            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0, 0, 0));
             float scale = ItemHeldSize / Mathf.Max(ItemHeldTexture.width, ItemHeldTexture.height);
             float itemWidth = ItemHeldTexture.width * scale;
             float itemHeight = ItemHeldTexture.height * scale;
