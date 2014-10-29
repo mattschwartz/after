@@ -187,8 +187,8 @@ GUITexture:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0
-    height: 0
+    width: 640
+    height: 480
   m_LeftBorder: 0
   m_RightBorder: 0
   m_TopBorder: 0
