@@ -1703,8 +1703,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 1, y: .30000037}
-  m_Center: {x: 0, y: .250703335}
+  m_Size: {x: 1.35540497, y: .30000037}
+  m_Center: {x: -.0167732239, y: .250703335}
 --- !u!4 &1056199118
 Transform:
   m_ObjectHideFlags: 0
@@ -3300,11 +3300,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6100002, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_Size.x
-      value: 1
+      value: 1.35540497
       objectReference: {fileID: 0}
     - target: {fileID: 6100002, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_Center.x
-      value: 0
+      value: -.0167732239
       objectReference: {fileID: 0}
     - target: {fileID: 6100002, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_Size.y
@@ -3940,8 +3940,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 2.55458117, y: .307666779}
-  m_Center: {x: 1.22455215, y: .0754303932}
+  m_Size: {x: 2.38693213, y: .307666779}
+  m_Center: {x: 1.3083744, y: .0754303932}
 --- !u!61 &1949481777
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3951,8 +3951,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 1.25863349, y: .310834616}
-  m_Center: {x: -1.6937027, y: .0755877495}
+  m_Size: {x: 1.06416607, y: .310834616}
+  m_Center: {x: -1.79093933, y: .0755877495}
 --- !u!114 &1949481778
 MonoBehaviour:
   m_ObjectHideFlags: 0
