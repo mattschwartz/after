@@ -15,3 +15,5 @@ EditorBuildSettings:
     path: Assets/Scenes/SewerLevel/SewerLevel.unity
   - enabled: 1
     path: Assets/Scenes/PowerStation/PowerStation.unity
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/Elevator1/Elevator.unity

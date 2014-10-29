@@ -18885,6 +18885,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: daa942fb38e058a4f9de4f1dc9743abc, type: 2}
+      propertyPath: NextLevel
+      value: PowerStation
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: daa942fb38e058a4f9de4f1dc9743abc, type: 2}
   m_RootGameObject: {fileID: 1007987589}
