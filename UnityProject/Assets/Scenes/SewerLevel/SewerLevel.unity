@@ -11968,7 +11968,7 @@ MonoBehaviour:
   LockDuration: 2
   Player: {fileID: 194404990}
   PlayerAnimator: {fileID: 194404997}
-  Fader: {fileID: 0}
+  Fader: {fileID: 1007987590}
 --- !u!4 &1353188772
 Transform:
   m_ObjectHideFlags: 0
