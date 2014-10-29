@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 4ce2deb7212935343841218078868815
+guid: 2cb0104a7ba774e22a9f47ae33d19373
 TextureImporter:
   fileIDToRecycleName:
-    21300000: IconTextureNormalMainMenu
+    21300000: Roof Pipe
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,9 +26,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
