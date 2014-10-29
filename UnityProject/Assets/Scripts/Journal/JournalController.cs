@@ -133,6 +133,8 @@ namespace After.Journal
 
         void Update()
         {
+            if (!Visible && SceneHandler.GUILock) { return; }
+
             DefineClickableRegions();
             if (!Player.IsLocked() && Input.GetKeyDown(JournalKey)) {
                 Show();
@@ -361,7 +363,7 @@ namespace After.Journal
         private bool UniqueAdd(Entry entry)
         {
             foreach (var jEntry in Entries) {
-                if (jEntry == entry) {
+                if (jEntry.Name == entry.Name) {
                     jEntry.Description = entry.Description;
                     jEntry.Image = entry.Image;
                     return false;
