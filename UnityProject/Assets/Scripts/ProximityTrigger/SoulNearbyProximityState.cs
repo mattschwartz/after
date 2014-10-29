@@ -39,7 +39,8 @@ namespace After.ProximityTrigger
             cl.a = opacity;
             PlayerSoulGlow.renderer.material.color = cl;
 
-            AmbienceLoop.volume = opacity;
+            var volume = Mathf.Clamp(0.3f - (distance / 8.33f), 0, 0.3f);
+            AmbienceLoop.volume = volume;
 
             return null;
         }

@@ -17,7 +17,7 @@ namespace After.Interactable.Transitions
         {
             ItemToSpawn.GetComponent<SpriteRenderer>().enabled = false;
             ItemToSpawn.GetComponent<BoxCollider2D>().enabled = false;
-            //ItemToSpawn.transform.position = new Vector2(5000, 5000);
+            ItemToSpawn.transform.position = new Vector2(-5000, -5000);
         }
 
         public override void Read(StateType fromState, StateType toState)

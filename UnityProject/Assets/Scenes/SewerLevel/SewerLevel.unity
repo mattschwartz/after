@@ -886,6 +886,60 @@ Prefab:
   m_RootGameObject: {fileID: 931653501}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &76486557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 76486560}
+  - 61: {fileID: 76486559}
+  - 114: {fileID: 76486558}
+  m_Layer: 0
+  m_Name: Falling Rock Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &76486558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 76486557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dccc8b5dbc8064e55b71dcd70370b93c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Volume: 1
+  WatchForFallingRock: {fileID: 1816749789}
+  RockLandClip: {fileID: 8300000, guid: efec55dae98ea4c0abdbdac88db64d74, type: 3}
+--- !u!61 &76486559
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 76486557}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 6.17999983, y: 1.69446468}
+  m_Center: {x: 0, y: -.347232342}
+--- !u!4 &76486560
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 76486557}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.2793751, y: -6.28252029, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
 --- !u!1 &88328287
 GameObject:
   m_ObjectHideFlags: 0
@@ -5217,8 +5271,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  JournalIconTexture: {fileID: 2800000, guid: d21516f5bcb96554c86a1242fbd68b89, type: 3}
-  MainMenuIconTexture: {fileID: 2800000, guid: 4ce2deb7212935343841218078868815, type: 3}
   MenuBackgroundTexture: {fileID: 2800000, guid: 2c82975bdca484748ac935f63743c88a,
     type: 3}
 --- !u!4 &343447046
@@ -9483,10 +9535,10 @@ AudioSource:
   m_GameObject: {fileID: 927005167}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: d46f2cb58b3b54e8286eb6dbb1b934d6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d9b1b81ed893d4c61b7f3c416d5efb85, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: .75
+  m_Volume: .119999997
+  m_Pitch: 1
   Loop: 1
   Mute: 0
   Priority: 128
@@ -11017,6 +11069,7 @@ GameObject:
   - 4: {fileID: 1237961437}
   - 82: {fileID: 1237961438}
   - 82: {fileID: 1237961436}
+  - 82: {fileID: 1237961439}
   m_Layer: 0
   m_Name: Background Sounds
   m_TagString: Untagged
@@ -11117,6 +11170,64 @@ AudioSource:
   BypassEffects: 1
   BypassListenerEffects: 1
   BypassReverbZones: 1
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &1237961439
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1237961435}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: e5e80e6a688244fcdaecacb604813eb0, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
