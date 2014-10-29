@@ -16,14 +16,23 @@ namespace After.Audio
         {
         }
 
+        void Awake()
+        {
+            if(Instance == null) {
+                Instance = this;
+                DontDestroyOnLoad(this);
+            } else {
+                if (this != Instance) {
+                    Debug.Log("Another instance of " + this.GetType().Name
+                        + " exists (" + Instance + ") and is not this! "
+                        + "( " + this + ") Destroying this.");
+                    Destroy(this);
+                }
+            }
+        }
+
         void Start()
         {
-            if (AudioManager.Instance == null) {
-                AudioManager.Instance = AudioManager.CreateInstance<AudioManager>();
-            } else {
-                DontDestroyOnLoad(AudioManager.Instance);
-            }
-
             foreach (var pac in AudioManager.Instance.PersistentAudioClips) {
                 DontDestroyOnLoad(pac);
             }

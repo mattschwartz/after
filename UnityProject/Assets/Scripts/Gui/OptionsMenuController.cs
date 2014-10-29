@@ -40,6 +40,7 @@ namespace After.Gui
             if (!Visible && SceneHandler.GUILock) { return; }
 
             ProcessKeyboard();
+            ProcessMouse();
 
             if (!Visible) { return; }
 
@@ -53,6 +54,20 @@ namespace After.Gui
                 Visible = !Visible;
                 SceneHandler.GUILock = Visible;
                 Time.timeScale = Visible ? 0 : 1;
+            }
+        }
+
+        private void ProcessMouse()
+        {
+            if (!Input.GetMouseButtonDown(0)) { return; }
+
+            Vector3 mouse = Input.mousePosition;
+            mouse.y = Screen.height - mouse.y;
+
+            if (JournalIconBounds.Contains(mouse)) {
+                Debug.Log("Opening journal.");
+            } else if (MainMenuBounds.Contains(mouse)) {
+                Debug.Log("Returning to main menu.");
             }
         }
 

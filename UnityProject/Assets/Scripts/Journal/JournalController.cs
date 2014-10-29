@@ -7,11 +7,9 @@ using After.Scene.SceneManagement;
 
 namespace After.Journal
 {
-    public class JournalController : MonoBehaviour
+    public class JournalController : ScriptableObject
     {
         #region Members
-
-        private static bool Created = false;
 
         public bool ShowToast = false;
         public float ToastDuration = 3;
@@ -41,18 +39,29 @@ namespace After.Journal
         private Rect NextPageBounds;
         private Rect JournalIndexBounds;
 
+        public static JournalController Instance { get; private set; }
+
         #endregion
 
         #region Start
 
         void Awake()
         {
-            if (!Created) {
+            if(Instance == null) {
+                Instance = this;
+                Instance.Initialize();
                 DontDestroyOnLoad(this);
-                Created = true;}
+            } else {
+                if (this != Instance) {
+                    Debug.Log("Another instance of " + this.GetType().Name
+                        + " exists (" + Instance + ") and is not this! "
+                        + "( " + this + ") Destroying this.");
+                    Destroy(this);
+                }
+            }
         }
 
-        void Start()
+        private void Initialize()
         {
             Entries = new List<Entry>();
             Entries.Add(new Entry("Index", "", null));
@@ -60,8 +69,7 @@ namespace After.Journal
             FadedBackgroundTexture.transform.position = Vector3.zero;
             FadedBackgroundTexture.pixelInset = new Rect(new Rect(0, 0, 
                 Screen.width, Screen.height));
-            FadedBackgroundTexture.enabled = false;
-            DefineClickableRegions();
+            FadedBackgroundTexture.enabled = false;   
         }
 
         /// <summary>Determine the size of the rectangles of the clickable 
@@ -132,6 +140,11 @@ namespace After.Journal
         #region Update
 
         void Update()
+        {
+            JournalController.Instance.StaticUpdate();
+        }
+
+        private void StaticUpdate()
         {
             if (!Visible && SceneHandler.GUILock) { return; }
 
@@ -221,12 +234,12 @@ namespace After.Journal
 
         void OnGUI()
         {
-            Toast();
+            JournalController.Instance.Toast();
 
-            if (!Visible) { return; }
+            if (!JournalController.Instance.Visible) { return; }
 
-            RenderBackground();
-            RenderText();
+            JournalController.Instance.RenderBackground();
+            JournalController.Instance.RenderText();
         }
 
         /// <summary>Handles rendering the Toast prompt to the screen, stopping 
