@@ -203,11 +203,9 @@ public class PlayerController : MonoBehaviour
                 Sprite.sortingLayerName = "Player";
             }
 
-            if (x != 0.0f) {
+            if (x != 0.0f)
+            {
                 rigidbody2D.AddForce(new Vector2(x, 200f));
-                Animator.SetBool("LadderDrop", true);
-            } else {
-                Animator.SetBool("LadderLift", true);
             }
 
             Animator.SetBool("LadderLift", top);
