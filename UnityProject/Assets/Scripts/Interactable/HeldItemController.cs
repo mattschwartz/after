@@ -57,7 +57,7 @@ namespace After.Interactable
             float scale = ItemHeldSize / Mathf.Max(ItemHeldTexture.width, ItemHeldTexture.height);
             float itemWidth = ItemHeldTexture.width * scale;
             float itemHeight = ItemHeldTexture.height * scale;
-            ItemPosition = new Rect(camPos.x - itemWidth - (BackpackSize - itemWidth) / 2, camPos.y - itemHeight - (BackpackSize - itemHeight) / 2, itemWidth, itemHeight);
+            ItemPosition = new Rect(camPos.x + (BackpackSize - itemWidth) / 2, camPos.y + (BackpackSize - itemHeight) / 2, itemWidth, itemHeight);
         }
 
         public void DropItem()
