@@ -16107,7 +16107,7 @@ MonoBehaviour:
   From: 1
   To: 2
   RockBody: {fileID: 1816749794}
-  AppliedForce: {x: 15000, y: 10000}
+  AppliedForce: {x: 20000, y: 10000}
 --- !u!1001 &1809587378
 Prefab:
   m_ObjectHideFlags: 0
