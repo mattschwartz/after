@@ -46,7 +46,7 @@ namespace After.Journal
 
         #region Start
 
-        void Awake()
+        void Start()
         {
             if (Instance == null) {
                 Instance = this;

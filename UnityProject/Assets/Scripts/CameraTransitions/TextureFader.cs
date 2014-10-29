@@ -9,7 +9,6 @@ namespace After.CameraTransitions
 	public class TextureFader : ScriptableObject
 	{
 		public GUITexture SwatchTexture;
-		public static TextureFader Instance;
 
 		private bool Fading = false;
 		private float t;
@@ -18,18 +17,28 @@ namespace After.CameraTransitions
 		private Color EndColor;
 		private Texture DefaultTexture;
 
-		private TextureFader()
-		{
-		}
+		public static TextureFader Instance { get; private set; }
 
 		void Start()
 		{
-			Instance = TextureFader.CreateInstance<TextureFader>();
-			Instance.SwatchTexture = SwatchTexture;
-	        Instance.SwatchTexture.transform.position = new Vector3(0, 0, 0);
-	        Instance.SwatchTexture.pixelInset = new Rect(0, 0, Screen.width, Screen.height);
-            Instance.SwatchTexture.enabled = false;
-            Instance.DefaultTexture = Instance.SwatchTexture.texture;
+            if (Instance == null) {
+                Instance = this;
+                Instance.Initialize();
+                DontDestroyOnLoad(this);
+            } else if (this != Instance) {
+                Debug.Log("Another instance of " + this.GetType().Name
+                    + " exists (" + Instance + ") and is not this! "
+                    + "( " + this + ") Destroying this.");
+                Destroy(this);
+            }
+		}
+
+		private void Initialize()
+		{
+	        SwatchTexture.transform.position = new Vector3(0, 0, 0);
+	        SwatchTexture.pixelInset = new Rect(0, 0, Screen.width, Screen.height);
+            SwatchTexture.enabled = false;
+            DefaultTexture = SwatchTexture.texture;
 		}
 
 		void Update()

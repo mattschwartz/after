@@ -12,7 +12,7 @@ namespace After.Audio
 
         public static AudioManager Instance;
 
-        void Awake()
+        void Start()
         {
             if(Instance == null) {
                 Instance = this;
@@ -25,10 +25,7 @@ namespace After.Audio
                     Destroy(this);
                 }
             }
-        }
-
-        void Start()
-        {
+            
             foreach (var pac in AudioManager.Instance.PersistentAudioClips) {
                 DontDestroyOnLoad(pac);
             }
