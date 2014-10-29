@@ -12,10 +12,6 @@ namespace After.Audio
 
         public static AudioManager Instance;
 
-        private AudioManager()
-        {
-        }
-
         void Awake()
         {
             if(Instance == null) {
@@ -36,15 +32,6 @@ namespace After.Audio
             foreach (var pac in AudioManager.Instance.PersistentAudioClips) {
                 DontDestroyOnLoad(pac);
             }
-        }
-
-        /// <summary>
-        /// Change the master volume to the specified float.
-        /// </summary>
-        /// <param name="masterVolume" />
-        public static void SetVolume(float masterVolume)
-        {
-            AudioListener.volume = masterVolume;
         }
 
         /// <summary>

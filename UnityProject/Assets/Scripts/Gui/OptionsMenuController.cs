@@ -18,8 +18,6 @@ namespace After.Gui
         public Texture MenuBackgroundTexture;
 
         private bool Visible = false;
-        private KeyCode kcOkay = KeyCode.Return;
-        private KeyCode kcCancel = KeyCode.Escape;
         private Rect MenuBackgroundBounds;
         private Rect SoundSliderBounds;
         private Rect JournalIconBounds;
@@ -45,7 +43,6 @@ namespace After.Gui
             if (!Visible) { return; }
 
             Resize();
-            AudioManager.SetVolume(hSliderValue / 100f);
         }
 
         private void ProcessKeyboard()
@@ -142,6 +139,7 @@ namespace After.Gui
 
             hSliderValue = GUI.HorizontalSlider(SoundSliderBounds,
                 hSliderValue, 0, 100, SliderStyle, SliderThumbStyle);
+            AudioListener.volume = hSliderValue / 100f;
 
             GUI.Label(TitleBounds, "Game Options", opaCustomStyle);
             GUI.Label(LabelBounds, "Game Volume:", opaCustomStyle);

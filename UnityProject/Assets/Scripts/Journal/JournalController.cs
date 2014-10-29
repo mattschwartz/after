@@ -47,17 +47,15 @@ namespace After.Journal
 
         void Awake()
         {
-            if(Instance == null) {
+            if (Instance == null) {
                 Instance = this;
                 Instance.Initialize();
                 DontDestroyOnLoad(this);
-            } else {
-                if (this != Instance) {
-                    Debug.Log("Another instance of " + this.GetType().Name
-                        + " exists (" + Instance + ") and is not this! "
-                        + "( " + this + ") Destroying this.");
-                    Destroy(this);
-                }
+            } else if (this != Instance) {
+                Debug.Log("Another instance of " + this.GetType().Name
+                    + " exists (" + Instance + ") and is not this! "
+                    + "( " + this + ") Destroying this.");
+                Destroy(this);
             }
         }
 
