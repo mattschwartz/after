@@ -4,10 +4,14 @@ using System.Collections;
 public class CutSceneController : MonoBehaviour 
 {
 	public SceneFaderController Fader;
+    public float Duration;
+    private float Tick;
 
 	void Update() 
 	{
-		if (Input.anyKey) {
+        Tick += Time.deltaTime;
+		if (Input.anyKey || Tick >= Duration) {
+            //NYI: stop and ding
 			LoadNextLevel();
 		}
 	}
