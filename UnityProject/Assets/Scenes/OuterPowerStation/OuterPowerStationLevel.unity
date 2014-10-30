@@ -1904,11 +1904,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 5821222fc2d59e64b9a7c38376867198, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.73780358
+      value: -7.78885269
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5821222fc2d59e64b9a7c38376867198, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -5.51514626
+      value: -.728113174
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5821222fc2d59e64b9a7c38376867198, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1932,7 +1932,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5821222fc2d59e64b9a7c38376867198, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 5821222fc2d59e64b9a7c38376867198, type: 2}
       propertyPath: FollowTarget
@@ -1942,6 +1942,10 @@ Prefab:
       propertyPath: SpriteBounds
       value: 
       objectReference: {fileID: 279175871}
+    - target: {fileID: 2000000, guid: 5821222fc2d59e64b9a7c38376867198, type: 2}
+      propertyPath: orthographic size
+      value: 6.34000015
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5821222fc2d59e64b9a7c38376867198, type: 2}
   m_RootGameObject: {fileID: 1181649481}
@@ -2182,7 +2186,7 @@ Camera:
   far clip plane: 1000
   field of view: 53
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.34000015
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2201,7 +2205,7 @@ Transform:
   m_PrefabInternal: {fileID: 1106395926}
   m_GameObject: {fileID: 1181649481}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.73780358, y: -5.51514626, z: -10}
+  m_LocalPosition: {x: -7.78885269, y: -.728113174, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

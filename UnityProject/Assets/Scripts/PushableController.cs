@@ -13,7 +13,6 @@ public class PushableController : MonoBehaviour {
 	void Start () {
         RBody.drag = 90000f;
         RBody.mass = 90000f;
-        PlayerCon.Push(false);
 	}
 
     //these two methods make it so that the player can only push the box while grounded,
