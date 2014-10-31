@@ -164,7 +164,8 @@ MonoBehaviour:
   LockDuration: 1
   Player: {fileID: 366451553}
   PlayerAnimator: {fileID: 366451557}
-  Trigger: CutChain
+  xOffset: 1
+  Trigger: OpenDesk
 --- !u!1 &144801147
 GameObject:
   m_ObjectHideFlags: 0
