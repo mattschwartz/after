@@ -11712,7 +11712,6 @@ GameObject:
   - 4: {fileID: 1423169791}
   - 68: {fileID: 1423169792}
   - 114: {fileID: 1423169793}
-  - 114: {fileID: 1423169794}
   m_Layer: 8
   m_Name: Railing Rubble
   m_TagString: Untagged
@@ -11762,20 +11761,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
   - {fileID: 8300000, guid: 145898131f0fb49928f9935e8a665431, type: 3}
   - {fileID: 8300000, guid: e862af059df554c2093cebc016d0bb2f, type: 3}
---- !u!114 &1423169794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1423169790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dccc8b5dbc8064e55b71dcd70370b93c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Volume: 1
-  WatchForFallingRock: {fileID: 1816749789}
-  RockLandClip: {fileID: 8300000, guid: efec55dae98ea4c0abdbdac88db64d74, type: 3}
 --- !u!1001 &1435387502
 Prefab:
   m_ObjectHideFlags: 0
