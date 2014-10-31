@@ -7,7 +7,7 @@ using After.Scene.SceneManagement;
 
 namespace After.Journal
 {
-    public class JournalController : ScriptableObject
+    public class JournalController : MonoBehaviour
     {
         #region Members
 
@@ -25,7 +25,6 @@ namespace After.Journal
         public AudioClip JournalPageFlipClip;
         public AudioClip OpenJournalClip;
         public AudioClip CloseJournalClip;
-        public PlayerController Player;
         public Texture JournalBackground;
         public GUITexture FadedBackgroundTexture;
         public GUIStyle opaCustomStyle;
@@ -39,6 +38,7 @@ namespace After.Journal
         private Rect PreviousPageBounds;
         private Rect NextPageBounds;
         private Rect JournalIndexBounds;
+        private PlayerController Player;
 
         public static JournalController Instance { get; private set; }
 
@@ -56,8 +56,10 @@ namespace After.Journal
                 Debug.Log("Another instance of " + this.GetType().Name
                     + " exists (" + Instance + ") and is not this! "
                     + "( " + this + ") Destroying this.");
-                Destroy(this);
+                Destroy(this.gameObject);
             }
+
+            Player = SceneHandler.Player;
         }
 
         private void Initialize()

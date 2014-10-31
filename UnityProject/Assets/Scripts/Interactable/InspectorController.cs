@@ -15,40 +15,60 @@ namespace After.Interactable
         public GUIStyle opaCustomStyle;
         public PlayerController Player;
         public Color ColorOverlay;
-        public JournalController Journal;
 
         private bool ShowInspector;
         private string TitleText;
         private string DescriptionText;
         private Texture ItemTexture;
 
+        public static InspectorController Instance { get; private set; }
+
         #endregion
 
         void Start()
         {
+            if (Instance == null) {
+                Instance = this;
+                Instance.Initialize();
+                DontDestroyOnLoad(this);
+            } else if (this != Instance) {
+                Debug.Log("Another instance of " + this.GetType().Name
+                    + " exists (" + Instance + ") and is not this! "
+                    + "( " + this + ") Destroying this.");
+                Destroy(this);
+            }
+        }
+
+        private void Initialize()
+        {
             ShowInspector = false;
             BlackSwatchTexture.pixelInset = new Rect(new Rect(0, 0, Screen.width, Screen.height));
-            BlackSwatchTexture.enabled = false;
+            BlackSwatchTexture.enabled = false;   
         }
 
         void Update()
+        {
+            Instance.StaticUpdate();
+        }
+
+        private void StaticUpdate()
         {
             if (ShowInspector && Input.GetKeyDown(CloseButton)) {
                 Player.FreePlayer();
                 SceneHandler.GUILock = false;
                 ShowInspector = false;
                 BlackSwatchTexture.enabled = false;
-            }
+            }   
         }
 
         #region Render GUI
 
         void OnGUI()
         {
-            if (!ShowInspector) { return; }
+            if (!Instance.ShowInspector) { return; }
 
-            RenderItem();
-            RenderText();
+            Instance.RenderItem();
+            Instance.RenderText();
         }
 
         private void RenderItem() 
@@ -103,7 +123,7 @@ namespace After.Interactable
             entry.Description = description;
             entry.Image = texture;
 
-            Journal.AddEntry(entry);
+            JournalController.Instance.AddEntry(entry);
         }
 
         #endregion

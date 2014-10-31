@@ -14,6 +14,10 @@ public class DisableSoulParticlesTransition : Transition
 
     private IEnumerator FadeEmission()
     {
+        if (ParticleSystem != null) {
+            yield return 0;
+        }
+        
         while (ParticleSystem.emissionRate > 0.1f) {
             ParticleSystem.emissionRate = Mathf.Lerp(ParticleSystem.emissionRate, 0, Time.deltaTime);
             yield return 0;

@@ -24,7 +24,7 @@ namespace After.Interactable.Conditions
 
         protected bool PlayerHasItem()
         {
-            string itemHeld = SceneHandler.CurrentPlayer.ItemHeld;
+            string itemHeld = SceneHandler.PlayerItemHeld;
             bool playerHasItem = (RequiredItem && itemHeld == RequiredItem.name);
 
             // Use the item, possibly destroying it
@@ -32,7 +32,7 @@ namespace After.Interactable.Conditions
                 HeldItem.SendMessage("DropItem");
 
                 if (DestroyItemOnUse) {
-                    SceneHandler.CurrentPlayer.ItemHeld = string.Empty;
+                    SceneHandler.PlayerItemHeld = string.Empty;
                     Destroy(RequiredItem);
                 }
             }

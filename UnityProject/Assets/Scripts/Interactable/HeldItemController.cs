@@ -51,7 +51,7 @@ namespace After.Interactable
             ItemHeld = item;
 
             ItemHeldTexture = ItemHeld.GetComponent<SpriteRenderer>().sprite.texture;
-            SceneHandler.CurrentPlayer.ItemHeld = ItemHeld.name;
+            SceneHandler.PlayerItemHeld = ItemHeld.name;
 
             var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0, 0, 0));
             float scale = ItemHeldSize / Mathf.Max(ItemHeldTexture.width, ItemHeldTexture.height);
@@ -72,7 +72,7 @@ namespace After.Interactable
             ItemHeld.rigidbody2D.AddForce(Vector2.up * 1000f);
             ItemHeld = null;
 
-            SceneHandler.CurrentPlayer.ItemHeld = String.Empty;
+            SceneHandler.PlayerItemHeld = String.Empty;
         }
     }
 }

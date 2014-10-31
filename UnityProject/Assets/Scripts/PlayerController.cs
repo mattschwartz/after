@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     public Transform GroundCheck;
     public LayerMask GroundLayerMask;
     public HeldItemController Backpack;
-    public InspectorController InspectorController;
 
     //Variable multiplier for debugging the rope swing animation
     public float SwingVelMult = 10f;
@@ -144,7 +143,7 @@ public class PlayerController : MonoBehaviour
         string name = grabbableItem.ItemName;
         string description = grabbableItem.Description;
 
-        InspectorController.InspectItem(name, description, texture);
+        InspectorController.Instance.InspectItem(name, description, texture);
     }
 
     #region Message Functions
