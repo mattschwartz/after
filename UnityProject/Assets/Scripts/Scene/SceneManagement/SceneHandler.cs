@@ -11,6 +11,8 @@ namespace After.Scene.SceneManagement
 
         void Start()
         {
+            GUILock = null;
+            
             if (Player == null) {
                 var go = GameObject.Find("Player");
                 Player = go.GetComponent<PlayerController>();

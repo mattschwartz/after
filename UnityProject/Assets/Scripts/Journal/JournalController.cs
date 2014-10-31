@@ -137,7 +137,7 @@ namespace After.Journal
 
         #region Update
 
-        void LateUpdate()
+        void Update()
         {
             JournalController.Instance.StaticUpdate();
         }
@@ -162,7 +162,7 @@ namespace After.Journal
 
         private void ProcessKeyboard()
         {
-            if (Input.GetKeyDown(CloseJournal)) {
+            if (Input.GetKeyUp(CloseJournal)) {
                 Hide();
             }
 

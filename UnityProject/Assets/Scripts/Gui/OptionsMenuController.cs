@@ -34,7 +34,7 @@ namespace After.Gui
             Resize();
         }
 
-        void LateUpdate()
+        void Update()
         {
             if (SceneHandler.GUILock != this
                 && SceneHandler.GUILock != null) { 
@@ -52,7 +52,7 @@ namespace After.Gui
         {
             if (Input.GetKeyDown(KeyCode.Escape)) {
                 Visible = !Visible;
-                Debug.Log("Escape pressed");
+                Debug.Log("[OptionsMenu] Escape pressed");
 
                 if (Visible) {
                     Show();

@@ -45,14 +45,14 @@ namespace After.Interactable
             BlackSwatchTexture.enabled = false;   
         }
 
-        void LateUpdate()
+        void Update()
         {
             Instance.StaticUpdate();
         }
 
         private void StaticUpdate()
         {
-            if (ShowInspector && Input.GetKeyDown(CloseButton)) {
+            if (ShowInspector && Input.GetKeyUp(CloseButton)) {
                 SceneHandler.Player.FreePlayer();
                 SceneHandler.GUILock = null;
                 ShowInspector = false;
