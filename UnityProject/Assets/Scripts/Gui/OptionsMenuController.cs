@@ -52,7 +52,6 @@ namespace After.Gui
         {
             if (Input.GetKeyDown(KeyCode.Escape)) {
                 Visible = !Visible;
-                Debug.Log("[OptionsMenu] Escape pressed");
 
                 if (Visible) {
                     Show();

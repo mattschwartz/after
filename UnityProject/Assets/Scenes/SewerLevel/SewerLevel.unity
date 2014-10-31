@@ -8522,7 +8522,7 @@ MonoBehaviour:
   WaitSecondsBeforeRead: .600000024
   From: 1
   To: 2
-  DarknessAnimator: {fileID: 1168216545}
+  Darkness: {fileID: 1168216546}
 --- !u!1 &824021402
 GameObject:
   m_ObjectHideFlags: 0
@@ -10452,7 +10452,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1168216544}
   - 212: {fileID: 1168216546}
-  - 95: {fileID: 1168216545}
   m_Layer: 0
   m_Name: The Darkness
   m_TagString: Untagged
@@ -10472,21 +10471,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 262035517}
   m_RootOrder: 0
---- !u!95 &1168216545
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1168216543}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4d6eb609aeda83846b2771f5fad21f3a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!212 &1168216546
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10508,7 +10492,7 @@ SpriteRenderer:
   m_SortingLayerID: 1894618561
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3afeb89f75b5ae9468ddf0294cb45c13, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: .161764681, g: .152249113, b: .152249113, a: .494117647}
 --- !u!1 &1195238254
 GameObject:
   m_ObjectHideFlags: 0
