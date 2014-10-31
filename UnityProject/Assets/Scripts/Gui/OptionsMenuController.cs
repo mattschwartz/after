@@ -34,9 +34,12 @@ namespace After.Gui
             Resize();
         }
 
-        void Update()
+        void LateUpdate()
         {
-            if (!Visible && SceneHandler.GUILock) { return; }
+            if (SceneHandler.GUILock != this
+                && SceneHandler.GUILock != null) { 
+                return; 
+            }
 
             ProcessKeyboard();
 
@@ -49,6 +52,7 @@ namespace After.Gui
         {
             if (Input.GetKeyDown(KeyCode.Escape)) {
                 Visible = !Visible;
+                Debug.Log("Escape pressed");
 
                 if (Visible) {
                     Show();
@@ -61,14 +65,14 @@ namespace After.Gui
         private void Show()
         {
             Visible = true;
-            SceneHandler.GUILock = true;
+            SceneHandler.GUILock = this;
             Time.timeScale = 0;
         }
 
         private void Hide()
         {
             Visible = false;
-            SceneHandler.GUILock = false;
+            SceneHandler.GUILock = null;
             Time.timeScale = 1;
         }
 

@@ -10,15 +10,14 @@ namespace After.Interactable
         #region Members
 
         public float TextureSize = 200;
-        public KeyCode CloseButton = KeyCode.Escape;
         public GUITexture BlackSwatchTexture;
         public GUIStyle opaCustomStyle;
-        public PlayerController Player;
         public Color ColorOverlay;
 
         private bool ShowInspector;
         private string TitleText;
         private string DescriptionText;
+        private KeyCode CloseButton = KeyCode.Escape;
         private Texture ItemTexture;
 
         public static InspectorController Instance { get; private set; }
@@ -46,7 +45,7 @@ namespace After.Interactable
             BlackSwatchTexture.enabled = false;   
         }
 
-        void Update()
+        void LateUpdate()
         {
             Instance.StaticUpdate();
         }
@@ -54,8 +53,8 @@ namespace After.Interactable
         private void StaticUpdate()
         {
             if (ShowInspector && Input.GetKeyDown(CloseButton)) {
-                Player.FreePlayer();
-                SceneHandler.GUILock = false;
+                SceneHandler.Player.FreePlayer();
+                SceneHandler.GUILock = null;
                 ShowInspector = false;
                 BlackSwatchTexture.enabled = false;
             }   
@@ -92,22 +91,27 @@ namespace After.Interactable
             camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.75f, 0));
             GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), DescriptionText, opaCustomStyle);
             camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.95f, 0));
-            GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), "Press Escape to close", opaCustomStyle);
+            GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), "Press X to close", opaCustomStyle);
         }
 
         #endregion
 
         #region Public Methods
 
-        public void InspectItem(string title, string description, Texture itemTexture, float size = 200, bool addToJournal = true)
+        public void InspectItem(
+            string title, 
+            string description, 
+            Texture itemTexture, 
+            float size = 200, 
+            bool addToJournal = true)
         {
             if (addToJournal) {
                 AddToJournal(title, description, itemTexture);
             }
 
-            Player.LockPlayer();
+            SceneHandler.Player.LockPlayer();
             ShowInspector = true;
-            SceneHandler.GUILock = true;
+            SceneHandler.GUILock = this;
             TitleText = title;
             DescriptionText = description;
             BlackSwatchTexture.enabled = true;

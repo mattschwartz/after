@@ -7,7 +7,7 @@ namespace After.Scene.SceneManagement
     {
         public static string PlayerItemHeld;
         public static PlayerController Player;
-        public static bool GUILock = false;
+        public static MonoBehaviour GUILock;
 
         void Start()
         {

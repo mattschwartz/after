@@ -12,7 +12,6 @@ namespace After.Interactable
 
         private float ItemHeldSize = 100;
         private float BackpackSize = 175;
-        public GameObject Player;
         public Texture BackpackTextureEmpty;
         public Texture BackpackTextureFull;
 
@@ -66,7 +65,7 @@ namespace After.Interactable
                 return;
             }
 
-            var pos = Player.transform.position;
+            var pos = SceneHandler.Player.transform.position;
             ItemHeld.transform.position = new Vector2(pos.x, pos.y + 2);
             ItemHeld.rigidbody2D.velocity = Vector2.zero;
             ItemHeld.rigidbody2D.AddForce(Vector2.up * 1000f);

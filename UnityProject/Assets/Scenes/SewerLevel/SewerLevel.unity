@@ -12369,7 +12369,7 @@ GameObject:
   m_Layer: 10
   m_Name: Backpack
   m_TagString: Untagged
-  m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -12397,7 +12397,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 680bd19f594b5dd42b654c5b50bae125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 194404990}
   BackpackTextureEmpty: {fileID: 2800000, guid: f9f76162fefc98d4cab4b78bec28cc93,
     type: 3}
   BackpackTextureFull: {fileID: 2800000, guid: 90266df834bc2374c9e551a41251e8b0, type: 3}

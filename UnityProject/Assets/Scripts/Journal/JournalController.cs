@@ -18,10 +18,6 @@ namespace After.Journal
 
         public float PercentSize = 88.5f;
         public float EntryImageSize = 200;
-        public KeyCode PreviousPageKey = KeyCode.LeftArrow;
-        public KeyCode NextPageKey = KeyCode.RightArrow;
-        public KeyCode JournalKey = KeyCode.J;
-        public KeyCode CloseJournal = KeyCode.Escape;
         public AudioClip JournalPageFlipClip;
         public AudioClip OpenJournalClip;
         public AudioClip CloseJournalClip;
@@ -38,7 +34,10 @@ namespace After.Journal
         private Rect PreviousPageBounds;
         private Rect NextPageBounds;
         private Rect JournalIndexBounds;
-        private PlayerController Player;
+        private KeyCode PreviousPageKey = KeyCode.LeftArrow;
+        private KeyCode NextPageKey = KeyCode.RightArrow;
+        private KeyCode JournalKey = KeyCode.J;
+        private KeyCode CloseJournal = KeyCode.Escape;
 
         public static JournalController Instance { get; private set; }
 
@@ -58,8 +57,6 @@ namespace After.Journal
                     + "( " + this + ") Destroying this.");
                 Destroy(this.gameObject);
             }
-
-            Player = SceneHandler.Player;
         }
 
         private void Initialize()
@@ -140,33 +137,40 @@ namespace After.Journal
 
         #region Update
 
-        void Update()
+        void LateUpdate()
         {
             JournalController.Instance.StaticUpdate();
         }
 
         private void StaticUpdate()
         {
-            if (!Visible && SceneHandler.GUILock) { return; }
-
-            DefineClickableRegions();
-            if (!Player.IsLocked() && Input.GetKeyDown(JournalKey)) {
-                Show();
+            if (SceneHandler.GUILock != this 
+                && SceneHandler.GUILock != null) { 
+                return; 
             }
 
-            if (Input.GetKeyDown(CloseJournal)) {
-                Hide();
+            DefineClickableRegions();
+            if (!SceneHandler.Player.IsLocked() && Input.GetKeyDown(JournalKey)) {
+                Show();
             }
 
             if (!Visible) { return; }
 
             ProcessMouse();
+            ProcessKeyboard();
+        }
+
+        private void ProcessKeyboard()
+        {
+            if (Input.GetKeyDown(CloseJournal)) {
+                Hide();
+            }
 
             if (Input.GetKeyDown(PreviousPageKey)) {
                 TurnPage(-1);
             } else if (Input.GetKeyDown(NextPageKey)) {
                 TurnPage(1);
-            }
+            }   
         }
 
         /// <summary>
@@ -196,9 +200,9 @@ namespace After.Journal
             if (Visible) { return; }
 
             Visible = true;
-            SceneHandler.GUILock = true;
+            SceneHandler.GUILock = this;
             FadedBackgroundTexture.enabled = true;
-            Player.LockPlayer();
+            SceneHandler.Player.LockPlayer();
             AudioManager.PlayClipAtPoint(OpenJournalClip, Vector2.zero);
         }
 
@@ -207,10 +211,10 @@ namespace After.Journal
             if (!Visible) { return; }
 
             Visible = false;
-            SceneHandler.GUILock = false;
             FadedBackgroundTexture.enabled = false;
-            Player.FreePlayer();
+            SceneHandler.Player.FreePlayer();
             AudioManager.PlayClipAtPoint(CloseJournalClip, Vector2.zero);
+            SceneHandler.GUILock = null;
         }
 
         /// <summary>Turn page either left or right, but the method needs to be
