@@ -34,7 +34,7 @@ namespace After.Interactable
                 Debug.Log("Another instance of " + this.GetType().Name
                     + " exists (" + Instance + ") and is not this! "
                     + "( " + this + ") Destroying this.");
-                Destroy(this);
+                Destroy(this.gameObject);
             }
         }
 
