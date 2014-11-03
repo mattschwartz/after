@@ -207,8 +207,6 @@ public class PlayerController : MonoBehaviour
             {
                 rigidbody2D.AddForce(new Vector2(x, 200f));
             }
-
-            
         }
 
         Climbing = on;
