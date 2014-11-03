@@ -180,7 +180,7 @@ public class PlayerController : MonoBehaviour
 
     //the variable "x" serves as the ladder's horizontal position in the on=true case
     //and the horizontal force for ladder dismount in the on=false case
-    public void Climb(bool on, bool profile, bool top, float x)
+    public void Climb(bool on, bool profile, bool top, bool up, float x)
     {
 
         if (on) {
@@ -189,7 +189,8 @@ public class PlayerController : MonoBehaviour
             rigidbody2D.gravityScale = 0;
             Animator.SetFloat("Velocity", 0);
             Animator.SetFloat("vMove", 0);
-            Animator.SetBool("LadderDrop", top);
+            Animator.SetBool("LadderDrop", top && !up);
+            Animator.SetBool("LadderLift", top && up);
 
             if (Sprite) {
                 //interspace, the space between the default and background layers, where people on ladders go
@@ -207,7 +208,6 @@ public class PlayerController : MonoBehaviour
                 rigidbody2D.AddForce(new Vector2(x, 200f));
             }
 
-            Animator.SetBool("LadderLift", top);
             
         }
 
