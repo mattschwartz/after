@@ -7,29 +7,35 @@ public class CutSceneController : MonoBehaviour
 	public SceneFaderController Fader;
     public float Duration;
     public Animator Animator;
-    public AudioClip StopClip;
+    public AudioClip StopClip = null;
 
     private bool Arrived = false;
-    private float Tick;
+    private float Tick = 0f;
 
 	void Update() 
 	{
 		if (Arrived) {return; }
 
-        Tick += Time.deltaTime;
 		if (Input.GetKeyDown(KeyCode.Escape) || Tick >= Duration) {
 			if (Tick >= Duration) {
 				Animator.SetTrigger("Stop");
-				AudioManager.PlayClipAtPoint(StopClip, transform.position);
+                if (StopClip)
+				    AudioManager.PlayClipAtPoint(StopClip, transform.position);
 				StartCoroutine(LoadNextLevel());
 				Arrived = true;
 			}
 		}
 	}
 
+    void FixedUpdate()
+    {
+        Tick += Time.deltaTime;
+    }
+
 	private IEnumerator LoadNextLevel()
 	{
-		yield return new WaitForSeconds(StopClip.length);
+        if (StopClip)
+		    yield return new WaitForSeconds(StopClip.length);
 		StartCoroutine(Fader.FadeOut());
 	}
 }

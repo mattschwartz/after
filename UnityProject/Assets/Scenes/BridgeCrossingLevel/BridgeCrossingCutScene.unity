@@ -318,3 +318,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Fader: {fileID: 1219387018}
   Duration: 10
+  Animator: {fileID: 2005840134}
+  StopClip: {fileID: 0}
