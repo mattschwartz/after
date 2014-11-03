@@ -12,11 +12,6 @@ namespace After.Journal
     {
         #region Members
 
-        public bool ShowToast = false;
-        public float ToastDuration = 3;
-        public float ToastDurationTracker;
-        public string ToastText = "Journal Updated";
-
         public float PercentSize = 88.5f;
         public float EntryImageSize = 200;
         public AudioClip JournalPageFlipClip;
@@ -27,6 +22,11 @@ namespace After.Journal
         public GUIStyle opaCustomStyle;
         public GUIStyle EntryTitleStyle;
         public GUIStyle EntryStyle;
+
+        private bool ShowToast = false;
+        private float ToastDuration = 4;
+        private float ToastDurationTracker;
+        private string ToastText = "Journal Updated (Press J to Open)";
 
         private bool Visible = false;
         private int EntryIndex = 0;
@@ -260,7 +260,7 @@ namespace After.Journal
                 ShowToast = false;
             }
 
-            var screenCoords = new Vector3(0.105f, 0.93f, 0);
+            var screenCoords = new Vector3(0.175f, 0.93f, 0);
             var camPos = Camera.main.ViewportToScreenPoint(screenCoords);
             var labelCoords = new Rect(camPos.x, camPos.y, 0, 0);
 

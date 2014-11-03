@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using After.Interactable;
 using UnityEngine;
+using After.Interactable;
+using After.Interactable.Transitions;
 using After.Journal;
 
-namespace After.Interactable.Transitions
+namespace After.ProximityTrigger.ProximityTransitions
 {
-    public class UpdateJournalTransition : Transition
+    public class UpdateJournalProximityTransition : ProximityTransition
     {
         public string Title;
         public string Update;
