@@ -99,34 +99,35 @@ namespace After.Interactable
         #region Public Methods
 
         public void InspectItem(
-            string title, 
-            string description, 
+            string title,
+            string observations, 
             Texture itemTexture, 
             float size = 200, 
             bool addToJournal = true)
         {
             if (addToJournal) {
-                AddToJournal(title, description, itemTexture);
+                AddToJournal(title, observations, itemTexture);
             }
 
             SceneHandler.Player.LockPlayer();
             ShowInspector = true;
             SceneHandler.GUILock = this;
             TitleText = title;
-            DescriptionText = description;
+            DescriptionText = observations;
             BlackSwatchTexture.enabled = true;
             ItemTexture = itemTexture;
             TextureSize = size;
             ColorOverlay = Color.white;
         }
 
-        private void AddToJournal(string title, string description, Texture texture)
+        private void AddToJournal(string title, string observations, Texture texture)
         {
-            Entry entry = new Entry();
-            entry.Name = title;
-            entry.Description = description;
-            entry.Image = texture;
+            Entry entry = new Entry() {
+                Name = title,
+                Image = texture
+            };
 
+            entry.Updates.Add(observations);
             JournalController.Instance.AddEntry(entry);
         }
 

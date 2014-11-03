@@ -1541,7 +1541,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: Description
-      value: It appears to have the digits 4-2-3-9 scrawled on it.
+      value: A bar napkin. Looks like the key code was scrawled on the back of it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_Size.x
+      value: 1.27999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_Center.y
+      value: 9.53674316e-07
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -3465,6 +3481,7 @@ Transform:
   - {fileID: 520467743}
   - {fileID: 618332388}
   - {fileID: 1890551971}
+  - {fileID: 818104537}
   - {fileID: 517203323}
   - {fileID: 2025917682}
   - {fileID: 668142921}
@@ -4589,6 +4606,7 @@ MonoBehaviour:
   - {fileID: 1890551972}
   - {fileID: 618332389}
   - {fileID: 517203324}
+  - {fileID: 818104538}
 --- !u!61 &300403329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5418,7 +5436,7 @@ GameObject:
   - 114: {fileID: 419237410}
   - 50: {fileID: 419237411}
   m_Layer: 13
-  m_Name: KeyCard
+  m_Name: Access Card
   m_TagString: Untagged
   m_Icon: {fileID: -1500306622, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -5471,8 +5489,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 2.81947923, y: 1.27999997}
-  m_Center: {x: -.765261352, y: 0}
+  m_Size: {x: 1.27999997, y: 1.27999997}
+  m_Center: {x: 0, y: 0}
 --- !u!114 &419237410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5491,8 +5509,9 @@ MonoBehaviour:
   SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 37619331}
-  ItemName: Key Card
-  Description: An access card for restricted areas in the facility.
+  ItemName: Access Card
+  Description: I'm sorry I didn't listen to you, James. I don't think I would have
+    wanted this.
 --- !u!50 &419237411
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -5615,7 +5634,8 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 96d5a031f40509d4bb6143ba7b0aa6e0, type: 2}
     - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: Description
-      value: This can contains a few liters of gasoline.
+      value: Feels like there's just enough to start the generator back up. My lucky
+        day.
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -6071,7 +6091,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 300403324}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!114 &517203324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6407,7 +6427,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: m_Name
-      value: KeyCard
+      value: Access Card
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: Label
@@ -6424,7 +6444,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: ItemName
-      value: Key Card
+      value: Access Card
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: PlayOnSuccess
@@ -6440,7 +6460,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: Description
-      value: An access card for restricted areas in the facility.
+      value: I'm sorry I didn't listen to you, James. I don't think I would have wanted
+        this.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_Size.x
+      value: 1.27999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_Center.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -6697,7 +6730,7 @@ MonoBehaviour:
   TransitionScripts:
   - {fileID: 1272377025}
   ItemName: Crumpled Paper
-  Description: It appears to have the digits 4-2-3-9 scrawled on it.
+  Description: A bar napkin. Looks like the key code was scrawled on the back of it.
 --- !u!61 &653709352
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6708,8 +6741,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 2.81947923, y: 1.27999997}
-  m_Center: {x: -.765261352, y: 0}
+  m_Size: {x: 1.27999997, y: 1.27999997}
+  m_Center: {x: 0, y: 9.53674316e-07}
 --- !u!212 &653709353
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6865,7 +6898,7 @@ Transform:
   m_Children:
   - {fileID: 719622381}
   m_Father: {fileID: 300403324}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &674526955
 GameObject:
   m_ObjectHideFlags: 0
@@ -8523,6 +8556,53 @@ MonoBehaviour:
   From: 1
   To: 2
   Darkness: {fileID: 1168216546}
+--- !u!1 &818104536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 818104537}
+  - 114: {fileID: 818104538}
+  m_Layer: 0
+  m_Name: Update Journal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &818104537
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 818104536}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 300403324}
+  m_RootOrder: 5
+--- !u!114 &818104538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 818104536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e9f7f39884d66419bb265fef6436e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 1
+  To: 2
+  Title: Felix West
+  Update: I knew you. I worked with you.. You tried to warn me, once; tried to protect
+    me. What was I trying to do? Why did I do it?
+  Sprite: {fileID: 300403327}
 --- !u!1 &824021402
 GameObject:
   m_ObjectHideFlags: 0
@@ -8566,7 +8646,7 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 1
   To: 1
-  Observations: This beautiful boulder is too heavy to lift. I'll need some leverage
+  Observations: 'It looks like someone was crushed underneath. '
 --- !u!1001 &837851185
 Prefab:
   m_ObjectHideFlags: 0
@@ -8621,7 +8701,7 @@ Prefab:
         type: 3}
     - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: Description
-      value: Steel used for reinforcing concrete that can be used for prying now.
+      value: Some old reinforcing steel. Maybe I could use this for leverage.
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: m_LocalScale.x
@@ -10902,7 +10982,7 @@ Transform:
   m_Children:
   - {fileID: 295699890}
   m_Father: {fileID: 300403324}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!95 &1240414420
 Animator:
   serializedVersion: 3
@@ -11316,7 +11396,7 @@ MonoBehaviour:
   TransitionScripts:
   - {fileID: 878753111}
   ItemName: Rebar
-  Description: Steel used for reinforcing concrete that can be used for prying now.
+  Description: Some old reinforcing steel. Maybe I could use this for leverage.
 --- !u!61 &1305626021
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12479,6 +12559,65 @@ MonoBehaviour:
     m_FontStyle: 0
     m_Alignment: 1
     m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  EntryTitleStyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 12800000, guid: 18412cee854d77143a5e17b2ef00f635, type: 3}
+    m_FontSize: 24
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 1
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
@@ -14016,7 +14155,8 @@ MonoBehaviour:
   TransitionScripts:
   - {fileID: 728401012}
   ItemName: Generator Fuel
-  Description: This can contains a few liters of gasoline.
+  Description: Feels like there's just enough to start the generator back up. My lucky
+    day.
 --- !u!61 &1614624038
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15735,6 +15875,19 @@ Prefab:
     - target: {fileID: 400000, guid: 130942ee731155042ab679f46cdec904, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 130942ee731155042ab679f46cdec904, type: 2}
+      propertyPath: EntryTitleStyle.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 18412cee854d77143a5e17b2ef00f635,
+        type: 3}
+    - target: {fileID: 11400000, guid: 130942ee731155042ab679f46cdec904, type: 2}
+      propertyPath: EntryTitleStyle.m_FontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 130942ee731155042ab679f46cdec904, type: 2}
+      propertyPath: EntryTitleStyle.m_WordWrap
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 130942ee731155042ab679f46cdec904, type: 2}
@@ -18244,7 +18397,7 @@ Transform:
   m_Children:
   - {fileID: 1624531499}
   m_Father: {fileID: 300403324}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &2052403241
 GameObject:
   m_ObjectHideFlags: 0

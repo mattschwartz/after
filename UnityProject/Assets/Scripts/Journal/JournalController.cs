@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using After.Audio;
 using After.CameraTransitions;
 using After.Scene.SceneManagement;
+using System.Linq;
 
 namespace After.Journal
 {
@@ -24,6 +25,7 @@ namespace After.Journal
         public Texture JournalBackground;
         public GUITexture FadedBackgroundTexture;
         public GUIStyle opaCustomStyle;
+        public GUIStyle EntryTitleStyle;
         public GUIStyle EntryStyle;
 
         private bool Visible = false;
@@ -76,7 +78,8 @@ namespace After.Journal
         private void DefineClickableRegions()
         {
             Scale = (PercentSize / 100f);
-            EntryStyle.fontSize = (int)(21f * Scale);
+            EntryStyle.fontSize = (int)((float)21 * Scale);
+            EntryTitleStyle.fontSize = (int)((float)26 * Scale);
 
             PreviousPageBounds = GetRelativeByBounds(JournalBounds, 0.046f, 
                 0.83f, 180 * Scale, 45 * Scale);
@@ -312,11 +315,11 @@ namespace After.Journal
             Entry entry = Entries[EntryIndex];
 
             Rect pos = GetRelativeByBounds(JournalBounds, 0.46f, 0.11f, 
-                210 * Scale, 0);
+                345 * Scale, 0);
 
-            GUI.Label(pos, entry.Name, EntryStyle);
-            pos.y += 31 * Scale;
-            GUI.Label(pos, entry.Description, EntryStyle);
+            GUI.Label(pos, entry.Name, EntryTitleStyle);
+            pos.y += 38 * Scale;
+            GUI.Label(pos, entry.Updates.First(), EntryStyle);
 
             RenderEntryImage(entry.Image);
         }
@@ -343,16 +346,16 @@ namespace After.Journal
         private void RenderIndex()
         {
             Rect bounds = GetRelativeByBounds(JournalBounds, 0.46f, 0.11f);
-            GUI.Label(bounds, "Index", EntryStyle);
+            GUI.Label(bounds, "Index", EntryTitleStyle);
 
             if (Entries.Count == 1) {
-                bounds.y += 31 * Scale;
+                bounds.y += 38 * Scale;
                 GUI.Label(bounds, "No entries", EntryStyle);
                 return;
             }
 
             for (int i = 1; i < Mathf.Min(Entries.Count, 8); ++i) {
-                bounds.y += 31 * Scale;
+                bounds.y += 38 * Scale;
                 GUI.Label(bounds, Entries[i].Name, EntryStyle);
             }
         }
@@ -381,15 +384,29 @@ namespace After.Journal
         private bool UniqueAdd(Entry entry)
         {
             foreach (var jEntry in Entries) {
-                if (jEntry.Name == entry.Name) {
-                    jEntry.Description = entry.Description;
+                if (jEntry.Equals(entry)) {
+                    jEntry.Updates = entry.Updates;
                     jEntry.Image = entry.Image;
+
+                    return false;
+                } else if (jEntry.Name == entry.Name) {
+                    jEntry.Updates.Add(entry.Updates.FirstOrDefault());
+
                     return false;
                 }
             }
 
             Entries.Add(entry);
             return true;
+        }
+
+        public void UpdateEntry(string name, string update)
+        {
+            if (!Entries.Exists(t => t.Name == name)) {
+                return;
+            }
+
+            Entries.First(t => t.Name == name).Updates.Add(update);
         }
 
         #endregion
