@@ -1451,7 +1451,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 528612470}
-  m_RootOrder: 4
+  m_RootOrder: 1
 --- !u!114 &305501763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1465,8 +1465,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
   WaitSecondsBeforeRead: 0
-  From: 2
-  To: 3
+  From: 1
+  To: 2
   LockDuration: 1
   Player: {fileID: 750317700}
   PlayerAnimator: {fileID: 750317702}
@@ -1590,7 +1590,6 @@ GameObject:
   - 114: {fileID: 528612472}
   - 61: {fileID: 528612471}
   - 212: {fileID: 528612473}
-  - 95: {fileID: 528612474}
   - 198: {fileID: 528612476}
   - 199: {fileID: 528612475}
   m_Layer: 0
@@ -1607,15 +1606,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 528612469}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.6400003, y: -12.5313721, z: 0}
-  m_LocalScale: {x: .0960533991, y: .0960532874, z: 1}
+  m_LocalPosition: {x: 12.7136288, y: -12.8751402, z: 0}
+  m_LocalScale: {x: .183482975, y: .183482602, z: 1}
   m_Children:
   - {fileID: 2091058471}
-  - {fileID: 1333995602}
-  - {fileID: 1156237865}
-  - {fileID: 561029274}
   - {fileID: 305501762}
-  - {fileID: 1710249499}
   m_Father: {fileID: 896387184}
   m_RootOrder: 23
 --- !u!61 &528612471
@@ -1644,13 +1639,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentState: 1
   LockedState: {fileID: 2091058472}
-  UnlockedState: {fileID: 1333995603}
+  UnlockedState: {fileID: 0}
   SpentState: {fileID: 0}
   TransitionScripts:
-  - {fileID: 1156237866}
-  - {fileID: 561029275}
   - {fileID: 305501763}
-  - {fileID: 1710249500}
 --- !u!212 &528612473
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1671,23 +1663,8 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 13e4f47ee053e7d41a671312345707d9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 15b946000350199418fa93b64b53e079, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!95 &528612474
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 528612469}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6f2f679baee87f64b950deaf8112cb68, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!199 &528612475
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -1732,7 +1709,7 @@ ParticleSystem:
   randomSeed: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   moveWithTransform: 1
   InitialModule:
     enabled: 1
@@ -2752,50 +2729,6 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
---- !u!1 &561029273
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 561029274}
-  - 114: {fileID: 561029275}
-  m_Layer: 0
-  m_Name: Enable Smoke
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &561029274
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 561029273}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 528612470}
-  m_RootOrder: 3
---- !u!114 &561029275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 561029273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21f63cc7b8adaa24b92afd7ab3763e48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestroyOnRead: 0
-  WaitSecondsBeforeRead: 0
-  From: 1
-  To: 2
-  Smoke: {fileID: 528612476}
 --- !u!1 &576623022
 GameObject:
   m_ObjectHideFlags: 0
@@ -4094,94 +4027,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 896387184}
   m_RootOrder: 6
---- !u!1 &1156237864
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1156237865}
-  - 114: {fileID: 1156237866}
-  m_Layer: 0
-  m_Name: Lift Manhole
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1156237865
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1156237864}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 528612470}
-  m_RootOrder: 2
---- !u!114 &1156237866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1156237864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0167aea529911b4a8a035b68a0195e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestroyOnRead: 0
-  WaitSecondsBeforeRead: 0
-  From: 1
-  To: 2
-  LockDuration: 1.95000005
-  Player: {fileID: 750317700}
-  PlayerAnimator: {fileID: 750317702}
-  ManholeAnimator: {fileID: 528612474}
---- !u!1 &1333995601
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1333995602}
-  - 114: {fileID: 1333995603}
-  m_Layer: 0
-  m_Name: Uncovered
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1333995602
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1333995601}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .99999994, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 528612470}
-  m_RootOrder: 1
---- !u!114 &1333995603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1333995601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cd4db1c4c14614439e01019b2bd2ea7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  To: 3
-  Conditions: {fileID: 0}
 --- !u!1 &1398798788
 GameObject:
   m_ObjectHideFlags: 0
@@ -4449,6 +4294,65 @@ MonoBehaviour:
     m_FontSize: 21
     m_FontStyle: 0
     m_Alignment: 1
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  EntryTitleStyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
     m_WordWrap: 0
     m_RichText: 1
     m_TextClipping: 0
@@ -5222,51 +5126,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 896387184}
   m_RootOrder: 11
---- !u!1 &1710249498
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1710249499}
-  - 114: {fileID: 1710249500}
-  m_Layer: 0
-  m_Name: Lift Sound Effect
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1710249499
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1710249498}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 528612470}
-  m_RootOrder: 5
---- !u!114 &1710249500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1710249498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestroyOnRead: 0
-  WaitSecondsBeforeRead: 0
-  From: 1
-  To: 2
-  Volume: 1
-  Clip: {fileID: 8300000, guid: 131ff08f93be44c2fbccd411ca6b5409, type: 3}
 --- !u!1001 &1788652637
 Prefab:
   m_ObjectHideFlags: 0
