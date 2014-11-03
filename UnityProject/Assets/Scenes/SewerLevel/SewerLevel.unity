@@ -16880,10 +16880,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbf4c2fb688929043b5b54f594d911e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyOnRead: 1
-  WaitSecondsBeforeRead: 1
-  From: 2
-  To: 3
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 1
+  To: 2
   Velocity: {x: 0, y: 1000}
   ItemToSpawn: {fileID: 419237405}
 --- !u!1 &1898526268
