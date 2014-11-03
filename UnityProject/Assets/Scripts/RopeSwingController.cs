@@ -31,7 +31,6 @@ public class RopeSwingController : MonoBehaviour {
         Length = MinLength;
 
 		Trans = GetComponent<Transform>();
-		Body = GetComponent<Rigidbody2D>();
 
 	}
 
