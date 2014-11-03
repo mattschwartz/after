@@ -24,19 +24,21 @@ public class RopeSwingController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Active = false;
-		//Displace = 0f;
 		Entered = false;
         Dismount = false;
-        //Falling = false;
         Length = MinLength;
 
 		Trans = GetComponent<Transform>();
 
+        //give rope some initial sway
+        Body.AddForce(new Vector2(20f, 0f));
 	}
 
 	void OnTriggerEnter2D ()
 	{
 		Entered = true;
+
+        Body.angularDrag = 0f;
 	}
 
 	void OnTriggerExit2D ()
