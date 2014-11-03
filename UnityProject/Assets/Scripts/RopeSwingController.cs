@@ -47,28 +47,6 @@ public class RopeSwingController : MonoBehaviour {
 
         Body.angularDrag = 2f;
 	}
-
-    /*
-	void FixedUpdate ()
-	{
-		if (Falling && Length < MaxLength)
-		{
-			Length += FallRate;
-		}
-		else if (Falling)
-		{
-			Falling = false;
-		}
-        else if (Active && Length < MaxLength)
-        {
-            TimeInterval += Time.deltaTime;
-        }
-        else if (!Active && Length > MinLength)
-        {
-            Length -= FallRate;
-        }
-	}
-     */
 	
 	// Update is called once per frame
 	void Update () {
@@ -141,15 +119,10 @@ public class RopeSwingController : MonoBehaviour {
             PlayerObject.rigidbody2D.transform.position = Trans.position + hToA;
             //rotate player with rope
             PlayerObject.rigidbody2D.transform.rotation = Trans.rotation;
+
+            //Allow player to add force to rope
+            float hInput = Input.GetAxis("Horizontal");
+            Body.AddForce(new Vector2(5f * hInput, 0));
 		}
-		
-		//the following is for the purposes of testing the functionality
-        /*
-		if (Active && TimeInterval >= TimeToFall)
-		{
-			Falling = true;
-            TimeInterval = 0f;
-		}
-         */
 	}
 }
