@@ -195,12 +195,14 @@ public class PlayerController : MonoBehaviour
             if (Sprite) {
                 //interspace, the space between the default and background layers, where people on ladders go
                 Sprite.sortingLayerName = "Interspace";
+                Sprite.sortingOrder = 100;
             }
         } else {
             rigidbody2D.gravityScale = Gravity;
             if (Sprite) {
                 //the normal player layer
                 Sprite.sortingLayerName = "Player";
+                Sprite.sortingOrder = 0;
             }
 
             if (x != 0.0f)
