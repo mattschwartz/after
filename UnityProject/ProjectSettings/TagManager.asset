@@ -41,7 +41,7 @@ TagManager:
   - name: Background
     userID: 1
     uniqueID: 1343960909
-    locked: 0
+    locked: 1
   - name: Jumpable
     userID: 2
     uniqueID: 3056740579
@@ -53,7 +53,7 @@ TagManager:
   - name: Default
     userID: 0
     uniqueID: 0
-    locked: 0
+    locked: 1
   - name: Interactable
     userID: 3
     uniqueID: 4236500287
