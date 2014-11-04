@@ -9390,7 +9390,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.5, y: 1.5}
   m_Center: {x: 0, y: 0}
 --- !u!114 &942941845
 MonoBehaviour:
@@ -17213,9 +17213,9 @@ MonoBehaviour:
   StepClips:
   - {fileID: 0}
   Profile: 0
-  HandleY: 0
-  TopOffY: 0
-  TopOnY: 0
+  HandleY: 7.795156
+  TopOffY: 9.39999962
+  TopOnY: 6.69999981
 --- !u!61 &1918864478
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17226,8 +17226,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 2, y: 17}
-  m_Center: {x: 0, y: 0}
+  m_Size: {x: 1.5, y: 16.4942169}
+  m_Center: {x: 0, y: -.252891541}
 --- !u!114 &1918864479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17330,7 +17330,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_Size.y
-      value: 17
+      value: 16.4942169
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_LocalPosition.y
@@ -17376,6 +17376,26 @@ Prefab:
       propertyPath: PlayerCon
       value: 
       objectReference: {fileID: 194404992}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: HandleY
+      value: 7.795156
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: TopOffY
+      value: 9.39999962
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: TopOnY
+      value: 6.69999981
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: m_Center.y
+      value: -.252891541
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: m_Size.x
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
   m_RootGameObject: {fileID: 1918864474}
@@ -18684,7 +18704,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 1482764551
-  m_SortingOrder: 1
+  m_SortingOrder: 101
   m_Sprite: {fileID: 21300000, guid: 8ddda5aa102d54a97add11f7643e1f3a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &2079244786
