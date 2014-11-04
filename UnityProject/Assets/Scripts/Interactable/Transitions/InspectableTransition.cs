@@ -9,18 +9,20 @@ namespace After.Interactable.Transitions
 {
     public class InspectableTransition : Transition
     {
+
+        #region Members
+
         public bool AddToJournal = true;
-        public Color TextureOverlay;
         public float TextureSize = 550;
         public string Title;
         public string Description;
         public Texture InspectableTexture;
-        public InspectorController Inspector;
+
+        #endregion
 
         public override void Read(StateType fromState, StateType toState)
         {
-            Inspector.InspectItem(Title, Description, InspectableTexture, TextureSize, AddToJournal);
-            Inspector.ColorOverlay = TextureOverlay;
+            InspectorController.Instance.InspectItem(Title, Description, InspectableTexture, TextureSize, AddToJournal);
         }
     }
 }

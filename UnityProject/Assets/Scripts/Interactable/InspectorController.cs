@@ -91,7 +91,7 @@ namespace After.Interactable
             camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.75f, 0));
             GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), DescriptionText, opaCustomStyle);
             camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.95f, 0));
-            GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), "Press X to close", opaCustomStyle);
+            GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), "Press Escape to close", opaCustomStyle);
         }
 
         #endregion

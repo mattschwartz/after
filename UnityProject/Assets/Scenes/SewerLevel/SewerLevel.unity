@@ -17092,12 +17092,10 @@ MonoBehaviour:
   From: 1
   To: 1
   AddToJournal: 0
-  TextureOverlay: {r: .176470578, g: .176470578, b: .176470578, a: 1}
   TextureSize: 550
   Title: Bulletin Board
   Description: The board is too dark to read.
   InspectableTexture: {fileID: 2800000, guid: dc7e77c32415e374ea822df51a64ba8f, type: 3}
-  Inspector: {fileID: 0}
 --- !u!1001 &1884475195
 Prefab:
   m_ObjectHideFlags: 0
@@ -18995,12 +18993,10 @@ MonoBehaviour:
   From: 0
   To: 2
   AddToJournal: 1
-  TextureOverlay: {r: 1, g: 1, b: 1, a: 1}
   TextureSize: 550
   Title: Bulletin Board
   Description: A board made of cork.
   InspectableTexture: {fileID: 2800000, guid: dc7e77c32415e374ea822df51a64ba8f, type: 3}
-  Inspector: {fileID: 0}
 --- !u!1001 &2075214602
 Prefab:
   m_ObjectHideFlags: 0
