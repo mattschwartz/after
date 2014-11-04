@@ -108,6 +108,21 @@ namespace After.Audio
             Destroy(gameObject, clip.length);
         }
 
+        public static void PlayClipAtPoint(AudioClip clip, Vector2 position, float pitchLow, float pitchHigh, float volume = 1.0f)
+        {
+            if (clip == null) { return; }
+
+            GameObject gameObject = new GameObject();
+            var source = gameObject.AddComponent<AudioSource>();
+
+            gameObject.transform.position = position;
+            gameObject.name = clip.name;
+            source.pitch = Random.Range(pitchLow, pitchHigh);
+            source.PlayOneShot(clip, volume);
+
+            Destroy(gameObject, clip.length);
+        }
+
         public static void PlayClipAtPoint(
             AudioClip clip, 
             float pitch, 
