@@ -3478,7 +3478,6 @@ Transform:
   m_Children:
   - {fileID: 1601522911}
   - {fileID: 1538208844}
-  - {fileID: 520467743}
   - {fileID: 618332388}
   - {fileID: 1890551971}
   - {fileID: 818104537}
@@ -4601,12 +4600,11 @@ MonoBehaviour:
   UnlockedState: {fileID: 1538208845}
   SpentState: {fileID: 0}
   TransitionScripts:
-  - {fileID: 520467744}
+  - {fileID: 818104538}
   - {fileID: 618332389}
   - {fileID: 1890551972}
   - {fileID: 618332389}
   - {fileID: 517203324}
-  - {fileID: 818104538}
 --- !u!61 &300403329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5510,7 +5508,7 @@ MonoBehaviour:
   TransitionScripts:
   - {fileID: 37619331}
   ItemName: Access Card
-  Description: I'm sorry I didn't listen to you, James. I don't think I would have
+  Description: I'm sorry I didn't listen to you, Felix. I don't think I would have
     wanted this.
 --- !u!50 &419237411
 Rigidbody2D:
@@ -6091,7 +6089,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 300403324}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!114 &517203324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6112,53 +6110,6 @@ MonoBehaviour:
   - {fileID: 2025917680}
   - {fileID: 668142919}
   - {fileID: 1240414420}
---- !u!1 &520467742
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 520467743}
-  - 114: {fileID: 520467744}
-  m_Layer: 0
-  m_Name: Soulsplosion Audio
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &520467743
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 520467742}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 300403324}
-  m_RootOrder: 2
---- !u!114 &520467744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 520467742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c9b5e7c2ca65d14dbf79459414db2ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestroyOnRead: 0
-  WaitSecondsBeforeRead: 0
-  From: 1
-  To: 2
-  StartVolume: 1
-  LoopVolume: 1
-  StartClip: {fileID: 8300000, guid: a3ac0a035bf7a401f97a229447e8649b, type: 3}
-  LoopClip: {fileID: 8300000, guid: 0b395caf199b14bda80a26b522f6617a, type: 3}
 --- !u!1 &547926204
 GameObject:
   m_ObjectHideFlags: 0
@@ -6365,7 +6316,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 300403324}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &618332389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6460,7 +6411,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: Description
-      value: I'm sorry I didn't listen to you, James. I don't think I would have wanted
+      value: I'm sorry I didn't listen to you, Felix. I don't think I would have wanted
         this.
       objectReference: {fileID: 0}
     - target: {fileID: 6100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
@@ -6898,7 +6849,7 @@ Transform:
   m_Children:
   - {fileID: 719622381}
   m_Father: {fileID: 300403324}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &674526955
 GameObject:
   m_ObjectHideFlags: 0
@@ -8585,7 +8536,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 300403324}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!114 &818104538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10984,7 +10935,7 @@ Transform:
   m_Children:
   - {fileID: 295699890}
   m_Father: {fileID: 300403324}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!95 &1240414420
 Animator:
   serializedVersion: 3
@@ -16866,7 +16817,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 300403324}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!114 &1890551972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18398,7 +18349,7 @@ Transform:
   m_Children:
   - {fileID: 1624531499}
   m_Father: {fileID: 300403324}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1 &2052403241
 GameObject:
   m_ObjectHideFlags: 0
