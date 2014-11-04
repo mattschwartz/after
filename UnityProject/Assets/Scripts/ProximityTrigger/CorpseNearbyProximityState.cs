@@ -8,7 +8,7 @@ using After.Audio;
 
 namespace After.ProximityTrigger
 {
-    public class SoulNearbyProximityState : ProximityState
+    public class CorpseNearbyProximityState : ProximityState
     {
         public float MaxVolume = 1;
         public GameObject Player;

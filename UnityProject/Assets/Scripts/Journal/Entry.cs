@@ -24,6 +24,8 @@ namespace After.Journal
             Image = image;
         }
 
+        #region Overrided methods
+
         public static bool operator ==(Entry lhs, Entry rhs)
         {
             return lhs.Name == rhs.Name
@@ -35,5 +37,17 @@ namespace After.Journal
             return lhs.Name != rhs.Name
                 || lhs.Updates.FirstOrDefault() != rhs.Updates.FirstOrDefault();
         }
+
+        public override bool Equals(object obj)
+        {
+            return this == obj;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        #endregion
     }
 }

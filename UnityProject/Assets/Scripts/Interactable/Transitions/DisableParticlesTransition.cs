@@ -3,7 +3,7 @@ using After.Interactable;
 using UnityEngine;
 using System.Collections;
 
-public class DisableSoulParticlesTransition : Transition
+public class DisableParticlesTransition : Transition
 {
 	public ParticleSystem ParticleSystem;
 
