@@ -1081,6 +1081,30 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
+--- !u!1101 &110178107
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110261619}
+  m_DstState: {fileID: 110248376}
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Pushing
+    m_EventTreshold: 0
+    m_ExitTime: 1
+  - m_ConditionMode: 4
+    m_ConditionEvent: Velocity
+    m_EventTreshold: .00999999978
+    m_ExitTime: 1
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
 --- !u!1101 &110178257
 Transition:
   serializedVersion: 2
@@ -1228,6 +1252,21 @@ State:
   - {fileID: 7400000, guid: 851b044d8a94843b9b256e014f636540, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: 408, y: -108, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110202792
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: LadderSideClimb
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: ca239edfe688318478c05783ae17403a, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: -193, y: 281, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -1426,6 +1465,21 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
+--- !u!1102 &110248376
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: PushingIdle
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 1f625ed13d37da2468eb92ddca279b57, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: -228, y: 216, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1102 &110261619
 State:
   m_ObjectHideFlags: 3
@@ -1438,6 +1492,21 @@ State:
   - {fileID: 7400000, guid: 6835879d996cd244a8ccdc243fc0c3d5, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: -228, y: 108, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110286082
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Memory
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 018f09d6f346eac48b98e561a833e572, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: -564, y: 204, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -1480,6 +1549,9 @@ StateMachine:
   - {fileID: 110261619}
   - {fileID: 110227041}
   - {fileID: 110209330}
+  - {fileID: 110286082}
+  - {fileID: 110248376}
+  - {fileID: 110202792}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
@@ -1555,6 +1627,7 @@ StateMachine:
       first: {fileID: 110261619}
       second:
       - {fileID: 110160054}
+      - {fileID: 110178107}
     data:
       first: {fileID: 110227041}
       second:
