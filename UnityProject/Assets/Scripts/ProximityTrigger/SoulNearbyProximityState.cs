@@ -10,9 +10,21 @@ namespace After.ProximityTrigger
 {
     public class SoulNearbyProximityState : ProximityState
     {
-        public Animator PlayerSoulGlow;
+        public float MaxVolume = 1;
+        public GameObject Player;
         public InteractableController SoulController;
         public AudioSource AmbienceLoop;
+        public Collider2D SelfCollider;
+
+        private float MaxDistance;
+
+        void Start()
+        {
+            Vector3 center = SelfCollider.bounds.center;
+            Vector3 max = SelfCollider.bounds.max;
+
+            MaxDistance = Math.Abs(Vector3.Distance(center, max));
+        }
 
         public override StateType? OnEnter(UnityEngine.Collider2D other)
         {
@@ -20,7 +32,6 @@ namespace After.ProximityTrigger
                 return To;
             }
 
-            PlayerSoulGlow.SetBool("Glowing", true);
             AmbienceLoop.Play();
             return null;
         }
@@ -28,26 +39,20 @@ namespace After.ProximityTrigger
         public override StateType? OnRemain(Collider2D other)
         {
             if (SoulController.CurrentState == StateType.Unlocked) {
-                PlayerSoulGlow.SetBool("Glowing", false);
                 AmbienceLoop.Stop();
                 return To;
             }
 
-            var distance = Vector2.Distance(transform.position, PlayerSoulGlow.transform.position);
-            var opacity = Mathf.Clamp(1 - (distance / 8.33f) + 0.17f, 0, 1);
-            var cl = PlayerSoulGlow.renderer.material.color;
-            cl.a = opacity;
-            PlayerSoulGlow.renderer.material.color = cl;
+            float distance = Vector2.Distance(transform.position, Player.transform.position);
+            float volume = (float)(1 - Math.Log(distance, MaxDistance));
 
-            var volume = Mathf.Clamp(0.3f - (distance / 8.33f), 0, 0.3f);
-            AmbienceLoop.volume = volume;
+            AmbienceLoop.volume = Mathf.Clamp(volume, 0, MaxVolume);
 
             return null;
         }
 
         public override StateType? OnExit(Collider2D other)
         {
-            PlayerSoulGlow.SetBool("Glowing", false);
             StartCoroutine(AudioManager.FadeMusic(AmbienceLoop));
             return null;
         }
