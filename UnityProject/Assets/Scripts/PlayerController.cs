@@ -227,11 +227,6 @@ public class PlayerController : MonoBehaviour
         SwingLastX = rigidbody2D.position.x;
     }
 
-    public void Lift(bool lifting)
-    {
-        Animator.SetBool("Lifiting", lifting);
-    }
-
     public void PlayFootstep()
     {
         // Get overlapping platform
@@ -247,6 +242,11 @@ public class PlayerController : MonoBehaviour
     {
         Animator.SetBool("LadderLift", false);
         Animator.SetBool("LadderDrop", false);
+    }
+
+    public void SetY(float y)
+    {
+        transform.position = new Vector2(transform.position.x, y);
     }
 
     #endregion

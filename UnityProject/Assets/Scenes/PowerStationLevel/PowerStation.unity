@@ -1000,6 +1000,9 @@ MonoBehaviour:
   PlayerCon: {fileID: 1087088099}
   StepClips: []
   Profile: 0
+  HandleY: -2.34110808
+  TopOffY: -1.10000002
+  TopOnY: -3
 --- !u!61 &708300413
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2090,6 +2093,9 @@ MonoBehaviour:
   PlayerCon: {fileID: 1087088099}
   StepClips: []
   Profile: 0
+  HandleY: 3.54964089
+  TopOffY: 4.5
+  TopOnY: 3
 --- !u!61 &970546943
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2887,7 +2893,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 1343960909
+  m_SortingLayerID: 1482764551
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 90c3ffd0d849e4624ab08209b1748c1b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3700,6 +3706,18 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: 1343960909
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: HandleY
+      value: -2.34110808
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: TopOnY
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: TopOffY
+      value: -1.10000002
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
   m_RootGameObject: {fileID: 708300409}
@@ -3941,6 +3959,18 @@ Prefab:
     - target: {fileID: 100002, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: HandleY
+      value: 3.54964089
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: TopOffY
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: TopOnY
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
@@ -4831,7 +4861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c194ef04a48474996b48dd5c2cc0ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LadCon: {fileID: 970546942}
+  LadCon: {fileID: 708300412}
 --- !u!61 &2056806652
 BoxCollider2D:
   m_ObjectHideFlags: 0
