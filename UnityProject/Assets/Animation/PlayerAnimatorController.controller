@@ -98,6 +98,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: Profile
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -633,6 +639,26 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
+--- !u!1101 &110134353
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 0}
+  m_DstState: {fileID: 110202792}
+  m_TransitionDuration: .100000001
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Profile
+    m_EventTreshold: 0
+    m_ExitTime: .899999976
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
 --- !u!1101 &110136636
 Transition:
   serializedVersion: 2
@@ -681,26 +707,6 @@ Transition:
     m_ConditionEvent: Swinging
     m_EventTreshold: 0
     m_ExitTime: .899999976
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
-  m_CanTransitionToSelf: 0
---- !u!1101 &110140947
-Transition:
-  serializedVersion: 2
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110209330}
-  m_DstState: {fileID: 110246278}
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
-    m_EventTreshold: 0
-    m_ExitTime: 1
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -857,6 +863,26 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
+--- !u!1101 &110156052
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110202792}
+  m_DstState: {fileID: 110246278}
+  m_TransitionDuration: .300000012
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Profile
+    m_EventTreshold: 0
+    m_ExitTime: .699999988
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
 --- !u!1101 &110159347
 Transition:
   serializedVersion: 2
@@ -950,7 +976,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: Profile
     m_EventTreshold: 0
     m_ExitTime: 1
   m_Atomic: 1
@@ -1010,7 +1036,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: Profile
     m_EventTreshold: 0
     m_ExitTime: 1
   m_Atomic: 1
@@ -1266,7 +1292,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: ca239edfe688318478c05783ae17403a, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: -193, y: 281, z: 0}
+  m_Position: {x: 84, y: 144, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -1296,7 +1322,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 03d0bfbba6bc4b74dbd08e7ea678c1a9, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: -540, y: -324, z: 0}
+  m_Position: {x: -528, y: 84, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -1556,6 +1582,16 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
+      first: {fileID: 110202792}
+      second:
+      - {fileID: 110156052}
+    data:
+      first: {fileID: 110248376}
+      second: []
+    data:
+      first: {fileID: 110286082}
+      second: []
+    data:
       first: {fileID: 0}
       second:
       - {fileID: 110122937}
@@ -1569,6 +1605,7 @@ StateMachine:
       - {fileID: 110143170}
       - {fileID: 110130133}
       - {fileID: 110174328}
+      - {fileID: 110134353}
     data:
       first: {fileID: 110246278}
       second:
@@ -1634,8 +1671,7 @@ StateMachine:
       - {fileID: 110116924}
     data:
       first: {fileID: 110209330}
-      second:
-      - {fileID: 110140947}
+      second: []
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -264, y: -96, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
