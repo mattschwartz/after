@@ -169,6 +169,10 @@ Prefab:
       propertyPath: NextLevel
       value: IntroLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 13100000, guid: daa942fb38e058a4f9de4f1dc9743abc, type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 81fa59138dd27d54f8ecb9a6f4fb0bd0, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: daa942fb38e058a4f9de4f1dc9743abc, type: 2}
   m_RootGameObject: {fileID: 1219387016}
@@ -199,7 +203,7 @@ GUITexture:
   m_PrefabInternal: {fileID: 1198837824}
   m_GameObject: {fileID: 1219387016}
   m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: 3afeb89f75b5ae9468ddf0294cb45c13, type: 3}
+  m_Texture: {fileID: 2800000, guid: 81fa59138dd27d54f8ecb9a6f4fb0bd0, type: 3}
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2

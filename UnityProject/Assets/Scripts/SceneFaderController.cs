@@ -6,6 +6,7 @@ public class SceneFaderController : MonoBehaviour
     public float FadeRate;
     public string NextLevel;
     public GUITexture guiTexture;
+    private Color OrigColor;
 
     // Use this for initialization
     void Start()
@@ -13,6 +14,7 @@ public class SceneFaderController : MonoBehaviour
         // Set the texture so that it is the the size of the screen and covers it.
         guiTexture.pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);
         guiTexture.enabled = true;
+        OrigColor = guiTexture.color;
         StartCoroutine(FadeIn());
     }
 
@@ -21,10 +23,11 @@ public class SceneFaderController : MonoBehaviour
         guiTexture.enabled = true;
         // Lerp the colour of the texture between itself and black.
         while (true) {
-            guiTexture.color = Color.Lerp(guiTexture.color, Color.black, FadeRate * Time.deltaTime);
+            guiTexture.color = Color.Lerp(guiTexture.color, OrigColor, FadeRate * Time.deltaTime);
             yield return null;
-            if (guiTexture.color.a >= .95) {
-                guiTexture.color = Color.black;
+            //despite how little sense it makes, the full opacity of the Laoding image is .5
+            if (guiTexture.color.a >= .49) {
+                guiTexture.color = OrigColor;
                 if (string.IsNullOrEmpty(NextLevel))
                     Application.Quit();
                 else

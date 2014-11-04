@@ -113,6 +113,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 13100000, guid: daa942fb38e058a4f9de4f1dc9743abc, type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 81fa59138dd27d54f8ecb9a6f4fb0bd0, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: daa942fb38e058a4f9de4f1dc9743abc, type: 2}
   m_RootGameObject: {fileID: 1958682524}
@@ -1589,6 +1593,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
   - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
   Profile: 0
+  HandleY: 0
+  TopOffY: 0
+  TopOnY: 0
 --- !u!61 &588061933
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7154,6 +7161,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
   - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
   Profile: 0
+  HandleY: 0
+  TopOffY: 0
+  TopOnY: 0
 --- !u!61 &1561370682
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7680,7 +7690,7 @@ GUITexture:
   m_PrefabInternal: {fileID: 7419905}
   m_GameObject: {fileID: 1958682524}
   m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: 3afeb89f75b5ae9468ddf0294cb45c13, type: 3}
+  m_Texture: {fileID: 2800000, guid: 81fa59138dd27d54f8ecb9a6f4fb0bd0, type: 3}
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
