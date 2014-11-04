@@ -12,6 +12,7 @@ public class OverlayController : MonoBehaviour
     public SpriteRenderer ScanLines;
     public SpriteRenderer GlitchInBackground;
     public AudioClip ToggleClip;
+    public AudioSource IdleSource;
 
     private bool CameraOn = false;
     private float ToggleDelay = 8;
@@ -60,6 +61,7 @@ public class OverlayController : MonoBehaviour
         } else {
             DisableSprites();
             AudioManager.PlayClipAtPoint(ToggleClip, transform.position, 0.8f, 1);
+            IdleSource.Stop();
         }
 
         ToggleDelay = Random.Range(8, 15);
@@ -76,6 +78,8 @@ public class OverlayController : MonoBehaviour
 
     private IEnumerator TurnCameraOn()
     {
+        IdleSource.Play();
+
         Blur.enabled = true;
         yield return new WaitForSeconds(0.05f);
         Blur.enabled = false;
