@@ -664,9 +664,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StepSounds:
-  - {fileID: 8300000, guid: ce9993a47b4d743ca8f2898dfc65dca6, type: 3}
-  - {fileID: 8300000, guid: 3082198931a5745e08145703bb8d85aa, type: 3}
-  - {fileID: 8300000, guid: 59a8c1cff634748ffa695b719c77f91a, type: 3}
+  - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
+  - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
+  - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
 --- !u!1 &356488093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,9 +1366,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StepSounds:
-  - {fileID: 8300000, guid: ce9993a47b4d743ca8f2898dfc65dca6, type: 3}
-  - {fileID: 8300000, guid: 3082198931a5745e08145703bb8d85aa, type: 3}
-  - {fileID: 8300000, guid: 59a8c1cff634748ffa695b719c77f91a, type: 3}
+  - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
+  - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
+  - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
 --- !u!1 &554192565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,7 +1584,10 @@ MonoBehaviour:
   FloorGates:
   - {fileID: 341952464}
   PlayerCon: {fileID: 366451559}
-  StepClips: []
+  StepClips:
+  - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
+  - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
+  - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
   Profile: 0
 --- !u!61 &588061933
 BoxCollider2D:
@@ -2930,9 +2933,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StepSounds:
-  - {fileID: 8300000, guid: ce9993a47b4d743ca8f2898dfc65dca6, type: 3}
-  - {fileID: 8300000, guid: 3082198931a5745e08145703bb8d85aa, type: 3}
-  - {fileID: 8300000, guid: 59a8c1cff634748ffa695b719c77f91a, type: 3}
+  - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
+  - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
+  - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
 --- !u!1 &653875717
 GameObject:
   m_ObjectHideFlags: 0
@@ -3193,6 +3196,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 279175872}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: StepClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_LocalPosition.x
       value: 22.0488758
@@ -3290,6 +3297,18 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: StepClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: StepClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: StepClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
   m_RootGameObject: {fileID: 588061929}
@@ -4915,6 +4934,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 279175872}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: StepClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_LocalPosition.x
       value: 20.2400894
@@ -5012,6 +5035,18 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: StepClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: StepClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: StepClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
   m_RootGameObject: {fileID: 1561370678}
@@ -7114,7 +7149,10 @@ MonoBehaviour:
   FloorGates:
   - {fileID: 636308243}
   PlayerCon: {fileID: 366451559}
-  StepClips: []
+  StepClips:
+  - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
+  - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
+  - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
   Profile: 0
 --- !u!61 &1561370682
 BoxCollider2D:
@@ -7599,9 +7637,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StepSounds:
-  - {fileID: 8300000, guid: ce9993a47b4d743ca8f2898dfc65dca6, type: 3}
-  - {fileID: 8300000, guid: 3082198931a5745e08145703bb8d85aa, type: 3}
-  - {fileID: 8300000, guid: 59a8c1cff634748ffa695b719c77f91a, type: 3}
+  - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
+  - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
+  - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
 --- !u!1 &1958682524
 GameObject:
   m_ObjectHideFlags: 0
@@ -8182,7 +8220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Volume: 1
   WatchForFallingRock: {fileID: 1414369497}
-  RockLandClip: {fileID: 8300000, guid: 7ca67dff28026624da03d7c421141e86, type: 3}
+  RockLandClip: {fileID: 8300000, guid: 19d320709b18c41f89cca34589708f6c, type: 3}
 --- !u!61 &2097647888
 BoxCollider2D:
   m_ObjectHideFlags: 0
