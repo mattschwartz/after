@@ -6783,6 +6783,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 260634086}
   m_RootOrder: 23
+--- !u!1 &663071454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 663071455}
+  - 114: {fileID: 663071456}
+  m_Layer: 8
+  m_Name: Pry rock animation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &663071455
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 663071454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1816749790}
+  m_RootOrder: 4
+--- !u!114 &663071456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 663071454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4f9fa0c762169468236e20694b706e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 1
+  To: 2
+  LockDuration: 1.20000005
+  Player: {fileID: 194404990}
+  PlayerAnimator: {fileID: 194404997}
+  xOffset: 1
+  Trigger: OpenDesk
 --- !u!1 &668142918
 GameObject:
   m_ObjectHideFlags: 0
@@ -16096,7 +16144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsBeforeRead: 0
+  WaitSecondsBeforeRead: 1.20000005
   From: 1
   To: 2
   RockBody: {fileID: 1816749794}
@@ -16286,6 +16334,7 @@ Transform:
   - {fileID: 2093770816}
   - {fileID: 824021403}
   - {fileID: 1796371401}
+  - {fileID: 663071455}
   m_Father: {fileID: 260634086}
   m_RootOrder: 12
 --- !u!212 &1816749791
@@ -16370,6 +16419,7 @@ MonoBehaviour:
   TransitionScripts:
   - {fileID: 824021404}
   - {fileID: 1796371402}
+  - {fileID: 663071456}
 --- !u!61 &1816749796
 BoxCollider2D:
   m_ObjectHideFlags: 0
