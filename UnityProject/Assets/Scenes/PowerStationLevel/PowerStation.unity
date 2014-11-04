@@ -1098,7 +1098,10 @@ MonoBehaviour:
   FloorGates:
   - {fileID: 2042305761}
   PlayerCon: {fileID: 1087088099}
-  StepClips: []
+  StepClips:
+  - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
+  - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
+  - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
   Profile: 0
   HandleY: -2.34110808
   TopOffY: -1.10000002
@@ -2191,7 +2194,10 @@ MonoBehaviour:
   FloorGates:
   - {fileID: 1056199117}
   PlayerCon: {fileID: 1087088099}
-  StepClips: []
+  StepClips:
+  - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
+  - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
+  - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
   Profile: 0
   HandleY: 3.54964089
   TopOffY: 4.5
@@ -3734,6 +3740,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1835881764}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: StepClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_LocalPosition.x
       value: .32084024
@@ -3818,6 +3828,18 @@ Prefab:
       propertyPath: TopOffY
       value: -1.10000002
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: StepClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: StepClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: StepClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
   m_RootGameObject: {fileID: 708300409}
@@ -3980,6 +4002,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1835881764}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: StepClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_LocalPosition.x
       value: -15.3843155
@@ -4072,6 +4098,18 @@ Prefab:
       propertyPath: TopOnY
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: StepClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: StepClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
+    - target: {fileID: 11400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: StepClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
   m_RootGameObject: {fileID: 970546939}
