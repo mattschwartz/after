@@ -18726,8 +18726,8 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 1
   To: 2
-  Volume: 1
-  Clip: {fileID: 0}
+  Volume: .5
+  Clip: {fileID: 8300000, guid: f519b641802c644feae5505ba31f1021, type: 3}
 --- !u!1 &2004789011
 GameObject:
   m_ObjectHideFlags: 0
