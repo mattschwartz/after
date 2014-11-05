@@ -630,7 +630,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyItemOnUse: 1
-  HeldItem: {fileID: 1456273195}
   RequiredItem: {fileID: 1614624034}
 --- !u!1 &55897107
 GameObject:
@@ -1206,7 +1205,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyItemOnUse: 0
-  HeldItem: {fileID: 1456273195}
   RequiredItem: {fileID: 1305626017}
 --- !u!1 &134424515
 GameObject:
@@ -6202,7 +6200,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyItemOnUse: 1
-  HeldItem: {fileID: 0}
   RequiredItem: {fileID: 0}
 --- !u!1 &584261982
 GameObject:
@@ -6990,7 +6987,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyItemOnUse: 1
-  HeldItem: {fileID: 1456273195}
   RequiredItem: {fileID: 653709347}
 --- !u!1 &682843631
 GameObject:
@@ -8561,7 +8557,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyItemOnUse: 1
-  HeldItem: {fileID: 1456273195}
   RequiredItem: {fileID: 1305626017}
   Player: {fileID: 194404990}
 --- !u!1 &800700950
@@ -9873,7 +9868,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyItemOnUse: 1
-  HeldItem: {fileID: 0}
   RequiredItem: {fileID: 0}
 --- !u!4 &973346812
 Transform:
@@ -10702,7 +10696,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyItemOnUse: 1
-  HeldItem: {fileID: 1456273195}
   RequiredItem: {fileID: 419237405}
 --- !u!1 &1168216543
 GameObject:

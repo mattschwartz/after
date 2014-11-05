@@ -1095,6 +1095,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 414548066}
   - 212: {fileID: 414548065}
+  - 95: {fileID: 414548067}
   m_Layer: 0
   m_Name: Control Console
   m_TagString: Untagged
@@ -1136,6 +1137,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1352088840}
   m_RootOrder: 2
+--- !u!95 &414548067
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 414548064}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7837f95dbe0a12545ae8d350563f626d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &424678420
 GameObject:
   m_ObjectHideFlags: 0
