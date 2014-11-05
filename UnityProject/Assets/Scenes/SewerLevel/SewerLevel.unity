@@ -1605,7 +1605,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .75, y: .370000005}
+  m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!1 &163337025
 GameObject:
@@ -5538,7 +5538,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 1.27999997, y: 1.27999997}
+  m_Size: {x: 1.27999997, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!114 &419237410
 MonoBehaviour:
@@ -6743,7 +6743,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 1.27999997, y: 1.27999997}
+  m_Size: {x: 1.27999997, y: 1}
   m_Center: {x: 0, y: 9.53674316e-07}
 --- !u!212 &653709353
 SpriteRenderer:
@@ -11680,7 +11680,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 1.27999997, y: 1.27999997}
+  m_Size: {x: 1.27999997, y: 1}
   m_Center: {x: 0, y: -4.76837158e-07}
 --- !u!212 &1305626022
 SpriteRenderer:
@@ -16147,7 +16147,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .75, y: .370000005}
+  m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!4 &1698336327
 Transform:
