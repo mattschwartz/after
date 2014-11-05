@@ -9,22 +9,21 @@ public class PlayerController : MonoBehaviour
 {
     #region Members
 
+    public float Speed = 7f;
+    public float JumpForce = 1225f;
     public KeyCode InteractButton = KeyCode.E;
     public KeyCode InspectButton = KeyCode.X;
     public KeyCode JumpButton = KeyCode.Space;
     public Transform GroundCheck;
     public LayerMask GroundLayerMask;
-    public HeldItemController Backpack;
 
-    //Variable multiplier for debugging the rope swing animation
+    // Variable multiplier for debugging the rope swing animation
     public float SwingVelMult = 10f;
 
     private bool PlayerLocked = false;
     private bool Grounded = false;
     private bool FacingRight = true;
     private bool Swinging = false;
-    private float Speed = 7f;
-    private float JumpForce = 1225f;
     private float GroundRadius = 0.2f;
     private float SwingLastX = 0f;
     private Animator Animator;
@@ -61,7 +60,7 @@ public class PlayerController : MonoBehaviour
             Interact();
         }
 
-        if (Backpack && Input.GetKeyDown(InspectButton)) {
+        if (Input.GetKeyDown(InspectButton)) {
             InspectItem();
         }
     }
@@ -137,9 +136,10 @@ public class PlayerController : MonoBehaviour
 
     private void InspectItem()
     {
-        if (Backpack.ItemHeld == null) { return; }
-        Texture texture = Backpack.ItemHeld.GetComponent<SpriteRenderer>().sprite.texture;
-        GrabbableItemController grabbableItem = Backpack.ItemHeld.GetComponent<GrabbableItemController>();
+        if (BackpackController.Instance.ItemHeld == null) { return; }
+
+        Texture texture = BackpackController.Instance.ItemHeld.GetComponent<SpriteRenderer>().sprite.texture;
+        GrabbableItemController grabbableItem = BackpackController.Instance.ItemHeld.GetComponent<GrabbableItemController>();
         string name = grabbableItem.ItemName;
         string description = grabbableItem.Description;
 
@@ -170,12 +170,12 @@ public class PlayerController : MonoBehaviour
     public void PickupItem(GameObject item)
     {
         Animator.SetTrigger("PickupItemLow");
-        Backpack.SetItemHeld(item);
+        BackpackController.Instance.SetItemHeld(item);
     }
 
     public void DropItem()
     {
-        Backpack.DropItem();
+        BackpackController.Instance.DropItem();
     }
 
     //the variable "x" serves as the ladder's horizontal position in the on=true case

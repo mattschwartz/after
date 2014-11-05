@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerScalerController : MonoBehaviour
 {
+    public float Scale = 1.5f;
     private Vector2 OriginalTransform;
 
     void OnTriggerEnter2D(Collider2D other)
@@ -11,7 +12,7 @@ public class PlayerScalerController : MonoBehaviour
             var scale = other.transform.localScale;
 
             OriginalTransform = new Vector2(Mathf.Abs(scale.x), scale.y);
-            other.transform.localScale = new Vector2(1.5f * Mathf.Sign(scale.x), 1.5f);
+            other.transform.localScale = new Vector2(Scale * Mathf.Sign(scale.x), Scale);
         }
     }
 

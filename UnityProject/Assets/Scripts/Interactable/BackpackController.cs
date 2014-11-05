@@ -6,7 +6,7 @@ using After.Entities;
 
 namespace After.Interactable
 {
-    public class HeldItemController : MonoBehaviour
+    public class BackpackController : MonoBehaviour
     {
         #region Members
 
@@ -20,9 +20,25 @@ namespace After.Interactable
         private Rect BackpackPosition;
         private Rect ItemPosition;
 
+        public static BackpackController Instance { get; private set; }
+
         #endregion
 
         void Start()
+        {
+            if (Instance == null) {
+                Instance = this;
+                Instance.Initialize();
+                DontDestroyOnLoad(this);
+            } else if (this != Instance) {
+                Debug.Log("Another instance of " + this.GetType().Name
+                    + " exists (" + Instance + ") and is not this! "
+                    + "( " + this + ") Destroying this.");
+                Destroy(this.gameObject);
+            }
+        }
+
+        private void Initialize()
         {
             var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0, 0, 0));
             BackpackPosition = new Rect(camPos.x, camPos.y, BackpackSize, BackpackSize);
@@ -32,6 +48,11 @@ namespace After.Interactable
         {
             if (SceneHandler.GUILock) { return; }
 
+            Instance.StaticOnGui();
+        }
+
+        private void StaticOnGui()
+        {
             if (ItemHeld != null) {
                 GUI.DrawTexture(BackpackPosition, BackpackTextureFull);
                 GUI.DrawTexture(ItemPosition, ItemHeldTexture);

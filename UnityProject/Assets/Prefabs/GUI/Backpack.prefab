@@ -36,7 +36,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 680bd19f594b5dd42b654c5b50bae125, type: 3}
+  m_Script: {fileID: 11500000, guid: 0dffc58ff28cb1b42909382eff020350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BackpackTextureEmpty: {fileID: 2800000, guid: f9f76162fefc98d4cab4b78bec28cc93,

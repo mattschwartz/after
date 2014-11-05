@@ -26,18 +26,4 @@ public class SewerLevelAnimationController : MonoBehaviour
 		transform.position = new Vector2(position.x, transform.position.y);
 		Animator.SetTrigger("OpenDesk");
 	}
-
-	#region Temporary Message Methods
-
-    public void ShowHeldItem()
-    {
-        PlayerController.Backpack.SendMessage("ShowItemHeld");
-    }
-
-    public void ShowDroppedItem()
-    {
-        PlayerController.Backpack.SendMessage("ShowItemDropped");
-    }
-
-    #endregion
 }
