@@ -111,7 +111,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
       propertyPath: Player
@@ -1417,7 +1417,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c47b4d550baedb848a5a07a607901a65, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c47b4d550baedb848a5a07a607901a65, type: 2}
@@ -1550,7 +1550,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 130942ee731155042ab679f46cdec904, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 130942ee731155042ab679f46cdec904, type: 2}
@@ -2900,7 +2900,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: daa942fb38e058a4f9de4f1dc9743abc, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: daa942fb38e058a4f9de4f1dc9743abc, type: 2}
       propertyPath: NextLevel
@@ -4206,48 +4206,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 896387184}
   m_RootOrder: 6
---- !u!1 &1094104499
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1094104501}
-  - 114: {fileID: 1094104500}
-  m_Layer: 0
-  m_Name: Persistent Background Music
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1094104500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1094104499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 648f9568e79e84db9ab51eec2ddac39d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PostLoadFadeDuration: 5
-  Source: {fileID: 1586175351}
---- !u!4 &1094104501
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1094104499}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.38926983, y: -3.78940487, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1586175350}
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
 --- !u!1 &1398798788
 GameObject:
   m_ObjectHideFlags: 0
@@ -4374,7 +4332,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5821222fc2d59e64b9a7c38376867198, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 5821222fc2d59e64b9a7c38376867198, type: 2}
       propertyPath: FollowTarget
@@ -5189,7 +5147,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 567345ba38ced4395ac37353fa543c55, type: 2}
@@ -5205,6 +5163,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1586175350}
   - 82: {fileID: 1586175351}
+  - 114: {fileID: 1586175352}
   m_Layer: 0
   m_Name: Background Music
   m_TagString: Untagged
@@ -5219,11 +5178,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1586175349}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.02623367, y: -12.4403086, z: -.00805664062}
+  m_LocalPosition: {x: 2.36303616, y: -16.2297134, z: -.00805664062}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1094104501}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
 --- !u!82 &1586175351
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5282,6 +5241,19 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &1586175352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1586175349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648f9568e79e84db9ab51eec2ddac39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PostLoadFadeDuration: 5
+  Source: {fileID: 1586175351}
 --- !u!1 &1589868293
 GameObject:
   m_ObjectHideFlags: 0

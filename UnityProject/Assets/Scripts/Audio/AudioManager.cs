@@ -29,9 +29,9 @@ namespace After.Audio
 
             DontDestroyOnLoad(Instance.gameObject);
 
-            foreach (var pac in Instance.PersistentAudioClips) {
-                DontDestroyOnLoad(pac.gameObject);
-            }
+            Instance.PersistentAudioClips
+                .FindAll(t => t != null)
+                .ForEach(t => DontDestroyOnLoad(t.gameObject));
         }
 
         /// <summary>
