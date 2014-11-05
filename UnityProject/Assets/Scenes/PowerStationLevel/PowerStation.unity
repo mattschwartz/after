@@ -599,8 +599,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 1.41634881, y: 4.52295828}
-  m_Center: {x: .208174616, y: -.192162097}
+  m_Size: {x: 1.08239913, y: 4.52295828}
+  m_Center: {x: .375144958, y: -.192162097}
 --- !u!114 &173839250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1432,9 +1432,9 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 0
   To: 2
-  ExitNexus: {fileID: 0}
-  Player: {fileID: 0}
-  NewSpriteBounds: {fileID: 0}
+  ExitNexus: {fileID: 173839247}
+  Player: {fileID: 1087088095}
+  NewSpriteBounds: {fileID: 1835881763}
 --- !u!1 &470373693
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,6 +1595,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 509604553}
   - 61: {fileID: 509604554}
+  - 114: {fileID: 509604555}
   m_Layer: 8
   m_Name: Floor
   m_TagString: Untagged
@@ -1625,6 +1626,22 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 15.5900002, y: 1}
   m_Center: {x: 0, y: 0}
+--- !u!114 &509604555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 509604552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StepSounds:
+  - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
+  - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
+  - {fileID: 8300000, guid: 145898131f0fb49928f9935e8a665431, type: 3}
+  - {fileID: 8300000, guid: e862af059df554c2093cebc016d0bb2f, type: 3}
 --- !u!1 &537101877
 GameObject:
   m_ObjectHideFlags: 0
@@ -2999,8 +3016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyItemOnUse: 1
-  HeldItem: {fileID: 0}
-  RequiredItem: {fileID: 0}
+  RequiredItem: {fileID: 1743393593}
 --- !u!4 &849859211
 Transform:
   m_ObjectHideFlags: 0

@@ -12,7 +12,6 @@ namespace After.Interactable.Conditions
         #region Members
 
         public bool DestroyItemOnUse = true;
-        public GameObject HeldItem;
         public GameObject RequiredItem;
 
         #endregion
@@ -29,7 +28,7 @@ namespace After.Interactable.Conditions
 
             // Use the item, possibly destroying it
             if (playerHasItem) {
-                HeldItem.SendMessage("DropItem");
+                BackpackController.Instance.DropItem();
 
                 if (DestroyItemOnUse) {
                     SceneHandler.PlayerItemHeld = string.Empty;
