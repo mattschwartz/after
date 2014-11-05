@@ -23,3 +23,5 @@ EditorBuildSettings:
     path: Assets/Scenes/ElevatorToSkyscraperLevel/ElevatorToSkyscraperLevel.unity
   - enabled: 1
     path: Assets/Scenes/SkyscraperLevel/Skyscraper.unity
+  - enabled: 1
+    path: Assets/Scenes/EndScene/EndScene.unity
