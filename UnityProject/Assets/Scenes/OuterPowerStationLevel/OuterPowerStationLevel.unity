@@ -6115,7 +6115,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyItemOnUse: 1
-  HeldItem: {fileID: 1959907501}
   RequiredItem: {fileID: 416857258}
 --- !u!1 &1154167438
 GameObject:
@@ -6633,6 +6632,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1271849889}
   - 82: {fileID: 1271849888}
+  - 114: {fileID: 1271849890}
   m_Layer: 0
   m_Name: Ambience Loop
   m_TagString: Untagged
@@ -6710,6 +6710,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
+--- !u!114 &1271849890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1271849887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648f9568e79e84db9ab51eec2ddac39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PostLoadFadeDuration: 5
+  Source: {fileID: 1271849888}
 --- !u!1001 &1293902455
 Prefab:
   m_ObjectHideFlags: 0
@@ -7096,12 +7109,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1348085862}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dccc8b5dbc8064e55b71dcd70370b93c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b06df08b948ff447b730f5a7ad8e7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Volume: 1
-  WatchForFallingRock: {fileID: 1414369497}
-  RockLandClip: {fileID: 8300000, guid: 793762c49b6791f4896315d96722d51c, type: 3}
+  WatchFor: {fileID: 1414369497}
+  AudioClips:
+  - {fileID: 8300000, guid: 793762c49b6791f4896315d96722d51c, type: 3}
 --- !u!61 &1348085865
 BoxCollider2D:
   m_ObjectHideFlags: 0

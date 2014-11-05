@@ -26,18 +26,18 @@ namespace After.Audio
 		void OnLevelWasLoaded(int level)
 		{
 			SceneUnloaded = true;
-            DurationTracker = 0;
+            DurationTracker = PostLoadFadeDuration;
 		}
 
 		void Update()
 		{
 			if (!SceneUnloaded) { return; }
 
-			float f = 1 - (DurationTracker / PostLoadFadeDuration);
+			float f = (DurationTracker / PostLoadFadeDuration);
 			Source.volume = Mathf.Lerp(0, 1, f);
-			DurationTracker += Time.deltaTime;
+			DurationTracker -= Time.deltaTime;
 
-			if (DurationTracker >= PostLoadFadeDuration) {
+			if (DurationTracker < 0) {
 				Destroy(this.gameObject);
 			}
 		}
