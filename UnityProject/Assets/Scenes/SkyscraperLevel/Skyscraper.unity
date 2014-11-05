@@ -985,7 +985,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 5821222fc2d59e64b9a7c38376867198, type: 2}
       propertyPath: SpriteBounds
       value: 
-      objectReference: {fileID: 633188340}
+      objectReference: {fileID: 592899023}
     - target: {fileID: 11400000, guid: 5821222fc2d59e64b9a7c38376867198, type: 2}
       propertyPath: FollowTarget
       value: 
@@ -1269,7 +1269,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: f33adb5ca95a4284999610c9dc73dad7, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 594071723}
-  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
+  m_LocalRotation: {x: 0, y: 0, z: .707106888, w: .707106769}
   m_LocalPosition: {x: 7.78317261, y: -3.80877852, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1873,7 +1873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StaticCamera: 0
   FollowTarget: {fileID: 1193481749}
-  SpriteBounds: {fileID: 633188340}
+  SpriteBounds: {fileID: 592899023}
   CameraFits: 0
   DampTime: .150000006
 --- !u!81 &1001816043
@@ -3355,7 +3355,7 @@ GameObject:
   - 4: {fileID: 1757145919}
   - 212: {fileID: 1757145918}
   m_Layer: 0
-  m_Name: Skyscraper Background
+  m_Name: Skyscraper Bkg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
