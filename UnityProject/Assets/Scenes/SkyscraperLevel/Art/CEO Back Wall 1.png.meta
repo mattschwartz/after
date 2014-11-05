@@ -1,7 +1,8 @@
 fileFormatVersion: 2
-guid: 162b8f729608a4c4bb08b92118121af9
+guid: 6e53d55c5815f4f118bf10951447f02b
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: CEO Back Wall 1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
