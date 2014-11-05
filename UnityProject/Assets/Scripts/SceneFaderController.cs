@@ -12,7 +12,7 @@ public class SceneFaderController : MonoBehaviour
     void Start()
     {
         // Set the texture so that it is the the size of the screen and covers it.
-        guiTexture.pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);
+        //guiTexture.pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);
         guiTexture.enabled = true;
         OrigColor = guiTexture.color;
         StartCoroutine(FadeIn());
