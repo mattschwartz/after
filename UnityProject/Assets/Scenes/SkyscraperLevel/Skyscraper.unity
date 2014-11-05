@@ -1257,7 +1257,7 @@ GameObject:
   - 61: {fileID: 594071726}
   - 212: {fileID: 594071725}
   m_Layer: 0
-  m_Name: Interactable
+  m_Name: CEO bossman
   m_TagString: Untagged
   m_Icon: {fileID: -1500306622, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1269,9 +1269,9 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: f33adb5ca95a4284999610c9dc73dad7, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 594071723}
-  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
-  m_LocalPosition: {x: 7.78317261, y: -3.80877852, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.36039734, y: -6.2074461, z: 0}
+  m_LocalScale: {x: .426550239, y: .426550657, z: 1}
   m_Children:
   - {fileID: 1358362185}
   - {fileID: 1036405423}
