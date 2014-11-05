@@ -175,7 +175,7 @@ GameObject:
   - 212: {fileID: 143666429}
   - 61: {fileID: 143666428}
   - 50: {fileID: 143666427}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Single Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
