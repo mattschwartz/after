@@ -76,9 +76,9 @@ public class LadderController : MonoBehaviour {
 
             float xForce;
             if (Input.GetKeyDown(KeyCode.D)) {
-                xForce = 3000f;
+                xForce = 5000f;
             } else {
-                xForce = -3000f;
+                xForce = -5000f;
             }
             
             PlayerCon.Climb(false, false, false, false, xForce);
