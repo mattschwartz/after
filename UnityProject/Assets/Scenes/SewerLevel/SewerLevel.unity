@@ -3484,6 +3484,7 @@ Transform:
   - {fileID: 1890551971}
   - {fileID: 818104537}
   - {fileID: 517203323}
+  - {fileID: 1991771674}
   - {fileID: 2025917682}
   - {fileID: 668142921}
   - {fileID: 1240414419}
@@ -4607,6 +4608,7 @@ MonoBehaviour:
   - {fileID: 1890551972}
   - {fileID: 618332389}
   - {fileID: 517203324}
+  - {fileID: 1991771675}
 --- !u!61 &300403329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6946,7 +6948,7 @@ Transform:
   m_Children:
   - {fileID: 719622381}
   m_Father: {fileID: 300403324}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &674526955
 GameObject:
   m_ObjectHideFlags: 0
@@ -11199,7 +11201,7 @@ Transform:
   m_Children:
   - {fileID: 295699890}
   m_Father: {fileID: 300403324}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!95 &1240414420
 Animator:
   serializedVersion: 3
@@ -18681,6 +18683,51 @@ MonoBehaviour:
   From: 1
   To: 1
   Observations: The generator won't start.
+--- !u!1 &1991771673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1991771674}
+  - 114: {fileID: 1991771675}
+  m_Layer: 0
+  m_Name: Memory sound trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1991771674
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1991771673}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 300403324}
+  m_RootOrder: 6
+--- !u!114 &1991771675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1991771673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 1
+  To: 2
+  Volume: 1
+  Clip: {fileID: 0}
 --- !u!1 &2004789011
 GameObject:
   m_ObjectHideFlags: 0
@@ -18843,7 +18890,7 @@ Transform:
   m_Children:
   - {fileID: 1624531499}
   m_Father: {fileID: 300403324}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &2052403241
 GameObject:
   m_ObjectHideFlags: 0
