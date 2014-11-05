@@ -31,7 +31,10 @@ namespace After.Audio
 
             Instance.PersistentAudioClips
                 .FindAll(t => t != null)
-                .ForEach(t => DontDestroyOnLoad(t.gameObject));
+                .ForEach(t => {
+                    DontDestroyOnLoad(t.gameObject);
+                    t.FadeOut();
+                });
         }
 
         /// <summary>

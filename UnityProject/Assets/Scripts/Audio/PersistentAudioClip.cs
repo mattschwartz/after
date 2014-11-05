@@ -23,11 +23,11 @@ namespace After.Audio
 			AudioManager.Instance.AddPersistentAudioClip(this);
 		}
 
-		void OnLevelWasLoaded(int level)
-		{
-			SceneUnloaded = true;
+        public void FadeOut()
+        {
+            SceneUnloaded = true;
             DurationTracker = PostLoadFadeDuration;
-		}
+        }
 
 		void Update()
 		{
