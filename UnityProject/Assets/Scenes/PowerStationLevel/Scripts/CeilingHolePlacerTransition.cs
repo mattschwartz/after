@@ -12,11 +12,6 @@ public class CeilingHolePlacerTransition : ProximityTransition
 
     #endregion
 
-    void Start()
-    {
-        CeilingHole.enabled = false;
-    }
-
     public override void Read(StateType fromState, StateType toState)
     {
         CeilingHole.enabled = true;
