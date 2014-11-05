@@ -175,6 +175,7 @@ GameObject:
   - 212: {fileID: 143666429}
   - 61: {fileID: 143666428}
   - 50: {fileID: 143666427}
+  - 114: {fileID: 143666430}
   m_Layer: 8
   m_Name: Single Chair
   m_TagString: Untagged
@@ -242,6 +243,17 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7987b6441e6794d54bbb98de9046a32b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &143666430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 143666425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6025614b6bcf44d4893f58054099ef04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &233327069
 GameObject:
   m_ObjectHideFlags: 0
@@ -2959,7 +2971,7 @@ GameObject:
   - 4: {fileID: 1704786875}
   - 212: {fileID: 1704786874}
   - 61: {fileID: 1704786876}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CEO Desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
