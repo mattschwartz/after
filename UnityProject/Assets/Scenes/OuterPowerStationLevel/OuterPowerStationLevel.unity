@@ -1592,6 +1592,7 @@ GameObject:
   - 61: {fileID: 588061933}
   - 114: {fileID: 588061932}
   - 212: {fileID: 588061931}
+  - 114: {fileID: 588061934}
   m_Layer: 0
   m_Name: Ladder_bottom
   m_TagString: Untagged
@@ -1671,6 +1672,21 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .419999987, y: 2.25999999}
   m_Center: {x: 0, y: 0}
+--- !u!114 &588061934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 588061929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StepSounds:
+  - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
+  - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
+  - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
 --- !u!1 &593749290
 GameObject:
   m_ObjectHideFlags: 0
@@ -7359,6 +7375,7 @@ GameObject:
   - 61: {fileID: 1561370682}
   - 114: {fileID: 1561370681}
   - 212: {fileID: 1561370680}
+  - 114: {fileID: 1561370683}
   m_Layer: 0
   m_Name: Ladder_top
   m_TagString: Untagged
@@ -7438,6 +7455,21 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .419999987, y: 2.25999999}
   m_Center: {x: 0, y: 0}
+--- !u!114 &1561370683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1561370678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StepSounds:
+  - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
+  - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
+  - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
 --- !u!1 &1588682446
 GameObject:
   m_ObjectHideFlags: 0
