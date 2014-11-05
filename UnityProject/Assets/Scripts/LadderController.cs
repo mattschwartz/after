@@ -51,7 +51,8 @@ public class LadderController : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         //Allows the player to mount the ladder simply by moving up or down while within the ladder's box collider
-        if (Entered && !Active && ((Input.GetKeyDown(KeyCode.W) && !Top) || Input.GetKeyDown(KeyCode.S) || Mathf.Abs(PlayerObserver.GetPlayerVel().y) > 20f))
+        //After determining issue, put " || Mathf.Abs(PlayerObserver.GetPlayerVel().y) > 20f" back at end of if-statement
+        if (Entered && !Active && ((Input.GetKeyDown(KeyCode.W) && !Top) || Input.GetKeyDown(KeyCode.S)))
         {
             foreach (BoxCollider2D gate in FloorGates)
             {
