@@ -163,6 +163,76 @@ MonoBehaviour:
   To: 2
   Volume: 1
   Clip: {fileID: 8300000, guid: 708d9e97b416b4e96ad46f1949ad716b, type: 3}
+--- !u!1001 &59657858
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1352088840}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4.59144878
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5.75001907
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_Name
+      value: This Boulder, I mean srsly
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a630e27aae6d74c0e8883c06b230177e,
+        type: 3}
+    - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: ItemName
+      value: Rubble
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: Description
+      value: Some rubble that fell from the ceiling when I came in like a wrecking
+        ball. Might be able to use it to get out of here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_FixedAngle
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_RootGameObject: {fileID: 1743393593}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &116771284
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,6 +273,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!1 &117331672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 117331673}
+  - 114: {fileID: 117331674}
+  - 61: {fileID: 117331675}
+  m_Layer: 0
+  m_Name: Spawn Rubble
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &117331673
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 117331672}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.387820959, y: 2.31799889, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1352088840}
+  m_RootOrder: 12
+--- !u!114 &117331674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 117331672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b34af84bb988774c862f738917d735f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rubble: {fileID: 1743393595}
+--- !u!61 &117331675
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 117331672}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 15.6000004, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &126104965
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,6 +602,46 @@ MonoBehaviour:
   - {fileID: 2067794217}
   - {fileID: 1890855513}
   - {fileID: 440847413}
+--- !u!1 &178747313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_PrefabInternal: {fileID: 59657858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 178747314}
+  - 61: {fileID: 178747315}
+  m_Layer: 11
+  m_Name: WorldCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &178747314
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_PrefabInternal: {fileID: 59657858}
+  m_GameObject: {fileID: 178747313}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1743393594}
+  m_RootOrder: 0
+--- !u!61 &178747315
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100000, guid: 880db7676c14fbe4ea810bf7078712f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 59657858}
+  m_GameObject: {fileID: 178747313}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &181490246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1621,6 +1783,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1835881764}
   m_RootOrder: 12
+--- !u!1 &669450120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100004, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_PrefabInternal: {fileID: 59657858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 669450121}
+  - 114: {fileID: 669450122}
+  m_Layer: 13
+  m_Name: Audio Transition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &669450121
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400004, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_PrefabInternal: {fileID: 59657858}
+  m_GameObject: {fileID: 669450120}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1743393594}
+  m_RootOrder: 1
+--- !u!114 &669450122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 880db7676c14fbe4ea810bf7078712f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 59657858}
+  m_GameObject: {fileID: 669450120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 0
+  To: 0
+  Volume: 1
+  Clip: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
 --- !u!1 &674740587
 GameObject:
   m_ObjectHideFlags: 0
@@ -4531,6 +4739,8 @@ Transform:
   - {fileID: 1620573949}
   - {fileID: 377058921}
   - {fileID: 1849647333}
+  - {fileID: 117331673}
+  - {fileID: 1743393594}
   m_Father: {fileID: 0}
   m_RootOrder: 10
 --- !u!1 &1426786772
@@ -5563,6 +5773,111 @@ MonoBehaviour:
   LeftPositionBounds: -.400000006
   RightPositionBounds: 2.5999999
   CeilingHole: {fileID: 1606049119}
+--- !u!1 &1743393593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_PrefabInternal: {fileID: 59657858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1743393594}
+  - 212: {fileID: 1743393598}
+  - 61: {fileID: 1743393597}
+  - 114: {fileID: 1743393596}
+  - 50: {fileID: 1743393595}
+  m_Layer: 13
+  m_Name: This Boulder, I mean srsly
+  m_TagString: Untagged
+  m_Icon: {fileID: -1500306622, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1743393594
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_PrefabInternal: {fileID: 59657858}
+  m_GameObject: {fileID: 1743393593}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.59144878, y: 5.75001907, z: 0}
+  m_LocalScale: {x: .927992642, y: .927992761, z: 1}
+  m_Children:
+  - {fileID: 178747314}
+  - {fileID: 669450121}
+  m_Father: {fileID: 1352088840}
+  m_RootOrder: 13
+--- !u!50 &1743393595
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5000000, guid: 880db7676c14fbe4ea810bf7078712f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 59657858}
+  m_GameObject: {fileID: 1743393593}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!114 &1743393596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 59657858}
+  m_GameObject: {fileID: 1743393593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c76ea56eb68ddf4bbbe9d43f6e835ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentState: 1
+  LockedState: {fileID: 0}
+  UnlockedState: {fileID: 0}
+  SpentState: {fileID: 0}
+  TransitionScripts:
+  - {fileID: 669450122}
+  ItemName: Rubble
+  Description: Some rubble that fell from the ceiling when I came in like a wrecking
+    ball. Might be able to use it to get out of here.
+--- !u!61 &1743393597
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 880db7676c14fbe4ea810bf7078712f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 59657858}
+  m_GameObject: {fileID: 1743393593}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
+--- !u!212 &1743393598
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200000, guid: 880db7676c14fbe4ea810bf7078712f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 59657858}
+  m_GameObject: {fileID: 1743393593}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 4236500287
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: a630e27aae6d74c0e8883c06b230177e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1745562820
 GameObject:
   m_ObjectHideFlags: 0
