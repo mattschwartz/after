@@ -4912,10 +4912,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Delay: 42
-  OneShotVolume: .5
-  LoopVolume: .5
-  OneShotClip: {fileID: 8300000, guid: 8210e111dd501417180f987f4994c454, type: 3}
-  LoopClip: {fileID: 8300000, guid: 94409c3eeb29e4b5f933b0fe1614110b, type: 3}
+  OneShotVolume: 1
+  LoopVolume: 1
+  OneShotClip: {fileID: 8300000, guid: 8629fb1390c0d465e92933266392427e, type: 3}
+  LoopClip: {fileID: 8300000, guid: 642c0d706585240399ef3c7f25afe5c4, type: 3}
 --- !u!4 &1241012421
 Transform:
   m_ObjectHideFlags: 0

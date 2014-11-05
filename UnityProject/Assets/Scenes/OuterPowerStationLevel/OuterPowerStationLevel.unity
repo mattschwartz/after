@@ -967,7 +967,7 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 1
   To: 2
-  Volume: 1
+  Volume: .100000001
   Clip: {fileID: 8300000, guid: e0bd1e8517efae74ca70b22c1ec7d916, type: 3}
 --- !u!1 &387604616
 GameObject:
@@ -1593,7 +1593,7 @@ GameObject:
   - 114: {fileID: 588061932}
   - 212: {fileID: 588061931}
   - 114: {fileID: 588061934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ladder_bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3407,6 +3407,10 @@ Prefab:
       propertyPath: TopOnY
       value: -2.579
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
   m_RootGameObject: {fileID: 588061929}
@@ -5159,6 +5163,10 @@ Prefab:
       propertyPath: TopOnY
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
   m_RootGameObject: {fileID: 1561370678}
@@ -6667,7 +6675,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 6e5bb48b66c9945eca4979608c1d022f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6750,7 +6758,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 70c210901b3c14cf78769cb976f65483, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .25
+  m_Volume: .0500000007
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7435,7 +7443,7 @@ GameObject:
   - 114: {fileID: 1561370681}
   - 212: {fileID: 1561370680}
   - 114: {fileID: 1561370683}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ladder_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
