@@ -1658,7 +1658,7 @@ Transform:
   m_PrefabInternal: {fileID: 579728324}
   m_GameObject: {fileID: 485893602}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: .5, y: .5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2872,11 +2872,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: daa942fb38e058a4f9de4f1dc9743abc, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: daa942fb38e058a4f9de4f1dc9743abc, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: daa942fb38e058a4f9de4f1dc9743abc, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3158,6 +3158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e20c8106fec5ac4e958a6d169788c1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 7
+  JumpForce: 1225
   InteractButton: 101
   InspectButton: 120
   JumpButton: 32
@@ -3165,7 +3167,6 @@ MonoBehaviour:
   GroundLayerMask:
     serializedVersion: 2
     m_Bits: 256
-  Backpack: {fileID: 0}
   SwingVelMult: 10
 --- !u!61 &750317705
 BoxCollider2D:
@@ -3874,7 +3875,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 925095325}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 680bd19f594b5dd42b654c5b50bae125, type: 3}
+  m_Script: {fileID: 11500000, guid: 0dffc58ff28cb1b42909382eff020350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BackpackTextureEmpty: {fileID: 2800000, guid: f9f76162fefc98d4cab4b78bec28cc93,

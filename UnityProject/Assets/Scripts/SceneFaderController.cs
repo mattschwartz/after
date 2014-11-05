@@ -26,7 +26,7 @@ public class SceneFaderController : MonoBehaviour
             guiTexture.color = Color.Lerp(guiTexture.color, OrigColor, FadeRate * Time.deltaTime);
             yield return null;
             //despite how little sense it makes, the full opacity of the Laoding image is .5
-            if (guiTexture.color.a >= .49) {
+            if (guiTexture.color.a >= .45) {
                 guiTexture.color = OrigColor;
                 if (string.IsNullOrEmpty(NextLevel))
                     Application.Quit();
