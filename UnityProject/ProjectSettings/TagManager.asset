@@ -41,7 +41,7 @@ TagManager:
   - name: Background
     userID: 1
     uniqueID: 1343960909
-    locked: 1
+    locked: 0
   - name: Jumpable
     userID: 2
     uniqueID: 3056740579
@@ -53,7 +53,7 @@ TagManager:
   - name: Default
     userID: 0
     uniqueID: 0
-    locked: 1
+    locked: 0
   - name: Interactable
     userID: 3
     uniqueID: 4236500287
@@ -65,7 +65,7 @@ TagManager:
   - name: Foreground
     userID: 6
     uniqueID: 2631936957
-    locked: 1
+    locked: 0
   - name: Particles
     userID: 8
     uniqueID: 1762738285
@@ -77,4 +77,4 @@ TagManager:
   - name: Camera Transition
     userID: 9
     uniqueID: 1894618561
-    locked: 1
+    locked: 0
