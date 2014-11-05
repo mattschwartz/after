@@ -882,6 +882,10 @@ Prefab:
       propertyPath: m_Center.y
       value: -.00637388229
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
+      propertyPath: Volume
+      value: .400000006
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
   m_RootGameObject: {fileID: 931653501}
@@ -1745,6 +1749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Volume: .400000006
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
@@ -1996,6 +2001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Volume: .400000006
   StepSounds:
   - {fileID: 8300000, guid: f62ccc640ea8f4d0fb25e2880efa442c, type: 3}
   - {fileID: 8300000, guid: c23cc0203bb0d4c56ad3f5e42f60bc7c, type: 3}
@@ -4679,6 +4685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Volume: .300000012
   StepSounds:
   - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
   - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
@@ -5377,6 +5384,10 @@ Prefab:
       propertyPath: m_Center.x
       value: .206701756
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
+      propertyPath: Volume
+      value: .400000006
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
   m_RootGameObject: {fileID: 182848637}
@@ -5734,6 +5745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Volume: .400000006
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
@@ -6017,6 +6029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Volume: 1
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
@@ -7301,6 +7314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Volume: .300000012
   StepSounds:
   - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
   - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
@@ -9281,6 +9295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Volume: 1
   StepSounds:
   - {fileID: 8300000, guid: f62ccc640ea8f4d0fb25e2880efa442c, type: 3}
   - {fileID: 8300000, guid: c23cc0203bb0d4c56ad3f5e42f60bc7c, type: 3}
@@ -9553,6 +9568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Volume: .400000006
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
@@ -9951,6 +9967,10 @@ Prefab:
       propertyPath: StepSounds.Array.data[3]
       value: 
       objectReference: {fileID: 8300000, guid: e862af059df554c2093cebc016d0bb2f, type: 3}
+    - target: {fileID: 11400000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
+      propertyPath: Volume
+      value: .400000006
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
   m_RootGameObject: {fileID: 1306637178}
@@ -11786,6 +11806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Volume: .400000006
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
@@ -12134,6 +12155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Volume: 1
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
@@ -16022,6 +16044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Volume: .400000006
   StepSounds:
   - {fileID: 8300000, guid: f62ccc640ea8f4d0fb25e2880efa442c, type: 3}
   - {fileID: 8300000, guid: c23cc0203bb0d4c56ad3f5e42f60bc7c, type: 3}
@@ -16574,6 +16597,10 @@ Prefab:
       propertyPath: StepSounds.Array.data[3]
       value: 
       objectReference: {fileID: 8300000, guid: d844be863eda14edd925b80bf089004d, type: 3}
+    - target: {fileID: 11400000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
+      propertyPath: Volume
+      value: .300000012
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6100000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
@@ -16617,7 +16644,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
       propertyPath: m_Size.x
@@ -16654,6 +16681,10 @@ Prefab:
     - target: {fileID: 6100000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
       propertyPath: m_Center.y
       value: -.166892648
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
+      propertyPath: Volume
+      value: .400000006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
@@ -16732,6 +16763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Volume: 1
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
@@ -17261,6 +17293,10 @@ Prefab:
       propertyPath: StepSounds.Array.data[3]
       value: 
       objectReference: {fileID: 8300000, guid: e862af059df554c2093cebc016d0bb2f, type: 3}
+    - target: {fileID: 11400000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
+      propertyPath: Volume
+      value: .5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
   m_RootGameObject: {fileID: 1947084501}
@@ -17715,6 +17751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Volume: 1
   StepSounds:
   - {fileID: 8300000, guid: ce446eaad76004ac68432fd9b039fcee, type: 3}
 --- !u!1 &1926738289
@@ -18033,6 +18070,10 @@ Prefab:
       propertyPath: StepSounds.Array.data[3]
       value: 
       objectReference: {fileID: 8300000, guid: d844be863eda14edd925b80bf089004d, type: 3}
+    - target: {fileID: 11400000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
+      propertyPath: Volume
+      value: .300000012
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6100000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 64391b18514bf4d4db6281a6d035a5a8, type: 2}
@@ -18406,6 +18447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Volume: .5
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
