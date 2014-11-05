@@ -856,7 +856,7 @@ GameObject:
   - 114: {fileID: 292997476}
   - 212: {fileID: 292997475}
   - 114: {fileID: 292997478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ladder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2345,7 +2345,8 @@ GameObject:
   - 4: {fileID: 708300410}
   - 61: {fileID: 708300413}
   - 114: {fileID: 708300412}
-  m_Layer: 0
+  - 114: {fileID: 708300411}
+  m_Layer: 8
   m_Name: Right Ladder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2367,6 +2368,22 @@ Transform:
   - {fileID: 1184275070}
   m_Father: {fileID: 1835881764}
   m_RootOrder: 23
+--- !u!114 &708300411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 708300409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Volume: .200000003
+  StepSounds:
+  - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
+  - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
+  - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
 --- !u!114 &708300412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3831,7 +3848,8 @@ GameObject:
   - 61: {fileID: 970546943}
   - 114: {fileID: 970546942}
   - 212: {fileID: 970546941}
-  m_Layer: 0
+  - 114: {fileID: 970546944}
+  m_Layer: 8
   m_Name: Left Ladder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3912,6 +3930,22 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .800000012, y: 9.67125416}
   m_Center: {x: 0, y: 1.49090958}
+--- !u!114 &970546944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 970546939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Volume: .200000003
+  StepSounds:
+  - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
+  - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
+  - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
 --- !u!1001 &974835650
 Prefab:
   m_ObjectHideFlags: 0
@@ -4841,8 +4875,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1184275070}
   - 212: {fileID: 1184275069}
-  - 114: {fileID: 1184275071}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4883,22 +4916,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 708300410}
   m_RootOrder: 2
---- !u!114 &1184275071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1184275068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Volume: .200000003
-  StepSounds:
-  - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
-  - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
-  - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
 --- !u!1 &1220684429
 GameObject:
   m_ObjectHideFlags: 0
@@ -5639,8 +5656,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1426786774}
   - 212: {fileID: 1426786773}
-  - 114: {fileID: 1426786775}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PowerLadder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5681,22 +5697,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 970546940}
   m_RootOrder: 1
---- !u!114 &1426786775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1426786772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Volume: .200000003
-  StepSounds:
-  - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
-  - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
-  - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
 --- !u!1 &1472951592
 GameObject:
   m_ObjectHideFlags: 0
@@ -5968,7 +5968,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1501773985}
   - 212: {fileID: 1501773984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Upper LAdder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6368,7 +6368,7 @@ Prefab:
       objectReference: {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
     - target: {fileID: 100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_Layer
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 21200000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
@@ -6810,6 +6810,10 @@ Prefab:
       propertyPath: StepClips.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
+    - target: {fileID: 100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
   m_RootGameObject: {fileID: 970546939}
@@ -8495,7 +8499,7 @@ GameObject:
   - 4: {fileID: 2056806650}
   - 61: {fileID: 2056806652}
   - 114: {fileID: 2056806651}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8674,7 +8678,7 @@ GameObject:
   - 4: {fileID: 2109503328}
   - 61: {fileID: 2109503327}
   - 114: {fileID: 2109503326}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
