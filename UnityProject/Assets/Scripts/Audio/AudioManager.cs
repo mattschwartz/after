@@ -6,28 +6,31 @@ using System.Collections;
 
 namespace After.Audio 
 {
-	public class AudioManager : ScriptableObject
+	public class AudioManager : MonoBehaviour
     {
         private List<PersistentAudioClip> PersistentAudioClips = new List<PersistentAudioClip>();
 
-        public static AudioManager Instance;
+        public static AudioManager Instance { get; private set; }
 
-        void Start()
+        void Awake()
         {
             if(Instance == null) {
                 Instance = this;
-                DontDestroyOnLoad(this);
+                DontDestroyOnLoad(this.gameObject);
             } else {
                 if (this != Instance) {
                     Debug.Log("Another instance of " + this.GetType().Name
                         + " exists (" + Instance + ") and is not this! "
                         + "( " + this + ") Destroying this.");
-                    Destroy(this);
+
+                    Destroy(this.gameObject);
                 }
             }
-            
-            foreach (var pac in AudioManager.Instance.PersistentAudioClips) {
-                DontDestroyOnLoad(pac);
+
+            DontDestroyOnLoad(Instance.gameObject);
+
+            foreach (var pac in Instance.PersistentAudioClips) {
+                DontDestroyOnLoad(pac.gameObject);
             }
         }
 

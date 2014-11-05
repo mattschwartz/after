@@ -18,25 +18,27 @@ namespace After.Audio
 		// TODO: Ensure this function does not get called during scene 
 		// transition.
 		void Start()
-		{
+        {
+            DontDestroyOnLoad(this);
 			AudioManager.Instance.AddPersistentAudioClip(this);
 		}
 
 		void OnLevelWasLoaded(int level)
 		{
 			SceneUnloaded = true;
+            DurationTracker = 0;
 		}
 
 		void Update()
 		{
 			if (!SceneUnloaded) { return; }
 
-			float f = (DurationTracker / PostLoadFadeDuration);
+			float f = 1 - (DurationTracker / PostLoadFadeDuration);
 			Source.volume = Mathf.Lerp(0, 1, f);
-			DurationTracker -= Time.deltaTime;
+			DurationTracker += Time.deltaTime;
 
-			if (DurationTracker <= 0) {
-				Destroy(this);
+			if (DurationTracker >= PostLoadFadeDuration) {
+				Destroy(this.gameObject);
 			}
 		}
 	}
