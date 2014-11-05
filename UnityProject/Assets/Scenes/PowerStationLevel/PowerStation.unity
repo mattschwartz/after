@@ -699,7 +699,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 2bdc9e752cc2a48eba01fdd0cf515724, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &181490248
@@ -948,7 +948,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 324347796}
   - 212: {fileID: 324347798}
-  - 61: {fileID: 324347797}
   - 114: {fileID: 324347800}
   m_Layer: 8
   m_Name: That Same Damned Rock
@@ -963,23 +962,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 324347795}
-  m_LocalRotation: {x: 0, y: 0, z: .128498033, w: .991709828}
-  m_LocalPosition: {x: -8.08961773, y: -2.48745537, z: 0}
-  m_LocalScale: {x: 2.29999995, y: 2.29999995, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: .0648183376, w: .997897148}
+  m_LocalPosition: {x: -8.05616283, y: -2.1196003, z: 0}
+  m_LocalScale: {x: 3.53999996, y: 3.53999996, z: 1}
   m_Children: []
   m_Father: {fileID: 1949834331}
   m_RootOrder: 8
---- !u!61 &324347797
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 324347795}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: .882832289, y: .611938655}
-  m_Center: {x: -.00322023197, y: -.0246316884}
 --- !u!212 &324347798
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -999,7 +987,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: a630e27aae6d74c0e8883c06b230177e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &324347800
@@ -1472,7 +1460,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 9c2ae46a365cc413197181165d8d7f45, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &462666539
@@ -4821,8 +4809,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1326556592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.739084482, y: -3.10534859, z: 0}
-  m_LocalScale: {x: .218415961, y: .218416974, z: 1}
+  m_LocalPosition: {x: -.455150932, y: -3.19649506, z: 0}
+  m_LocalScale: {x: .229011372, y: .229011938, z: 1}
   m_Children: []
   m_Father: {fileID: 1949834331}
   m_RootOrder: 7
