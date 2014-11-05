@@ -9,10 +9,14 @@ public class RockSlideAudioController : MonoBehaviour
 
 	void OnCollisionStay2D(Collision2D other) 
 	{
-		if (WatchFor == null) { Destroy(this.gameObject); }
+		if (WatchFor == null) { 
+			Destroy(this.gameObject); 
+			return; 
+		}
+		
 		if (other.gameObject.name != WatchFor.name) { return; }
 		float velocity = Mathf.Abs(WatchFor.rigidbody2D.velocity.x);
-		
+
 		SlideSource.volume = velocity / MaxVelocity;
 
 		if (velocity > 0.01) {
