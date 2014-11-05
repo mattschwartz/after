@@ -912,12 +912,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 76486557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dccc8b5dbc8064e55b71dcd70370b93c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b06df08b948ff447b730f5a7ad8e7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Volume: 1
-  WatchForFallingRock: {fileID: 1816749789}
-  RockLandClip: {fileID: 8300000, guid: efec55dae98ea4c0abdbdac88db64d74, type: 3}
+  WatchFor: {fileID: 1816749789}
+  AudioClips:
+  - {fileID: 8300000, guid: efec55dae98ea4c0abdbdac88db64d74, type: 3}
 --- !u!61 &76486559
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1863,7 +1864,7 @@ Transform:
   m_PrefabInternal: {fileID: 2075214602}
   m_GameObject: {fileID: 194404990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.0069523, y: 9.46809769, z: 0}
+  m_LocalPosition: {x: -12.0069523, y: 8.94082355, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 1034772426}
@@ -6877,7 +6878,7 @@ MonoBehaviour:
   LockDuration: 1.20000005
   Player: {fileID: 194404990}
   PlayerAnimator: {fileID: 194404997}
-  xOffset: 1
+  xOffset: 1.5
   Trigger: OpenDesk
 --- !u!1 &668142918
 GameObject:
@@ -10024,7 +10025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeRate: 1.5
-  NextLevel: Elevator
+  NextLevel: ElevatorToOuterPowerStationLevel
   guiTexture: {fileID: 1007987592}
 --- !u!4 &1007987591
 Transform:
@@ -16643,8 +16644,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1816749789}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.8349843, y: 1.42180192, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -2.07377738e-07, w: 1}
+  m_LocalPosition: {x: 7.83475924, y: 1.57585526, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1653741024}
@@ -19059,7 +19060,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 9.46809769
+      value: 8.94082355
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
       propertyPath: m_LocalPosition.z
@@ -19324,7 +19325,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: daa942fb38e058a4f9de4f1dc9743abc, type: 2}
       propertyPath: NextLevel
-      value: Elevator
+      value: ElevatorToOuterPowerStationLevel
       objectReference: {fileID: 0}
     - target: {fileID: 13100000, guid: daa942fb38e058a4f9de4f1dc9743abc, type: 2}
       propertyPath: m_Texture

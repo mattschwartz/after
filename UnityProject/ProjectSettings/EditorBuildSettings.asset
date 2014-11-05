@@ -14,8 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SewerLevel/SewerLevel.unity
   - enabled: 1
-    path: Assets/Scenes/PowerStationLevel/PowerStation.unity
-  - enabled: 1
-    path: Assets/Scenes/ElevatorLevel/Elevator.unity
+    path: Assets/Scenes/ElevatorToOuterPowerStationLevel/ElevatorToOuterPowerStationLevel.unity
   - enabled: 1
     path: Assets/Scenes/OuterPowerStationLevel/OuterPowerStationLevel.unity
+  - enabled: 1
+    path: Assets/Scenes/PowerStationLevel/PowerStation.unity
+  - enabled: 1
+    path: Assets/Scenes/ElevatorToSkyscraperLevel/ElevatorToSkyscraperLevel.unity
+  - enabled: 1
+    path: Assets/Scenes/SkyscraperLevel/Skyscraper.unity

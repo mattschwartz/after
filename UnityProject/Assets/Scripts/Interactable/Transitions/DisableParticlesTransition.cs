@@ -14,7 +14,7 @@ public class DisableParticlesTransition : Transition
 
     private IEnumerator FadeEmission()
     {
-        while (ParticleSystem.emissionRate > 0.1f) {
+        while (ParticleSystem != null && ParticleSystem.emissionRate > 0.1f) {
             ParticleSystem.emissionRate = Mathf.Lerp(ParticleSystem.emissionRate, 0, Time.deltaTime);
             yield return 0;
         }
