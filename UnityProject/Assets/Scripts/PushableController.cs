@@ -21,7 +21,8 @@ public class PushableController : MonoBehaviour {
     {
         RBody.drag = Drag;
         RBody.mass = Mass;
-        PlayerCon.Push(true);
+        if (Trigger.isTrigger)
+            PlayerCon.Push(true);
     }
 
     void OnTriggerExit2D ()
