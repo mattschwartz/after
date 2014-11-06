@@ -265,8 +265,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: Description
-      value: Some rubble that fell from the ceiling when I came in like a wrecking
-        ball. Might be able to use it to get out of here.
+      value: Some rubble that fell from the ceiling when I fell. Might be able to
+        use it to get out of here.
       objectReference: {fileID: 0}
     - target: {fileID: 5000000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: m_GravityScale
@@ -7051,8 +7051,8 @@ MonoBehaviour:
   TransitionScripts:
   - {fileID: 669450122}
   ItemName: Rubble
-  Description: Some rubble that fell from the ceiling when I came in like a wrecking
-    ball. Might be able to use it to get out of here.
+  Description: Some rubble that fell from the ceiling when I fell. Might be able to
+    use it to get out of here.
 --- !u!61 &1743393597
 BoxCollider2D:
   m_ObjectHideFlags: 0
