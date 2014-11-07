@@ -6219,6 +6219,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DestroyItemOnUse: 1
   RequiredItem: {fileID: 0}
+--- !u!1 &549507422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 549507423}
+  - 114: {fileID: 549507424}
+  m_Layer: 8
+  m_Name: Try push transition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &549507423
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 549507422}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1816749790}
+  m_RootOrder: 5
+--- !u!114 &549507424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 549507422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c138591d405a6ff4a9bfb5d187ce7151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 1
+  To: 1
+  Duration: 1
+  Boolean: Pushing
+  PlayerAnimator: {fileID: 194404997}
+  Player: {fileID: 194404992}
 --- !u!1 &580607285
 GameObject:
   m_ObjectHideFlags: 0
@@ -8790,7 +8837,7 @@ GameObject:
   - 4: {fileID: 824021403}
   - 114: {fileID: 824021404}
   m_Layer: 8
-  m_Name: 2heavy4u
+  m_Name: Observations of failure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8823,7 +8870,8 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 1
   To: 1
-  Observations: 'It looks like someone was crushed underneath. '
+  Observations: It looks like someone was crushed underneath, but it's too heavy to
+    move with my hands.
 --- !u!1001 &837851185
 Prefab:
   m_ObjectHideFlags: 0
@@ -8833,11 +8881,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6.61205196
+      value: 7.77112579
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -6.89638805
+      value: -6.81911755
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8882,11 +8930,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.20000005
+      value: 1.29999995
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.20000005
+      value: 1.29999995
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
       propertyPath: m_LocalScale.z
@@ -11817,8 +11865,8 @@ Transform:
   m_PrefabInternal: {fileID: 837851185}
   m_GameObject: {fileID: 1305626017}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.61205196, y: -6.89638805, z: 0}
-  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 0}
+  m_LocalPosition: {x: 7.77112579, y: -6.81911755, z: 0}
+  m_LocalScale: {x: 1.29999995, y: 1.29999995, z: 0}
   m_Children:
   - {fileID: 20006581}
   - {fileID: 878753110}
@@ -16775,6 +16823,7 @@ Transform:
   - {fileID: 824021403}
   - {fileID: 1796371401}
   - {fileID: 663071455}
+  - {fileID: 549507423}
   m_Father: {fileID: 260634086}
   m_RootOrder: 12
 --- !u!212 &1816749791
@@ -16861,6 +16910,7 @@ MonoBehaviour:
   - {fileID: 824021404}
   - {fileID: 1796371402}
   - {fileID: 663071456}
+  - {fileID: 549507424}
 --- !u!61 &1816749796
 BoxCollider2D:
   m_ObjectHideFlags: 0
