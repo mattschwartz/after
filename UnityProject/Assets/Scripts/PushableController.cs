@@ -38,13 +38,6 @@ public class PushableController : MonoBehaviour {
         {
             Falling = true;
             RBody.drag = 0f;
-
-            //deactivates the trigger properties of the object after it has fallen
-            if (Mathf.Abs(RBody.rotation) >= 0.1f)
-            {
-                Trigger.isTrigger = false;
-                PlayerCon.Push(false);
-            }
         }
         else if (Falling)
         {
