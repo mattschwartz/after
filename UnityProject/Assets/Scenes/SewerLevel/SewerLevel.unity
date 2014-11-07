@@ -3496,6 +3496,7 @@ Transform:
   - {fileID: 2025917682}
   - {fileID: 668142921}
   - {fileID: 1240414419}
+  - {fileID: 1079507714}
   m_Father: {fileID: 260634086}
   m_RootOrder: 32
 --- !u!198 &300403325
@@ -4613,7 +4614,7 @@ MonoBehaviour:
   TransitionScripts:
   - {fileID: 818104538}
   - {fileID: 618332389}
-  - {fileID: 1890551972}
+  - {fileID: 1079507715}
   - {fileID: 618332389}
   - {fileID: 517203324}
   - {fileID: 1991771675}
@@ -10533,6 +10534,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &1079507713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1079507714}
+  - 114: {fileID: 1079507715}
+  m_Layer: 0
+  m_Name: Put in player's backpack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1079507714
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1079507713}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 300403324}
+  m_RootOrder: 12
+--- !u!114 &1079507715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1079507713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5154222707374e188081a5cb0c568fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 1
+  To: 2
+  Player: {fileID: 194404992}
+  GrabbableItem: {fileID: 419237410}
 --- !u!1 &1089036313
 GameObject:
   m_ObjectHideFlags: 0
