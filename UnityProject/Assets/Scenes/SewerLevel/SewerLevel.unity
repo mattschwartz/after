@@ -3490,12 +3490,12 @@ Transform:
   - {fileID: 818104537}
   - {fileID: 517203323}
   - {fileID: 629377129}
+  - {fileID: 1079507714}
   - {fileID: 1991771674}
   - {fileID: 580607286}
   - {fileID: 2025917682}
   - {fileID: 668142921}
   - {fileID: 1240414419}
-  - {fileID: 1079507714}
   m_Father: {fileID: 260634086}
   m_RootOrder: 32
 --- !u!198 &300403325
@@ -6293,7 +6293,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 300403324}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!114 &580607287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7102,7 +7102,7 @@ Transform:
   m_Children:
   - {fileID: 719622381}
   m_Father: {fileID: 300403324}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!1 &674526955
 GameObject:
   m_ObjectHideFlags: 0
@@ -10559,7 +10559,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 300403324}
-  m_RootOrder: 11
+  m_RootOrder: 6
 --- !u!114 &1079507715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10572,10 +10572,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsBeforeRead: 0
+  WaitSecondsBeforeRead: .699999988
   From: 1
   To: 2
-  Player: {fileID: 194404992}
   GrabbableItem: {fileID: 419237410}
 --- !u!1 &1089036313
 GameObject:
@@ -11409,7 +11408,7 @@ Transform:
   m_Children:
   - {fileID: 295699890}
   m_Father: {fileID: 300403324}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!95 &1240414420
 Animator:
   serializedVersion: 3
@@ -18884,7 +18883,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 300403324}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!114 &1991771675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19064,7 +19063,7 @@ Transform:
   m_Children:
   - {fileID: 1624531499}
   m_Father: {fileID: 300403324}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1 &2052403241
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,6 @@ namespace After.Interactable
 {
 	public class ItemGrabTransition : Transition
 	{
-		public PlayerController Player;
 		public GrabbableItemController GrabbableItem;
 
         void Start()
@@ -18,7 +17,7 @@ namespace After.Interactable
 
         public override void Read(StateType fromState, StateType toState)
         {
-            Player.PickupItem(GrabbableItem.gameObject);
+        	BackpackController.Instance.SetItemHeld(GrabbableItem.gameObject);
             GrabbableItem = null;
         }
 
