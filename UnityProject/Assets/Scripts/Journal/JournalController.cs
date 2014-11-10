@@ -77,7 +77,7 @@ namespace After.Journal
         /// </summary>
         private void DefineClickableRegions()
         {
-            Scale = (PercentSize / 100f);
+            Scale = (PercentSize / 100f) * ((float)Screen.width / 960f);
             EntryStyle.fontSize = (int)((float)21 * Scale);
             EntryTitleStyle.fontSize = (int)((float)26 * Scale);
 
@@ -92,7 +92,7 @@ namespace After.Journal
         }
 
         /// <summary>Creates a <c>Rect</c> that is scaled according to the 
-        /// specified <paramref name="bounds" />bounds parameter.
+        /// specified bounds parameter.
         /// </summary>
         /// <param name="bounds">The containing <c>Rect</c> object.</param>
         /// <param name="scaleX">The x-scale in percent form of the returned

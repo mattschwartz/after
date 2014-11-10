@@ -901,6 +901,7 @@ GameObject:
   - 4: {fileID: 76486560}
   - 61: {fileID: 76486559}
   - 114: {fileID: 76486558}
+  - 114: {fileID: 76486561}
   m_Layer: 0
   m_Name: Falling Rock Sound
   m_TagString: Untagged
@@ -946,6 +947,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 260634086}
   m_RootOrder: 39
+--- !u!114 &76486561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 76486557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 206fb67d6a686a3438a9af5c265b1cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WatchFor: {fileID: 1816749793}
 --- !u!1 &88328287
 GameObject:
   m_ObjectHideFlags: 0
@@ -10050,6 +10063,48 @@ Prefab:
   m_RootGameObject: {fileID: 139879936}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &957461470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: f3dbe3f0a1aa8fe4da27f99c432c8fb0, type: 2}
+  m_PrefabInternal: {fileID: 1065139629}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 957461472}
+  - 114: {fileID: 957461471}
+  m_Layer: 0
+  m_Name: Screen Shaker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &957461471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: f3dbe3f0a1aa8fe4da27f99c432c8fb0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1065139629}
+  m_GameObject: {fileID: 957461470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c18869d25e64545b3ebff04f8e6626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Decay: .00200000009
+  Intensity: .150000006
+--- !u!4 &957461472
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: f3dbe3f0a1aa8fe4da27f99c432c8fb0, type: 2}
+  m_PrefabInternal: {fileID: 1065139629}
+  m_GameObject: {fileID: 957461470}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.57162285, y: -4.09270382, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
 --- !u!1 &973346810
 GameObject:
   m_ObjectHideFlags: 0
@@ -10496,6 +10551,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   To: 2
   Conditions: {fileID: 986580293}
+--- !u!1001 &1065139629
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: f3dbe3f0a1aa8fe4da27f99c432c8fb0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 9.57162285
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f3dbe3f0a1aa8fe4da27f99c432c8fb0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4.09270382
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f3dbe3f0a1aa8fe4da27f99c432c8fb0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f3dbe3f0a1aa8fe4da27f99c432c8fb0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f3dbe3f0a1aa8fe4da27f99c432c8fb0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f3dbe3f0a1aa8fe4da27f99c432c8fb0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f3dbe3f0a1aa8fe4da27f99c432c8fb0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f3dbe3f0a1aa8fe4da27f99c432c8fb0, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f3dbe3f0a1aa8fe4da27f99c432c8fb0, type: 2}
+      propertyPath: m_Name
+      value: Screen Shaker
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f3dbe3f0a1aa8fe4da27f99c432c8fb0, type: 2}
+  m_RootGameObject: {fileID: 957461470}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1065970020
 GameObject:
   m_ObjectHideFlags: 0
@@ -12184,47 +12287,6 @@ Transform:
   - {fileID: 2053286136}
   m_Father: {fileID: 0}
   m_RootOrder: 12
---- !u!1 &1346023180
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1346023182}
-  - 114: {fileID: 1346023181}
-  m_Layer: 0
-  m_Name: Camera Shaker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1346023181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1346023180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29c18869d25e64545b3ebff04f8e6626, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Decay: .00200000009
-  Intensity: .150000006
---- !u!4 &1346023182
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1346023180}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
 --- !u!1 &1348473376
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,8 @@ namespace After.CameraTransitions
 
 		private bool Shaking;
 		private float IntensityTracker;
-		private Vector3 originPosition;
+
+        public static CameraShakerController Instance { get; private set; }
 
 		#endregion
 
@@ -24,8 +25,18 @@ namespace After.CameraTransitions
 		// }
 
    		void Start()
-   		{
-   			Shaking = false;
+        {
+            if (Instance == null) {
+                Instance = this;
+                DontDestroyOnLoad(this);
+            } else if (this != Instance) {
+                Debug.Log("Another instance of " + this.GetType().Name
+                    + " exists (" + Instance + ") and is not this! "
+                    + "( " + this + ") Destroying this.");
+                Destroy(this.gameObject);
+            }
+
+            Instance.Shaking = false;
    		}
 
 		void Update ()
@@ -42,10 +53,9 @@ namespace After.CameraTransitions
 			}
 		}
 
-		void Shake()
+		public void Shake()
 		{
 			Shaking = true;
-			originPosition = Camera.main.transform.position;
 			IntensityTracker = Intensity;
 		}
 	}
