@@ -142,7 +142,7 @@ namespace After.Journal
 
         void Update()
         {
-            JournalController.Instance.StaticUpdate();
+            Instance.StaticUpdate();
         }
 
         private void StaticUpdate()
@@ -242,12 +242,12 @@ namespace After.Journal
 
         void OnGUI()
         {
-            JournalController.Instance.Toast();
+            Instance.Toast();
 
-            if (!JournalController.Instance.Visible) { return; }
+            if (!Instance.Visible) { return; }
 
-            JournalController.Instance.RenderBackground();
-            JournalController.Instance.RenderText();
+            Instance.RenderBackground();
+            Instance.RenderText();
         }
 
         /// <summary>Handles rendering the Toast prompt to the screen, stopping 

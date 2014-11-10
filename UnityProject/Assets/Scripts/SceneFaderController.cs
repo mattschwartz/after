@@ -5,7 +5,7 @@ public class SceneFaderController : MonoBehaviour
 {
     public float FadeRate;
     public string NextLevel;
-    public GUITexture guiTexture;
+    public new GUITexture guiTexture;
     private Color OrigColor;
 
     // Use this for initialization
