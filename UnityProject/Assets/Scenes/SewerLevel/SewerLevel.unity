@@ -5574,6 +5574,7 @@ MonoBehaviour:
   - {fileID: 37619331}
   ItemName: Access Card
   Description: This belonged to Felix. He must have been an engineer in the sewer.
+  JournalImage: {fileID: 2800000, guid: cc8ddebdce22d8148919a5b43e6ebabd, type: 3}
 --- !u!50 &419237411
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -6582,6 +6583,10 @@ Prefab:
       propertyPath: m_Center.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: JournalImage
+      value: 
+      objectReference: {fileID: 2800000, guid: cc8ddebdce22d8148919a5b43e6ebabd, type: 3}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
@@ -6930,6 +6935,7 @@ MonoBehaviour:
   - {fileID: 1272377025}
   ItemName: Crumpled Paper
   Description: A bar napkin. Looks like the key code was scrawled on the back of it.
+  JournalImage: {fileID: 0}
 --- !u!61 &653709352
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12006,6 +12012,7 @@ MonoBehaviour:
   - {fileID: 878753111}
   ItemName: Rebar
   Description: Some old reinforcing steel. Maybe I could use this for leverage.
+  JournalImage: {fileID: 0}
 --- !u!61 &1305626021
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14815,6 +14822,7 @@ MonoBehaviour:
   ItemName: Generator Fuel
   Description: Feels like there's just enough to start the generator back up. My lucky
     day.
+  JournalImage: {fileID: 0}
 --- !u!61 &1614624038
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ namespace After.Interactable
 
         public string ItemName;
         public string Description;
+        public Texture JournalImage;
 
         private static float LastInteraction = 2;
         private float InteractDelay = 1;

@@ -138,12 +138,16 @@ public class PlayerController : MonoBehaviour
     {
         if (BackpackController.Instance.ItemHeld == null) { return; }
 
-        Texture texture = BackpackController.Instance.ItemHeld.GetComponent<SpriteRenderer>().sprite.texture;
+
+
         GrabbableItemController grabbableItem = BackpackController.Instance.ItemHeld.GetComponent<GrabbableItemController>();
         string name = grabbableItem.ItemName;
         string description = grabbableItem.Description;
+        Texture journalImage = grabbableItem.JournalImage 
+            ??  BackpackController.Instance.ItemHeld
+                .GetComponent<SpriteRenderer>().sprite.texture;
 
-        InspectorController.Instance.InspectItem(name, description, texture);
+        InspectorController.Instance.InspectItem(name, description, journalImage);
     }
 
     #region Message Functions
