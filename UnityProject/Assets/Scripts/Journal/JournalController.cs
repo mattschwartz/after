@@ -64,7 +64,7 @@ namespace After.Journal
         private void Initialize()
         {
             Entries = new List<Entry>();
-            Entries.Add(new Entry("Index", "", null));
+            Entries.Add(new Entry("Index", "", null) { Read = true });
 
             FadedBackgroundTexture.transform.position = Vector3.zero;
             FadedBackgroundTexture.pixelInset = new Rect(new Rect(0, 0, 
@@ -207,6 +207,14 @@ namespace After.Journal
             FadedBackgroundTexture.enabled = true;
             SceneHandler.Player.LockPlayer();
             AudioManager.PlayClipAtPoint(OpenJournalClip, Vector2.zero);
+
+            for (int i = 0; i < Entries.Count; ++i) {
+                if (!Entries[i].Read) {
+                    EntryIndex = i;
+                }
+            }
+
+            Debug.Log("Index: " + EntryIndex);
         }
 
         public void Hide()
@@ -313,6 +321,7 @@ namespace After.Journal
         private void RenderEntry()
         {
             Entry entry = Entries[EntryIndex];
+            entry.Read = true;
 
             Rect pos = GetRelativeByBounds(JournalBounds, 0.46f, 0.11f, 
                 345 * Scale, 0);

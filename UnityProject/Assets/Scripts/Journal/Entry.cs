@@ -6,9 +6,14 @@ namespace After.Journal
 {
     public class Entry
     {
+        #region Members
+
+        public bool Read = false;
         public string Name;
         public List<string> Updates;
         public Texture Image;
+
+        #endregion
 
         public Entry()
         {
