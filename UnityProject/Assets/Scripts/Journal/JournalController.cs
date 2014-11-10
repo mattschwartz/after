@@ -213,8 +213,6 @@ namespace After.Journal
                     EntryIndex = i;
                 }
             }
-
-            Debug.Log("Index: " + EntryIndex);
         }
 
         public void Hide()

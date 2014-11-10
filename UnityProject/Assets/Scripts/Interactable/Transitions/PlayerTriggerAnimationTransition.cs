@@ -10,12 +10,17 @@ namespace After.Interactable.Transitions
 {
     public class PlayerTriggerAnimationTransition : PlayerLockTransition
     {
-        public float xOffset = 4;
+        public bool MovePlayer;
         public string Trigger;
+        public Vector2 Offset;
 
         public override void Read(StateType fromState, StateType toState)
         {
-            Player.transform.position = new Vector2(transform.position.x - xOffset, transform.position.y);
+            if (MovePlayer) {
+                var pos = Player.transform.position;
+                Player.transform.position = new Vector2(pos.x - Offset.x, pos.y - Offset.y);
+            }
+
             Player.SendMessage("LockPlayer");
             Invoke("FreePlayer", LockDuration);
 
