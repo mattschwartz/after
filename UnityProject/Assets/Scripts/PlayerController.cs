@@ -138,12 +138,15 @@ public class PlayerController : MonoBehaviour
     {
         if (BackpackController.Instance.ItemHeld == null) { return; }
 
-        GrabbableItemController grabbableItem = BackpackController.Instance.ItemHeld.GetComponent<GrabbableItemController>();
+        GrabbableItemController grabbableItem = BackpackController.Instance
+            .ItemHeld.GetComponent<GrabbableItemController>();
         string name = grabbableItem.ItemName;
         string description = grabbableItem.Description;
-        Texture journalImage = grabbableItem.JournalImage 
-            ??  BackpackController.Instance.ItemHeld
-                .GetComponent<SpriteRenderer>().sprite.texture;
+
+        Texture journalImage = grabbableItem.JournalImage == null
+            ? BackpackController.Instance.ItemHeld
+            .GetComponent<SpriteRenderer>().sprite.texture
+            : grabbableItem.JournalImage;
 
         InspectorController.Instance.InspectItem(name, description, journalImage);
     }
