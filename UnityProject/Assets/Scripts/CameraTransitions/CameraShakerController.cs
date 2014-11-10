@@ -14,11 +14,6 @@ namespace After.CameraTransitions
 		private Vector3 originPosition;
 
 		#endregion
-		void OnGUI (){
-      if (GUI.Button (new Rect (20,40,80,20), "Shake")){
-         Shake ();
-      }
-   }
 
    		void Start()
    		{
@@ -36,7 +31,6 @@ namespace After.CameraTransitions
 				IntensityTracker -= Decay;
 			} else {
 				Shaking = false;
-				// Camera.main.transform.position = originPosition;
 			}
 		}
 
