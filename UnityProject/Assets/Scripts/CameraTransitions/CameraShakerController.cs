@@ -15,6 +15,14 @@ namespace After.CameraTransitions
 
 		#endregion
 
+		// Uncomment for testing shaker via a button.
+		// void OnGUI()
+		// {
+		// 	if (GUI.Button (new Rect (20,40,80,20), "Shake")) {
+		// 		Shake ();
+		// 	}
+		// }
+
    		void Start()
    		{
    			Shaking = false;
@@ -25,7 +33,7 @@ namespace After.CameraTransitions
 			if (!Shaking) { return; }
 
 			if (IntensityTracker > 0) {
-				Camera.main.transform.position = Camera.main.transform.position + 
+				Camera.main.transform.position += 
 					Random.insideUnitSphere * IntensityTracker;
 
 				IntensityTracker -= Decay;
