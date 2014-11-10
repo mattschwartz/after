@@ -138,8 +138,6 @@ public class PlayerController : MonoBehaviour
     {
         if (BackpackController.Instance.ItemHeld == null) { return; }
 
-
-
         GrabbableItemController grabbableItem = BackpackController.Instance.ItemHeld.GetComponent<GrabbableItemController>();
         string name = grabbableItem.ItemName;
         string description = grabbableItem.Description;
