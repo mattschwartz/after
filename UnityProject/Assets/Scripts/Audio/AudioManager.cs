@@ -100,21 +100,26 @@ namespace After.Audio
             source.Play();
         }
 
-        public static void PlayClipAtPoint(AudioClip clip, Vector2 position, float volume = 1.0f)
-        {
-            if (clip == null) { return; }
+        // public static void PlayClipAtPoint(AudioClip clip, Vector2 position, float volume = 1.0f)
+        // {
+        //     if (clip == null) { return; }
 
-            GameObject gameObject = new GameObject();
-            var source = gameObject.AddComponent<AudioSource>();
+        //     GameObject gameObject = new GameObject();
+        //     var source = gameObject.AddComponent<AudioSource>();
 
-            gameObject.transform.position = position;
-            gameObject.name = clip.name;
-            source.PlayOneShot(clip, volume);
+        //     gameObject.transform.position = position;
+        //     gameObject.name = clip.name;
+        //     source.PlayOneShot(clip, volume);
 
-            Destroy(gameObject, clip.length);
-        }
+        //     Destroy(gameObject, clip.length);
+        // }
 
-        public static void PlayClipAtPoint(AudioClip clip, Vector2 position, float pitchLow, float pitchHigh, float volume = 1.0f)
+        public static void PlayClipAtPoint(
+            AudioClip clip, 
+            Vector2 position,
+            float volume = 1,
+            float pitchLow = 1, 
+            float pitchHigh = 1)
         {
             if (clip == null) { return; }
 

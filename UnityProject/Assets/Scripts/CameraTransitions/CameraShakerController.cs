@@ -6,9 +6,8 @@ namespace After.CameraTransitions
 	{
 		#region Members
 
-		public float Decay = 0.002f;
-		public float Intensity = 0.15f;
-
+		private float Decay;
+		private float Intensity;
 		private bool Shaking;
 		private float IntensityTracker;
 
@@ -53,9 +52,11 @@ namespace After.CameraTransitions
 			}
 		}
 
-		public void Shake()
+		public void Shake(float intensity = 0.15f, float decay = 0.002f)
 		{
 			Shaking = true;
+			Decay = decay;
+			Intensity = intensity;
 			IntensityTracker = Intensity;
 		}
 	}
