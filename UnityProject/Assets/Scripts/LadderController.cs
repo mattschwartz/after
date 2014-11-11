@@ -65,8 +65,8 @@ public class LadderController : MonoBehaviour {
             {
                 PlayerCon.SetY(HandleY);
                 PlayerCon.LockPlayer();
-                Invoke("FreePlayer", 1f);
-                Invoke("EndDrop", 1f);
+                Invoke("FreePlayer", .5f);
+                Invoke("EndDrop", .5f);
             }
         }
 
@@ -77,9 +77,9 @@ public class LadderController : MonoBehaviour {
 
             float xForce;
             if (Input.GetKeyDown(KeyCode.D)) {
-                xForce = 5000f;
+                xForce = 2000f;
             } else {
-                xForce = -5000f;
+                xForce = -2000f;
             }
             
             PlayerCon.Climb(false, false, false, false, xForce);
@@ -90,8 +90,8 @@ public class LadderController : MonoBehaviour {
             PlayerCon.Climb(true, Profile, true, true, transform.position.x);
             PlayerCon.LockPlayer();
             PlayerCon.SetY(HandleY);
-            Invoke("FreePlayer", 1f);
-            Invoke("EndLift", 1f);
+            Invoke("FreePlayer", .5f);
+            Invoke("EndLift", .5f);
             Active = false;
         }
     }
