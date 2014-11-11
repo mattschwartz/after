@@ -23,6 +23,7 @@ public class DisableRockColliderController : MonoBehaviour
         PassThrough.ForEach(t => {Debug.Log("Destroying t: " + t); Physics2D.IgnoreCollision(t, other); });
 
         ChangeToTrigger.isTrigger = true;
+        other.isTrigger = false;
         TrapdoorSpriteRenderer.sprite = CrushedTrapdoor;
         TrapdoorTriggerController.CurrentState = After.Interactable.StateType.Unlocked;
     }

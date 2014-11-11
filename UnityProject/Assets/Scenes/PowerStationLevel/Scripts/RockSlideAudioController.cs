@@ -30,7 +30,7 @@ public class RockSlideAudioController : MonoBehaviour
 
 	void OnCollisionExit2D(Collision2D other) 
 	{
-		if (other.gameObject.name != WatchFor.name) { return; }
+		if (WatchFor == null || other.gameObject.name != WatchFor.name) { return; }
 
 		SlideSource.Stop();
 	}
