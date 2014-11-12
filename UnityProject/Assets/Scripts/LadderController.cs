@@ -30,14 +30,15 @@ public class LadderController : MonoBehaviour {
         Active = false;
     }
 
-    void OnTriggerEnter2D ()
+    void OnTriggerStay2D ()
     {
         Entered = true;
     }
 
     void OnTriggerExit2D ()
     {
-        Entered = false;
+        if (!Active)
+            Entered = false;
         Active = false;
         
         foreach (BoxCollider2D gate in FloorGates)
@@ -52,7 +53,7 @@ public class LadderController : MonoBehaviour {
     void Update () {
         //Allows the player to mount the ladder simply by moving up or down while within the ladder's box collider
         //After determining issue, put " || Mathf.Abs(PlayerObserver.GetPlayerVel().y) > 20f" back at end of if-statement
-        if (Entered && !Active && ((Input.GetKeyDown(KeyCode.W) && !Top) || Input.GetKeyDown(KeyCode.S)))
+        if (Entered && ((!Active && ((Input.GetKeyDown(KeyCode.W) && !Top) || Input.GetKeyDown(KeyCode.S))) || Mathf.Abs(PlayerObserver.GetPlayerVel().y) > 10f))
         {
             foreach (BoxCollider2D gate in FloorGates)
             {

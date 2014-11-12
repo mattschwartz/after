@@ -911,7 +911,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d59eed22f338347a4940de0f91a50c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FloorGates: []
+  FloorGates:
+  - {fileID: 1056199117}
   PlayerCon: {fileID: 1087088099}
   StepClips: []
   Profile: 0
@@ -6668,7 +6669,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_Name
