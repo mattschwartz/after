@@ -432,6 +432,7 @@ MonoBehaviour:
   From: 1
   To: 1
   Observations: No power. The generator must have shut off.
+  Observer: {fileID: 329743549}
 --- !u!1 &37619329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,7 +1866,8 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 1
   To: 1
-  Observations: I'll need to pry these open with something.
+  Observations: I'll need to pry this open with something.
+  Observer: {fileID: 329743549}
 --- !u!1 &259909123
 GameObject:
   m_ObjectHideFlags: 0
@@ -4885,6 +4887,7 @@ MonoBehaviour:
   To: 1
   Observations: This must be the door to the engineering room. I need an access card,
     though.
+  Observer: {fileID: 329743549}
 --- !u!1 &358117380
 GameObject:
   m_ObjectHideFlags: 0
@@ -8952,6 +8955,7 @@ MonoBehaviour:
   To: 1
   Observations: It looks like someone was crushed underneath, but it's too heavy to
     move with my hands.
+  Observer: {fileID: 329743549}
 --- !u!1001 &837851185
 Prefab:
   m_ObjectHideFlags: 0
@@ -10417,6 +10421,7 @@ MonoBehaviour:
   From: 1
   To: 2
   Observations: This receipt has some numbers written on the back.
+  Observer: {fileID: 329743549}
 --- !u!1 &1067199651
 GameObject:
   m_ObjectHideFlags: 0
@@ -15704,8 +15709,8 @@ MonoBehaviour:
   UnlockedState: {fileID: 0}
   SpentState: {fileID: 0}
   TransitionScripts:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1865999370}
+  - {fileID: 2075073237}
 --- !u!1 &1653741023
 GameObject:
   m_ObjectHideFlags: 0
@@ -16351,6 +16356,7 @@ MonoBehaviour:
   From: 1
   To: 2
   Observations: 4.2.3.9. Aha! That worked.
+  Observer: {fileID: 329743549}
 --- !u!1001 &1809587378
 Prefab:
   m_ObjectHideFlags: 0
@@ -17028,9 +17034,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1865999368}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 518cef77cb6e0aa42bff9e59b0a0d503, type: 3}
+  m_Script: {fileID: 11500000, guid: 250c3e78bed476141838121b4ff3a68b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 1
+  To: 1
+  AddToJournal: 0
+  PercentSize: 0
+  Title: Bulletin Board
+  Observations: The board is too dark to read.
+  InspectingTexture: {fileID: 0}
 --- !u!1001 &1884475195
 Prefab:
   m_ObjectHideFlags: 0
@@ -18366,6 +18381,7 @@ MonoBehaviour:
   From: 1
   To: 1
   Observations: This controls the power, but I need to start the generator first.
+  Observer: {fileID: 329743549}
 --- !u!1 &1980510727
 GameObject:
   m_ObjectHideFlags: 0
@@ -18453,6 +18469,7 @@ MonoBehaviour:
   From: 1
   To: 1
   Observations: The generator won't start. Looks like it's out of fuel.
+  Observer: {fileID: 329743549}
 --- !u!1001 &1988598106
 Prefab:
   m_ObjectHideFlags: 0
@@ -18994,9 +19011,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2075073235}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 518cef77cb6e0aa42bff9e59b0a0d503, type: 3}
+  m_Script: {fileID: 11500000, guid: 250c3e78bed476141838121b4ff3a68b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 0
+  To: 2
+  AddToJournal: 0
+  PercentSize: 0
+  Title: Bulletin board
+  Observations: 
+  InspectingTexture: {fileID: 0}
 --- !u!1 &2079244784
 GameObject:
   m_ObjectHideFlags: 0
@@ -19315,3 +19341,4 @@ MonoBehaviour:
   From: 3
   To: 3
   Observations: The generator is running.
+  Observer: {fileID: 329743549}

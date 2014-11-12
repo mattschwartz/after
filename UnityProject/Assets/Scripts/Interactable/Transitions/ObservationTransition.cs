@@ -10,16 +10,11 @@ namespace After.Interactable.Transitions
     public class ObservationTransition : Transition
     {
         public string Observations;
-        private GameObject PlayerThoughts;
-
-        void Start()
-        {
-            PlayerThoughts = GameObject.Find("Player Thoughts");
-        }
+        public ObservationsController Observer;
 
         public override void Read(StateType fromState, StateType toState)
         {
-            PlayerThoughts.SendMessage("SetThought", Observations);
+            Observer.SetThought(Observations);
         }
     }
 }
