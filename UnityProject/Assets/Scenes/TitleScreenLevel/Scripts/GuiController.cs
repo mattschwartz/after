@@ -1,18 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 using After.Audio;
+using System.Collections.Generic;
 
 public class GuiController : MonoBehaviour
 {
 
     #region Members
 
+    public float Volume = 1;
     public GUIStyle NewGameStyle;
     public GUIStyle ContinueStyle;
     public GUIStyle OptionsStyle;
     public GUIStyle ExitStyle;
-    public AudioClip MousePressClip;
     public SceneFaderController SceneFader;
+    public AudioClip ClickClip;
 
     private float btnWidth = 123;
     private float btnHeight = 20;
@@ -21,8 +23,28 @@ public class GuiController : MonoBehaviour
     private Rect ContinuePosition;
     private Rect OptionsPosition;
     private Rect ExitPosition;
+    private List<float> Notes;
 
     #endregion
+
+    void Start() 
+    {
+        Notes = new List<float>() {
+            0.05946309435905f,
+            0.12246204830885f,
+            0.1892071150019f,
+            0.2599210498937f,
+            0.3348398541685f,
+            0.4142135623711f,
+
+            -0.05946309435905f,
+            -0.12246204830885f,
+            -0.1892071150019f,
+            -0.2599210498937f,
+            -0.3348398541685f,
+            -0.4142135623711f
+        };
+    }
 
     private void DefineBounds()
     {
@@ -34,25 +56,30 @@ public class GuiController : MonoBehaviour
         ExitPosition = new Rect(camPos.x - btnWidth / 2, camPos.y - btnWidth / 2 + yOffs * 3, btnWidth, btnHeight);
     }
 
+    private void PlayRandomClick()
+    {
+        float pitch = 1 + (Notes[Random.Range(0, Notes.Count - 1)]);
+        AudioManager.PlayClipAtPoint(ClickClip, pitch, transform.position, Volume);
+    }
+
     private void NewGame_Click()
     {
-        AudioManager.PlayClipAtPoint(MousePressClip, transform.position);
-        StartCoroutine(SceneFader.FadeOut());
+        PlayRandomClick();
     }
 
     private void Continue_Click()
     {
-        AudioManager.PlayClipAtPoint(MousePressClip, transform.position);
+        PlayRandomClick();
     }
 
     private void Options_Click()
     {
-        AudioManager.PlayClipAtPoint(MousePressClip, transform.position);
+        PlayRandomClick();
     }
 
     private void Exit_Click()
     {
-        AudioManager.PlayClipAtPoint(MousePressClip, transform.position);
+        PlayRandomClick();
         Application.Quit();
     }
 

@@ -1,27 +1,41 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using After.Audio;
 
-public class RClickPitchController : MonoBehaviour {
+public class ClickPitchController : MonoBehaviour 
+{
+	#region Members
 
-// values of notes (added to root pitch, 1)
-//a = 0.05946309435905
-//b = 0.12246204830885
-//c = 0.1892071150019
-//d = 0.2599210498937
-//e = 0.3348398541685
-//f = 0.4142135623711
+	public float Volume = 1;
+	public AudioClip ClickClip;
+	private List<float> Notes;
 
-// randomly select pitch to add to root pitch (1)
-// +/- a-f
-// pitch = 1 + Random([a,b,c,d,e,f, a.neg,b.neg,c.neg,d.neg,e.neg,f.neg])
+	#endregion
 
-	// Use this for initialization
-	void Start () {
-	
+	void Start() 
+	{
+		Notes = new List<float>() {
+			0.05946309435905f,
+			0.12246204830885f,
+			0.1892071150019f,
+			0.2599210498937f,
+			0.3348398541685f,
+			0.4142135623711f,
+
+			-0.05946309435905f,
+			-0.12246204830885f,
+			-0.1892071150019f,
+			-0.2599210498937f,
+			-0.3348398541685f,
+			-0.4142135623711f
+		};
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	void Update() 
+	{
+		float pitch = 1 + (Notes[Random.Range(0, Notes.Count - 1)]);
+		AudioManager.PlayClipAtPoint(ClickClip, pitch, transform.position, Volume);
 	}
 }

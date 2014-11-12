@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dcb1180e17bcbf49852d09f5b252779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Volume: 1
   NewGameStyle:
     m_Name: 
     m_Normal:
@@ -469,8 +470,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  MousePressClip: {fileID: 8300000, guid: 9c2ab7160ccd45a4b9073def422ba0d8, type: 3}
   SceneFader: {fileID: 937982489}
+  ClickClip: {fileID: 8300000, guid: 9c2ab7160ccd45a4b9073def422ba0d8, type: 3}
 --- !u!1001 &266851177
 Prefab:
   m_ObjectHideFlags: 0
