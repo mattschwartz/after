@@ -9,8 +9,7 @@ public class RockSlideAudioController : MonoBehaviour
 
 	void OnCollisionStay2D(Collision2D other) 
 	{
-		if (WatchFor == null) { 
-			//Destroy(this.gameObject); 
+		if (WatchFor == null) {
 			return; 
 		}
 		
