@@ -40,8 +40,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f00157d9785c6545a818570814000b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TextWidth: 88.5
   TextureSize: 200
-  CloseButton: 27
   BlackSwatchTexture: {fileID: 13100000}
   opaCustomStyle:
     m_Name: 
@@ -89,22 +89,20 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 12800000, guid: 18412cee854d77143a5e17b2ef00f635, type: 3}
+    m_Font: {fileID: 12800000, guid: 22f7c3a882a15604da8ec404d5e5d4ea, type: 3}
     m_FontSize: 18
     m_FontStyle: 0
-    m_Alignment: 1
+    m_Alignment: 4
     m_WordWrap: 1
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
-    m_ContentOffset: {x: -300, y: 0}
+    m_ContentOffset: {x: 0, y: 0}
     m_FixedWidth: 600
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Player: {fileID: 0}
   ColorOverlay: {r: 0, g: 0, b: 0, a: 0}
-  Journal: {fileID: 0}
 --- !u!131 &13100000
 GUITexture:
   m_ObjectHideFlags: 1

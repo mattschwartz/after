@@ -39,10 +39,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46bd61d07c5e6e448b964ceeaf876912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerBoxCollider: {fileID: 0}
-  Player: {fileID: 0}
   screenPosition: {x: 0, y: 0, z: 0}
-  Thought: 
+  Observations: 
   opaCustomStyle:
     m_Name: 
     m_Normal:
@@ -92,8 +90,8 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 18412cee854d77143a5e17b2ef00f635, type: 3}
     m_FontSize: 21
     m_FontStyle: 0
-    m_Alignment: 1
-    m_WordWrap: 0
+    m_Alignment: 7
+    m_WordWrap: 1
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0

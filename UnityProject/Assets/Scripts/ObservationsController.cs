@@ -3,7 +3,6 @@ using System.Collections;
 
 public class ObservationsController : MonoBehaviour
 {
-    public BoxCollider2D PlayerBoxCollider;
     public Vector3 screenPosition;
     public string Observations;
     public GUIStyle opaCustomStyle;

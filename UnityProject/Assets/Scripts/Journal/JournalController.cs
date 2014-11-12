@@ -82,6 +82,7 @@ namespace After.Journal
             Scale = (PercentSize / 100f) * ((float)Screen.width / 960f);
             EntryStyle.fontSize = (int)((float)21 * Scale);
             EntryTitleStyle.fontSize = (int)((float)26 * Scale);
+            opaCustomStyle.fontSize = (int)((float)38 * Scale);
 
             PreviousPageBounds = GetRelativeByBounds(JournalBounds, 0.046f, 
                 0.83f, 180 * Scale, 45 * Scale);
@@ -326,7 +327,7 @@ namespace After.Journal
                 RenderEntry();
             }
 
-            var screenCoords = new Vector3(0.5f, 0.9f, 0);
+            var screenCoords = new Vector3(0.03f, 0.07f, 0);
             var camPos = Camera.main.ViewportToScreenPoint(screenCoords);
             var labelCoords = new Rect(camPos.x, camPos.y, 0, 0);
             GUI.Label(labelCoords, "Press Escape to close", opaCustomStyle);
