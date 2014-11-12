@@ -17042,10 +17042,10 @@ MonoBehaviour:
   From: 1
   To: 1
   AddToJournal: 0
-  PercentSize: 0
+  PercentSize: 75
   Title: Bulletin Board
   Observations: The board is too dark to read.
-  InspectingTexture: {fileID: 0}
+  InspectingTexture: {fileID: 2800000, guid: 1aea569c979384511941f09109c8c55e, type: 3}
 --- !u!1001 &1884475195
 Prefab:
   m_ObjectHideFlags: 0
@@ -19019,10 +19019,10 @@ MonoBehaviour:
   From: 0
   To: 2
   AddToJournal: 0
-  PercentSize: 0
+  PercentSize: 75
   Title: Bulletin board
   Observations: 
-  InspectingTexture: {fileID: 0}
+  InspectingTexture: {fileID: 2800000, guid: 1edb397a3005a8b4c98ce71a54e3ccb6, type: 3}
 --- !u!1 &2079244784
 GameObject:
   m_ObjectHideFlags: 0
