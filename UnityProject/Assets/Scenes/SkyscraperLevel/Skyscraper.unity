@@ -3536,8 +3536,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1704786875}
   - 212: {fileID: 1704786874}
-  - 61: {fileID: 1704786876}
-  - 114: {fileID: 1704786877}
   m_Layer: 8
   m_Name: CEO Desk
   m_TagString: Untagged
@@ -3579,34 +3577,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1008162773}
   m_RootOrder: 8
---- !u!61 &1704786876
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1704786873}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 4.35388947, y: 1.16999996}
-  m_Center: {x: -.228363037, y: 0}
---- !u!114 &1704786877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1704786873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Volume: 1
-  StepSounds:
-  - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
-  - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
-  - {fileID: 8300000, guid: 145898131f0fb49928f9935e8a665431, type: 3}
-  - {fileID: 8300000, guid: e862af059df554c2093cebc016d0bb2f, type: 3}
 --- !u!1 &1725288109
 GameObject:
   m_ObjectHideFlags: 0
