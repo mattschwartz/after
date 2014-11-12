@@ -1710,7 +1710,7 @@ MonoBehaviour:
   Volume: 1
   WatchFor: {fileID: 488547617}
   AudioClips:
-  - {fileID: 8300000, guid: efec55dae98ea4c0abdbdac88db64d74, type: 3}
+  - {fileID: 8300000, guid: a3e7caf0cf97e4b8ca2190478dd72014, type: 3}
   - {fileID: 8300000, guid: 8afb05ee3711f734986eca71dffc9a89, type: 3}
 --- !u!1 &413521062
 GameObject:
@@ -3620,9 +3620,9 @@ AudioSource:
   m_GameObject: {fileID: 790199331}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 1630d07af24b94401b3dcfc48e2f9332, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dc35eaad3769a4cfa8fbfc0eec8725dd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .5
   m_Pitch: 1
   Loop: 1
   Mute: 0
