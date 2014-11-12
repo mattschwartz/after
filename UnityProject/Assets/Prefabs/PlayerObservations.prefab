@@ -87,7 +87,7 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 12800000, guid: 18412cee854d77143a5e17b2ef00f635, type: 3}
+    m_Font: {fileID: 12800000, guid: c6b43eb7443c09c40aa87add81afed9c, type: 3}
     m_FontSize: 21
     m_FontStyle: 0
     m_Alignment: 7
@@ -100,6 +100,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+  ObservationBackgroundTexture: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
