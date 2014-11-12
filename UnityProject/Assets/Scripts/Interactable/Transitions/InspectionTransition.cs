@@ -5,12 +5,12 @@ using System.Collections;
 
 namespace After.Interactable.Transitions
 {
-    public class InspectionViewTransition : Transition
+    public class InspectionTransition : Transition
     {
         #region Members
 
         public bool AddToJournal;
-        public float ScreenSize;
+        public float PercentSize;
         public string Title;
         public string Observations;
         public Texture InspectingTexture;
@@ -19,7 +19,7 @@ namespace After.Interactable.Transitions
 
         public override void Read(StateType fromState, StateType toState)
         {
-            float size = (ScreenSize / 100f) * (float)Screen.width;
+            float size = (PercentSize / 100f) * (float)Screen.width;
             InspectorController.Instance.InspectItem(Title, Observations, InspectingTexture, size, AddToJournal);
         }
     }

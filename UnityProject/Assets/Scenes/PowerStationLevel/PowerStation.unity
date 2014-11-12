@@ -550,46 +550,6 @@ Prefab:
   m_RootGameObject: {fileID: 1104890948}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &156429705
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-  m_PrefabInternal: {fileID: 961221873}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 156429706}
-  - 61: {fileID: 156429707}
-  m_Layer: 11
-  m_Name: WorldCollider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &156429706
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-  m_PrefabInternal: {fileID: 961221873}
-  m_GameObject: {fileID: 156429705}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 298742632}
-  m_RootOrder: 0
---- !u!61 &156429707
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6100000, guid: 880db7676c14fbe4ea810bf7078712f0,
-    type: 2}
-  m_PrefabInternal: {fileID: 961221873}
-  m_GameObject: {fileID: 156429705}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: .5, y: .5}
-  m_Center: {x: 0, y: 0}
 --- !u!1 &156483769
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +641,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1949834331}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!61 &171733339
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -893,7 +853,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1949834331}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!68 &181490249
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -957,7 +917,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1949834331}
-  m_RootOrder: 16
+  m_RootOrder: 15
 --- !u!212 &292997475
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1029,112 +989,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
   - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
   - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
---- !u!1 &298742631
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-  m_PrefabInternal: {fileID: 961221873}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 298742632}
-  - 212: {fileID: 298742636}
-  - 61: {fileID: 298742635}
-  - 114: {fileID: 298742634}
-  - 50: {fileID: 298742633}
-  m_Layer: 13
-  m_Name: Eugene Waltz ID card
-  m_TagString: Untagged
-  m_Icon: {fileID: -1500306622, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &298742632
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-  m_PrefabInternal: {fileID: 961221873}
-  m_GameObject: {fileID: 298742631}
-  m_LocalRotation: {x: 0, y: 0, z: -.382683456, w: .923879504}
-  m_LocalPosition: {x: 6.46759224, y: -.605741501, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 156429706}
-  - {fileID: 1174397058}
-  m_Father: {fileID: 1949834331}
-  m_RootOrder: 0
---- !u!50 &298742633
-Rigidbody2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5000000, guid: 880db7676c14fbe4ea810bf7078712f0,
-    type: 2}
-  m_PrefabInternal: {fileID: 961221873}
-  m_GameObject: {fileID: 298742631}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 8
-  m_FixedAngle: 1
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
---- !u!114 &298742634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0,
-    type: 2}
-  m_PrefabInternal: {fileID: 961221873}
-  m_GameObject: {fileID: 298742631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c76ea56eb68ddf4bbbe9d43f6e835ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentState: 1
-  LockedState: {fileID: 0}
-  UnlockedState: {fileID: 0}
-  SpentState: {fileID: 0}
-  TransitionScripts:
-  - {fileID: 1174397059}
-  ItemName: Access Card
-  Description: This card belonged to Eugene Waltz. He worked under me and he betrayed
-    me.
-  JournalImage: {fileID: 2800000, guid: caeddd55901eb604ab7a4296fd339f6f, type: 3}
---- !u!61 &298742635
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6100002, guid: 880db7676c14fbe4ea810bf7078712f0,
-    type: 2}
-  m_PrefabInternal: {fileID: 961221873}
-  m_GameObject: {fileID: 298742631}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 1.27999997, y: 1.27999997}
-  m_Center: {x: 0, y: 0}
---- !u!212 &298742636
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 21200000, guid: 880db7676c14fbe4ea810bf7078712f0,
-    type: 2}
-  m_PrefabInternal: {fileID: 961221873}
-  m_GameObject: {fileID: 298742631}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 4236500287
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 669e702900ad7674ba0ca4df8a9d5d49, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &306542805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,7 +1111,7 @@ Transform:
   m_LocalScale: {x: 1.88701081, y: 1.88700855, z: 1}
   m_Children: []
   m_Father: {fileID: 1949834331}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!212 &324347798
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1651,7 +1505,7 @@ Transform:
   - {fileID: 1800737354}
   - {fileID: 1325791469}
   m_Father: {fileID: 1949834331}
-  m_RootOrder: 14
+  m_RootOrder: 13
 --- !u!58 &416403217
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1710,7 +1564,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1949834331}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!114 &424678422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1892,7 +1746,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1949834331}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1 &444879971
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,7 +1888,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1949834331}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!1 &469706976
 GameObject:
   m_ObjectHideFlags: 0
@@ -2108,6 +1962,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1949834331}
+<<<<<<< HEAD
   m_RootOrder: 11
 --- !u!1 &480305720
 GameObject:
@@ -2159,6 +2014,9 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 21
+=======
+  m_RootOrder: 10
+>>>>>>> FETCH_HEAD
 --- !u!1 &488547617
 GameObject:
   m_ObjectHideFlags: 0
@@ -2463,6 +2321,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1835881764}
   m_RootOrder: 26
+--- !u!1 &596610353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 596610354}
+  - 114: {fileID: 596610355}
+  m_Layer: 0
+  m_Name: Inspector transition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &596610354
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 596610353}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1326556593}
+  m_RootOrder: 2
+--- !u!114 &596610355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 596610353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250c3e78bed476141838121b4ff3a68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 0
+  To: 2
+  AddToJournal: 1
+  PercentSize: 88.5
+  Title: Eugene Waltz
+  Observations: He was an engineer on my team. I thought I could trust him, but he
+    was one of them...against me. He betrayed me and all of humanity.
+  InspectingTexture: {fileID: 2800000, guid: f314a44cc0eee4518a29f6e97c7f01f6, type: 3}
 --- !u!1 &600732261
 GameObject:
   m_ObjectHideFlags: 0
@@ -3050,7 +2957,7 @@ Transform:
   m_LocalScale: {x: .882047474, y: .882046521, z: 1}
   m_Children: []
   m_Father: {fileID: 1949834331}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1 &750979930
 GameObject:
   m_ObjectHideFlags: 0
@@ -4139,51 +4046,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1949834331}
-  m_RootOrder: 4
---- !u!1 &856948682
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 856948683}
-  - 114: {fileID: 856948684}
-  m_Layer: 0
-  m_Name: Put Item in backpack
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &856948683
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 856948682}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1326556593}
-  m_RootOrder: 1
---- !u!114 &856948684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 856948682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5154222707374e188081a5cb0c568fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestroyOnRead: 0
-  WaitSecondsBeforeRead: .699999988
-  From: 1
-  To: 2
-  GrabbableItem: {fileID: 298742634}
+  m_RootOrder: 3
 --- !u!1 &866192562
 GameObject:
   m_ObjectHideFlags: 0
@@ -4422,101 +4285,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1949834331}
-  m_RootOrder: 1
---- !u!1001 &961221873
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1949834331}
-    m_Modifications:
-    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 6.46759224
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -.605741501
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -.382683456
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: .923879504
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 21200000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 669e702900ad7674ba0ca4df8a9d5d49,
-        type: 3}
-    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: m_Size.x
-      value: 1.27999997
-      objectReference: {fileID: 0}
-    - target: {fileID: 6100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: m_Size.y
-      value: 1.27999997
-      objectReference: {fileID: 0}
-    - target: {fileID: 6100000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: m_Size.x
-      value: .5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6100000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: m_Size.y
-      value: .5
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: m_Name
-      value: Eugene Waltz ID card
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: ItemName
-      value: Access Card
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: Description
-      value: This card belonged to Eugene Waltz. He worked under me and he betrayed
-        me.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-      propertyPath: JournalImage
-      value: 
-      objectReference: {fileID: 2800000, guid: caeddd55901eb604ab7a4296fd339f6f, type: 3}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
-  m_RootGameObject: {fileID: 298742631}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
+  m_RootOrder: 0
 --- !u!1 &970546939
 GameObject:
   m_ObjectHideFlags: 0
@@ -4676,6 +4445,10 @@ Prefab:
     - target: {fileID: 13100000, guid: 130942ee731155042ab679f46cdec904, type: 2}
       propertyPath: m_PixelInset.height
       value: 909
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 130942ee731155042ab679f46cdec904, type: 2}
+      propertyPath: opaCustomStyle.m_Alignment
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 130942ee731155042ab679f46cdec904, type: 2}
@@ -5490,6 +5263,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1835881764}
   m_RootOrder: 0
+<<<<<<< HEAD
 --- !u!1 &1174397057
 GameObject:
   m_ObjectHideFlags: 0
@@ -5586,6 +5360,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 23
+=======
+>>>>>>> FETCH_HEAD
 --- !u!1 &1182367946
 GameObject:
   m_ObjectHideFlags: 0
@@ -5614,7 +5390,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1949834331}
-  m_RootOrder: 15
+  m_RootOrder: 14
 --- !u!61 &1182367948
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6247,10 +6023,10 @@ Transform:
   m_LocalScale: {x: .266127139, y: .266128361, z: 1}
   m_Children:
   - {fileID: 174628842}
-  - {fileID: 856948683}
   - {fileID: 1801846474}
+  - {fileID: 596610354}
   m_Father: {fileID: 1949834331}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!212 &1326556594
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6289,7 +6065,7 @@ MonoBehaviour:
   UnlockedState: {fileID: 0}
   SpentState: {fileID: 0}
   TransitionScripts:
-  - {fileID: 856948684}
+  - {fileID: 596610355}
   - {fileID: 1801846475}
 --- !u!61 &1326556596
 BoxCollider2D:
@@ -7848,6 +7624,7 @@ MonoBehaviour:
   SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 669450122}
+  WidthOnInspection: 200
   ItemName: Rubble
   Description: Some rubble that fell from the ceiling when I fell. Might be able to
     use it to get out of here.
@@ -8259,7 +8036,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1326556593}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &1801846475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8386,7 +8163,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: c6b43eb7443c09c40aa87add81afed9c, type: 3}
     m_FontSize: 21
     m_FontStyle: 0
-    m_Alignment: 1
+    m_Alignment: 3
     m_WordWrap: 0
     m_RichText: 1
     m_TextClipping: 0
@@ -8924,7 +8701,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1949834331}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1 &1917481245
 GameObject:
   m_ObjectHideFlags: 0
@@ -9145,7 +8922,6 @@ Transform:
   m_LocalPosition: {x: .0321121216, y: -24.3390694, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 298742632}
   - {fileID: 917854653}
   - {fileID: 1898979636}
   - {fileID: 1968327324}
@@ -9263,7 +9039,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1949834331}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &1990588744
 GameObject:
   m_ObjectHideFlags: 0
