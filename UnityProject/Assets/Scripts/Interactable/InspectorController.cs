@@ -9,6 +9,7 @@ namespace After.Interactable
     {
         #region Members
 
+        public float TextWidth = 88.5f;
         public float TextureSize = 200;
         public GUITexture BlackSwatchTexture;
         public GUIStyle opaCustomStyle;
@@ -52,12 +53,17 @@ namespace After.Interactable
 
         private void StaticUpdate()
         {
-            if (ShowInspector && Input.GetKeyUp(CloseButton)) {
-                SceneHandler.Player.FreePlayer();
-                SceneHandler.GUILock = null;
-                ShowInspector = false;
-                BlackSwatchTexture.enabled = false;
-            }   
+            if (ShowInspector) {
+                opaCustomStyle.fixedWidth = Screen.width * (TextWidth / 100f);
+                opaCustomStyle.fontSize = (int)((float)26 * (TextWidth / 100f) * ((float)Screen.width / 960f));
+
+                 if (Input.GetKeyUp(CloseButton)) {
+                    SceneHandler.Player.FreePlayer();
+                    SceneHandler.GUILock = null;
+                    ShowInspector = false;
+                    BlackSwatchTexture.enabled = false;
+                }   
+            }
         }
 
         #region Render GUI
@@ -86,11 +92,14 @@ namespace After.Interactable
 
         private void RenderText() 
         {
-            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.05f, 0));
+            float centerX = (1 - (TextWidth / 100f)) / 2;
+            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(centerX, 0.05f, 0));
             GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), TitleText, opaCustomStyle);
-            camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.75f, 0));
+
+            camPos = Camera.main.ViewportToScreenPoint(new Vector3(centerX, 0.75f, 0));
             GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), DescriptionText, opaCustomStyle);
-            camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.95f, 0));
+
+            camPos = Camera.main.ViewportToScreenPoint(new Vector3(centerX, 0.95f, 0));
             GUI.Label(new Rect(camPos.x, camPos.y, 0, 0), "Press Escape to close", opaCustomStyle);
         }
 
