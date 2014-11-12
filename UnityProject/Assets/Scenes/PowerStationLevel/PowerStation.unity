@@ -7187,7 +7187,7 @@ MonoBehaviour:
   From: 1
   To: 1
   Observations: I could probably bust the handle with something.
-  Observer: {fileID: 0}
+  Observer: {fileID: 1123528234}
 --- !u!1 &1486330021
 GameObject:
   m_ObjectHideFlags: 0
@@ -9731,7 +9731,7 @@ MonoBehaviour:
   From: 1
   To: 2
   Observations: Hmm...
-  Observer: {fileID: 0}
+  Observer: {fileID: 1123528234}
 --- !u!1001 &1934467938
 Prefab:
   m_ObjectHideFlags: 0
