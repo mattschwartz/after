@@ -4767,7 +4767,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerBoxCollider: {fileID: 194404993}
-  Player: {fileID: 194404990}
   screenPosition: {x: 0, y: 0, z: 0}
   Observations: 
   opaCustomStyle:
@@ -4819,8 +4818,8 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 18412cee854d77143a5e17b2ef00f635, type: 3}
     m_FontSize: 21
     m_FontStyle: 0
-    m_Alignment: 1
-    m_WordWrap: 0
+    m_Alignment: 7
+    m_WordWrap: 1
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
@@ -9159,7 +9158,7 @@ MonoBehaviour:
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
-    m_ContentOffset: {x: -300, y: 0}
+    m_ContentOffset: {x: 0, y: 0}
     m_FixedWidth: 600
     m_FixedHeight: 0
     m_StretchWidth: 1
@@ -11790,6 +11789,10 @@ Prefab:
     - target: {fileID: 400000, guid: c47b4d550baedb848a5a07a607901a65, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c47b4d550baedb848a5a07a607901a65, type: 2}
+      propertyPath: opaCustomStyle.m_ContentOffset.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c47b4d550baedb848a5a07a607901a65, type: 2}
@@ -18773,6 +18776,14 @@ Prefab:
       propertyPath: Player
       value: 
       objectReference: {fileID: 194404990}
+    - target: {fileID: 11400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
+      propertyPath: opaCustomStyle.m_WordWrap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
+      propertyPath: opaCustomStyle.m_Alignment
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
   m_RootGameObject: {fileID: 329743548}

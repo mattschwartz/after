@@ -4,7 +4,6 @@ using System.Collections;
 public class ObservationsController : MonoBehaviour
 {
     public BoxCollider2D PlayerBoxCollider;
-    public GameObject Player;
     public Vector3 screenPosition;
     public string Observations;
     public GUIStyle opaCustomStyle;
@@ -12,13 +11,6 @@ public class ObservationsController : MonoBehaviour
     private bool ShowThought = true;
     private float DisplayTime;
     private float FadeTime;
-
-    void Update()
-    {
-        screenPosition = Camera.main.WorldToScreenPoint(new Vector3(
-            Player.transform.position.x, PlayerBoxCollider.bounds.max.y + 1, 0));
-        screenPosition.y = Screen.height - screenPosition.y;
-    }
 
     void FixedUpdate()
     {
@@ -33,6 +25,10 @@ public class ObservationsController : MonoBehaviour
     {
         if (!ShowThought) { return; }
 
+
+        opaCustomStyle.fixedWidth = Screen.width * 0.90f;
+        opaCustomStyle.fontSize = (int)((float)38 * 0.90f * ((float)Screen.width / 960f));
+        screenPosition = Camera.main.ViewportToScreenPoint(new Vector3(0.05f, 0.95f, 0));
         GUI.Label(new Rect(screenPosition.x, screenPosition.y, 0, 0), Observations, opaCustomStyle);
     }
 
