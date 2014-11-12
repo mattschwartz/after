@@ -62,7 +62,7 @@ namespace After.Interactable
                     SceneHandler.GUILock = null;
                     ShowInspector = false;
                     BlackSwatchTexture.enabled = false;
-                }   
+                }
             }
         }
 

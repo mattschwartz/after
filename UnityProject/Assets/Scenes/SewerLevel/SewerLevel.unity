@@ -2161,58 +2161,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 260634086}
   m_RootOrder: 7
---- !u!1001 &277019641
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
-      propertyPath: PlayerBoxCollider
-      value: 
-      objectReference: {fileID: 194404993}
-    - target: {fileID: 11400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 194404990}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
-  m_RootGameObject: {fileID: 329743548}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &287223999
 GameObject:
   m_ObjectHideFlags: 0
@@ -4789,13 +4737,13 @@ SpriteRenderer:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
-  m_PrefabInternal: {fileID: 277019641}
+  m_PrefabInternal: {fileID: 2047665633}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 329743550}
   - 114: {fileID: 329743549}
   m_Layer: 0
-  m_Name: Player Thoughts
+  m_Name: Player Observations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4806,7 +4754,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: 9b8a2948d835669419f9084f6afb06b0,
     type: 2}
-  m_PrefabInternal: {fileID: 277019641}
+  m_PrefabInternal: {fileID: 2047665633}
   m_GameObject: {fileID: 329743548}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4880,7 +4828,7 @@ MonoBehaviour:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
-  m_PrefabInternal: {fileID: 277019641}
+  m_PrefabInternal: {fileID: 2047665633}
   m_GameObject: {fileID: 329743548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -5535,6 +5483,7 @@ MonoBehaviour:
   SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 37619331}
+  WidthOnInspection: 200
   ItemName: Access Card
   Description: This belonged to Felix. He must have been an engineer in the sewer.
   JournalImage: {fileID: 2800000, guid: cc8ddebdce22d8148919a5b43e6ebabd, type: 3}
@@ -6822,6 +6771,7 @@ MonoBehaviour:
   SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 1272377025}
+  WidthOnInspection: 200
   ItemName: Crumpled Paper
   Description: A bar napkin. Looks like the key code was scrawled on the back of it.
   JournalImage: {fileID: 0}
@@ -9100,6 +9050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f00157d9785c6545a818570814000b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TextWidth: 88.5
   TextureSize: 200
   BlackSwatchTexture: {fileID: 843662211}
   opaCustomStyle:
@@ -11845,6 +11796,7 @@ MonoBehaviour:
   SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 878753111}
+  WidthOnInspection: 200
   ItemName: Rebar
   Description: Some old reinforcing steel. Maybe I could use this for leverage.
   JournalImage: {fileID: 0}
@@ -14358,6 +14310,7 @@ MonoBehaviour:
   SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 728401012}
+  WidthOnInspection: 200
   ItemName: Generator Fuel
   Description: Feels like there's just enough to start the generator back up. My lucky
     day.
@@ -15703,8 +15656,8 @@ MonoBehaviour:
   UnlockedState: {fileID: 0}
   SpentState: {fileID: 0}
   TransitionScripts:
-  - {fileID: 1865999370}
-  - {fileID: 2075073237}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1653741023
 GameObject:
   m_ObjectHideFlags: 0
@@ -18713,6 +18666,62 @@ Transform:
   - {fileID: 1624531499}
   m_Father: {fileID: 300403324}
   m_RootOrder: 9
+--- !u!1001 &2047665633
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
+      propertyPath: m_Name
+      value: Player Observations
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
+      propertyPath: PlayerBoxCollider
+      value: 
+      objectReference: {fileID: 194404993}
+    - target: {fileID: 11400000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 194404990}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9b8a2948d835669419f9084f6afb06b0, type: 2}
+  m_RootGameObject: {fileID: 329743548}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &2052403241
 GameObject:
   m_ObjectHideFlags: 0

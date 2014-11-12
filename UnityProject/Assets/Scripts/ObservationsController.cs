@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ThoughtController : MonoBehaviour
+public class ObservationsController : MonoBehaviour
 {
     public BoxCollider2D PlayerBoxCollider;
     public GameObject Player;
