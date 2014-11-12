@@ -7,6 +7,8 @@ using System.Linq;
 
 public class PeriodicScreenShakerController : MonoBehaviour 
 {
+	#region Members
+
 	public float Intensity = 0.15f;
 	public float Decay = 0.002f;
 	public float RangeMin;
@@ -20,6 +22,8 @@ public class PeriodicScreenShakerController : MonoBehaviour
 	private float LastShake;
 	private float NextShake;
 
+	#endregion
+
 	void Start()
 	{
 		FallingRock.renderer.sortingLayerName = "Particles";
@@ -32,6 +36,7 @@ public class PeriodicScreenShakerController : MonoBehaviour
 		RumbleClips.ForEach(t =>
 			AudioManager.PlayClipAtPoint(t, transform.position, ClipVolume, PitchLow, PitchHigh));
 		
+		FallingRock.Stop();
 		FallingRock.Simulate(0);
 		FallingRock.Play();
 	}
