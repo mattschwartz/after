@@ -246,6 +246,7 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 1
   To: 1
+  Observations: {fileID: 329743549}
 --- !u!1 &17949768
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,7 +364,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 139879937}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!114 &27248707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1311,6 +1312,7 @@ Transform:
   - {fileID: 711705601}
   - {fileID: 16400119}
   - {fileID: 1806160325}
+  - {fileID: 510151486}
   - {fileID: 1289120092}
   - {fileID: 1390533639}
   - {fileID: 910787350}
@@ -1378,6 +1380,7 @@ MonoBehaviour:
   - {fileID: 1289120093}
   - {fileID: 27248707}
   - {fileID: 1806160326}
+  - {fileID: 510151487}
 --- !u!61 &139879941
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4764,7 +4767,7 @@ MonoBehaviour:
   PlayerBoxCollider: {fileID: 194404993}
   Player: {fileID: 194404990}
   screenPosition: {x: 0, y: 0, z: 0}
-  Thought: 
+  Observations: 
   opaCustomStyle:
     m_Name: 
     m_Normal:
@@ -5958,6 +5961,51 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
   - {fileID: 8300000, guid: 145898131f0fb49928f9935e8a665431, type: 3}
   - {fileID: 8300000, guid: e862af059df554c2093cebc016d0bb2f, type: 3}
+--- !u!1 &510151485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 510151486}
+  - 114: {fileID: 510151487}
+  m_Layer: 0
+  m_Name: Auditory Success
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &510151486
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 510151485}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 139879937}
+  m_RootOrder: 4
+--- !u!114 &510151487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 510151485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 0
+  To: 2
+  Volume: 1
+  Clip: {fileID: 8300000, guid: b8f5eb70626994b1fac278bcf169a665, type: 3}
 --- !u!1 &512251822
 GameObject:
   m_ObjectHideFlags: 0
@@ -9408,7 +9456,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 139879937}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!212 &910787351
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11680,7 +11728,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 139879937}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!114 &1289120093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12113,7 +12161,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 139879937}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!114 &1390533640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16983,15 +17031,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518cef77cb6e0aa42bff9e59b0a0d503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyOnRead: 0
-  WaitSecondsBeforeRead: 0
-  From: 1
-  To: 1
-  AddToJournal: 0
-  TextureSize: 550
-  Title: Bulletin Board
-  Description: The board is too dark to read.
-  InspectableTexture: {fileID: 2800000, guid: dc7e77c32415e374ea822df51a64ba8f, type: 3}
 --- !u!1001 &1884475195
 Prefab:
   m_ObjectHideFlags: 0
@@ -18958,15 +18997,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518cef77cb6e0aa42bff9e59b0a0d503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyOnRead: 0
-  WaitSecondsBeforeRead: 0
-  From: 0
-  To: 2
-  AddToJournal: 1
-  TextureSize: 550
-  Title: Bulletin Board
-  Description: A board made of cork.
-  InspectableTexture: {fileID: 2800000, guid: 1edb397a3005a8b4c98ce71a54e3ccb6, type: 3}
 --- !u!1 &2079244784
 GameObject:
   m_ObjectHideFlags: 0

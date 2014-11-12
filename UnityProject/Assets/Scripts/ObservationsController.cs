@@ -6,7 +6,7 @@ public class ObservationsController : MonoBehaviour
     public BoxCollider2D PlayerBoxCollider;
     public GameObject Player;
     public Vector3 screenPosition;
-    public string Thought;
+    public string Observations;
     public GUIStyle opaCustomStyle;
 
     private bool ShowThought = true;
@@ -15,7 +15,8 @@ public class ObservationsController : MonoBehaviour
 
     void Update()
     {
-        screenPosition = Camera.main.WorldToScreenPoint(new Vector3(Player.transform.position.x, PlayerBoxCollider.bounds.max.y + 1, 0));
+        screenPosition = Camera.main.WorldToScreenPoint(new Vector3(
+            Player.transform.position.x, PlayerBoxCollider.bounds.max.y + 1, 0));
         screenPosition.y = Screen.height - screenPosition.y;
     }
 
@@ -32,16 +33,16 @@ public class ObservationsController : MonoBehaviour
     {
         if (!ShowThought) { return; }
 
-        GUI.Label(new Rect(screenPosition.x, screenPosition.y, 0, 0), Thought, opaCustomStyle);
+        GUI.Label(new Rect(screenPosition.x, screenPosition.y, 0, 0), Observations, opaCustomStyle);
     }
 
     #region Message Functions
 
-    public void SetThought(string thought)
+    public void SetThought(string observations)
     {
-        Thought = thought;
+        Observations = observations;
         DisplayTime = 0;
-        FadeTime = (Thought.Split(' ').Length) * 0.30f;
+        FadeTime = (observations.Split(' ').Length) * 0.30f;
 
         ShowThought = true;
     }

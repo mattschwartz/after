@@ -5,12 +5,7 @@ using System.Collections;
 
 public class RandomCodeObservationTransition : Transition
 {
-    private GameObject PlayerThoughts;
-
-    void Start()
-    {
-        PlayerThoughts = GameObject.Find("Player Thoughts");
-    }
+    public ObservationsController Observations;
 
     public override void Read(StateType fromState, StateType toState)
     {
@@ -22,6 +17,6 @@ public class RandomCodeObservationTransition : Transition
         } while (tryCode == 4239);
 
         observations += tryCode + "... Nope.";
-        PlayerThoughts.SendMessage("SetThought", observations);
+        Observations.SetThought(observations);
     }
 }
