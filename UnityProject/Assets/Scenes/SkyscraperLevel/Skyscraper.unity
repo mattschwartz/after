@@ -396,6 +396,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 633188341}
   m_RootOrder: 8
+--- !u!1 &254384668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 254384669}
+  - 114: {fileID: 254384670}
+  m_Layer: 0
+  m_Name: Running Man
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &254384669
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254384668}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 594071724}
+  m_RootOrder: 3
+--- !u!114 &254384670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254384668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23107d433997e2a47940c80d0f2d4c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 1
+  To: 2
+  Speed: 2
+  Player: {fileID: 1193481745}
+  PlayerAnimator: {fileID: 1193481743}
 --- !u!1001 &264746498
 Prefab:
   m_ObjectHideFlags: 0
@@ -1260,11 +1306,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 594071723}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.36039734, y: -6.2074461, z: 0}
+  m_LocalPosition: {x: -1.11697388, y: -6.34379482, z: 0}
   m_LocalScale: {x: .426550239, y: .426550657, z: 1}
   m_Children:
   - {fileID: 1358362185}
   - {fileID: 1036405423}
+  - {fileID: 966459689}
+  - {fileID: 254384669}
   m_Father: {fileID: 1008162773}
   m_RootOrder: 17
 --- !u!212 &594071725
@@ -1318,6 +1366,8 @@ MonoBehaviour:
   UnlockedState: {fileID: 0}
   SpentState: {fileID: 0}
   TransitionScripts:
+  - {fileID: 966459690}
+  - {fileID: 254384670}
   - {fileID: 1036405424}
 --- !u!1 &609547187
 GameObject:
@@ -1847,6 +1897,51 @@ Prefab:
   m_RootGameObject: {fileID: 18901447}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &966459688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 966459689}
+  - 114: {fileID: 966459690}
+  m_Layer: 0
+  m_Name: Cause Holo-explosion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &966459689
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 966459688}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 594071724}
+  m_RootOrder: 2
+--- !u!114 &966459690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 966459688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3deaec0ce7019c441b2282bb38cce561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 1
+  To: 2
+  Trigger: Explosion
+  Animator: {fileID: 1151661087}
 --- !u!1001 &968367240
 Prefab:
   m_ObjectHideFlags: 0
@@ -2107,7 +2202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsBeforeRead: 0
+  WaitSecondsBeforeRead: 1.5
   From: 1
   To: 2
   LockDuration: 0
@@ -3539,7 +3634,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1704786873}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.359554291, y: -5.81699705, z: 0}
+  m_LocalPosition: {x: -.291572571, y: -5.88495827, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1008162773}
