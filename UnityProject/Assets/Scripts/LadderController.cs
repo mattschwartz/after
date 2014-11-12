@@ -79,6 +79,7 @@ public class LadderController : MonoBehaviour {
         else if (Entered && Active && (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A)))
         {
             Active = false;
+            Entered = false;
 
             float xForce;
             if (Input.GetKeyDown(KeyCode.D)) {
@@ -98,6 +99,7 @@ public class LadderController : MonoBehaviour {
             Invoke("FreePlayer", .5f);
             Invoke("EndLift", .5f);
             Active = false;
+            Entered = false;
         }
     }
 
