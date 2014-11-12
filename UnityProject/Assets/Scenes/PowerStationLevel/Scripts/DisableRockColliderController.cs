@@ -20,7 +20,7 @@ public class DisableRockColliderController : MonoBehaviour
     {
         if (other.gameObject != WatchFor) { return; }
 
-        PassThrough.ForEach(t => {Debug.Log("Destroying t: " + t); Physics2D.IgnoreCollision(t, other); });
+        PassThrough.ForEach(t => Physics2D.IgnoreCollision(t, other));
 
         ChangeToTrigger.isTrigger = true;
         other.isTrigger = false;

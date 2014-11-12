@@ -11,6 +11,7 @@ namespace After.Interactable
     {
         #region Members
 
+        public float WidthOnInspection = 200f;
         public string ItemName;
         public string Description;
         public Texture JournalImage;

@@ -9,6 +9,8 @@ namespace After.Journal
         #region Members
 
         public bool Read = false;
+        public float InspectorPercentSize = 88.5f;
+        public float JournalSize = 200;
         public string Name;
         public List<string> Updates;
         public Texture Image;

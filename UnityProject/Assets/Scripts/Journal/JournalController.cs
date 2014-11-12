@@ -5,6 +5,7 @@ using After.Audio;
 using After.CameraTransitions;
 using After.Scene.SceneManagement;
 using System.Linq;
+using After.Interactable;
 
 namespace After.Journal
 {
@@ -24,7 +25,7 @@ namespace After.Journal
         public GUIStyle EntryStyle;
 
         private bool ShowToast = false;
-        private float ToastDuration = 4;
+        private float ToastDuration = 5;
         private float ToastDurationTracker;
         private string ToastText = "Journal Updated (Press J to Open)";
 
@@ -40,6 +41,7 @@ namespace After.Journal
         private KeyCode NextPageKey = KeyCode.RightArrow;
         private KeyCode JournalKey = KeyCode.J;
         private KeyCode CloseJournal = KeyCode.Escape;
+        private KeyCode InspectKey = KeyCode.X;
 
         public static JournalController Instance { get; private set; }
 
@@ -173,7 +175,29 @@ namespace After.Journal
                 TurnPage(-1);
             } else if (Input.GetKeyDown(NextPageKey)) {
                 TurnPage(1);
-            }   
+            } else if (Input.GetKeyDown(InspectKey)) {
+                Hide();
+                InspectEntry();
+            }
+        }
+
+        private void InspectEntry()
+        {
+            if (EntryIndex <= 0 || EntryIndex >= Entries.Count) { return; }
+
+            float size;
+            string title;
+            string observations;
+            Texture texture;
+            Entry entry = Entries[EntryIndex];
+
+            size = (entry.InspectorPercentSize / 100f) * (float)Screen.width;
+            title = entry.Name;
+            observations = entry.Updates.Last();
+            texture = entry.Image;
+
+            InspectorController.Instance.InspectItem(title, observations, texture, size, false);
+
         }
 
         /// <summary>
@@ -266,7 +290,7 @@ namespace After.Journal
                 ShowToast = false;
             }
 
-            var screenCoords = new Vector3(0.175f, 0.93f, 0);
+            var screenCoords = new Vector3(0.03f, 0.93f, 0);
             var camPos = Camera.main.ViewportToScreenPoint(screenCoords);
             var labelCoords = new Rect(camPos.x, camPos.y, 0, 0);
 
