@@ -185,12 +185,11 @@ public class PlayerController : MonoBehaviour
 
     //the variable "x" serves as the ladder's horizontal position in the on=true case
     //and the horizontal force for ladder dismount in the on=false case
-    public void Climb(bool on, bool profile, bool top, bool up, float x)
+    public void Climb(bool on, bool profile, bool top, bool up, float xForce)
     {
 
         if (on) {
             rigidbody2D.velocity = Vector2.zero;
-            rigidbody2D.position = new Vector2(x, transform.position.y);
             rigidbody2D.gravityScale = 0;
             Animator.SetFloat("Velocity", 0);
             Animator.SetFloat("vMove", 0);
@@ -210,9 +209,9 @@ public class PlayerController : MonoBehaviour
                 Sprite.sortingOrder = 0;
             }
 
-            if (x != 0.0f)
+            if (xForce != 0.0f)
             {
-                rigidbody2D.AddForce(new Vector2(x, 200f));
+                rigidbody2D.AddForce(new Vector2(xForce, 200f));
             }
         }
 
@@ -251,9 +250,12 @@ public class PlayerController : MonoBehaviour
         Animator.SetBool("LadderDrop", false);
     }
 
-    public void SetY(float y)
+    public void SetPos(float x, float y)
     {
-        transform.position = new Vector2(transform.position.x, y);
+        if (y == -9000f)
+            transform.position = new Vector2(x, transform.position.y);
+        else
+            transform.position = new Vector2(x, y);
     }
 
     #endregion

@@ -60,13 +60,17 @@ public class LadderController : MonoBehaviour {
             }
             Active = true;
 
-            PlayerCon.Climb(true, Profile, Top, false, transform.position.x);
+            PlayerCon.Climb(true, Profile, Top, false, 0);
             if (Top)
             {
-                PlayerCon.SetY(HandleY);
+                PlayerCon.SetPos(transform.position.x, HandleY);
                 PlayerCon.LockPlayer();
                 Invoke("FreePlayer", .5f);
                 Invoke("EndDrop", .5f);
+            }
+            else
+            {
+                PlayerCon.SetPos(transform.position.x, -9000f);
             }
         }
 
@@ -89,7 +93,7 @@ public class LadderController : MonoBehaviour {
         {
             PlayerCon.Climb(true, Profile, true, true, transform.position.x);
             PlayerCon.LockPlayer();
-            PlayerCon.SetY(HandleY);
+            PlayerCon.SetPos(transform.position.x, HandleY);
             Invoke("FreePlayer", .5f);
             Invoke("EndLift", .5f);
             Active = false;
@@ -120,11 +124,11 @@ public class LadderController : MonoBehaviour {
 
     private void EndDrop()
     {
-        PlayerCon.SetY(TopOnY);
+        PlayerCon.SetPos(transform.position.x, TopOnY);
     }
 
     private void EndLift()
     {
-        PlayerCon.SetY(TopOffY);
+        PlayerCon.SetPos(transform.position.x, TopOffY);
     }
 }
