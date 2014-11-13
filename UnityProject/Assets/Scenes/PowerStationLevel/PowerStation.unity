@@ -352,6 +352,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
+--- !u!1 &112778360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 112778362}
+  - 114: {fileID: 112778361}
+  m_Layer: 13
+  m_Name: Add to journal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &112778361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 112778360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e9f7f39884d66419bb265fef6436e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 2
+  To: 2
+  Title: Operations Log
+  Update: Looks like something failed to launch, but what?
+  Image: {fileID: 2800000, guid: 454f0998fc6002d4988570d3de607b25, type: 3}
+--- !u!4 &112778362
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 112778360}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1234645341}
+  m_RootOrder: 3
 --- !u!1 &116771284
 GameObject:
   m_ObjectHideFlags: 0
@@ -6480,6 +6526,7 @@ Transform:
   - {fileID: 2006824538}
   - {fileID: 322580267}
   - {fileID: 300339764}
+  - {fileID: 112778362}
   m_Father: {fileID: 1001310380}
   m_RootOrder: 11
 --- !u!50 &1234645342
@@ -6516,6 +6563,7 @@ MonoBehaviour:
   SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 300339763}
+  - {fileID: 112778361}
 --- !u!61 &1234645344
 BoxCollider2D:
   m_ObjectHideFlags: 0
