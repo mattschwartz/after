@@ -865,15 +865,15 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 12800000, guid: 18412cee854d77143a5e17b2ef00f635, type: 3}
+    m_Font: {fileID: 12800000, guid: 22f7c3a882a15604da8ec404d5e5d4ea, type: 3}
     m_FontSize: 18
     m_FontStyle: 0
-    m_Alignment: 1
+    m_Alignment: 4
     m_WordWrap: 1
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
-    m_ContentOffset: {x: -300, y: 0}
+    m_ContentOffset: {x: 0, y: 0}
     m_FixedWidth: 600
     m_FixedHeight: 0
     m_StretchWidth: 1
@@ -1522,7 +1522,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 1343960909
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300004, guid: f90b2eda561cd4bf2a149100e5cf30cd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f90b2eda561cd4bf2a149100e5cf30cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &633188341
 Transform:
@@ -3270,8 +3270,8 @@ GUITexture:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 646
-    height: 404
+    width: 1920
+    height: 909
   m_LeftBorder: 0
   m_RightBorder: 0
   m_TopBorder: 0
@@ -3344,7 +3344,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: c6b43eb7443c09c40aa87add81afed9c, type: 3}
     m_FontSize: 21
     m_FontStyle: 0
-    m_Alignment: 1
+    m_Alignment: 3
     m_WordWrap: 0
     m_RichText: 1
     m_TextClipping: 0
