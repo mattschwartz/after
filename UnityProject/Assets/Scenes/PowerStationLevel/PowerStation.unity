@@ -6889,7 +6889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dc16b1857faf1e499f4d4345e2124f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  To: 2
+  To: 1
   Conditions: {fileID: 0}
 --- !u!1 &1280309019
 GameObject:
@@ -8368,7 +8368,7 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 1
   To: 1
-  Observations: Access denied.. Looks like I'll need to enter an override somewhere.
+  Observations: Access denied. Looks like I'll need to enter an override somewhere.
   Observer: {fileID: 1123528234}
 --- !u!1 &1523217947
 GameObject:
