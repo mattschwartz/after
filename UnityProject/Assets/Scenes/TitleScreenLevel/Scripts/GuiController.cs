@@ -65,6 +65,7 @@ public class GuiController : MonoBehaviour
     private void NewGame_Click()
     {
         PlayRandomClick();
+        StartCoroutine(SceneFader.FadeOut());
     }
 
     private void Continue_Click()
