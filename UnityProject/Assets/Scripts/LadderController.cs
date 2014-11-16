@@ -15,6 +15,7 @@ public class LadderController : MonoBehaviour {
     public float HandleY;
     public float TopOffY;
     public float TopOnY;
+    public bool Blocked;  //not to be modified in-editor
 
     private bool Active;
     private bool Entered;
@@ -28,6 +29,7 @@ public class LadderController : MonoBehaviour {
             gate.enabled = true;
         }
         Active = false;
+        Blocked = false;
     }
 
     void OnTriggerStay2D ()
@@ -53,7 +55,7 @@ public class LadderController : MonoBehaviour {
     void Update () {
         //Allows the player to mount the ladder simply by moving up or down while within the ladder's box collider
         //After determining issue, put " || Mathf.Abs(PlayerObserver.GetPlayerVel().y) > 20f" back at end of if-statement
-        if (Entered && ((!Active && ((Input.GetKeyDown(KeyCode.W) && !Top) || Input.GetKeyDown(KeyCode.S))) || Mathf.Abs(PlayerObserver.GetPlayerVel().y) > 10f))
+        if (!Blocked && Entered && ((!Active && ((Input.GetKeyDown(KeyCode.W) && !Top) || Input.GetKeyDown(KeyCode.S))) || Mathf.Abs(PlayerObserver.GetPlayerVel().y) > 10f))
         {
             foreach (BoxCollider2D gate in FloorGates)
             {
