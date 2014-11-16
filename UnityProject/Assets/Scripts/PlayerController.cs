@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     private bool Climbing;
     private SpriteRenderer Sprite;
     private float Gravity;
-    private float JumpCD;
+    private float JumpCD;  //cooldown on player jumping
 
     #endregion
 
