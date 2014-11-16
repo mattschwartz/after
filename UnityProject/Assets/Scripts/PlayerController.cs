@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     private bool Climbing;
     private SpriteRenderer Sprite;
     private float Gravity;
+    private float JumpCD;
 
     #endregion
 
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
         Animator = GetComponent<Animator>();
         Sprite = GetComponent<SpriteRenderer>();
         Gravity = rigidbody2D.gravityScale;
+        JumpCD = 1.0f;
     }
 
     #endregion
@@ -52,8 +54,9 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        if (Grounded && Input.GetKeyDown(JumpButton)) {
+        if (JumpCD < 0f && Grounded && Input.GetKeyDown(JumpButton)) {
             rigidbody2D.AddForce(Vector2.up * JumpForce);
+            JumpCD = 1.0f;
         }
 
         if (Input.GetKeyDown(InteractButton)) {
@@ -67,6 +70,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        JumpCD -= Time.deltaTime;
         if (PlayerLocked) {
             return;
         }
