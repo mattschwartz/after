@@ -136,6 +136,8 @@ public class RopeSwingController : MonoBehaviour {
                     AudioManager.PlayClipAtPoint(Backward, transform.position, ClipVol);
             }
 
+            LastPlayerVel = PlayerObserver.GetPlayerVel().x;
+
             //Allow player to add force to rope
             float hInput = Input.GetAxis("Horizontal");
             Body.AddForce(new Vector2(5f * hInput, 0));
