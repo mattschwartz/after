@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using Assets.Scripts.Scene.SceneManagement;
+using After.Audio;
 
 public class RopeSwingController : MonoBehaviour {
 
@@ -17,9 +18,13 @@ public class RopeSwingController : MonoBehaviour {
     private bool Dismount;
     //private bool Falling;
     private float TimeInterval;
+    private float LastPlayerVel;
     //private float Displace;  //in radians
     public Rigidbody2D Body;
     public Rigidbody2D Anchor;
+    public AudioClip Forward;
+    public AudioClip Backward;
+    public float ClipVol;
 
 	// Use this for initialization
 	void Start () {
@@ -67,6 +72,8 @@ public class RopeSwingController : MonoBehaviour {
 				//we don't want to divide by zero
 				xSign = 1f;
 			}
+
+            LastPlayerVel = PlayerObserver.GetPlayerVel().x;
 
 			//snaps player to rope
             Vector3 hToA = new Vector3(0f, 0f - Length, 0f);
@@ -121,9 +128,19 @@ public class RopeSwingController : MonoBehaviour {
             //rotate player with rope
             PlayerObject.rigidbody2D.transform.rotation = Trans.rotation;
 
+            if (PlayerObserver.GetPlayerVel().x * LastPlayerVel <= 0f)
+            {
+                if (LastPlayerVel >= 0f)
+                    AudioManager.PlayClipAtPoint(Forward, transform.position, ClipVol);
+                else
+                    AudioManager.PlayClipAtPoint(Backward, transform.position, ClipVol);
+            }
+
             //Allow player to add force to rope
             float hInput = Input.GetAxis("Horizontal");
             Body.AddForce(new Vector2(5f * hInput, 0));
 		}
 	}
 }
+
+//AudioManager.PlayClipAtPoint(<audioclip>, transform.position, volume);

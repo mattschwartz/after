@@ -6994,6 +6994,9 @@ MonoBehaviour:
   TimeToFall: 1
   Body: {fileID: 1259295113}
   Anchor: {fileID: 41991146}
+  Forward: {fileID: 8300000, guid: 701fdced6adbf4521b144b28aaa42376, type: 3}
+  Backward: {fileID: 8300000, guid: 862ca1e646c8f48ea95310ba6d2a8a94, type: 3}
+  ClipVol: 1
 --- !u!212 &1259295115
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7946,6 +7949,9 @@ MonoBehaviour:
   TimeToFall: 1
   Body: {fileID: 1450750922}
   Anchor: {fileID: 41991146}
+  Forward: {fileID: 8300000, guid: 701fdced6adbf4521b144b28aaa42376, type: 3}
+  Backward: {fileID: 8300000, guid: 862ca1e646c8f48ea95310ba6d2a8a94, type: 3}
+  ClipVol: 1
 --- !u!212 &1450750924
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8262,6 +8268,9 @@ MonoBehaviour:
   TimeToFall: 1
   Body: {fileID: 1494811405}
   Anchor: {fileID: 751294104}
+  Forward: {fileID: 8300000, guid: 701fdced6adbf4521b144b28aaa42376, type: 3}
+  Backward: {fileID: 8300000, guid: 862ca1e646c8f48ea95310ba6d2a8a94, type: 3}
+  ClipVol: 1
 --- !u!233 &1494811407
 HingeJoint2D:
   m_ObjectHideFlags: 0
