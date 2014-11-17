@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
         if (Swinging)
         {
             Animator.SetFloat("Velocity", (rigidbody2D.position.x - SwingLastX) * SwingVelMult);
-            //print((rigidbody2D.position.x - SwingLastX) * SwingVelMult);
+            PlayerObserver.SetPlayerVel(new Vector2((rigidbody2D.position.x - SwingLastX) * SwingVelMult, 0));
             SwingLastX = rigidbody2D.position.x;
         }
 
@@ -101,7 +101,8 @@ public class PlayerController : MonoBehaviour
                 Flip();
             }
         }
-        PlayerObserver.SetPlayerVel(rigidbody2D.velocity);
+        if (!Swinging)
+            PlayerObserver.SetPlayerVel(rigidbody2D.velocity);
     }
 
     private void IsGrounded()
