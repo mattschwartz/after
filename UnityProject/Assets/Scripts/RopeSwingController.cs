@@ -22,8 +22,8 @@ public class RopeSwingController : MonoBehaviour {
     //private float Displace;  //in radians
     public Rigidbody2D Body;
     public Rigidbody2D Anchor;
-    public AudioClip Forward;
-    public AudioClip Backward;
+    public AudioSource Forward;
+    public AudioSource Backward;
     public float ClipVol;
 
 	// Use this for initialization
@@ -130,10 +130,12 @@ public class RopeSwingController : MonoBehaviour {
 
             if (PlayerObserver.GetPlayerVel().x * LastPlayerVel <= 0f)
             {
-                if (LastPlayerVel >= 0f)
-                    AudioManager.PlayClipAtPoint(Forward, transform.position, ClipVol);
-                else
-                    AudioManager.PlayClipAtPoint(Backward, transform.position, ClipVol);
+                if (LastPlayerVel >= 0f) {
+                    Forward.Play();
+                }
+                else {
+                    Backward.Play();
+                }
             }
 
             LastPlayerVel = PlayerObserver.GetPlayerVel().x;
