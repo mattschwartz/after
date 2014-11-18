@@ -5236,7 +5236,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: .800000012, y: 9.67125416}
+  m_Size: {x: .680000007, y: 9.78999996}
   m_Center: {x: 0, y: 1.49090958}
 --- !u!114 &970546944
 MonoBehaviour:
@@ -6746,8 +6746,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: .725063562, y: 2}
-  m_Center: {x: -.0196380615, y: 0}
+  m_Size: {x: .725063562, y: 3.1099999}
+  m_Center: {x: -.0196380615, y: -.280000001}
 --- !u!114 &1230563637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9766,7 +9766,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_Size.x
-      value: .800000012
+      value: .680000007
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_Center.x
@@ -9774,7 +9774,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_Size.y
-      value: 9.67125416
+      value: 9.78999996
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_Center.y
