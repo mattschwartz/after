@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour
         }
 
         if (Climbing) {
+            Debug.Log("I'm climbing yo");
             float vMove = Input.GetAxis("Vertical");
             Animator.SetFloat("vMove", Mathf.Abs(vMove));
             rigidbody2D.velocity = new Vector2(0, vMove * Speed * 0.5f);
