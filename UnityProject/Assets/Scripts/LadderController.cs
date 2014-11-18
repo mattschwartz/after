@@ -32,8 +32,10 @@ public class LadderController : MonoBehaviour {
         Blocked = false;
     }
 
-    void OnTriggerStay2D ()
+    void OnTriggerStay2D (Collider2D other)
     {
+        if (other.gameObject != PlayerCon.GetObj())
+            return;
         Entered = true;
     }
 

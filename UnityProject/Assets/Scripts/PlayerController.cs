@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         Animator = GetComponent<Animator>();
         Sprite = GetComponent<SpriteRenderer>();
         Gravity = rigidbody2D.gravityScale;
-        JumpCD = 1.0f;
+        JumpCD = 0f;
     }
 
     #endregion
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
         if (JumpCD < 0f && Grounded && Input.GetKeyDown(JumpButton)) {
             rigidbody2D.AddForce(Vector2.up * JumpForce);
-            JumpCD = 1.0f;
+            JumpCD = .5f;
         }
 
         if (Input.GetKeyDown(InteractButton)) {
@@ -261,6 +261,11 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector2(x, transform.position.y);
         else
             transform.position = new Vector2(x, y);
+    }
+
+    public GameObject GetObj()
+    {
+        return gameObject;
     }
 
     #endregion

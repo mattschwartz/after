@@ -39,11 +39,13 @@ public class RopeSwingController : MonoBehaviour {
         Body.AddForce(new Vector2(20f, 0f));
 	}
 
-	void OnTriggerEnter2D ()
+	void OnTriggerEnter2D (Collider2D other)
 	{
-		Entered = true;
-
-        Body.angularDrag = 0f;
+        if (other == PlayerObject.collider2D)
+        {
+            Entered = true;
+            Body.angularDrag = 0f;
+        }
 	}
 
 	void OnTriggerExit2D ()
@@ -128,6 +130,7 @@ public class RopeSwingController : MonoBehaviour {
             //rotate player with rope
             PlayerObject.rigidbody2D.transform.rotation = Trans.rotation;
 
+            //If player velocity changes sign...
             if (PlayerObserver.GetPlayerVel().x * LastPlayerVel <= 0f)
             {
                 if (LastPlayerVel >= 0f) {
