@@ -1222,7 +1222,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 5821222fc2d59e64b9a7c38376867198, type: 2}
       propertyPath: SpriteBounds
       value: 
-      objectReference: {fileID: 405572158}
+      objectReference: {fileID: 633188340}
     - target: {fileID: 11400000, guid: 5821222fc2d59e64b9a7c38376867198, type: 2}
       propertyPath: FollowTarget
       value: 
@@ -1722,6 +1722,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 633188341}
+  - 212: {fileID: 633188340}
   m_Layer: 0
   m_Name: Skyscraper bounds
   m_TagString: Untagged
@@ -1729,6 +1730,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!212 &633188340
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 633188339}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 1343960909
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: f90b2eda561cd4bf2a149100e5cf30cd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &633188341
 Transform:
   m_ObjectHideFlags: 0
@@ -2065,6 +2088,7 @@ MonoBehaviour:
   LockDuration: .699999988
   Player: {fileID: 1193481741}
   PlayerAnimator: {fileID: 1193481743}
+  LockPlayer: 1
   MovePlayer: 0
   Trigger: PickupItemLow
   Offset: {x: 0, y: 0}
@@ -2328,7 +2352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StaticCamera: 0
   FollowTarget: {fileID: 1193481749}
-  SpriteBounds: {fileID: 405572158}
+  SpriteBounds: {fileID: 633188340}
   CameraFits: 1
   DampTime: .150000006
 --- !u!81 &1001816043
