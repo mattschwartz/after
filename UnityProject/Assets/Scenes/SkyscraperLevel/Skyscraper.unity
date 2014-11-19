@@ -314,6 +314,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
+--- !u!1 &170722856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100004, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_PrefabInternal: {fileID: 436223447}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 170722857}
+  - 114: {fileID: 170722858}
+  m_Layer: 13
+  m_Name: Audio Transition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &170722857
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400004, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_PrefabInternal: {fileID: 436223447}
+  m_GameObject: {fileID: 170722856}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2108378244}
+  m_RootOrder: 1
+--- !u!114 &170722858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 880db7676c14fbe4ea810bf7078712f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 436223447}
+  m_GameObject: {fileID: 170722856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 0
+  To: 0
+  Volume: 1
+  Clip: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
 --- !u!1 &214570389
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,7 +427,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 21
+  m_RootOrder: 20
 --- !u!61 &233327071
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -445,7 +491,7 @@ Transform:
   m_LocalScale: {x: 1.33333337, y: 1.16279066, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!61 &245988551
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1126,7 +1172,7 @@ Transform:
   m_LocalScale: {x: 1.77777743, y: 1.35208249, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 19
+  m_RootOrder: 18
 --- !u!1 &403413883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,7 +1239,7 @@ Transform:
   m_LocalScale: {x: 1.03147709, y: .89954412, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 23
+  m_RootOrder: 22
 --- !u!212 &405572158
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1266,6 +1312,76 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1008162773}
   m_RootOrder: 4
+--- !u!1001 &436223447
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 633188341}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 17.2336845
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -9.44188309
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_RootOrder
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.33333337
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.16279066
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_Name
+      value: Cord
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0c7754ebc8df0354996a2f43f421e26f,
+        type: 3}
+    - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: Description
+      value: Huh.  With that outlet right next to where I picked it up, I could probably
+        plug something in.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: ItemName
+      value: Extension Cord
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_RootGameObject: {fileID: 2108378243}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1001 &470354743
 Prefab:
   m_ObjectHideFlags: 0
@@ -1371,7 +1487,7 @@ Transform:
   m_LocalScale: {x: 1.02494621, y: .930657744, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &481756857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1473,7 +1589,7 @@ Transform:
   m_LocalScale: {x: 1.33333337, y: 1.16279066, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!61 &492411668
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1546,6 +1662,76 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
+--- !u!1001 &528886547
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 633188341}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -11.7297173
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -7.66705275
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d2b3eb2db0099fb438d432289bc39c89,
+        type: 3}
+    - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: Description
+      value: Still a little juice left in the battery.  I might be able to get a little
+        use out of it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: ItemName
+      value: Cordless Power Drill
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.23732352
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.07906127
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+      propertyPath: m_Name
+      value: Drill
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_RootGameObject: {fileID: 1959161941}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &543540805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,7 +1831,7 @@ Transform:
   m_LocalScale: {x: 1.33333337, y: 1.16279066, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 14
+  m_RootOrder: 13
 --- !u!1 &594071723
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,7 +2189,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 1343960909
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300004, guid: f90b2eda561cd4bf2a149100e5cf30cd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f90b2eda561cd4bf2a149100e5cf30cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &633188341
 Transform:
@@ -2017,7 +2203,6 @@ Transform:
   m_Children:
   - {fileID: 1718765306}
   - {fileID: 543540807}
-  - {fileID: 919029768}
   - {fileID: 1443359893}
   - {fileID: 1757145919}
   - {fileID: 776437287}
@@ -2041,7 +2226,8 @@ Transform:
   - {fileID: 405572157}
   - {fileID: 1790631914}
   - {fileID: 964274619}
-  - {fileID: 1185595466}
+  - {fileID: 1959161942}
+  - {fileID: 2108378244}
   m_Father: {fileID: 0}
   m_RootOrder: 10
 --- !u!1 &677113664
@@ -2172,7 +2358,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 16
+  m_RootOrder: 15
 --- !u!61 &706987810
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2250,7 +2436,7 @@ Transform:
   m_LocalScale: {x: 1.33333337, y: 1.16279066, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!1 &776437285
 GameObject:
   m_ObjectHideFlags: 0
@@ -2300,7 +2486,7 @@ Transform:
   m_LocalScale: {x: 1.33333337, y: 1.16279066, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1 &820263661
 GameObject:
   m_ObjectHideFlags: 0
@@ -2444,90 +2630,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
---- !u!1 &919029764
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 919029768}
-  - 212: {fileID: 919029767}
-  - 61: {fileID: 919029766}
-  - 114: {fileID: 919029765}
-  m_Layer: 0
-  m_Name: Drill
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &919029765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 919029764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c76ea56eb68ddf4bbbe9d43f6e835ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentState: 1
-  LockedState: {fileID: 0}
-  UnlockedState: {fileID: 0}
-  SpentState: {fileID: 0}
-  TransitionScripts: []
-  WidthOnInspection: 200
-  ItemName: Cordless Power Drill
-  Description: Still a little juice left in the battery.  I might be able to get a
-    little use out of it.
-  JournalImage: {fileID: 0}
---- !u!61 &919029766
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 919029764}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 1.20000005, y: .800000012}
-  m_Center: {x: 0, y: 0}
---- !u!212 &919029767
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 919029764}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d2b3eb2db0099fb438d432289bc39c89, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!4 &919029768
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 919029764}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.5711012, y: -9.30691433, z: 0}
-  m_LocalScale: {x: 1.33333337, y: 1.16279066, z: 1}
-  m_Children: []
-  m_Father: {fileID: 633188341}
-  m_RootOrder: 2
 --- !u!1001 &947204874
 Prefab:
   m_ObjectHideFlags: 0
@@ -2621,7 +2723,7 @@ Transform:
   m_LocalScale: {x: 1.33333337, y: 1.16279066, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 25
+  m_RootOrder: 24
 --- !u!1 &966459688
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,7 +3072,7 @@ Transform:
   - {fileID: 331495231}
   - {fileID: 317377452}
   m_Father: {fileID: 633188341}
-  m_RootOrder: 22
+  m_RootOrder: 21
 --- !u!58 &1046544159
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4307,90 +4409,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1629eb4f37243e0419153405829d5299, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &1185595462
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1185595466}
-  - 212: {fileID: 1185595465}
-  - 114: {fileID: 1185595464}
-  - 61: {fileID: 1185595463}
-  m_Layer: 0
-  m_Name: Power Cord Pickup
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!61 &1185595463
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1185595462}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: .720000029, y: .319999993}
-  m_Center: {x: 0, y: 0}
---- !u!114 &1185595464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1185595462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c76ea56eb68ddf4bbbe9d43f6e835ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentState: 1
-  LockedState: {fileID: 0}
-  UnlockedState: {fileID: 0}
-  SpentState: {fileID: 0}
-  TransitionScripts: []
-  WidthOnInspection: 200
-  ItemName: Extension Cord
-  Description: Huh.  With that outlet right next to where I picked it up, I could
-    probably plug something in.
-  JournalImage: {fileID: 0}
---- !u!212 &1185595465
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1185595462}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0c7754ebc8df0354996a2f43f421e26f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!4 &1185595466
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1185595462}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.2336845, y: -9.44188309, z: 0}
-  m_LocalScale: {x: 1.33333337, y: 1.16279066, z: 1}
-  m_Children: []
-  m_Father: {fileID: 633188341}
-  m_RootOrder: 26
 --- !u!1 &1193481741
 GameObject:
   m_ObjectHideFlags: 0
@@ -5037,7 +5055,47 @@ Transform:
   m_LocalScale: {x: 1.33333337, y: 1.16279066, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 3
+  m_RootOrder: 2
+--- !u!1 &1513489261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_PrefabInternal: {fileID: 436223447}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1513489262}
+  - 61: {fileID: 1513489263}
+  m_Layer: 11
+  m_Name: WorldCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1513489262
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_PrefabInternal: {fileID: 436223447}
+  m_GameObject: {fileID: 1513489261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2108378244}
+  m_RootOrder: 0
+--- !u!61 &1513489263
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100000, guid: 880db7676c14fbe4ea810bf7078712f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 436223447}
+  m_GameObject: {fileID: 1513489261}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &1516871785
 GameObject:
   m_ObjectHideFlags: 0
@@ -5106,7 +5164,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 15
+  m_RootOrder: 14
 --- !u!61 &1533308506
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5212,7 +5270,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 17
+  m_RootOrder: 16
 --- !u!61 &1581847918
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5920,7 +5978,7 @@ Transform:
   m_LocalScale: {x: 1.33333337, y: 1.16279066, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!114 &1725288112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5978,7 +6036,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 18
+  m_RootOrder: 17
 --- !u!61 &1752514258
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6039,7 +6097,7 @@ Transform:
   m_LocalScale: {x: 1.33333337, y: 1.16279066, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &1790631913
 GameObject:
   m_ObjectHideFlags: 0
@@ -6070,7 +6128,7 @@ Transform:
   m_LocalScale: {x: -2, y: 1.16279066, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 24
+  m_RootOrder: 23
 --- !u!61 &1790631915
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6181,7 +6239,7 @@ Transform:
   m_LocalScale: {x: 1.33333337, y: 1.16279066, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!114 &1827570768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6228,6 +6286,52 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
   - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
   - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
+--- !u!1 &1874007793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100004, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_PrefabInternal: {fileID: 528886547}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1874007794}
+  - 114: {fileID: 1874007795}
+  m_Layer: 13
+  m_Name: Audio Transition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1874007794
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400004, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_PrefabInternal: {fileID: 528886547}
+  m_GameObject: {fileID: 1874007793}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1959161942}
+  m_RootOrder: 1
+--- !u!114 &1874007795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 880db7676c14fbe4ea810bf7078712f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 528886547}
+  m_GameObject: {fileID: 1874007793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 0
+  To: 0
+  Volume: 1
+  Clip: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
 --- !u!1 &1894766219
 GameObject:
   m_ObjectHideFlags: 0
@@ -6279,7 +6383,7 @@ Transform:
   m_LocalScale: {x: 1.33333337, y: 1.16279066, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!68 &1894766222
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -6313,6 +6417,113 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
   - {fileID: 8300000, guid: 145898131f0fb49928f9935e8a665431, type: 3}
   - {fileID: 8300000, guid: e862af059df554c2093cebc016d0bb2f, type: 3}
+--- !u!1 &1959161941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_PrefabInternal: {fileID: 528886547}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1959161942}
+  - 212: {fileID: 1959161946}
+  - 61: {fileID: 1959161945}
+  - 114: {fileID: 1959161944}
+  - 50: {fileID: 1959161943}
+  m_Layer: 13
+  m_Name: Drill
+  m_TagString: Untagged
+  m_Icon: {fileID: -1500306622, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1959161942
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_PrefabInternal: {fileID: 528886547}
+  m_GameObject: {fileID: 1959161941}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.7297173, y: -7.66705275, z: 0}
+  m_LocalScale: {x: 1.23732352, y: 1.07906127, z: 1}
+  m_Children:
+  - {fileID: 2111734781}
+  - {fileID: 1874007794}
+  m_Father: {fileID: 633188341}
+  m_RootOrder: 25
+--- !u!50 &1959161943
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5000000, guid: 880db7676c14fbe4ea810bf7078712f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 528886547}
+  m_GameObject: {fileID: 1959161941}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 8
+  m_FixedAngle: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!114 &1959161944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 528886547}
+  m_GameObject: {fileID: 1959161941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c76ea56eb68ddf4bbbe9d43f6e835ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentState: 1
+  LockedState: {fileID: 0}
+  UnlockedState: {fileID: 0}
+  SpentState: {fileID: 0}
+  TransitionScripts:
+  - {fileID: 1874007795}
+  WidthOnInspection: 200
+  ItemName: Cordless Power Drill
+  Description: Still a little juice left in the battery.  I might be able to get a
+    little use out of it.
+  JournalImage: {fileID: 0}
+--- !u!61 &1959161945
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 880db7676c14fbe4ea810bf7078712f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 528886547}
+  m_GameObject: {fileID: 1959161941}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
+--- !u!212 &1959161946
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200000, guid: 880db7676c14fbe4ea810bf7078712f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 528886547}
+  m_GameObject: {fileID: 1959161941}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 4236500287
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: d2b3eb2db0099fb438d432289bc39c89, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2018613676
 GameObject:
   m_ObjectHideFlags: 0
@@ -7529,6 +7740,153 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
+--- !u!1 &2108378243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_PrefabInternal: {fileID: 436223447}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2108378244}
+  - 212: {fileID: 2108378248}
+  - 61: {fileID: 2108378247}
+  - 114: {fileID: 2108378246}
+  - 50: {fileID: 2108378245}
+  m_Layer: 13
+  m_Name: Cord
+  m_TagString: Untagged
+  m_Icon: {fileID: -1500306622, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2108378244
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400002, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_PrefabInternal: {fileID: 436223447}
+  m_GameObject: {fileID: 2108378243}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.2336845, y: -9.44188309, z: 0}
+  m_LocalScale: {x: 1.33333337, y: 1.16279066, z: 1}
+  m_Children:
+  - {fileID: 1513489262}
+  - {fileID: 170722857}
+  m_Father: {fileID: 633188341}
+  m_RootOrder: 26
+--- !u!50 &2108378245
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5000000, guid: 880db7676c14fbe4ea810bf7078712f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 436223447}
+  m_GameObject: {fileID: 2108378243}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 8
+  m_FixedAngle: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!114 &2108378246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 880db7676c14fbe4ea810bf7078712f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 436223447}
+  m_GameObject: {fileID: 2108378243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c76ea56eb68ddf4bbbe9d43f6e835ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentState: 1
+  LockedState: {fileID: 0}
+  UnlockedState: {fileID: 0}
+  SpentState: {fileID: 0}
+  TransitionScripts:
+  - {fileID: 170722858}
+  WidthOnInspection: 200
+  ItemName: Extension Cord
+  Description: Huh.  With that outlet right next to where I picked it up, I could
+    probably plug something in.
+  JournalImage: {fileID: 0}
+--- !u!61 &2108378247
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 880db7676c14fbe4ea810bf7078712f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 436223447}
+  m_GameObject: {fileID: 2108378243}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
+--- !u!212 &2108378248
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200000, guid: 880db7676c14fbe4ea810bf7078712f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 436223447}
+  m_GameObject: {fileID: 2108378243}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 4236500287
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 0c7754ebc8df0354996a2f43f421e26f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &2111734780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_PrefabInternal: {fileID: 528886547}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2111734781}
+  - 61: {fileID: 2111734782}
+  m_Layer: 11
+  m_Name: WorldCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2111734781
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 880db7676c14fbe4ea810bf7078712f0, type: 2}
+  m_PrefabInternal: {fileID: 528886547}
+  m_GameObject: {fileID: 2111734780}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1959161942}
+  m_RootOrder: 0
+--- !u!61 &2111734782
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100000, guid: 880db7676c14fbe4ea810bf7078712f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 528886547}
+  m_GameObject: {fileID: 2111734780}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &2113012368
 GameObject:
   m_ObjectHideFlags: 0
@@ -7617,7 +7975,7 @@ Transform:
   m_LocalScale: {x: 1.33333337, y: 1.16279066, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!1 &2115624326
 GameObject:
   m_ObjectHideFlags: 0
@@ -7696,7 +8054,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 633188341}
-  m_RootOrder: 20
+  m_RootOrder: 19
 --- !u!61 &2126195915
 BoxCollider2D:
   m_ObjectHideFlags: 0
