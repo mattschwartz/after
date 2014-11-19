@@ -17,6 +17,9 @@ namespace After.Interactable
 
         public override void Read(StateType fromState, StateType toState)
         {
+            GrabbableItem.GetComponent<SpriteRenderer>().enabled = true;
+            GrabbableItem.GetComponent<BoxCollider2D>().enabled = true;
+            BackpackController.Instance.DropItem();
         	BackpackController.Instance.SetItemHeld(GrabbableItem.gameObject);
             GrabbableItem = null;
         }

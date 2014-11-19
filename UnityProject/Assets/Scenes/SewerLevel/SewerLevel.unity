@@ -17579,6 +17579,7 @@ MonoBehaviour:
   HandleY: 7.795156
   TopOffY: 9.39999962
   TopOnY: 6.69999981
+  Blocked: 0
 --- !u!61 &1918864478
 BoxCollider2D:
   m_ObjectHideFlags: 0
