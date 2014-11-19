@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ba1680dad259e4fa6a97e78bae251f72
+guid: 6864430f761cb422b85ecee120fa2b86
 TextureImporter:
   fileIDToRecycleName:
     21300000: JIRA Lottery Ticket
@@ -26,9 +26,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
