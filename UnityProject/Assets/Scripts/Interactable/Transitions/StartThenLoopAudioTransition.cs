@@ -20,7 +20,7 @@ public class StartThenLoopAudioTransition : Transition
     {
         AudioManager.PlayClipAtPoint(StartClip, 1.0f, transform.position,
             StartVolume);
-        yield return new WaitForSeconds(StartClip.length);
+        yield return new WaitForSeconds(StartClip.length * 0.9f);
         AudioManager.LoopClipAtPoint(LoopClip, transform.position,
             LoopVolume);
     }
