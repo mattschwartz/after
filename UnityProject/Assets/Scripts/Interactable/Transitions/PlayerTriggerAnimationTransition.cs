@@ -10,7 +10,8 @@ namespace After.Interactable.Transitions
 {
     public class PlayerTriggerAnimationTransition : PlayerLockTransition
     {
-        public bool MovePlayer;
+        public bool LockPlayer = true;
+        public bool MovePlayer = false;
         public string Trigger;
         public Vector2 Offset;
 
@@ -21,8 +22,10 @@ namespace After.Interactable.Transitions
                 Player.transform.position = new Vector2(pos.x - Offset.x, pos.y - Offset.y);
             }
 
-            Player.SendMessage("LockPlayer");
-            Invoke("FreePlayer", LockDuration);
+            if (LockPlayer) {
+                Player.SendMessage("LockPlayer");
+                Invoke("FreePlayer", LockDuration);
+            }
 
             PlayerAnimator.SetTrigger(Trigger);
         }

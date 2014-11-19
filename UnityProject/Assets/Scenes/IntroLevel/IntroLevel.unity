@@ -3961,6 +3961,7 @@ MonoBehaviour:
   LockDuration: 1
   Player: {fileID: 750317700}
   PlayerAnimator: {fileID: 750317702}
+  LockPlayer: 0
   MovePlayer: 0
   Trigger: GenericInteraction
   Offset: {x: 0, y: 0}
@@ -4216,6 +4217,7 @@ MonoBehaviour:
   LockDuration: 1.79999995
   Player: {fileID: 750317700}
   PlayerAnimator: {fileID: 750317702}
+  LockPlayer: 0
   MovePlayer: 0
   Trigger: LiftManhole
   Offset: {x: 0, y: 0}
