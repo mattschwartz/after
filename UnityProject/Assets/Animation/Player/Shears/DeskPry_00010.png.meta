@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 434b514a9d9764949a9150f719b1c23e
+guid: 58857f3c305665340b57808b9c5fd830
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Shears
+    21300000: DeskPry_00010
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,9 +26,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50

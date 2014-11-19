@@ -168,6 +168,7 @@ MonoBehaviour:
   LockDuration: 1
   Player: {fileID: 366451553}
   PlayerAnimator: {fileID: 366451557}
+  LockPlayer: 1
   MovePlayer: 0
   Trigger: OpenDesk
   Offset: {x: 0, y: 0}
@@ -1001,15 +1002,15 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 12800000, guid: 18412cee854d77143a5e17b2ef00f635, type: 3}
+    m_Font: {fileID: 12800000, guid: 22f7c3a882a15604da8ec404d5e5d4ea, type: 3}
     m_FontSize: 18
     m_FontStyle: 0
-    m_Alignment: 1
+    m_Alignment: 4
     m_WordWrap: 1
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
-    m_ContentOffset: {x: -300, y: 0}
+    m_ContentOffset: {x: 0, y: 0}
     m_FixedWidth: 600
     m_FixedHeight: 0
     m_StretchWidth: 1
@@ -1248,6 +1249,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 441825015}
   - 114: {fileID: 441825014}
+  - 131: {fileID: 441825016}
   m_Layer: 0
   m_Name: PlayerObservations
   m_TagString: Untagged
@@ -1267,7 +1269,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46bd61d07c5e6e448b964ceeaf876912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenPosition: {x: 0, y: 0, z: 0}
   Observations: 
   opaCustomStyle:
     m_Name: 
@@ -1315,11 +1316,11 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 12800000, guid: 18412cee854d77143a5e17b2ef00f635, type: 3}
+    m_Font: {fileID: 12800000, guid: c6b43eb7443c09c40aa87add81afed9c, type: 3}
     m_FontSize: 21
     m_FontStyle: 0
-    m_Alignment: 1
-    m_WordWrap: 0
+    m_Alignment: 7
+    m_WordWrap: 1
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
@@ -1328,6 +1329,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+  ObservationBackgroundTexture: {fileID: 441825016}
 --- !u!4 &441825015
 Transform:
   m_ObjectHideFlags: 0
@@ -1340,6 +1342,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!131 &441825016
+GUITexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13100000, guid: 9b8a2948d835669419f9084f6afb06b0,
+    type: 2}
+  m_PrefabInternal: {fileID: 716842775}
+  m_GameObject: {fileID: 441825013}
+  m_Enabled: 1
+  m_Texture: {fileID: 2800000, guid: 49e80583dec4ab44f93a0d164195501c, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: .168627456}
+  m_PixelInset:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
 --- !u!1 &462637538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1700,6 +1722,7 @@ MonoBehaviour:
   HandleY: -1.33000004
   TopOffY: 0
   TopOnY: -2.579
+  Blocked: 0
 --- !u!61 &588061933
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7442,6 +7465,7 @@ MonoBehaviour:
   HandleY: 3.75999999
   TopOffY: 5.19999981
   TopOnY: 3
+  Blocked: 0
 --- !u!61 &1561370682
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -128,6 +128,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: ShearClip
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -624,7 +630,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: ShearClip
     m_EventTreshold: 0
     m_ExitTime: 1
   m_Atomic: 1
@@ -1203,6 +1209,26 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
+--- !u!1101 &110158276
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110284247}
+  m_DstState: {fileID: 110246278}
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 5
+    m_ConditionEvent: 
+    m_EventTreshold: 0
+    m_ExitTime: 1
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
 --- !u!1101 &110159347
 Transition:
   serializedVersion: 2
@@ -1376,7 +1402,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: ShearClip
     m_EventTreshold: 0
     m_ExitTime: 1
   m_Atomic: 1
@@ -1587,6 +1613,26 @@ Transition:
     m_ConditionEvent: Climbing
     m_EventTreshold: 0
     m_ExitTime: 1
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1101 &110181420
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 0}
+  m_DstState: {fileID: 110284247}
+  m_TransitionDuration: .100000001
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: ShearClip
+    m_EventTreshold: 0
+    m_ExitTime: .899999976
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -2070,6 +2116,21 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
+--- !u!1102 &110284247
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: ShearsClip
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: c899f6d513d922442ac399d1c980682c, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: -528, y: 324, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1102 &110286082
 State:
   m_ObjectHideFlags: 3
@@ -2145,17 +2206,14 @@ StateMachine:
   - {fileID: 110268409}
   - {fileID: 110227848}
   - {fileID: 110205954}
+  - {fileID: 110284247}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110205954}
+      first: {fileID: 110284247}
       second:
-      - {fileID: 110165159}
-    data:
-      first: {fileID: 110227848}
-      second:
-      - {fileID: 110126721}
+      - {fileID: 110158276}
     data:
       first: {fileID: 0}
       second:
@@ -2174,6 +2232,7 @@ StateMachine:
       - {fileID: 110103392}
       - {fileID: 110187383}
       - {fileID: 110149119}
+      - {fileID: 110181420}
     data:
       first: {fileID: 110246278}
       second:
@@ -2259,6 +2318,14 @@ StateMachine:
       first: {fileID: 110268409}
       second:
       - {fileID: 110178535}
+    data:
+      first: {fileID: 110227848}
+      second:
+      - {fileID: 110126721}
+    data:
+      first: {fileID: 110205954}
+      second:
+      - {fileID: 110165159}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -864, y: -216, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
