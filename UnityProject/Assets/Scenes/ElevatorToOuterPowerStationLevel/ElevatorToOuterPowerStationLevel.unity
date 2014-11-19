@@ -192,7 +192,7 @@ MonoBehaviour:
   Fader: {fileID: 479479100}
   Duration: 17.8999996
   Animator: {fileID: 719995687}
-  StopClip: {fileID: 8300000, guid: efec55dae98ea4c0abdbdac88db64d74, type: 3}
+  StopClip: {fileID: 0}
 --- !u!4 &414765189
 Transform:
   m_ObjectHideFlags: 0
@@ -914,7 +914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: .300000012
+  Volume: .280000001
   StepSounds:
   - {fileID: 8300000, guid: f62ccc640ea8f4d0fb25e2880efa442c, type: 3}
   - {fileID: 8300000, guid: c23cc0203bb0d4c56ad3f5e42f60bc7c, type: 3}
