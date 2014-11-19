@@ -7162,7 +7162,7 @@ MonoBehaviour:
   PlayerAnimator: {fileID: 194404997}
   LockPlayer: 1
   MovePlayer: 0
-  Trigger: OpenDesk
+  Trigger: BoulderPry
   Offset: {x: 0, y: 0}
 --- !u!1 &668142918
 GameObject:
