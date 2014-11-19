@@ -1777,7 +1777,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 5821222fc2d59e64b9a7c38376867198, type: 2}
       propertyPath: SpriteBounds
       value: 
-      objectReference: {fileID: 633188340}
+      objectReference: {fileID: 405572158}
     - target: {fileID: 11400000, guid: 5821222fc2d59e64b9a7c38376867198, type: 2}
       propertyPath: FollowTarget
       value: 
@@ -2571,7 +2571,8 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 2
   To: 2
-  Observations: I need to use the extension cable now.
+  Observations: I can see an electrical connection in there.  I wonder what would
+    happen if the crane were turned on.
   Observer: {fileID: 175181416}
 --- !u!1 &627087714
 GameObject:
@@ -3474,7 +3475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StaticCamera: 0
   FollowTarget: {fileID: 1193481749}
-  SpriteBounds: {fileID: 633188340}
+  SpriteBounds: {fileID: 405572158}
   CameraFits: 1
   DampTime: .150000006
 --- !u!81 &1001816043
@@ -7420,7 +7421,7 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 1
   To: 1
-  Observations: I need to use the drill now.
+  Observations: Door's stuck.  I might be able to remove the paneling, though.
   Observer: {fileID: 175181416}
 --- !u!1 &1959161941
 GameObject:
