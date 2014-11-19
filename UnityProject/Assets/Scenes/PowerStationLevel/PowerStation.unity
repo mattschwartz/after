@@ -1852,7 +1852,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 2631936957
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: a195ca10644134aa3ba5763878a9c3d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &376866932
@@ -4835,7 +4835,7 @@ Transform:
   m_PrefabInternal: {fileID: 1547777832}
   m_GameObject: {fileID: 708300409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .32084024, y: -4.32724667, z: 0}
+  m_LocalPosition: {x: 1.18098998, y: -4.4253931, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2042305760}
@@ -5358,8 +5358,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 9.06815052, y: .458527565}
-  m_Center: {x: -4.53592396, y: .16244173}
+  m_Size: {x: 9.92540836, y: .458527565}
+  m_Center: {x: -4.10729504, y: .16244173}
 --- !u!61 &790199334
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5369,8 +5369,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 2.44776559, y: .472580433}
-  m_Center: {x: 2.22867155, y: .158225775}
+  m_Size: {x: 1.66067147, y: .472580433}
+  m_Center: {x: 2.62221861, y: .158225775}
 --- !u!114 &790199335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7541,8 +7541,8 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 2631936957
-  m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: fa7af50f35e864b6596518731da383f9, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: bc732b6ef6a3145619e98dbd4b36e971, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &905248048
 Transform:
@@ -7551,7 +7551,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 905248046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.68833637, y: -1.9643724, z: 0}
+  m_LocalPosition: {x: -4.68833733, y: -1.92736006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9335,7 +9335,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1184275068}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .849302411, y: -.10869503, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 708300410}
@@ -12214,11 +12214,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .32084024
+      value: 1.18098998
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.32724667
+      value: -4.4253931
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_LocalPosition.z
@@ -12258,11 +12258,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6100002, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_Size.x
-      value: 1
+      value: .93276453
       objectReference: {fileID: 0}
     - target: {fileID: 6100002, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_Size.y
-      value: .46701622
+      value: .460650802
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_LocalPosition.y
@@ -12270,7 +12270,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6100002, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_Center.y
-      value: .0835080147
+      value: .18117857
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_Layer
@@ -12311,6 +12311,10 @@ Prefab:
     - target: {fileID: 100000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100002, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
+      propertyPath: m_Center.x
+      value: -.0336180925
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 21200000, guid: 69870890ea11e4d21af6301bc7780ccf, type: 2}
@@ -16260,8 +16264,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 1, y: .46701622}
-  m_Center: {x: 0, y: .0835080147}
+  m_Size: {x: .93276453, y: .460650802}
+  m_Center: {x: -.0336180925, y: .18117857}
 --- !u!1 &2056806649
 GameObject:
   m_ObjectHideFlags: 0
