@@ -27,10 +27,6 @@ public class PeriodicScreenShakerController : MonoBehaviour
 	void Start()
 	{
 		FallingRock.renderer.sortingLayerName = "Particles";
-	}
-
-	void Update () {
-		if (!TimeToShake()) { return; }
 
 		CameraShakerController.Instance.Shake(Intensity, Decay);
 		RumbleClips.ForEach(t =>
@@ -41,15 +37,27 @@ public class PeriodicScreenShakerController : MonoBehaviour
 		FallingRock.Play();
 	}
 
-	private bool TimeToShake()
-	{
-		if (LastShake < NextShake) {
-			LastShake += Time.deltaTime;
-			return false;
-		}
+	// void Update () {
+	// 	if (!TimeToShake()) { return; }
 
-		LastShake = 0;
-		NextShake = Random.Range(RangeMin, RangeMax);
-		return true;
-	}
+	// 	CameraShakerController.Instance.Shake(Intensity, Decay);
+	// 	RumbleClips.ForEach(t =>
+	// 		AudioManager.PlayClipAtPoint(t, transform.position, ClipVolume, PitchLow, PitchHigh));
+		
+	// 	FallingRock.Stop();
+	// 	FallingRock.Simulate(0);
+	// 	FallingRock.Play();
+	// }
+
+	// private bool TimeToShake()
+	// {
+	// 	if (LastShake < NextShake) {
+	// 		LastShake += Time.deltaTime;
+	// 		return false;
+	// 	}
+
+	// 	LastShake = 0;
+	// 	NextShake = Random.Range(RangeMin, RangeMax);
+	// 	return true;
+	// }
 }
