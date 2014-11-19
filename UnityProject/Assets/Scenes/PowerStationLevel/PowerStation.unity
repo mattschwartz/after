@@ -209,6 +209,7 @@ MonoBehaviour:
   LockDuration: .670000017
   Player: {fileID: 1087088095}
   PlayerAnimator: {fileID: 1087088097}
+  LockPlayer: 1
   MovePlayer: 0
   Trigger: ElevatorCall
   Offset: {x: 0, y: 0}
@@ -1979,7 +1980,6 @@ MonoBehaviour:
   WatchFor: {fileID: 488547617}
   AudioClips:
   - {fileID: 8300000, guid: a3e7caf0cf97e4b8ca2190478dd72014, type: 3}
-  - {fileID: 8300000, guid: 8afb05ee3711f734986eca71dffc9a89, type: 3}
 --- !u!1 &413521062
 GameObject:
   m_ObjectHideFlags: 0
@@ -3073,6 +3073,50 @@ MonoBehaviour:
   Observations: He was an engineer on my team. I thought I could trust him, but he
     was one of them...against me. He betrayed me and all of humanity.
   InspectingTexture: {fileID: 2800000, guid: f314a44cc0eee4518a29f6e97c7f01f6, type: 3}
+--- !u!1 &597457199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 597457201}
+  - 114: {fileID: 597457200}
+  m_Layer: 0
+  m_Name: server sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &597457200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 597457199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bfa641b9e5c746eea3af53637a91475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  OneShotVolume: .5
+  LoopVolume: .5
+  OneShotClip: {fileID: 8300000, guid: 9935aac84bc0e4de7a241faea97ef30d, type: 3}
+  LoopClip: {fileID: 8300000, guid: ed8cd66a2bc0c43fcb17a49408fde5fb, type: 3}
+--- !u!4 &597457201
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 597457199}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 32.9513779, y: 8.00487518, z: -8.47241211}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
 --- !u!1 &600501535
 GameObject:
   m_ObjectHideFlags: 0
@@ -6706,8 +6750,8 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 1
   To: 2
-  Volume: 1
-  Clip: {fileID: 8300000, guid: 279a6ec46cb21a44c9e39bf254474062, type: 3}
+  Volume: .800000012
+  Clip: {fileID: 8300000, guid: 461b8f61192d34c519876bc84641e93a, type: 3}
 --- !u!1 &1230563634
 GameObject:
   m_ObjectHideFlags: 0
@@ -10683,6 +10727,7 @@ MonoBehaviour:
   LockDuration: 1
   Player: {fileID: 1087088095}
   PlayerAnimator: {fileID: 1087088097}
+  LockPlayer: 1
   MovePlayer: 0
   Trigger: PickupItemLow
   Offset: {x: 0, y: 0}
