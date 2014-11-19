@@ -274,7 +274,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 260634086}
-  m_RootOrder: 36
+  m_RootOrder: 37
 --- !u!212 &17949770
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -384,9 +384,76 @@ MonoBehaviour:
   LockDuration: 1
   Player: {fileID: 194404990}
   PlayerAnimator: {fileID: 194404997}
+  LockPlayer: 1
   MovePlayer: 0
   Trigger: GenericInteraction
   Offset: {x: 0, y: 0}
+--- !u!1 &32266778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 32266779}
+  - 212: {fileID: 32266780}
+  - 95: {fileID: 32266781}
+  m_Layer: 0
+  m_Name: Ghostly Figure
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &32266779
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 32266778}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.17125607, y: 3.48845935, z: 0}
+  m_LocalScale: {x: -.65773201, y: .657730997, z: 1}
+  m_Children: []
+  m_Father: {fileID: 260634086}
+  m_RootOrder: 32
+--- !u!212 &32266780
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 32266778}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2631936957
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 3ac7ef58c8d2d8942bff77569383fbcb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &32266781
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 32266778}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9623dbd04666cb645b10843b1aaa9be7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &37478665
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +914,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 260634086}
-  m_RootOrder: 39
+  m_RootOrder: 40
 --- !u!114 &76486561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2004,6 +2071,7 @@ Transform:
   - {fileID: 927005168}
   - {fileID: 1581451908}
   - {fileID: 444525203}
+  - {fileID: 32266779}
   - {fileID: 300403324}
   - {fileID: 1830161834}
   - {fileID: 1760594707}
@@ -3359,11 +3427,12 @@ Transform:
   - {fileID: 1079507714}
   - {fileID: 1991771674}
   - {fileID: 580607286}
+  - {fileID: 518608517}
   - {fileID: 2025917682}
   - {fileID: 668142921}
   - {fileID: 1240414419}
   m_Father: {fileID: 260634086}
-  m_RootOrder: 32
+  m_RootOrder: 33
 --- !u!198 &300403325
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4484,6 +4553,7 @@ MonoBehaviour:
   - {fileID: 517203324}
   - {fileID: 1991771675}
   - {fileID: 629377130}
+  - {fileID: 518608518}
 --- !u!61 &300403329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4991,6 +5061,7 @@ MonoBehaviour:
   LockDuration: 1
   Player: {fileID: 194404990}
   PlayerAnimator: {fileID: 194404997}
+  LockPlayer: 1
   MovePlayer: 0
   Trigger: GenericInteraction
   Offset: {x: 0, y: 0}
@@ -5970,6 +6041,7 @@ MonoBehaviour:
   LockDuration: 0
   Player: {fileID: 194404990}
   PlayerAnimator: {fileID: 194404997}
+  LockPlayer: 1
   MovePlayer: 0
   Trigger: ElevatorCall
   Offset: {x: 0, y: 0}
@@ -6170,6 +6242,52 @@ MonoBehaviour:
   - {fileID: 2025917680}
   - {fileID: 668142919}
   - {fileID: 1240414420}
+--- !u!1 &518608516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 518608517}
+  - 114: {fileID: 518608518}
+  m_Layer: 0
+  m_Name: Show and dissipate Ghostly Figure
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &518608517
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 518608516}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 300403324}
+  m_RootOrder: 9
+--- !u!114 &518608518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 518608516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 000cbd3bf1ad3084e82b7a73325880a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 1
+  To: 2
+  Trigger: Dissipate
+  Animator: {fileID: 32266781}
+  Renderer: {fileID: 32266780}
 --- !u!1 &549507422
 GameObject:
   m_ObjectHideFlags: 0
@@ -6263,6 +6381,7 @@ MonoBehaviour:
   LockDuration: 0
   Player: {fileID: 194404990}
   PlayerAnimator: {fileID: 194404997}
+  LockPlayer: 1
   MovePlayer: 0
   Trigger: OpenDesk
   Offset: {x: 0, y: 0}
@@ -6679,6 +6798,7 @@ MonoBehaviour:
   LockDuration: 1.5
   Player: {fileID: 194404990}
   PlayerAnimator: {fileID: 194404997}
+  LockPlayer: 1
   MovePlayer: 0
   Trigger: PickupItemLow
   Offset: {x: 0, y: 0}
@@ -7040,6 +7160,7 @@ MonoBehaviour:
   LockDuration: 1.20000005
   Player: {fileID: 194404990}
   PlayerAnimator: {fileID: 194404997}
+  LockPlayer: 1
   MovePlayer: 0
   Trigger: OpenDesk
   Offset: {x: 0, y: 0}
@@ -7109,7 +7230,7 @@ Transform:
   m_Children:
   - {fileID: 719622381}
   m_Father: {fileID: 300403324}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!1 &674526955
 GameObject:
   m_ObjectHideFlags: 0
@@ -8767,6 +8888,7 @@ MonoBehaviour:
   LockDuration: 1
   Player: {fileID: 194404990}
   PlayerAnimator: {fileID: 194404997}
+  LockPlayer: 1
   MovePlayer: 0
   Trigger: GenericInteraction
   Offset: {x: 0, y: 0}
@@ -8840,7 +8962,7 @@ Animator:
   m_GameObject: {fileID: 802398774}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9623dbd04666cb645b10843b1aaa9be7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8af91196d4acfbf478d4397724e19a25, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -8875,7 +8997,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 802398774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.4700689, y: 1.14916062, z: 0}
+  m_LocalPosition: {x: -12.7039852, y: .993214548, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1348473377}
@@ -8926,6 +9048,7 @@ MonoBehaviour:
   LockDuration: 1
   Player: {fileID: 194404990}
   PlayerAnimator: {fileID: 194404997}
+  LockPlayer: 1
   MovePlayer: 0
   Trigger: GenericInteraction
   Offset: {x: 0, y: 0}
@@ -10908,6 +11031,7 @@ MonoBehaviour:
   LockDuration: 1.5
   Player: {fileID: 194404990}
   PlayerAnimator: {fileID: 194404997}
+  LockPlayer: 1
   MovePlayer: 0
   Trigger: PickupItemHigh
   Offset: {x: 0, y: 0}
@@ -11454,7 +11578,7 @@ Transform:
   m_Children:
   - {fileID: 295699890}
   m_Father: {fileID: 300403324}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!95 &1240414420
 Animator:
   serializedVersion: 3
@@ -12285,7 +12409,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 260634086}
-  m_RootOrder: 37
+  m_RootOrder: 38
 --- !u!68 &1423169792
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -14534,6 +14658,7 @@ MonoBehaviour:
   LockDuration: 1.5
   Player: {fileID: 194404990}
   PlayerAnimator: {fileID: 194404997}
+  LockPlayer: 1
   MovePlayer: 0
   Trigger: PickupItemLow
   Offset: {x: 0, y: 0}
@@ -16309,7 +16434,7 @@ Transform:
   m_Children:
   - {fileID: 709084356}
   m_Father: {fileID: 260634086}
-  m_RootOrder: 34
+  m_RootOrder: 35
 --- !u!61 &1760594708
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16825,7 +16950,7 @@ Transform:
   m_LocalScale: {x: 1.01860201, y: 1.01860201, z: 1}
   m_Children: []
   m_Father: {fileID: 260634086}
-  m_RootOrder: 35
+  m_RootOrder: 36
 --- !u!1 &1823007790
 GameObject:
   m_ObjectHideFlags: 0
@@ -16956,7 +17081,7 @@ Transform:
   - {fileID: 2014015041}
   - {fileID: 1353188772}
   m_Father: {fileID: 260634086}
-  m_RootOrder: 33
+  m_RootOrder: 34
 --- !u!95 &1830161835
 Animator:
   serializedVersion: 3
@@ -17775,7 +17900,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 260634086}
-  m_RootOrder: 38
+  m_RootOrder: 39
 --- !u!1 &1937524256
 GameObject:
   m_ObjectHideFlags: 0
@@ -18793,7 +18918,7 @@ Transform:
   m_Children:
   - {fileID: 1624531499}
   m_Father: {fileID: 300403324}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!1 &2052403241
 GameObject:
   m_ObjectHideFlags: 0

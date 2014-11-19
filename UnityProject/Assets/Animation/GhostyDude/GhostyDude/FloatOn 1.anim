@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: FloatOn
+  m_Name: FloatOn 1
   serializedVersion: 4
   m_AnimationType: 2
   m_Compressed: 0
@@ -17,15 +17,15 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: 7.14769745, y: 3.51659393, z: 0}
-        inSlope: {x: 0, y: 2.64446855, z: 0}
-        outSlope: {x: 0, y: 2.64446855, z: 0}
-        tangentMode: 0
+        value: {x: -12.70399, y: .993214488, z: 0}
+        inSlope: {x: 0, y: 3.48559499, z: 0}
+        outSlope: {x: 0, y: 3.48559499, z: 0}
+        tangentMode: 146457096
       - time: 3
-        value: {x: 7.14769745, y: 11.4499998, z: 0}
-        inSlope: {x: 0, y: 2.64446855, z: 0}
-        outSlope: {x: 0, y: 2.64446855, z: 0}
-        tangentMode: 0
+        value: {x: -12.70399, y: 11.4499998, z: 0}
+        inSlope: {x: 0, y: 3.48559499, z: 0}
+        outSlope: {x: 0, y: 3.48559499, z: 0}
+        tangentMode: 146457096
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: 
@@ -178,10 +178,10 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 7.14769745
+        value: -12.70399
         inSlope: 0
         outSlope: 0
-        tangentMode: 0
+        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_LocalPosition.x
@@ -192,14 +192,14 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 3.51659393
-        inSlope: 2.64446855
-        outSlope: 2.64446855
+        value: .993214488
+        inSlope: 3.48559499
+        outSlope: 3.48559499
         tangentMode: 10
       - time: 3
         value: 11.4499998
-        inSlope: 2.64446855
-        outSlope: 2.64446855
+        inSlope: 3.48559499
+        outSlope: 3.48559499
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
