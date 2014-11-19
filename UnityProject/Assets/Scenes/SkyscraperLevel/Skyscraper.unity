@@ -2003,7 +2003,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 1343960909
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f90b2eda561cd4bf2a149100e5cf30cd, type: 3}
+  m_Sprite: {fileID: 21300004, guid: f90b2eda561cd4bf2a149100e5cf30cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &633188341
 Transform:
@@ -6140,7 +6140,8 @@ GameObject:
   - 212: {fileID: 1827570766}
   - 114: {fileID: 1827570768}
   - 61: {fileID: 1827570769}
-  m_Layer: 0
+  - 114: {fileID: 1827570770}
+  m_Layer: 8
   m_Name: Light Ladder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6211,6 +6212,22 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .859999955, y: 13}
   m_Center: {x: 0, y: 0}
+--- !u!114 &1827570770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1827570765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Volume: .200000003
+  StepSounds:
+  - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
+  - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
+  - {fileID: 8300000, guid: 35542781b57464c3492dc225b6e176a4, type: 3}
 --- !u!1 &1894766219
 GameObject:
   m_ObjectHideFlags: 0
@@ -6381,7 +6398,7 @@ MonoBehaviour:
   RangeMax: 15
   PitchLow: 1
   PitchHigh: .699999988
-  ClipVolume: 1
+  ClipVolume: .5
   FallingRock: {fileID: 2018785399}
   RumbleClips:
   - {fileID: 8300000, guid: efec55dae98ea4c0abdbdac88db64d74, type: 3}
