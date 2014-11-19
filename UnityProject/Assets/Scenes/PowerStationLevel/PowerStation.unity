@@ -8100,7 +8100,7 @@ MonoBehaviour:
   From: 1
   To: 1
   Observations: A collection of server blades. They appear to be off.
-  Observer: {fileID: 0}
+  Observer: {fileID: 1123528234}
 --- !u!1 &1056199116
 GameObject:
   m_ObjectHideFlags: 0
@@ -11934,10 +11934,11 @@ GameObject:
   - 4: {fileID: 1531208410}
   - 212: {fileID: 1531208409}
   - 114: {fileID: 1531208411}
+  - 61: {fileID: 1531208412}
   m_Layer: 0
   m_Name: Server Cluster
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1500306622, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -11996,6 +11997,17 @@ MonoBehaviour:
   TransitionScripts:
   - {fileID: 1032382127}
   - {fileID: 206288333}
+--- !u!61 &1531208412
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1531208408}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 6.1500001, y: 5.44999981}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &1543570304
 GameObject:
   m_ObjectHideFlags: 0
