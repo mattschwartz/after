@@ -1986,7 +1986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: .400000006
+  Volume: .300000012
   StepSounds:
   - {fileID: 8300000, guid: f62ccc640ea8f4d0fb25e2880efa442c, type: 3}
   - {fileID: 8300000, guid: c23cc0203bb0d4c56ad3f5e42f60bc7c, type: 3}
@@ -9898,7 +9898,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: d9b1b81ed893d4c61b7f3c416d5efb85, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .119999997
+  m_Volume: .150000006
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -16116,7 +16116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: .400000006
+  Volume: .300000012
   StepSounds:
   - {fileID: 8300000, guid: f62ccc640ea8f4d0fb25e2880efa442c, type: 3}
   - {fileID: 8300000, guid: c23cc0203bb0d4c56ad3f5e42f60bc7c, type: 3}
@@ -17728,7 +17728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: 1
+  Volume: .300000012
   StepSounds:
   - {fileID: 8300000, guid: ce446eaad76004ac68432fd9b039fcee, type: 3}
 --- !u!1001 &1927804707
@@ -18754,8 +18754,8 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 1
   To: 2
-  Volume: .5
-  Clip: {fileID: 8300000, guid: f519b641802c644feae5505ba31f1021, type: 3}
+  Volume: .300000012
+  Clip: {fileID: 8300000, guid: e30eee022e85848c4b8d781fbd401536, type: 3}
 --- !u!1 &2004789011
 GameObject:
   m_ObjectHideFlags: 0
