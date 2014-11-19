@@ -1701,7 +1701,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: bd88af9d4976446a498942ddc9b45f00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 96ff0f143bab8474e9c3518ed796ef18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!61 &594071726
 BoxCollider2D:
