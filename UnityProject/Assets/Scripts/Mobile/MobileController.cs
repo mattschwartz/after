@@ -26,8 +26,6 @@ public class MobileController : MonoBehaviour
 
     void Update()
     {
-        if (Application.platform != RuntimePlatform.Android && Application.platform != RuntimePlatform.IPhonePlayer)
-            return;
         DefineBounds();
         ProcessJump();
         ProcessMove();
@@ -92,8 +90,8 @@ public class MobileController : MonoBehaviour
 
     void OnGUI()
     {
-        if ((Application.platform != RuntimePlatform.Android && Application.platform != RuntimePlatform.IPhonePlayer) || SceneHandler.GUILock != null) { return; }
-
+        if (SceneHandler.GUILock != null) { return; }
+        
         if (SceneHandler.OnInteractable) {
             if (GUI.Button(IconBounds, GUIContent.none, InspectStyle)) {
                 Player.Interact();
