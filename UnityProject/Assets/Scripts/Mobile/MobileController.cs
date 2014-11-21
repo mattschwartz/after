@@ -20,6 +20,11 @@ public class MobileController : MonoBehaviour
 
     void Start()
     {
+        if (Application.platform != RuntimePlatform.Android &&
+            Application.platform != RuntimePlatform.IPhonePlayer) {
+            Destroy(gameObject);
+        }
+
         TouchDown = false;
         TouchedFor = 0;
     }
@@ -91,7 +96,7 @@ public class MobileController : MonoBehaviour
     void OnGUI()
     {
         if (SceneHandler.GUILock != null) { return; }
-        
+
         if (SceneHandler.OnInteractable) {
             if (GUI.Button(IconBounds, GUIContent.none, InspectStyle)) {
                 Player.Interact();
