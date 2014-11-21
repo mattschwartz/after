@@ -50,6 +50,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (Application.platform == RuntimePlatform.Android ||
+            Application.platform == RuntimePlatform.IPhonePlayer) {
+            return;
+        }
+
         if (PlayerLocked || Climbing) {
             return;
         }
@@ -70,13 +75,18 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (Application.platform == RuntimePlatform.Android ||
+            Application.platform == RuntimePlatform.IPhonePlayer) {
+            IsGrounded();
+            return;
+        }
+
         JumpCD -= Time.deltaTime;
         if (PlayerLocked) {
             return;
         }
 
-        if (Swinging)
-        {
+        if (Swinging) {
             Animator.SetFloat("Velocity", (rigidbody2D.position.x - SwingLastX) * SwingVelMult);
             PlayerObserver.SetPlayerVel(new Vector2((rigidbody2D.position.x - SwingLastX) * SwingVelMult, 0));
             SwingLastX = rigidbody2D.position.x;
@@ -88,17 +98,18 @@ public class PlayerController : MonoBehaviour
             rigidbody2D.velocity = new Vector2(0, vMove * Speed * 0.5f);
         } else {
             IsGrounded();
+            if (!Input.GetMouseButton(0)) {
+                float hMove = Input.GetAxis("Horizontal");
+                Animator.SetFloat("Velocity", Mathf.Abs(hMove));
+                Animator.SetFloat("vMove", rigidbody2D.velocity.y);
 
-            float hMove = Input.GetAxis("Horizontal");
-            Animator.SetFloat("Velocity", Mathf.Abs(hMove));
-            Animator.SetFloat("vMove", rigidbody2D.velocity.y);
+                rigidbody2D.velocity = new Vector2(hMove * Speed, rigidbody2D.velocity.y);
 
-            rigidbody2D.velocity = new Vector2(hMove * Speed, rigidbody2D.velocity.y);
-
-            if (hMove > 0 && !FacingRight) {
-                Flip();
-            } else if (hMove < 0 && FacingRight) {
-                Flip();
+                if (hMove > 0 && !FacingRight) {
+                    Flip();
+                } else if (hMove < 0 && FacingRight) {
+                    Flip();
+                }
             }
         }
         if (!Swinging)
@@ -124,7 +135,7 @@ public class PlayerController : MonoBehaviour
 
     #region Interact
 
-    private void Interact()
+    public void Interact()
     {
         Bounds bounds = GetComponent<BoxCollider2D>().bounds;
         CircleCollider2D circle = GetComponent<CircleCollider2D>();
@@ -135,6 +146,37 @@ public class PlayerController : MonoBehaviour
             .ToList()
             .FindAll(t => t.GetComponent("InteractableController"))
             .ForEach(t => t.gameObject.SendMessage("Interact"));
+    }
+
+    #endregion
+
+    #region Movement Interface (for Mobile)
+
+    public void Move(float hMove)
+    {
+        Animator.SetFloat("Velocity", Mathf.Abs(hMove));
+        Animator.SetFloat("vMove", rigidbody2D.velocity.y);
+
+        if (PlayerLocked) { return; }
+
+        if (Climbing) {
+            Climb(false, false, false, false, 3000 * Mathf.Abs(Mathf.Ceil(hMove)));
+        }
+
+        rigidbody2D.velocity = new Vector2(hMove * Speed, rigidbody2D.velocity.y);
+
+        if (hMove > 0 && !FacingRight) {
+            Flip();
+        } else if (hMove < 0 && FacingRight) {
+            Flip();
+        }
+    }
+
+    public void Jump()
+    {
+        if (!Grounded) { return; }
+
+        rigidbody2D.AddForce(Vector2.up * JumpForce);
     }
 
     #endregion
@@ -214,8 +256,7 @@ public class PlayerController : MonoBehaviour
                 Sprite.sortingOrder = 0;
             }
 
-            if (xForce != 0.0f)
-            {
+            if (xForce != 0.0f) {
                 rigidbody2D.AddForce(new Vector2(xForce, 200f));
             }
         }

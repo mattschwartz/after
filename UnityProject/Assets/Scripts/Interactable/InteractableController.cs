@@ -1,4 +1,5 @@
 ﻿using After.Interactable.Transitions;
+using After.Scene.SceneManagement;
 using Assets.Utility;
 using System;
 using System.Collections;
@@ -18,6 +19,24 @@ namespace After.Interactable
         public InteractableState UnlockedState;
         public InteractableState SpentState;
         public List<Transition> TransitionScripts;
+
+        #endregion
+
+        #region Triggers
+
+        void OnTriggerStay2D(Collider2D other)
+        {
+            if (other.name == "Player") {
+                SceneHandler.OnInteractable = true;
+            }
+        }
+
+        void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.name == "Player") {
+                SceneHandler.OnInteractable = false;
+            }
+        }
 
         #endregion
 
