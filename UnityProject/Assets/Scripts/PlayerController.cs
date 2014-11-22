@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     private float GroundRadius = 0.2f;
     private float SwingLastX = 0f;
     private Animator Animator;
-    private bool Climbing;
+    public bool Climbing { get; private set; }
     private SpriteRenderer Sprite;
     private float Gravity;
     private float JumpCD;  //cooldown on player jumping
@@ -154,6 +154,8 @@ public class PlayerController : MonoBehaviour
 
     public void Move(float hMove)
     {
+        if (Climbing) { return; }
+
         if (PlayerLocked) {
             Animator.SetFloat("Velocity", 0);
             Animator.SetFloat("vMove", rigidbody2D.velocity.y);
@@ -162,10 +164,6 @@ public class PlayerController : MonoBehaviour
 
         Animator.SetFloat("Velocity", Mathf.Abs(hMove));
         Animator.SetFloat("vMove", rigidbody2D.velocity.y);
-
-        if (Climbing) {
-            Climb(false, false, false, false, 3000 * Mathf.Abs(Mathf.Ceil(hMove)));
-        }
 
         rigidbody2D.velocity = new Vector2(hMove * Speed, rigidbody2D.velocity.y);
 
@@ -176,9 +174,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void Climb(float vMove)
+    {
+        if (PlayerLocked || !Climbing) { return; }
+
+        Animator.SetFloat("vMove", Mathf.Abs(vMove));
+        rigidbody2D.velocity = new Vector2(0, vMove * Speed * 0.5f);
+    }
+
     public void Jump()
     {
-        if (!Grounded) { return; }
+        if (!Grounded || Climbing) { return; }
 
         rigidbody2D.AddForce(Vector2.up * JumpForce);
     }

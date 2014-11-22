@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   JumpThreshold: .300000012
   Player: {fileID: 0}
+  LadderController: {fileID: 0}
   InspectStyle:
     m_Name: 
     m_Normal:

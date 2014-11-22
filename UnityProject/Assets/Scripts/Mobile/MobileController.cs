@@ -10,13 +10,14 @@ public class MobileController : MonoBehaviour
 
     public float JumpThreshold = 1;
     public PlayerController Player;
+    public LadderController LadderController;
     public GUIStyle InspectStyle;
     public GUIStyle GrabbableStyle;
 
     private bool GUIInteraction;
-    private bool TouchDown;
     private float TouchedFor;
-    private Vector2 LastMouse;
+    private Vector2 LastMovePosition;
+    private Vector2 LastLadderPosition;
     private Rect IconBounds;
     private List<int> PossibleJumpTouches;
 
@@ -30,7 +31,6 @@ public class MobileController : MonoBehaviour
         }
 
         PossibleJumpTouches = new List<int>();
-        TouchDown = false;
         TouchedFor = 0;
     }
 
@@ -45,6 +45,7 @@ public class MobileController : MonoBehaviour
         if (Input.touchCount == 0) { GUIInteraction = false; }
 
         ProcessMove();
+        ProcessLadder();
     }
 
     private void DefineBounds()
@@ -92,21 +93,27 @@ public class MobileController : MonoBehaviour
 
     private void ProcessMove()
     {
-        // Movement will always be performed by the first registered touch
-        Touch moveTouch = Input.touches[0];
+        if (Player.Climbing) { return; }
 
-        if (Input.touchCount == 0 || moveTouch.phase == TouchPhase.Ended) {
+        // Movement will always be performed by the first registered touch
+        if (Input.touchCount == 0 || Input.touches[0].phase == TouchPhase.Ended) {
             Player.Move(0);
             return;
         }
 
+        Touch moveTouch = Input.touches[0];
+
         if (moveTouch.phase == TouchPhase.Began) {
-            LastMouse = moveTouch.position;
+            LastMovePosition = moveTouch.position;
         }
 
         Vector2 mouse = moveTouch.position;
 
-        float deltaX = (mouse.x - LastMouse.x);
+        float deltaY = (mouse.y - LastMovePosition.y);
+        float deltaX = (mouse.x - LastMovePosition.x);
+
+        if (Mathf.Abs(deltaY) > Mathf.Abs(deltaX)) { return; }
+
         if (deltaX < 0) {
             deltaX = -1;
         } else if (deltaX > 0) {
@@ -114,6 +121,50 @@ public class MobileController : MonoBehaviour
         }
 
         Player.Move(deltaX);
+    }
+
+    private void ProcessLadder()
+    {
+        //Vector2 mouse = moveTouch.position;
+        ResetLadderMovement();
+        Player.Climb(0);
+
+        if (Input.GetMouseButtonUp(0)) { return; }
+
+        if (Input.GetMouseButtonDown(0)) {
+            LastLadderPosition = Input.mousePosition;
+        }
+
+        if (!Input.GetMouseButton(0)) { return; }
+
+        Vector2 mouse = Input.mousePosition;
+
+        float deltaY = (mouse.y - LastLadderPosition.y);
+        float deltaX = (mouse.x - LastLadderPosition.x);
+
+        if (Mathf.Abs(deltaY) > Mathf.Abs(deltaX)) {
+            if (deltaY < 0) {
+                LadderController.LadderDown = true;
+                Player.Climb(-1);
+            } else if (deltaY > 0) {
+                LadderController.LadderUp = true;
+                Player.Climb(1);
+            }
+        } else {
+            if (deltaX < 0) {
+                LadderController.LadderLeft = true;
+            } else if (deltaX > 0) {
+                LadderController.LadderRight = true;
+            }
+        }
+    }
+
+    private void ResetLadderMovement()
+    {
+        LadderController.LadderUp = false;
+        LadderController.LadderDown = false;
+        LadderController.LadderLeft = false;
+        LadderController.LadderRight = false;
     }
 
     void OnGUI()
