@@ -154,10 +154,14 @@ public class PlayerController : MonoBehaviour
 
     public void Move(float hMove)
     {
+        if (PlayerLocked) {
+            Animator.SetFloat("Velocity", 0);
+            Animator.SetFloat("vMove", rigidbody2D.velocity.y);
+            return; 
+        }
+
         Animator.SetFloat("Velocity", Mathf.Abs(hMove));
         Animator.SetFloat("vMove", rigidbody2D.velocity.y);
-
-        if (PlayerLocked) { return; }
 
         if (Climbing) {
             Climb(false, false, false, false, 3000 * Mathf.Abs(Mathf.Ceil(hMove)));

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using After.Scene.SceneManagement;
+using System.Collections.Generic;
+using System.Linq;
 
 public class MobileController : MonoBehaviour
 {
@@ -11,10 +13,12 @@ public class MobileController : MonoBehaviour
     public GUIStyle InspectStyle;
     public GUIStyle GrabbableStyle;
 
+    private bool GUIInteraction;
     private bool TouchDown;
     private float TouchedFor;
-    private Vector3 LastMouse;
+    private Vector2 LastMouse;
     private Rect IconBounds;
+    private List<int> PossibleJumpTouches;
 
     #endregion
 
@@ -25,6 +29,7 @@ public class MobileController : MonoBehaviour
             Destroy(gameObject);
         }
 
+        PossibleJumpTouches = new List<int>();
         TouchDown = false;
         TouchedFor = 0;
     }
@@ -32,58 +37,76 @@ public class MobileController : MonoBehaviour
     void Update()
     {
         DefineBounds();
-        ProcessJump();
+
+        if (!GUIInteraction) {
+            ProcessJump();
+        }
+
+        if (Input.touchCount == 0) { GUIInteraction = false; }
+
         ProcessMove();
     }
 
     private void DefineBounds()
     {
-        var campos = Camera.main.ViewportToScreenPoint(new Vector3(1, 1));
         float w = (float)Screen.width * 0.25f;
         float h = (float)Screen.height * 0.25f;
         IconBounds = new Rect(Screen.width - w, Screen.height - h, w, h);
     }
 
-    private bool ProcessJump()
+    private void ProcessJump()
     {
-        if (Input.GetMouseButtonDown(0)) {
-            TouchDown = true;
-        }
-
-        if (Input.GetMouseButtonUp(0)) {
-            if (TouchedFor > 0 && TouchedFor <= JumpThreshold) {
+        // A touch has been previously recorded and it has just ended
+        if (PossibleJumpTouches.Any(t => Input.GetTouch(t).phase == TouchPhase.Ended)) {
+            // Has the touch been held for too long to be considered a jump?
+            if (TouchedFor <= JumpThreshold) {
                 Player.Jump();
             }
 
+            // Reset values
             TouchedFor = 0;
-            TouchDown = false;
-            return true;
+            PossibleJumpTouches.Clear();
+            return;
         }
+        
+        // No new registered touches, carry on.
+        if (Input.touchCount == 0) { return; }
 
-        if (TouchDown) {
-            TouchedFor += Time.deltaTime;
-        }
+        // Remove possible jump touches that have moved
+        PossibleJumpTouches.RemoveAll(t => Input.touches.ToList()
+            .Where(s => s.phase == TouchPhase.Moved)
+            .Select(s => s.fingerId)
+            .Any(s => s == t));
 
-        return false;
+        // Keep track of possible jump touches based on all touches that have begun
+        PossibleJumpTouches.AddRange(Input.touches.ToList()
+            .Where(t => t.phase == TouchPhase.Began)
+            .Select(t => t.fingerId));
+
+        // Found no valid touches - time to bail
+        if (PossibleJumpTouches.Count == 0) { return; }
+
+        // At least 1 finger is being held down and has not moved.
+        TouchedFor += Time.deltaTime;
     }
 
     private void ProcessMove()
     {
-        if (Input.GetMouseButtonUp(0)) {
+        // Movement will always be performed by the first registered touch
+        Touch moveTouch = Input.touches[0];
+
+        if (Input.touchCount == 0 || moveTouch.phase == TouchPhase.Ended) {
             Player.Move(0);
-        }
-
-        if (Input.GetMouseButtonDown(0)) {
-            LastMouse = Input.mousePosition;
-        }
-
-        if (!Input.GetMouseButton(0)) {
             return;
         }
 
-        Vector3 mouse = Input.mousePosition;
+        if (moveTouch.phase == TouchPhase.Began) {
+            LastMouse = moveTouch.position;
+        }
 
-        float deltaX = (mouse.x - LastMouse.x) / ((float)Screen.width / 2);
+        Vector2 mouse = moveTouch.position;
+
+        float deltaX = (mouse.x - LastMouse.x);
         if (deltaX < 0) {
             deltaX = -1;
         } else if (deltaX > 0) {
@@ -99,10 +122,12 @@ public class MobileController : MonoBehaviour
 
         if (SceneHandler.OnInteractable) {
             if (GUI.Button(IconBounds, GUIContent.none, InspectStyle)) {
+                GUIInteraction = true;
                 Player.Interact();
             }
         } else if (SceneHandler.OnGrabbable) {
             if (GUI.Button(IconBounds, GUIContent.none, GrabbableStyle)) {
+                GUIInteraction = true;
                 Player.Interact();
             }
         }
