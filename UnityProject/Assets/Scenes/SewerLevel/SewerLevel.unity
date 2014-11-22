@@ -11747,7 +11747,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   JumpThreshold: .300000012
   Player: {fileID: 194404992}
-  LadderController: {fileID: 1918864477}
   InspectStyle:
     m_Name: 
     m_Normal:
@@ -17918,10 +17917,6 @@ MonoBehaviour:
   TopOffY: 9.39999962
   TopOnY: 6.69999981
   Blocked: 0
-  LadderUp: 0
-  LadderDown: 0
-  LadderLeft: 0
-  LadderRight: 0
 --- !u!61 &1918864478
 BoxCollider2D:
   m_ObjectHideFlags: 0
