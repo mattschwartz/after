@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Assets.Scripts.Scene.SceneManagement;
 using After.Interactable;
 using System.Linq;
+using After.Scene.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -75,9 +76,15 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Application.platform == RuntimePlatform.Android ||
-            Application.platform == RuntimePlatform.IPhonePlayer) {
+        if (SceneHandler.OnMobile) {
             IsGrounded();
+            if (Swinging) {
+                Animator.SetFloat("Velocity", (rigidbody2D.position.x - SwingLastX) * SwingVelMult);
+                PlayerObserver.SetPlayerVel(new Vector2((rigidbody2D.position.x - SwingLastX) * SwingVelMult, 0));
+                SwingLastX = rigidbody2D.position.x;
+            } else {
+                PlayerObserver.SetPlayerVel(rigidbody2D.velocity);
+            }
             return;
         }
 
@@ -98,18 +105,16 @@ public class PlayerController : MonoBehaviour
             rigidbody2D.velocity = new Vector2(0, vMove * Speed * 0.5f);
         } else {
             IsGrounded();
-            if (!Input.GetMouseButton(0)) {
-                float hMove = Input.GetAxis("Horizontal");
-                Animator.SetFloat("Velocity", Mathf.Abs(hMove));
-                Animator.SetFloat("vMove", rigidbody2D.velocity.y);
+            float hMove = Input.GetAxis("Horizontal");
+            Animator.SetFloat("Velocity", Mathf.Abs(hMove));
+            Animator.SetFloat("vMove", rigidbody2D.velocity.y);
 
-                rigidbody2D.velocity = new Vector2(hMove * Speed, rigidbody2D.velocity.y);
+            rigidbody2D.velocity = new Vector2(hMove * Speed, rigidbody2D.velocity.y);
 
-                if (hMove > 0 && !FacingRight) {
-                    Flip();
-                } else if (hMove < 0 && FacingRight) {
-                    Flip();
-                }
+            if (hMove > 0 && !FacingRight) {
+                Flip();
+            } else if (hMove < 0 && FacingRight) {
+                Flip();
             }
         }
         if (!Swinging)
@@ -187,6 +192,13 @@ public class PlayerController : MonoBehaviour
         if (!Grounded || Climbing) { return; }
 
         rigidbody2D.AddForce(Vector2.up * JumpForce);
+    }
+
+    public void Swing()
+    {
+        Animator.SetFloat("Velocity", (rigidbody2D.position.x - SwingLastX) * SwingVelMult);
+        PlayerObserver.SetPlayerVel(new Vector2((rigidbody2D.position.x - SwingLastX) * SwingVelMult, 0));
+        SwingLastX = rigidbody2D.position.x;
     }
 
     #endregion

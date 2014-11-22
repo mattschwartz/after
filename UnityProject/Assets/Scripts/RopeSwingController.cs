@@ -2,10 +2,12 @@ using UnityEngine;
 using System.Collections;
 using Assets.Scripts.Scene.SceneManagement;
 using After.Audio;
+using After.Scene.SceneManagement;
 
 public class RopeSwingController : MonoBehaviour {
 
 	public GameObject PlayerObject;
+    public PlayerController PlayerCon;
 	public float MinLength;
     private float Length;
 	public float MaxLength;
@@ -61,7 +63,7 @@ public class RopeSwingController : MonoBehaviour {
 		if (Entered && !Active && !Dismount)
 		{
 			Active = true;
-			PlayerObject.SendMessage("Swing", true);
+            PlayerCon.Swing(true);
 
 			//determines which way the player is headed
 			float xSign;
@@ -93,8 +95,7 @@ public class RopeSwingController : MonoBehaviour {
 
             //eliminates rope drag
             Body.angularDrag = 0f;
-		}
-		else if (Active && Input.GetKeyDown(KeyCode.Space))
+		} else if (Active && SceneHandler.SwingDismount)
 		{
             Dismount = true;
             Active = false;
@@ -113,7 +114,7 @@ public class RopeSwingController : MonoBehaviour {
                 xSign = 1;
             PlayerObject.rigidbody2D.AddForce(new Vector2(1000f * xSign, 500f));
 
-            PlayerObject.SendMessage("Swing", false);
+            PlayerCon.Swing(false);
 
             //rope active status will be changed upon player leaving trigger box
 		}
@@ -134,9 +135,11 @@ public class RopeSwingController : MonoBehaviour {
             if (PlayerObserver.GetPlayerVel().x * LastPlayerVel <= 0f)
             {
                 if (LastPlayerVel >= 0f) {
+                    Backward.Stop();
                     Forward.Play();
                 }
                 else {
+                    Forward.Stop();
                     Backward.Play();
                 }
             }

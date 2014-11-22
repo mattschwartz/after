@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using After.Audio;
 using Assets.Scripts.Scene.SceneManagement;
+using After.Scene.SceneManagement;
 
 public class LadderController : MonoBehaviour {
 
@@ -18,7 +19,8 @@ public class LadderController : MonoBehaviour {
     public bool Blocked;  //not to be modified in-editor
 
     private bool Active;
-    private bool Entered;
+    public bool Entered { get; private set; }
+    private bool Exited;
     private bool Top = false;
 
     // Use this for initialization
@@ -41,8 +43,9 @@ public class LadderController : MonoBehaviour {
 
     void OnTriggerExit2D ()
     {
-        if (!Active)
+        if (!Active) {
             Entered = false;
+        }
         Active = false;
         
         foreach (BoxCollider2D gate in FloorGates)
@@ -51,30 +54,14 @@ public class LadderController : MonoBehaviour {
         }
 
         PlayerCon.Climb(false, false, false, false, 0);
+        Exited = true;
     }
-
-    #region Mobile stuff - avert your eyes, Tyler
-
-    public bool LadderUp;
-    public bool LadderDown;
-    public bool LadderLeft;
-    public bool LadderRight;
-
-    #endregion
 
     // Update is called once per frame
     void Update () {
-        if (Application.platform != RuntimePlatform.Android ||
-            Application.platform != RuntimePlatform.IPhonePlayer) {
-            LadderUp = Input.GetKeyDown(KeyCode.W);
-            LadderDown = Input.GetKeyDown(KeyCode.S);
-            LadderLeft = Input.GetKeyDown(KeyCode.A);
-            LadderRight = Input.GetKeyDown(KeyCode.D);
-        }
-        
         //Allows the player to mount the ladder simply by moving up or down while within the ladder's box collider
         //After determining issue, put " || Mathf.Abs(PlayerObserver.GetPlayerVel().y) > 20f" back at end of if-statement
-        if (!Blocked && Entered && ((!Active && ((LadderUp && !Top) || LadderDown)) || Mathf.Abs(PlayerObserver.GetPlayerVel().y) > 10f))
+        if (!Blocked && Entered && ((!Active && ((SceneHandler.LadderUp && !Top) || SceneHandler.LadderDown)) || Mathf.Abs(PlayerObserver.GetPlayerVel().y) > 10f))
         {
             foreach (BoxCollider2D gate in FloorGates)
             {
@@ -97,13 +84,13 @@ public class LadderController : MonoBehaviour {
         }
 
         //Allows the player to dismount the ladder simply by moving left or right
-        else if (Entered && Active && (LadderLeft || LadderRight))
+        else if (Entered && Active && (SceneHandler.LadderLeft || SceneHandler.LadderRight))
         {
             Active = false;
             Entered = false;
 
             float xForce;
-            if (LadderRight) {
+            if (SceneHandler.LadderRight) {
                 xForce = 3000f;
             } else {
                 xForce = -3000f;
@@ -112,15 +99,27 @@ public class LadderController : MonoBehaviour {
             PlayerCon.Climb(false, false, false, false, xForce);
         }
 
-        else if (Active && Top && LadderUp)
+        else if (Active && Top && SceneHandler.LadderUp)
         {
             PlayerCon.Climb(true, Profile, true, true, transform.position.x);
             PlayerCon.LockPlayer();
-            PlayerCon.SetPos(transform.position.x, HandleY);
+            PlayerCon.SetPos(PlayerCon.transform.position.x, HandleY);
             Invoke("FreePlayer", .5f);
             Invoke("EndLift", .5f);
             Active = false;
             Entered = false;
+
+        }
+    }
+
+    void LateUpdate()
+    {
+        if (Exited) {
+            SceneHandler.LadderDown = false;
+            SceneHandler.LadderUp = false;
+            SceneHandler.LadderLeft = false;
+            SceneHandler.LadderRight = false;
+            Exited = false;
         }
     }
 

@@ -475,7 +475,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 69810309}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.1941223, y: -24.230526, z: 0}
+  m_LocalPosition: {x: 14.5858068, y: -21.7265167, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2407,7 +2407,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 416403215}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.520072, y: 4.00498199, z: 0}
+  m_LocalPosition: {x: -15.520072, y: 4.4602356, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1800737354}
@@ -3292,7 +3292,7 @@ MonoBehaviour:
   From: 1
   To: 1
   Observations: Door's locked.. I'll need to find another way in, somehow.
-  Observer: {fileID: 0}
+  Observer: {fileID: 1123528234}
 --- !u!1 &564818256
 GameObject:
   m_ObjectHideFlags: 0
@@ -5066,6 +5066,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 323082a2daa4caf42aeaa162102f90c6, type: 2}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1087088099}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 323082a2daa4caf42aeaa162102f90c6, type: 2}
   m_RootGameObject: {fileID: 1951924604}
@@ -5523,6 +5527,10 @@ Prefab:
       propertyPath: MaxLength
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: fd88da636b94c42d8aef845806a7ad1c, type: 2}
+      propertyPath: PlayerCon
+      value: 
+      objectReference: {fileID: 1087088099}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd88da636b94c42d8aef845806a7ad1c, type: 2}
   m_RootGameObject: {fileID: 1494811401}
@@ -5782,7 +5790,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 792645827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.0659027, y: -28.0469494, z: 0}
+  m_LocalPosition: {x: 38.4575958, y: -25.5429497, z: 0}
   m_LocalScale: {x: .405582011, y: .405580014, z: 1}
   m_Children:
   - {fileID: 887119945}
@@ -7954,7 +7962,7 @@ MonoBehaviour:
   PlayOnEnter: 1
   PlayOnRemain: 0
   PlayOnExit: 0
-  ExitNexus: {fileID: 416403215}
+  ExitNexus: {fileID: 1163118459}
   Player: {fileID: 1087088095}
   NewSpriteBounds: {fileID: 1949834330}
 --- !u!1 &925965101
@@ -8205,7 +8213,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 962396642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.0444756, y: -28.0469494, z: 0}
+  m_LocalPosition: {x: 38.4361725, y: -25.5429497, z: 0}
   m_LocalScale: {x: .405582011, y: .405580014, z: 1}
   m_Children:
   - {fileID: 1837172448}
@@ -9443,6 +9451,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
+--- !u!1 &1163118459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1163118460}
+  m_Layer: 0
+  m_Name: Exit from workfloor ladder
+  m_TagString: Untagged
+  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1163118460
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1163118459}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.5798025, y: .784049988, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1949834331}
+  m_RootOrder: 18
 --- !u!1 &1164423433
 GameObject:
   m_ObjectHideFlags: 0
@@ -9787,7 +9822,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1208985885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.0444756, y: -28.0469494, z: 0}
+  m_LocalPosition: {x: 38.4361725, y: -25.5429497, z: 0}
   m_LocalScale: {x: .405582011, y: .405580014, z: 1}
   m_Children:
   - {fileID: 589353342}
@@ -10341,6 +10376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObject: {fileID: 1087088095}
+  PlayerCon: {fileID: 1087088099}
   MinLength: 1.5
   MaxLength: 1.5
   FallRate: 1
@@ -11248,7 +11284,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1408937265}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.3386803, y: -24.6758499, z: 0}
+  m_LocalPosition: {x: 38.7303772, y: -22.171833, z: 0}
   m_LocalScale: {x: .995048106, y: .995048106, z: 1}
   m_Children:
   - {fileID: 1193920258}
@@ -11507,6 +11543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObject: {fileID: 1087088095}
+  PlayerCon: {fileID: 1087088099}
   MinLength: 1.5
   MaxLength: 1.5
   FallRate: 1
@@ -11948,6 +11985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObject: {fileID: 1087088095}
+  PlayerCon: {fileID: 1087088099}
   MinLength: 1.5
   MaxLength: 1.5
   FallRate: 1
@@ -16469,7 +16507,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1949834329}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0321121216, y: -24.3390694, z: 0}
+  m_LocalPosition: {x: -1.57618809, y: -21.8350563, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 917854653}
@@ -16490,6 +16528,7 @@ Transform:
   - {fileID: 1766278144}
   - {fileID: 960099392}
   - {fileID: 600501537}
+  - {fileID: 1163118460}
   m_Father: {fileID: 0}
   m_RootOrder: 13
 --- !u!1 &1951924604
@@ -16521,7 +16560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JumpThreshold: .300000012
-  Player: {fileID: 0}
+  Player: {fileID: 1087088099}
   InspectStyle:
     m_Name: 
     m_Normal:

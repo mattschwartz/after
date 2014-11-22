@@ -10,7 +10,6 @@ public class MobileController : MonoBehaviour
 
     public float JumpThreshold = 1;
     public PlayerController Player;
-    public LadderController LadderController;
     public GUIStyle InspectStyle;
     public GUIStyle GrabbableStyle;
 
@@ -27,6 +26,7 @@ public class MobileController : MonoBehaviour
     {
         if (Application.platform != RuntimePlatform.Android &&
             Application.platform != RuntimePlatform.IPhonePlayer) {
+            Debug.LogWarning("Deleting mobile controller. You shouldn't be building with me!");
             Destroy(gameObject);
         }
 
@@ -46,6 +46,7 @@ public class MobileController : MonoBehaviour
 
         ProcessMove();
         ProcessLadder();
+        Unstucker();
     }
 
     private void DefineBounds()
@@ -55,12 +56,24 @@ public class MobileController : MonoBehaviour
         IconBounds = new Rect(Screen.width - w, Screen.height - h, w, h);
     }
 
+    private void Unstucker()
+    {
+        if (Input.touchCount == 0) {
+            PossibleJumpTouches.Clear();
+            LastLadderPosition = Vector2.zero;
+            LastMovePosition = Vector2.zero;
+        }
+    }
+
     private void ProcessJump()
     {
+        SceneHandler.SwingDismount = false;
+
         // A touch has been previously recorded and it has just ended
         if (PossibleJumpTouches.Any(t => Input.GetTouch(t).phase == TouchPhase.Ended)) {
             // Has the touch been held for too long to be considered a jump?
             if (TouchedFor <= JumpThreshold) {
+                SceneHandler.SwingDismount = true;
                 Player.Jump();
             }
 
@@ -79,10 +92,17 @@ public class MobileController : MonoBehaviour
             .Select(s => s.fingerId)
             .Any(s => s == t));
 
+        int count = PossibleJumpTouches.Count;
+
         // Keep track of possible jump touches based on all touches that have begun
         PossibleJumpTouches.AddRange(Input.touches.ToList()
             .Where(t => t.phase == TouchPhase.Began)
             .Select(t => t.fingerId));
+
+        // If we added more touches, reset timer
+        if (count < PossibleJumpTouches.Count) {
+            TouchedFor = 0;
+        }
 
         // Found no valid touches - time to bail
         if (PossibleJumpTouches.Count == 0) { return; }
@@ -111,13 +131,17 @@ public class MobileController : MonoBehaviour
 
         float deltaY = (mouse.y - LastMovePosition.y);
         float deltaX = (mouse.x - LastMovePosition.x);
+        float min = (float)Screen.width * 0.01f;
 
-        if (Mathf.Abs(deltaY) > Mathf.Abs(deltaX)) { return; }
+        //if (deltaY > deltaX) { return; }
 
-        if (deltaX < 0) {
+        // Ignore moves between -min and min
+        if (deltaX < -min) {
             deltaX = -1;
-        } else if (deltaX > 0) {
+        } else if (deltaX > min) {
             deltaX = 1;
+        } else {
+            deltaX = 0;
         }
 
         Player.Move(deltaX);
@@ -144,27 +168,27 @@ public class MobileController : MonoBehaviour
 
         if (Mathf.Abs(deltaY) > Mathf.Abs(deltaX)) {
             if (deltaY < 0) {
-                LadderController.LadderDown = true;
+                SceneHandler.LadderDown = true;
                 Player.Climb(-1);
             } else if (deltaY > 0) {
-                LadderController.LadderUp = true;
+                SceneHandler.LadderUp = true;
                 Player.Climb(1);
             }
         } else {
             if (deltaX < 0) {
-                LadderController.LadderLeft = true;
+                SceneHandler.LadderLeft = true;
             } else if (deltaX > 0) {
-                LadderController.LadderRight = true;
+                SceneHandler.LadderRight = true;
             }
         }
     }
 
     private void ResetLadderMovement()
     {
-        LadderController.LadderUp = false;
-        LadderController.LadderDown = false;
-        LadderController.LadderLeft = false;
-        LadderController.LadderRight = false;
+        SceneHandler.LadderUp = false;
+        SceneHandler.LadderDown = false;
+        SceneHandler.LadderLeft = false;
+        SceneHandler.LadderRight = false;
     }
 
     void OnGUI()
