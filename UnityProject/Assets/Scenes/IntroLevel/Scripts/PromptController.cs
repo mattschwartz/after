@@ -15,7 +15,7 @@ public class PromptController : MonoBehaviour
 
     void Start() 
     {
-        if (!SceneHandler.OnMobile) {
+        if (SceneHandler.OnMobile) {
             MobileStart();
         } else {
             OtherStart();
