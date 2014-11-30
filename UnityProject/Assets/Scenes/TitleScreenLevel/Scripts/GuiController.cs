@@ -2,6 +2,7 @@
 using System.Collections;
 using After.Audio;
 using System.Collections.Generic;
+using After.Scene.SceneManagement;
 
 public class GuiController : MonoBehaviour
 {
@@ -16,9 +17,8 @@ public class GuiController : MonoBehaviour
     public SceneFaderController SceneFader;
     public AudioClip ClickClip;
 
-    private float btnWidth = 123;
-    private float btnHeight = 20;
-    private float yOffs = 30;
+    private float btnWidth = 150;
+    private float btnHeight = 24;
     private Rect NewGamePosition;
     private Rect ContinuePosition;
     private Rect OptionsPosition;
@@ -48,12 +48,21 @@ public class GuiController : MonoBehaviour
 
     private void DefineBounds()
     {
-        var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.65f));
+        var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.6f));
+        var bounds = new Rect(camPos.x - btnWidth / 2, camPos.y - btnHeight / 2, 
+            btnWidth, btnHeight);
 
-        NewGamePosition = new Rect(camPos.x - btnWidth / 2, camPos.y - btnWidth / 2, btnWidth, btnHeight);
-        ContinuePosition = new Rect(camPos.x - btnWidth / 2, camPos.y - btnWidth / 2 + yOffs, btnWidth, btnHeight);
-        OptionsPosition = new Rect(camPos.x - btnWidth / 2, camPos.y - btnWidth / 2 + yOffs * 2, btnWidth, btnHeight);
-        ExitPosition = new Rect(camPos.x - btnWidth / 2, camPos.y - btnWidth / 2 + yOffs * 3, btnWidth, btnHeight);
+        NewGamePosition = bounds;
+
+        camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.8f));
+        bounds = new Rect(camPos.x - btnWidth / 2, camPos.y - btnHeight / 2, 
+            btnWidth, btnHeight);
+
+        ExitPosition = bounds;
+
+        // NYI
+        // ContinuePosition = new Rect(camPos.x - btnWidth / 2, camPos.y - btnWidth / 2 + yOffs, btnWidth, btnHeight);
+        // OptionsPosition = new Rect(camPos.x - btnWidth / 2, camPos.y - btnWidth / 2 + yOffs * 2, btnWidth, btnHeight);
     }
 
     private void PlayRandomClick()
@@ -97,18 +106,19 @@ public class GuiController : MonoBehaviour
             NewGame_Click();
         }
 
-        if (GUI.Button(ContinuePosition, GUIContent.none, ContinueStyle)) {
-            Continue_Click();
-        }
-
-        if (GUI.Button(OptionsPosition, GUIContent.none, OptionsStyle)) {
-            Options_Click();
-
-        }
+        if (!SceneHandler.OnMobile) { return; }
 
         if (GUI.Button(ExitPosition, GUIContent.none, ExitStyle)) {
             Exit_Click();
-
         }
+
+        // NYI
+        // if (GUI.Button(ContinuePosition, GUIContent.none, ContinueStyle)) {
+        //     Continue_Click();
+        // }
+
+        // if (GUI.Button(OptionsPosition, GUIContent.none, OptionsStyle)) {
+        //     Options_Click();
+        // }
     }
 }
