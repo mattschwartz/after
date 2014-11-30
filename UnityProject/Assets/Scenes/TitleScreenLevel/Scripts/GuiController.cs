@@ -17,8 +17,8 @@ public class GuiController : MonoBehaviour
     public SceneFaderController SceneFader;
     public AudioClip ClickClip;
 
-    private float btnWidth = 150;
-    private float btnHeight = 24;
+    private float btnWidth = 194;
+    private float btnHeight = 70;
     private Rect NewGamePosition;
     private Rect ContinuePosition;
     private Rect OptionsPosition;
@@ -48,15 +48,19 @@ public class GuiController : MonoBehaviour
 
     private void DefineBounds()
     {
+        float scale = ((float)Screen.width / 960f);
+        float x = btnWidth * scale;
+        float y = btnHeight * (x / btnWidth);
+
         var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.6f));
-        var bounds = new Rect(camPos.x - btnWidth / 2, camPos.y - btnHeight / 2, 
-            btnWidth, btnHeight);
+        var bounds = new Rect(camPos.x - x / 2, camPos.y - y / 2, 
+            x, y);
 
         NewGamePosition = bounds;
 
-        camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.8f));
-        bounds = new Rect(camPos.x - btnWidth / 2, camPos.y - btnHeight / 2, 
-            btnWidth, btnHeight);
+        camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.75f));
+        bounds = new Rect(camPos.x - x / 2, camPos.y - y / 2, 
+            x, y);
 
         ExitPosition = bounds;
 
@@ -106,7 +110,7 @@ public class GuiController : MonoBehaviour
             NewGame_Click();
         }
 
-        if (!SceneHandler.OnMobile) { return; }
+        // if (!SceneHandler.OnMobile) { return; }
 
         if (GUI.Button(ExitPosition, GUIContent.none, ExitStyle)) {
             Exit_Click();

@@ -213,7 +213,7 @@ MonoBehaviour:
       m_Background: {fileID: 2800000, guid: 971fdbf013776fc49b396efe7e223e72, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 0}
+      m_Background: {fileID: 2800000, guid: 886da109217cb4218b6f8353893f458f, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
@@ -390,7 +390,7 @@ MonoBehaviour:
       m_Background: {fileID: 2800000, guid: 6a7108c600808ee498dc61ed2e20ec46, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 0}
+      m_Background: {fileID: 2800000, guid: da45cb0787e37488d9b1cf4f59c796e7, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
