@@ -17,6 +17,7 @@ public class GuiController : MonoBehaviour
     public SceneFaderController SceneFader;
     public AudioClip ClickClip;
 
+    private bool HideGUI = false;
     private float btnWidth = 194;
     private float btnHeight = 70;
     private Rect NewGamePosition;
@@ -77,6 +78,7 @@ public class GuiController : MonoBehaviour
 
     private void NewGame_Click()
     {
+        HideGUI = true;
         PlayRandomClick();
         StartCoroutine(SceneFader.FadeOut());
     }
@@ -104,13 +106,15 @@ public class GuiController : MonoBehaviour
 
     private void RenderButtons()
     {
+        if (HideGUI) { return; }
+
         DefineBounds();
 
         if (GUI.Button(NewGamePosition, GUIContent.none, NewGameStyle)) {
             NewGame_Click();
         }
 
-        // if (!SceneHandler.OnMobile) { return; }
+        if (!SceneHandler.OnMobile) { return; }
 
         if (GUI.Button(ExitPosition, GUIContent.none, ExitStyle)) {
             Exit_Click();
