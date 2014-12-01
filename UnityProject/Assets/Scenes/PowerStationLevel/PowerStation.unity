@@ -5531,6 +5531,22 @@ Prefab:
       propertyPath: PlayerCon
       value: 
       objectReference: {fileID: 1087088099}
+    - target: {fileID: 11400000, guid: fd88da636b94c42d8aef845806a7ad1c, type: 2}
+      propertyPath: ClipVol
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: fd88da636b94c42d8aef845806a7ad1c, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 701fdced6adbf4521b144b28aaa42376, type: 3}
+    - target: {fileID: 8200000, guid: fd88da636b94c42d8aef845806a7ad1c, type: 2}
+      propertyPath: m_Volume
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200002, guid: fd88da636b94c42d8aef845806a7ad1c, type: 2}
+      propertyPath: m_Volume
+      value: .200000003
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd88da636b94c42d8aef845806a7ad1c, type: 2}
   m_RootGameObject: {fileID: 1494811401}
@@ -5667,7 +5683,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: dc35eaad3769a4cfa8fbfc0eec8725dd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .5
+  m_Volume: .100000001
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5677,9 +5693,9 @@ AudioSource:
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassEffects: 1
+  BypassListenerEffects: 1
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -10418,7 +10434,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 701fdced6adbf4521b144b28aaa42376, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .200000003
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -11585,7 +11601,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 701fdced6adbf4521b144b28aaa42376, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .200000003
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -12026,7 +12042,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 701fdced6adbf4521b144b28aaa42376, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .200000003
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -12085,7 +12101,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 862ca1e646c8f48ea95310ba6d2a8a94, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .200000003
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -16344,7 +16360,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 97599a1dc5e52be458ee4450db1c5061, type: 2}
       propertyPath: m_LocalPosition.y
