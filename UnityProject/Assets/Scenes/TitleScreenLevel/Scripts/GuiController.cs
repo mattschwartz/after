@@ -114,9 +114,7 @@ public class GuiController : MonoBehaviour
             NewGame_Click();
         }
 
-        if (!SceneHandler.OnMobile) { return; }
-
-        if (GUI.Button(ExitPosition, GUIContent.none, ExitStyle)) {
+        if (SceneHandler.OnMobile && GUI.Button(ExitPosition, GUIContent.none, ExitStyle)) {
             Exit_Click();
         }
 

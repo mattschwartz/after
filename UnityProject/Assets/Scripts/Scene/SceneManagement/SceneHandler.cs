@@ -27,7 +27,10 @@ namespace After.Scene.SceneManagement
 
             if (Player == null) {
                 var go = GameObject.Find("Player");
-                Player = go.GetComponent<PlayerController>();
+
+                if (go) {
+                    Player = go.GetComponent<PlayerController>();
+                }
             }
             OnInteractable = false;
             OnGrabbable = false;
