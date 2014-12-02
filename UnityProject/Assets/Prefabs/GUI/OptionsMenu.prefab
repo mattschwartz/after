@@ -44,7 +44,7 @@ MonoBehaviour:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
@@ -103,7 +103,7 @@ MonoBehaviour:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
@@ -394,7 +394,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  MenuBackgroundTexture: {fileID: 2800000, guid: 2c82975bdca484748ac935f63743c88a,
+  MenuBackgroundTexture: {fileID: 2800000, guid: a86a3bb3a3132e744a3f82e94bd97141,
     type: 3}
   ClickClip: {fileID: 8300000, guid: 9c2ab7160ccd45a4b9073def422ba0d8, type: 3}
 --- !u!1001 &100100000

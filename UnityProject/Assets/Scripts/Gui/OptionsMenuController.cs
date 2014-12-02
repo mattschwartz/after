@@ -165,14 +165,17 @@ namespace After.Gui
                 height = 0
             };
 
-            screenCoords = new Vector3(0.4f, 0.5f, 0);
+            screenCoords = new Vector3(0.5f, 0.5f, 0);
             camPos = Camera.main.ViewportToScreenPoint(screenCoords);
 
+            h = 0.90f * Screen.height;
+            w = MenuBackgroundTexture.width * (h / MenuBackgroundTexture.height);
+
             MenuBackgroundBounds = new Rect {
-                x = 0,
-                y = 0,
-                width = Screen.width,
-                height = Screen.height
+                x = camPos.x - w / 2,
+                y = camPos.y - h / 2,
+                width = w,
+                height = h
             };
         }
 
