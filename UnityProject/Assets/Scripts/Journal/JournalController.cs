@@ -23,11 +23,14 @@ namespace After.Journal
         public GUIStyle opaCustomStyle;
         public GUIStyle EntryTitleStyle;
         public GUIStyle EntryStyle;
+        public GUIStyle LeftArrowStyle;
+        public GUIStyle RightArrowStyle;
 
         private bool ShowToast = false;
         private float ToastDuration = 5;
         private float ToastDurationTracker;
         private string ToastText = "Journal Updated (Press J to Open)";
+        private string CloseText = "Press Escape to Close";
 
         private bool Visible = false;
         private int EntryIndex = 0;
@@ -42,6 +45,7 @@ namespace After.Journal
         private KeyCode JournalKey = KeyCode.J;
         private KeyCode CloseJournal = KeyCode.Escape;
         private KeyCode InspectKey = KeyCode.X;
+        private KeyCode ZoomKey = KeyCode.Z;
 
         public static JournalController Instance { get; private set; }
 
@@ -55,6 +59,11 @@ namespace After.Journal
                 Instance = this;
                 Instance.Initialize();
                 DontDestroyOnLoad(this);
+
+                if (SceneHandler.OnMobile) {
+                    Instance.CloseText = "Press Back to Close";
+                }
+
             } else if (this != Instance) {
                 Debug.Log("Another instance of " + this.GetType().Name
                     + " exists (" + Instance + ") and is not this! "
@@ -85,10 +94,10 @@ namespace After.Journal
             opaCustomStyle.fontSize = (int)((float)38 * Scale);
 
             PreviousPageBounds = GetRelativeByBounds(JournalBounds, 0.046f, 
-                0.83f, 180 * Scale, 45 * Scale);
+                0.8f, 81 * Scale, 59 * Scale);
 
-            NextPageBounds = GetRelativeByBounds(JournalBounds, 0.68f, 0.835f, 
-                140 * Scale, 35 * Scale);
+            NextPageBounds = GetRelativeByBounds(JournalBounds, 0.73f, 0.8f, 
+                81 * Scale, 59 * Scale);
 
             JournalIndexBounds = GetRelativeByBounds(JournalBounds, 0.109f, 0.05f,
                 77 * Scale, 34 * Scale);
@@ -198,7 +207,6 @@ namespace After.Journal
             texture = entry.Image;
 
             InspectorController.Instance.InspectItem(title, observations, texture, size, false);
-
         }
 
         /// <summary>
@@ -210,11 +218,7 @@ namespace After.Journal
             Vector3 mouse = Input.mousePosition;
             mouse.y = Screen.height - mouse.y;
 
-            if (PreviousPageBounds.Contains(mouse)) {
-                TurnPage(-1);
-            } else if (NextPageBounds.Contains(mouse)) {
-                TurnPage(1);
-            } else if (JournalIndexBounds.Contains(mouse)) {
+            if (JournalIndexBounds.Contains(mouse)) {
                 EntryIndex = 0;
             }
         }
@@ -279,6 +283,7 @@ namespace After.Journal
 
             Instance.RenderBackground();
             Instance.RenderText();
+            Instance.RenderButtons();
         }
 
         /// <summary>Handles rendering the Toast prompt to the screen, stopping 
@@ -327,15 +332,27 @@ namespace After.Journal
                 RenderEntry();
             }
 
-            var screenCoords = new Vector3(0.03f, 0.07f, 0);
+            var screenCoords = new Vector3(0.5f, 0.07f, 0);
             var camPos = Camera.main.ViewportToScreenPoint(screenCoords);
             var labelCoords = new Rect(camPos.x, camPos.y, 0, 0);
-            GUI.Label(labelCoords, "Press Escape to close", opaCustomStyle);
+            GUI.Label(labelCoords, CloseText, opaCustomStyle);
 
             // dbg
-            GUI.Box(PreviousPageBounds, GUIContent.none);
-            GUI.Box(NextPageBounds, GUIContent.none);
-            GUI.Box(JournalIndexBounds, GUIContent.none);
+            if (Application.platform == RuntimePlatform.WindowsEditor 
+                || Application.platform == RuntimePlatform.OSXEditor) {
+                GUI.Box(PreviousPageBounds, GUIContent.none);
+                GUI.Box(NextPageBounds, GUIContent.none);
+                GUI.Box(JournalIndexBounds, GUIContent.none);
+            }
+        }
+
+        private void RenderButtons()
+        {
+            if (GUI.Button(PreviousPageBounds, GUIContent.none, LeftArrowStyle)) {
+                TurnPage(-1);
+            } else if (GUI.Button(NextPageBounds, GUIContent.none, RightArrowStyle)) {
+                TurnPage(1);
+            }
         }
 
         /// <summary>Renders the currently selected journal entry or index if

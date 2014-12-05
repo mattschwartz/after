@@ -17,7 +17,9 @@ namespace After.Gui
         public GUIStyle SliderStyle;
         public GUIStyle SliderThumbStyle;
         public GUIStyle JournalStyle;
-        public GUIStyle MainMenuStyle;
+        public GUIStyle QuitButtonStyle;
+        public GUIStyle MenuBackButtonStyle;
+        public GUIStyle MenuButtonStyle;
         public Texture MenuBackgroundTexture;
         public AudioClip ClickClip;
 
@@ -26,9 +28,11 @@ namespace After.Gui
         private Rect MenuBackgroundBounds;
         private Rect SoundSliderBounds;
         private Rect JournalBounds;
-        private Rect MainMenuBounds;
+        private Rect QuitButtonBounds;
         private Rect TitleBounds;
         private Rect LabelBounds;
+        private Rect MenuBackButtonBounds;
+        private Rect MenuButtonBounds;
         private List<float> Notes;
 
         #endregion
@@ -69,9 +73,6 @@ namespace After.Gui
             }
 
             ProcessKeyboard();
-
-            if (!Visible) { return; }
-
             Resize();
         }
 
@@ -128,7 +129,7 @@ namespace After.Gui
             screenCoords = new Vector3(0.5f, 0.5f, 0);
             camPos = Camera.main.ViewportToScreenPoint(screenCoords);
 
-            MainMenuBounds = new Rect {
+            QuitButtonBounds = new Rect {
                 x = camPos.x - w / 2,
                 y = camPos.y - h / 2,
                 width = w,
@@ -177,11 +178,45 @@ namespace After.Gui
                 width = w,
                 height = h
             };
+
+            screenCoords = new Vector3(1, 0, 0);
+            camPos = Camera.main.ViewportToScreenPoint(screenCoords);
+
+            w = 128 * scale;
+            h = 104 * scale;
+
+            MenuButtonBounds = new Rect {
+                x = camPos.x - w,
+                y = camPos.y,
+                width = w,
+                height = h
+            };
+
+            w = 128 * scale;
+            h = 79 * scale;
+
+            screenCoords = new Vector3(0.03f, 0.03f, 0);
+            camPos = Camera.main.ViewportToScreenPoint(screenCoords);
+
+            MenuBackButtonBounds = new Rect {
+                x = MenuBackgroundBounds.xMin + camPos.x,
+                y = MenuBackgroundBounds.yMax - h - camPos.y,
+                width = w,
+                height = h
+            };
         }
+
+        public float xx, yy;
 
         void OnGUI()
         {
-            if (!Visible) { return; }
+            if (!Visible) {
+                if (GUI.Button(MenuButtonBounds, GUIContent.none, MenuButtonStyle)) {
+                    PlayRandomClick();
+                    Show();
+                }
+                return; 
+            }
 
             GUI.DrawTexture(MenuBackgroundBounds, MenuBackgroundTexture);
 
@@ -219,12 +254,13 @@ namespace After.Gui
 
         private void RenderButtons()
         {
-            if (GUI.Button(MainMenuBounds, GUIContent.none, MainMenuStyle)) {
+            if (GUI.Button(QuitButtonBounds, GUIContent.none, QuitButtonStyle)) {
                 MenuButton_Click();
-            }
-
-            if (GUI.Button(JournalBounds, GUIContent.none, JournalStyle)) {
+            } else if (GUI.Button(JournalBounds, GUIContent.none, JournalStyle)) {
                 JournalButton_Click();
+            } else if (GUI.Button(MenuBackButtonBounds, GUIContent.none, MenuBackButtonStyle)) {
+                PlayRandomClick();
+                Hide();
             }
         }
     }
