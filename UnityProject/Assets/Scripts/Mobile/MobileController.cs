@@ -68,6 +68,8 @@ public class MobileController : MonoBehaviour
 
     private void ProcessJump()
     {
+        if (SceneHandler.GUILock != null) { return; }
+
         SceneHandler.SwingDismount = false;
 
         // A touch has been previously recorded and it has just ended
@@ -166,12 +168,13 @@ public class MobileController : MonoBehaviour
 
         float deltaY = (mouse.y - LastLadderPosition.y);
         float deltaX = (mouse.x - LastLadderPosition.x);
+        float min = (float)Screen.height * 0.01f;
 
         if (Mathf.Abs(deltaY) > Mathf.Abs(deltaX)) {
-            if (deltaY < 0) {
+            if (deltaY < -min) {
                 SceneHandler.LadderDown = true;
                 Player.Climb(-1);
-            } else if (deltaY > 0) {
+            } else if (deltaY > min) {
                 SceneHandler.LadderUp = true;
                 Player.Climb(1);
             }

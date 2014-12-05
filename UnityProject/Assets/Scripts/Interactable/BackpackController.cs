@@ -29,10 +29,10 @@ namespace After.Interactable
                 Instance = this;
                 DontDestroyOnLoad(this);
             } else if (this != Instance) {
-                Debug.Log("Another instance of " + this.GetType().Name
+                Debug.Log("Another instance of " + GetType().Name
                     + " exists (" + Instance + ") and is not this! "
                     + "( " + this + ") Destroying this.");
-                Destroy(this.gameObject);
+                Destroy(gameObject);
             }
         }
 
@@ -74,10 +74,10 @@ namespace After.Interactable
             SceneHandler.PlayerItemHeld = ItemHeld.name;
 
             var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0, 0, 0));
-            float scale = ItemHeldSize / Mathf.Max(ItemHeldTexture.width, ItemHeldTexture.height);
+            float scale = Screen.width / 960f;
             float itemWidth = ItemHeldTexture.width * scale;
             float itemHeight = ItemHeldTexture.height * scale;
-            ItemPosition = new Rect(camPos.x + (BackpackSize - itemWidth) / 2, camPos.y + (BackpackSize - itemHeight) / 2, itemWidth, itemHeight);
+            ItemPosition = new Rect(camPos.x + (BackpackSize * scale - itemWidth) / 2, camPos.y + (BackpackSize * scale - itemHeight) / 2, itemWidth, itemHeight);
         }
 
         public void DropItem()
