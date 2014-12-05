@@ -13,7 +13,6 @@ namespace After.Interactable
         private float ItemHeldSize = 100;
         private float BackpackSize = 175;
         public Texture BackpackTextureEmpty;
-        public Texture BackpackTextureFull;
 
         public GameObject ItemHeld { get; private set; }
         private Texture ItemHeldTexture;
@@ -53,11 +52,10 @@ namespace After.Interactable
 
         private void StaticOnGui()
         {
+            GUI.DrawTexture(BackpackPosition, BackpackTextureEmpty);
+
             if (ItemHeld != null) {
-                GUI.DrawTexture(BackpackPosition, BackpackTextureFull);
                 GUI.DrawTexture(ItemPosition, ItemHeldTexture);
-            } else {
-                GUI.DrawTexture(BackpackPosition, BackpackTextureEmpty);
             }
         }
 

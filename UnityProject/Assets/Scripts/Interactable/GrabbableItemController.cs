@@ -1,4 +1,5 @@
-﻿using After.Utility;
+﻿using After.Journal;
+using After.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,6 +46,15 @@ namespace After.Interactable
                 ReadTransitions(StateType.Any, StateType.Any);
                 Player.SendMessage("PickupItem", gameObject);
                 LastInteraction = 0;
+
+                Entry entry = new Entry() {
+                    Name = ItemName,
+                    Image = JournalImage == null ? GetComponent<SpriteRenderer>().sprite.texture : JournalImage
+                };
+
+                entry.Updates.Add(Description);
+
+                JournalController.Instance.AddEntry(entry);
             }
         }
     }

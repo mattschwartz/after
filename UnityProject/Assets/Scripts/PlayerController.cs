@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     public float Speed = 7f;
     public float JumpForce = 1225f;
     public KeyCode InteractButton = KeyCode.E;
-    public KeyCode InspectButton = KeyCode.X;
     public KeyCode JumpButton = KeyCode.Space;
     public Transform GroundCheck;
     public LayerMask GroundLayerMask;
@@ -67,10 +66,6 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(InteractButton)) {
             Interact();
-        }
-
-        if (Input.GetKeyDown(InspectButton)) {
-            InspectItem();
         }
     }
 
@@ -203,6 +198,7 @@ public class PlayerController : MonoBehaviour
 
     #endregion
 
+    // Deprecated :(
     private void InspectItem()
     {
         if (BackpackController.Instance.ItemHeld == null) { return; }

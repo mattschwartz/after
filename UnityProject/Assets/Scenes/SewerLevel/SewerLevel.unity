@@ -1855,7 +1855,6 @@ MonoBehaviour:
   Speed: 7
   JumpForce: 1225
   InteractButton: 101
-  InspectButton: 120
   JumpButton: 32
   GroundCheck: {fileID: 1034772426}
   GroundLayerMask:
@@ -12946,7 +12945,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BackpackTextureEmpty: {fileID: 2800000, guid: f9f76162fefc98d4cab4b78bec28cc93,
     type: 3}
-  BackpackTextureFull: {fileID: 2800000, guid: 90266df834bc2374c9e551a41251e8b0, type: 3}
 --- !u!1 &1465563289
 GameObject:
   m_ObjectHideFlags: 0

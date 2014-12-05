@@ -1,12 +1,13 @@
 using After.Interactable;
 using After.Interactable.Transitions;
+using After.Journal;
 using UnityEngine;
 
-namespace After.Interactable 
+namespace After.Interactable
 {
-	public class ItemGrabTransition : Transition
-	{
-		public GrabbableItemController GrabbableItem;
+    public class ItemGrabTransition : Transition
+    {
+        public GrabbableItemController GrabbableItem;
 
         void Start()
         {
@@ -20,9 +21,25 @@ namespace After.Interactable
             GrabbableItem.GetComponent<SpriteRenderer>().enabled = true;
             GrabbableItem.GetComponent<BoxCollider2D>().enabled = true;
             BackpackController.Instance.DropItem();
-        	BackpackController.Instance.SetItemHeld(GrabbableItem.gameObject);
+            BackpackController.Instance.SetItemHeld(GrabbableItem.gameObject);
+
+            AddToJournal(GrabbableItem);
+
             GrabbableItem = null;
         }
 
-	}
+        private void AddToJournal(GrabbableItemController item)
+        {
+
+            Entry entry = new Entry() {
+                Name = item.ItemName,
+                Image = item.JournalImage == null
+                    ? item.GetComponent<SpriteRenderer>().sprite.texture
+                    : item.JournalImage
+            };
+
+            entry.Updates.Add(item.Description);
+            JournalController.Instance.AddEntry(entry);
+        }
+    }
 }
