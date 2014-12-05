@@ -210,13 +210,16 @@ namespace After.Gui
 
         void OnGUI()
         {
-            if (!Visible) {
+            if (SceneHandler.GUILock == null) {
                 if (GUI.Button(MenuButtonBounds, GUIContent.none, MenuButtonStyle)) {
                     PlayRandomClick();
                     Show();
                 }
-                return; 
+
+                return;
             }
+
+            if (!Visible) { return; }
 
             GUI.DrawTexture(MenuBackgroundBounds, MenuBackgroundTexture);
 

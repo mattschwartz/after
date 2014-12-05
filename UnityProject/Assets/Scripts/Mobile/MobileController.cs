@@ -51,8 +51,9 @@ public class MobileController : MonoBehaviour
 
     private void DefineBounds()
     {
-        float w = (float)Screen.width * 0.25f;
-        float h = (float)Screen.height * 0.25f;
+        float scale = Screen.width / 960f;
+        float w = 128 * scale;
+        float h = 128 * scale;
         IconBounds = new Rect(Screen.width - w, Screen.height - h, w, h);
     }
 

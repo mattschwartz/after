@@ -27,7 +27,6 @@ namespace After.Interactable
         {
             if (Instance == null) {
                 Instance = this;
-                Instance.Initialize();
                 DontDestroyOnLoad(this);
             } else if (this != Instance) {
                 Debug.Log("Another instance of " + this.GetType().Name
@@ -37,16 +36,19 @@ namespace After.Interactable
             }
         }
 
-        private void Initialize()
+        private void Resize()
         {
             var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0, 0, 0));
-            BackpackPosition = new Rect(camPos.x, camPos.y, BackpackSize, BackpackSize);
+            float scale = Screen.width / 960f;
+
+            BackpackPosition = new Rect(camPos.x, camPos.y, BackpackSize * scale, BackpackSize * scale);
         }
 
         void OnGUI()
         {
             if (SceneHandler.GUILock) { return; }
 
+            Instance.Resize();
             Instance.StaticOnGui();
         }
 
