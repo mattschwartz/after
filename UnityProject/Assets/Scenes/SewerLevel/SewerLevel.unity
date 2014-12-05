@@ -922,6 +922,7 @@ GameObject:
   - 61: {fileID: 76486559}
   - 114: {fileID: 76486558}
   - 114: {fileID: 76486561}
+  - 114: {fileID: 76486562}
   m_Layer: 0
   m_Name: Falling Rock Sound
   m_TagString: Untagged
@@ -979,6 +980,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WatchFor: {fileID: 1816749793}
+--- !u!114 &76486562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 76486557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec9bbda607def341b702f7566872a3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SRenderer: {fileID: 1816749791}
+  WatchFor: {fileID: 1816749789}
 --- !u!1 &81700295
 GameObject:
   m_ObjectHideFlags: 0
@@ -18497,12 +18511,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e94ca2ae6acf4b18938336f5a9ca8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hSliderValue: 25.217392
-  opaCustomStyle:
+  ClickClipVolume: 1
+  TitleLabelStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
@@ -18514,7 +18528,7 @@ MonoBehaviour:
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_OnNormal:
       m_Background: {fileID: 0}
-      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_OnHover:
       m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
@@ -18544,10 +18558,69 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 12800000, guid: 18412cee854d77143a5e17b2ef00f635, type: 3}
+    m_Font: {fileID: 12800000, guid: 5d76e0924eab5ad40ad8e95d4b62fc93, type: 3}
+    m_FontSize: 24
+    m_FontStyle: 0
+    m_Alignment: 4
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  VolumeLabelStyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 12800000, guid: c6b43eb7443c09c40aa87add81afed9c, type: 3}
     m_FontSize: 21
     m_FontStyle: 0
-    m_Alignment: 1
+    m_Alignment: 4
     m_WordWrap: 0
     m_RichText: 1
     m_TextClipping: 0
@@ -18671,20 +18744,20 @@ MonoBehaviour:
     m_TextClipping: 0
     m_ImagePosition: 1
     m_ContentOffset: {x: 0, y: 0}
-    m_FixedWidth: 20
-    m_FixedHeight: 25
+    m_FixedWidth: 30
+    m_FixedHeight: 35
     m_StretchWidth: 0
     m_StretchHeight: 0
   JournalStyle:
     m_Name: 
     m_Normal:
-      m_Background: {fileID: 2800000, guid: d21516f5bcb96554c86a1242fbd68b89, type: 3}
+      m_Background: {fileID: 2800000, guid: 93d551a384731d94184822e219a57a94, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
-      m_Background: {fileID: 0}
+      m_Background: {fileID: 2800000, guid: d390328bfef8f1e438a1bf4fc6904c93, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 0}
+      m_Background: {fileID: 2800000, guid: 7d76f054dbcb1064dab13de19d0d9337, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
@@ -18737,13 +18810,13 @@ MonoBehaviour:
   MainMenuStyle:
     m_Name: 
     m_Normal:
-      m_Background: {fileID: 2800000, guid: 4ce2deb7212935343841218078868815, type: 3}
+      m_Background: {fileID: 2800000, guid: 0770e958b55e95a49875f3af952f693e, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
-      m_Background: {fileID: 0}
+      m_Background: {fileID: 2800000, guid: 0401363a1e999bd479013d645a0dec35, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 0}
+      m_Background: {fileID: 2800000, guid: b2bfc71b8bad04a42b3c63da7dca72e0, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
@@ -18793,8 +18866,9 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  MenuBackgroundTexture: {fileID: 2800000, guid: 2c82975bdca484748ac935f63743c88a,
+  MenuBackgroundTexture: {fileID: 2800000, guid: a86a3bb3a3132e744a3f82e94bd97141,
     type: 3}
+  ClickClip: {fileID: 8300000, guid: 9c2ab7160ccd45a4b9073def422ba0d8, type: 3}
 --- !u!4 &1941344694
 Transform:
   m_ObjectHideFlags: 0
