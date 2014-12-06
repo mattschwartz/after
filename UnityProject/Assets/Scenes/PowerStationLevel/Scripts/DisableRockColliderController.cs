@@ -11,7 +11,7 @@ public class DisableRockColliderController : MonoBehaviour
     public Sprite CrushedTrapdoor;
     public SpriteRenderer TrapdoorSpriteRenderer;
     public ProximityTriggerController TrapdoorTriggerController;
-    public Collider2D ChangeToTrigger;
+    public Collider2D ToRemove;
     public List<Collider2D> PassThrough;
 
     #endregion
@@ -22,7 +22,7 @@ public class DisableRockColliderController : MonoBehaviour
 
         PassThrough.ForEach(t => Physics2D.IgnoreCollision(t, other));
 
-        ChangeToTrigger.isTrigger = true;
+        Destroy(ToRemove);
         other.isTrigger = false;
         TrapdoorSpriteRenderer.sprite = CrushedTrapdoor;
         TrapdoorTriggerController.CurrentState = After.Interactable.StateType.Unlocked;
