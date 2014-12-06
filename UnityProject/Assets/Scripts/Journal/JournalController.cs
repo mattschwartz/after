@@ -21,6 +21,7 @@ namespace After.Journal
         public Texture JournalBackground;
         public GUITexture FadedBackgroundTexture;
         public GUIStyle opaCustomStyle;
+        public GUIStyle ToastStyle;
         public GUIStyle EntryTitleStyle;
         public GUIStyle EntryStyle;
         public GUIStyle LeftArrowStyle;
@@ -62,6 +63,7 @@ namespace After.Journal
 
                 if (SceneHandler.OnMobile) {
                     Instance.CloseText = "Press Back to Close";
+                    Instance.ToastText = "Journal Updated";
                 }
 
             } else if (this != Instance) {
@@ -92,6 +94,7 @@ namespace After.Journal
             EntryStyle.fontSize = (int)((float)21 * Scale);
             EntryTitleStyle.fontSize = (int)((float)26 * Scale);
             opaCustomStyle.fontSize = (int)((float)38 * Scale);
+            ToastStyle.fontSize = (int)((float)38 * Scale);
 
             PreviousPageBounds = GetRelativeByBounds(JournalBounds, 0.046f, 
                 0.8f, 81 * Scale, 59 * Scale);
@@ -300,7 +303,7 @@ namespace After.Journal
             var camPos = Camera.main.ViewportToScreenPoint(screenCoords);
             var labelCoords = new Rect(camPos.x, camPos.y, 0, 0);
 
-            GUI.Label(labelCoords, ToastText, opaCustomStyle);
+            GUI.Label(labelCoords, ToastText, ToastStyle);
             ToastDurationTracker -= Time.deltaTime;
         }
 
