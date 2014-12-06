@@ -370,8 +370,15 @@ namespace After.Journal
                 345 * Scale, 0);
 
             GUI.Label(pos, entry.Name, EntryTitleStyle);
+
+            string updates = "";
+
+            foreach (string update in entry.Updates) {
+                updates += update + "\n\n";
+            }
+
             pos.y += 38 * Scale;
-            GUI.Label(pos, entry.Updates.First(), EntryStyle);
+            GUI.Label(pos, updates, EntryStyle);
 
             RenderEntryImage(entry.Image);
         }
@@ -458,7 +465,12 @@ namespace After.Journal
                 return;
             }
 
+            Debug.Log("Adding update: " + update + " to entry " + name);
             Entries.First(t => t.Name == name).Updates.Add(update);
+
+            // Toast the updated entry
+            ToastDurationTracker = ToastDuration;
+            ShowToast = true;
         }
 
         #endregion
