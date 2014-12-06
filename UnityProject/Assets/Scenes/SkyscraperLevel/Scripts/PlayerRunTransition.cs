@@ -7,6 +7,7 @@ public class PlayerRunTransition : Transition
 {
     #region Members
 
+    public float WalkForSeconds;
     public float Speed;
     public PlayerController Player;
     public Animator PlayerAnimator;
@@ -29,7 +30,15 @@ public class PlayerRunTransition : Transition
 
     void Update()
     {
+        if (WalkForSeconds <= 0.01f) {
+            Active = false;
+            PlayerAnimator.SetFloat("Velocity", 0);
+            Player.rigidbody2D.velocity = new Vector2(0, Player.rigidbody2D.velocity.y);
+            Destroy(gameObject);
+        }
+
         if (Active) {
+            WalkForSeconds -= Time.deltaTime;
             Player.rigidbody2D.velocity = new Vector2(Speed, Player.rigidbody2D.velocity.y);
         }
     }

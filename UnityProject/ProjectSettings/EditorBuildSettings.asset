@@ -25,3 +25,5 @@ EditorBuildSettings:
     path: Assets/Scenes/SkyscraperLevel/Skyscraper.unity
   - enabled: 1
     path: Assets/Scenes/EndScene/EndScene.unity
+  - enabled: 1
+    path: Assets/Scenes/CreditLevel/CreditLevel.unity
