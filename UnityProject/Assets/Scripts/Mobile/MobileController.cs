@@ -44,6 +44,8 @@ public class MobileController : MonoBehaviour
 
         if (Input.touchCount == 0) { GUIInteraction = false; }
 
+        if (SceneHandler.GUILock != null) { return; }
+
         ProcessMove();
         ProcessLadder();
         Unstucker();
