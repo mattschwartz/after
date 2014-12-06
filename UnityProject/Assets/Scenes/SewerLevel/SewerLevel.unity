@@ -17190,7 +17190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsBeforeRead: 1.20000005
+  WaitSecondsBeforeRead: .75
   From: 1
   To: 2
   RockBody: {fileID: 1816749794}
