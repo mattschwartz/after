@@ -10,7 +10,6 @@ public class OverlayController : MonoBehaviour
     public SpriteRenderer Blur;
     public SpriteRenderer CameraOverlay;
     public SpriteRenderer ScanLines;
-    public SpriteRenderer GlitchInBackground;
     public AudioClip ToggleClip;
     public AudioSource IdleSource;
 
@@ -34,24 +33,6 @@ public class OverlayController : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        if (!CameraOn) { return; }
-
-        float ran = Random.Range(3, 9);
-
-        if (Time.fixedTime % ran == 0) {
-            StartCoroutine(Glitch());
-        }
-    }
-
-    private IEnumerator Glitch()
-    {
-        GlitchInBackground.enabled = true;
-        yield return new WaitForSeconds(0.1f);
-        GlitchInBackground.enabled = false;
-    }
-
     private void Toggle()
     {
         CameraOn = !CameraOn;
@@ -73,7 +54,6 @@ public class OverlayController : MonoBehaviour
         Blur.enabled = false;
         CameraOverlay.enabled = false;
         ScanLines.enabled = false;
-        GlitchInBackground.enabled = false;
     }
 
     private IEnumerator TurnCameraOn()
