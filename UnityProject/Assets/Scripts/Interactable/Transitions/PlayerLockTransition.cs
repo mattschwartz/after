@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace After.Interactable.Transitions
 {
-    public abstract class PlayerLockTransition : Transition
+    public class PlayerLockTransition : Transition
     {
         public float LockDuration = 0f;
         public GameObject Player;
@@ -15,6 +15,12 @@ namespace After.Interactable.Transitions
         protected virtual void FreePlayer()
         {
             Player.SendMessage("FreePlayer");
+        }
+
+        public override void Read(StateType fromState, StateType toState)
+        {
+            Player.SendMessage("LockPlayer");
+            Invoke("FreePlayer", LockDuration);
         }
     }
 }
