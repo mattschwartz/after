@@ -10823,10 +10823,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
-  WaitSecondsBeforeRead: 0
+  WaitSecondsBeforeRead: 2.5
   From: 1
   To: 2
-  Observations: This receipt has some numbers written on the back.
+  Observations: There are some numbers written on the back.
   Observer: {fileID: 329743549}
 --- !u!1 &1067199651
 GameObject:
