@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 886da109217cb4218b6f8353893f458f
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: btnDownNewGame
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
