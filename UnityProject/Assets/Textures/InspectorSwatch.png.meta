@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 91468666fd568684faf3d044b42ee821
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: InspectorSwatch
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
