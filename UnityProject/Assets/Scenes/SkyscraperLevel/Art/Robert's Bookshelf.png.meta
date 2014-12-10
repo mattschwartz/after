@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 04d74a9666a15437ca076f5357fb154b
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Robert's Bookshelf
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
