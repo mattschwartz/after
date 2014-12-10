@@ -1765,7 +1765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: .100000001
+  Volume: .300000012
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
@@ -2283,7 +2283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: .100000001
+  Volume: .300000012
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
@@ -2401,7 +2401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: .100000001
+  Volume: .300000012
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
@@ -2469,7 +2469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: .100000001
+  Volume: .300000012
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
@@ -3164,7 +3164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: .100000001
+  Volume: .300000012
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
@@ -5679,7 +5679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: .100000001
+  Volume: .300000012
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
@@ -5695,7 +5695,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: dc35eaad3769a4cfa8fbfc0eec8725dd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .100000001
+  m_Volume: .0500000007
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -8564,7 +8564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: .0500000007
+  Volume: .200000003
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
@@ -8867,7 +8867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: .100000001
+  Volume: .300000012
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
@@ -8995,7 +8995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: .100000001
+  Volume: .300000012
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
@@ -12002,7 +12002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: .100000001
+  Volume: .300000012
   StepSounds:
   - {fileID: 8300000, guid: ea49a49082ef748729778abc64bc4def, type: 3}
   - {fileID: 8300000, guid: 932147e2afb494290be0f64f15b9c37e, type: 3}
@@ -16799,7 +16799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: .100000001
+  Volume: .300000012
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
@@ -17216,7 +17216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: .100000001
+  Volume: .300000012
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
@@ -17463,7 +17463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: .100000001
+  Volume: .300000012
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}
