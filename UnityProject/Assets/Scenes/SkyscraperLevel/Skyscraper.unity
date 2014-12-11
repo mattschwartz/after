@@ -334,7 +334,7 @@ MonoBehaviour:
   From: 1
   To: 2
   Volume: 1
-  Clip: {fileID: 8300000, guid: 19d320709b18c41f89cca34589708f6c, type: 3}
+  Clip: {fileID: 8300000, guid: ef2674ce43a8140bea785a587a9ed8ac, type: 3}
 --- !u!1 &123445031
 GameObject:
   m_ObjectHideFlags: 0
@@ -3519,7 +3519,7 @@ MonoBehaviour:
   From: 2
   To: 3
   Volume: 1
-  Clip: {fileID: 0}
+  Clip: {fileID: 8300000, guid: d4ad7d39fb9e34f5d8c620abaf5e19b2, type: 3}
 --- !u!1 &776437285
 GameObject:
   m_ObjectHideFlags: 0
@@ -6123,8 +6123,8 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 1
   To: 2
-  Volume: 1
-  Clip: {fileID: 0}
+  Volume: .5
+  Clip: {fileID: 8300000, guid: 4336f34baad374125a1c58dcbacdb20f, type: 3}
 --- !u!1 &1296010245
 GameObject:
   m_ObjectHideFlags: 0
@@ -6332,7 +6332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a73493c90c464b8d453afb219c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: 1
+  Volume: .200000003
   StepSounds:
   - {fileID: 8300000, guid: 40148cfa210e648d6ae6d5a736f2db1f, type: 3}
   - {fileID: 8300000, guid: a2a614f701dbb444f81ab9cf9642460a, type: 3}

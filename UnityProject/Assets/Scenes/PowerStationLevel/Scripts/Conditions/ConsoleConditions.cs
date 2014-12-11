@@ -8,6 +8,7 @@ namespace After.Interactable.Conditions
 		public string ServerOffObservations;
 		public string ItemNotFoundObservations;
 		public InteractableController ServerInteractable;
+        public InteractableController CrateInteractable;
 		public ObservationsController Observations;
 
 		public override bool ConditionsMet()
@@ -17,7 +18,7 @@ namespace After.Interactable.Conditions
 				return false;
 			}
 
-			if (!PlayerHasItem()) {
+			if (CrateInteractable.CurrentState != StateType.Unlocked) {
 				Observations.SetThought(ItemNotFoundObservations);
 				return false;
 			}
