@@ -2956,50 +2956,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1949834331}
   m_RootOrder: 8
---- !u!1 &475730679
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 475730680}
-  - 114: {fileID: 475730681}
-  m_Layer: 0
-  m_Name: Put item in backpack
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &475730680
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 475730679}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1760331456}
-  m_RootOrder: 1
---- !u!114 &475730681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 475730679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5154222707374e188081a5cb0c568fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestroyOnRead: 0
-  WaitSecondsBeforeRead: 0
-  From: 1
-  To: 2
-  GrabbableItem: {fileID: 925965103}
 --- !u!1 &488547617
 GameObject:
   m_ObjectHideFlags: 0
@@ -14291,8 +14247,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 847864843}
-  - {fileID: 475730680}
   - {fileID: 1792928774}
+  - {fileID: 1770287784}
   m_Father: {fileID: 1408937267}
   m_RootOrder: 4
 --- !u!61 &1760331457
@@ -14322,7 +14278,7 @@ MonoBehaviour:
   UnlockedState: {fileID: 0}
   SpentState: {fileID: 0}
   TransitionScripts:
-  - {fileID: 475730681}
+  - {fileID: 1770287785}
   - {fileID: 1792928775}
 --- !u!1 &1764582182
 GameObject:
@@ -14486,6 +14442,52 @@ MonoBehaviour:
   ExitNexus: {fileID: 816277586}
   Player: {fileID: 1087088095}
   NewSpriteBounds: {fileID: 1352088839}
+--- !u!1 &1770287783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1770287784}
+  - 114: {fileID: 1770287785}
+  m_Layer: 0
+  m_Name: Update Journal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1770287784
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1770287783}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1760331456}
+  m_RootOrder: 2
+--- !u!114 &1770287785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1770287783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e9f7f39884d66419bb265fef6436e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 1
+  To: 2
+  Title: JIRA ID Card
+  Update: This is me. I worked here. What did I do? Was I responsible for these deaths?
+  Image: {fileID: 2800000, guid: 60355044abfb8d84896346b7b738baff, type: 3}
 --- !u!1 &1785590950
 GameObject:
   m_ObjectHideFlags: 0
@@ -14627,7 +14629,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1760331456}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &1792928775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14643,7 +14645,7 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 1
   To: 2
-  Observations: Oh look it's me.
+  Observations: What's this, now? My ID card?
   Observer: {fileID: 1123528234}
 --- !u!1 &1800737353
 GameObject:
