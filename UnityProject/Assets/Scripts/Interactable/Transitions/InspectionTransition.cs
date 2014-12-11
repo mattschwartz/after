@@ -19,7 +19,8 @@ namespace After.Interactable.Transitions
 
         public override void Read(StateType fromState, StateType toState)
         {
-            float size = (PercentSize / 100f) * (float)Screen.width;
+            float size = (PercentSize / 100f) * Screen.width;
+
             InspectorController.Instance.InspectItem(Title, Observations, InspectingTexture, size, AddToJournal);
         }
     }

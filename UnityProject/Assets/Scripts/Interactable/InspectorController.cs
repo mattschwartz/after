@@ -43,7 +43,7 @@ namespace After.Interactable
         {
             ShowInspector = false;
             BlackSwatchTexture.pixelInset = new Rect(new Rect(0, 0, Screen.width, Screen.height));
-            BlackSwatchTexture.enabled = false;   
+            BlackSwatchTexture.enabled = false;
         }
 
         void Update()
@@ -53,16 +53,16 @@ namespace After.Interactable
 
         private void StaticUpdate()
         {
-            if (ShowInspector) {
-                opaCustomStyle.fixedWidth = Screen.width * (TextWidth / 100f);
-                opaCustomStyle.fontSize = (int)((float)26 * (TextWidth / 100f) * ((float)Screen.width / 960f));
+            if (!ShowInspector) { return; }
 
-                 if (Input.GetKeyUp(CloseButton)) {
-                    SceneHandler.Player.FreePlayer();
-                    SceneHandler.GUILock = null;
-                    ShowInspector = false;
-                    BlackSwatchTexture.enabled = false;
-                }
+            opaCustomStyle.fixedWidth = Screen.width * (TextWidth / 100f);
+            opaCustomStyle.fontSize = (int)((float)26 * (TextWidth / 100f) * ((float)Screen.width / 960f));
+
+            if (Input.GetKeyUp(CloseButton)) {
+                SceneHandler.Player.FreePlayer();
+                SceneHandler.GUILock = null;
+                ShowInspector = false;
+                BlackSwatchTexture.enabled = false;
             }
         }
 
@@ -78,11 +78,13 @@ namespace After.Interactable
 
         private void RenderItem() 
         {
-            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.42f, 0));
-            float scale = TextureSize / Mathf.Max(ItemTexture.width, ItemTexture.height);
-            float itemWidth = ItemTexture.width * scale;
-            float itemHeight = ItemTexture.height * scale;
+            float itemWidth;
+            float itemHeight;
 
+            itemWidth = TextureSize;
+            itemHeight = ItemTexture.height * (itemWidth / ItemTexture.width);
+
+            var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.5f, 0));
             Rect itemPosition = new Rect(camPos.x - itemWidth / 2, camPos.y - itemHeight / 2, itemWidth, itemHeight);
         
             GUI.color = ColorOverlay;
