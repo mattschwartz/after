@@ -290,6 +290,51 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 7987b6441e6794d54bbb98de9046a32b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &118614203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 118614204}
+  - 114: {fileID: 118614205}
+  m_Layer: 0
+  m_Name: Play Audio Clip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &118614204
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 118614203}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 594071724}
+  m_RootOrder: 6
+--- !u!114 &118614205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 118614203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 1
+  To: 2
+  Volume: 1
+  Clip: {fileID: 8300000, guid: 19d320709b18c41f89cca34589708f6c, type: 3}
 --- !u!1 &123445031
 GameObject:
   m_ObjectHideFlags: 0
@@ -2407,6 +2452,8 @@ Transform:
   - {fileID: 1910433407}
   - {fileID: 621994438}
   - {fileID: 1659414493}
+  - {fileID: 1238449646}
+  - {fileID: 775789566}
   m_Father: {fileID: 633188341}
   m_RootOrder: 28
 --- !u!212 &493844983
@@ -2463,6 +2510,8 @@ MonoBehaviour:
   - {fileID: 1910433408}
   - {fileID: 621994439}
   - {fileID: 1659414494}
+  - {fileID: 1238449647}
+  - {fileID: 775789567}
 --- !u!1 &508474305
 GameObject:
   m_ObjectHideFlags: 0
@@ -2717,6 +2766,8 @@ Transform:
   - {fileID: 820263662}
   - {fileID: 2037363298}
   - {fileID: 1296010246}
+  - {fileID: 118614204}
+  - {fileID: 1883622624}
   m_Father: {fileID: 1008162773}
   m_RootOrder: 16
 --- !u!212 &594071725
@@ -2775,6 +2826,8 @@ MonoBehaviour:
   - {fileID: 2037363299}
   - {fileID: 820263663}
   - {fileID: 1296010247}
+  - {fileID: 118614205}
+  - {fileID: 1883622625}
 --- !u!1 &608464293
 GameObject:
   m_ObjectHideFlags: 0
@@ -3422,6 +3475,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 633188341}
   m_RootOrder: 12
+--- !u!1 &775789565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 775789566}
+  - 114: {fileID: 775789567}
+  m_Layer: 0
+  m_Name: Play on Place Cord
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &775789566
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 775789565}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 493844982}
+  m_RootOrder: 6
+--- !u!114 &775789567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 775789565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 2
+  To: 3
+  Volume: 1
+  Clip: {fileID: 0}
 --- !u!1 &776437285
 GameObject:
   m_ObjectHideFlags: 0
@@ -5982,6 +6080,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PostLoadFadeDuration: 1.5
   Source: {fileID: 1196924922}
+--- !u!1 &1238449645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1238449646}
+  - 114: {fileID: 1238449647}
+  m_Layer: 0
+  m_Name: Play on Place Drill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1238449646
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1238449645}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 493844982}
+  m_RootOrder: 5
+--- !u!114 &1238449647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1238449645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9048420d3c32b174aa8db5136b64cb83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 1
+  To: 2
+  Volume: 1
+  Clip: {fileID: 0}
 --- !u!1 &1296010245
 GameObject:
   m_ObjectHideFlags: 0
@@ -8063,6 +8206,52 @@ MonoBehaviour:
   To: 0
   Volume: 1
   Clip: {fileID: 8300000, guid: 18491dc3b9ebb467d8efd07d65e1ce99, type: 3}
+--- !u!1 &1883622623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1883622624}
+  - 114: {fileID: 1883622625}
+  m_Layer: 0
+  m_Name: Destroy Objects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1883622624
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1883622623}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 594071724}
+  m_RootOrder: 7
+--- !u!114 &1883622625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1883622623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0d08562ac8e2a43b97b9d98207a96f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 0
+  WaitSecondsBeforeRead: 0
+  From: 1
+  To: 2
+  ToDestroy:
+  - {fileID: 1628309181}
+  - {fileID: 862300231}
 --- !u!1 &1894766219
 GameObject:
   m_ObjectHideFlags: 0
