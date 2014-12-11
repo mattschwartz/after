@@ -4573,7 +4573,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1326556593}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &596610355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4589,12 +4589,11 @@ MonoBehaviour:
   WaitSecondsBeforeRead: 0
   From: 0
   To: 2
-  AddToJournal: 1
-  PercentSize: 88.5
-  Title: Eugene Waltz
-  Observations: He was an engineer on my team. I thought I could trust him, but he
-    was one of them...against me. He betrayed me and all of humanity.
-  InspectingTexture: {fileID: 2800000, guid: f314a44cc0eee4518a29f6e97c7f01f6, type: 3}
+  AddToJournal: 0
+  PercentSize: 50
+  Title: JIRA Lottery Ticket
+  Observations: A lottery? Doubtful...
+  InspectingTexture: {fileID: 2800000, guid: 6864430f761cb422b85ecee120fa2b86, type: 3}
 --- !u!1 &600501535
 GameObject:
   m_ObjectHideFlags: 0
@@ -5533,6 +5532,53 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!1 &765056428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 765056429}
+  - 114: {fileID: 765056430}
+  m_Layer: 0
+  m_Name: Update journal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &765056429
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 765056428}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1326556593}
+  m_RootOrder: 2
+--- !u!114 &765056430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 765056428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e9f7f39884d66419bb265fef6436e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnRead: 1
+  WaitSecondsBeforeRead: 0
+  From: 1
+  To: 2
+  Title: JIRA Lottery Ticket
+  Update: The company faked a lottery for their employees. None of these poor souls
+    were getting off this doomed planet.
+  Image: {fileID: 2800000, guid: 6864430f761cb422b85ecee120fa2b86, type: 3}
 --- !u!1001 &768815666
 Prefab:
   m_ObjectHideFlags: 0
@@ -11122,8 +11168,8 @@ Transform:
   m_LocalScale: {x: .267451525, y: .267452747, z: 1}
   m_Children:
   - {fileID: 174628842}
-  - {fileID: 1801846474}
   - {fileID: 596610354}
+  - {fileID: 765056429}
   m_Father: {fileID: 1408937267}
   m_RootOrder: 11
 --- !u!212 &1326556594
@@ -11161,11 +11207,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentState: 1
   LockedState: {fileID: 174628843}
-  UnlockedState: {fileID: 0}
+  UnlockedState: {fileID: 174628843}
   SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 596610355}
-  - {fileID: 1801846475}
+  - {fileID: 765056430}
 --- !u!61 &1326556596
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14641,56 +14687,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   To: 2
   Conditions: {fileID: 0}
---- !u!1 &1801846473
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1801846474}
-  - 114: {fileID: 1801846475}
-  m_Layer: 0
-  m_Name: Player pickup item
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1801846474
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1801846473}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1326556593}
-  m_RootOrder: 1
---- !u!114 &1801846475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1801846473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b4f9fa0c762169468236e20694b706e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestroyOnRead: 0
-  WaitSecondsBeforeRead: 0
-  From: 1
-  To: 2
-  LockDuration: 1
-  Player: {fileID: 1087088095}
-  PlayerAnimator: {fileID: 1087088097}
-  LockPlayer: 1
-  MovePlayer: 0
-  Trigger: PickupItemLow
-  Offset: {x: 0, y: 0}
 --- !u!1 &1809134044
 GameObject:
   m_ObjectHideFlags: 0
