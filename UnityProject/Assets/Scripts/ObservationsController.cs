@@ -26,6 +26,11 @@ public class ObservationsController : MonoBehaviour
         }
     }
 
+    public bool ObservationsShowing()
+    {
+        return ShowThought;
+    }
+
     void OnGUI()
     {
         if (!ShowThought) { 

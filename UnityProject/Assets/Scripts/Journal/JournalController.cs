@@ -6,6 +6,7 @@ using After.CameraTransitions;
 using After.Scene.SceneManagement;
 using System.Linq;
 using After.Interactable;
+using System;
 
 namespace After.Journal
 {
@@ -47,6 +48,7 @@ namespace After.Journal
         private KeyCode CloseJournal = KeyCode.Escape;
         private KeyCode InspectKey = KeyCode.X;
         private KeyCode ZoomKey = KeyCode.Z;
+        private ObservationsController PlayerObservations;
 
         public static JournalController Instance { get; private set; }
 
@@ -63,7 +65,7 @@ namespace After.Journal
 
                 if (SceneHandler.OnMobile) {
                     Instance.CloseText = "Press Back to Close";
-                    Instance.ToastText = "Journal Updated";
+                    Instance.ToastText = "Journal Updated (Press Back)";
                 }
 
             } else if (this != Instance) {
@@ -71,6 +73,12 @@ namespace After.Journal
                     + " exists (" + Instance + ") and is not this! "
                     + "( " + this + ") Destroying this.");
                 Destroy(this.gameObject);
+            }
+
+            var gObject = GameObject.Find("PlayerObservations");
+
+            if (gObject) {
+                Instance.PlayerObservations = gObject.GetComponent<ObservationsController>();
             }
         }
 
@@ -295,11 +303,19 @@ namespace After.Journal
         private void Toast() 
         {
             if (!ShowToast) { return; }
+
             if (ToastDurationTracker <= 0) {
                 ShowToast = false;
             }
 
-            var screenCoords = new Vector3(0.03f, 0.93f, 0);
+            Vector3 screenCoords;
+
+            if (PlayerObservations != null && PlayerObservations.ObservationsShowing()) {
+                screenCoords = new Vector3(0.03f, 0.73f, 0);
+            } else {
+                screenCoords = new Vector3(0.03f, 0.93f, 0);
+            }
+
             var camPos = Camera.main.ViewportToScreenPoint(screenCoords);
             var labelCoords = new Rect(camPos.x, camPos.y, 0, 0);
 

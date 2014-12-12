@@ -10,6 +10,24 @@ public class CreditLevelController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        var gObject = GameObject.Find("Journal");
+
+        if (gObject) {
+            Destroy(gObject);
+        }
+
+        gObject = GameObject.Find("Backpack");
+
+        if (gObject) {
+            Destroy(gObject);
+        }
+
+        gObject = GameObject.Find("OptionsMenu");
+
+        if (gObject) {
+            Destroy(gObject);
+        }
+
         if (SceneHandler.OnMobile) {
             Destroy(ReturnPromptOther);
         } else {

@@ -10,7 +10,7 @@ namespace After.Interactable
     {
         #region Members
 
-        private float ItemHeldSize = 100;
+        private float ItemHeldSize = 75;
         private float BackpackSize = 175;
         public Texture BackpackTextureEmpty;
 
@@ -75,8 +75,8 @@ namespace After.Interactable
 
             var camPos = Camera.main.ViewportToScreenPoint(new Vector3(0, 0, 0));
             float scale = Screen.width / 960f;
-            float itemWidth = ItemHeldTexture.width * scale;
-            float itemHeight = ItemHeldTexture.height * scale;
+            float itemWidth = ItemHeldSize * scale;
+            float itemHeight = ItemHeldTexture.height * (itemWidth / ItemHeldTexture.width);
             ItemPosition = new Rect(camPos.x + (BackpackSize * scale - itemWidth) / 2, camPos.y + (BackpackSize * scale - itemHeight) / 2, itemWidth, itemHeight);
         }
 

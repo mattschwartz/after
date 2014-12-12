@@ -3615,6 +3615,10 @@ Prefab:
       propertyPath: Player
       value: 
       objectReference: {fileID: 366451559}
+    - target: {fileID: 11400000, guid: 130942ee731155042ab679f46cdec904, type: 2}
+      propertyPath: PlayerObservations
+      value: 
+      objectReference: {fileID: 441825014}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 130942ee731155042ab679f46cdec904, type: 2}
   m_RootGameObject: {fileID: 1324685074}
@@ -7408,6 +7412,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+  PlayerObservations: {fileID: 441825014}
 --- !u!4 &1324685077
 Transform:
   m_ObjectHideFlags: 0

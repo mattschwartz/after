@@ -472,7 +472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
   WaitSecondsBeforeRead: 0
-  From: 2
+  From: 1
   To: 2
   Title: Operations Log
   Update: Looks like something failed to launch, but what?
@@ -1550,7 +1550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DestroyOnRead: 0
   WaitSecondsBeforeRead: 0
-  From: 2
+  From: 0
   To: 2
   AddToJournal: 0
   PercentSize: 50
@@ -3384,6 +3384,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 130942ee731155042ab679f46cdec904, type: 2}
+      propertyPath: PlayerObservations
+      value: 
+      objectReference: {fileID: 1123528234}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 130942ee731155042ab679f46cdec904, type: 2}
   m_RootGameObject: {fileID: 1809134044}
@@ -10211,9 +10215,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ee47c2431dcdd4c8488e578ad6b3d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentState: 2
-  LockedState: {fileID: 0}
-  UnlockedState: {fileID: 2006824539}
+  CurrentState: 1
+  LockedState: {fileID: 2006824539}
+  UnlockedState: {fileID: 0}
   SpentState: {fileID: 0}
   TransitionScripts:
   - {fileID: 300339763}
@@ -14308,7 +14312,7 @@ MonoBehaviour:
   To: 2
   Title: JIRA ID Card
   Update: This is me. I worked here. What did I do? Was I responsible for these deaths?
-  Image: {fileID: 2800000, guid: 60355044abfb8d84896346b7b738baff, type: 3}
+  Image: {fileID: 2800000, guid: 84b7b8b73160d494d8e114ab166f0937, type: 3}
 --- !u!1 &1785590950
 GameObject:
   m_ObjectHideFlags: 0
@@ -17296,7 +17300,7 @@ GameObject:
   - 4: {fileID: 2006824538}
   - 114: {fileID: 2006824539}
   m_Layer: 13
-  m_Name: Unlocked state
+  m_Name: locked state
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
