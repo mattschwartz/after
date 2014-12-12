@@ -7,16 +7,33 @@ public class RandomCodeObservationTransition : Transition
 {
     public ObservationsController Observations;
 
+    private int TriedNumbers = 0;
+
     public override void Read(StateType fromState, StateType toState)
     {
-        int tryCode;
-        string observations = "A numeric code, hmm... ";
+        string observations = "A numeric code. How about ";
+
+        if (TriedNumbers < 1000) {
+            observations += "0";
+        }
+        if (TriedNumbers < 100) {
+            observations += "0";
+        }
+        if (TriedNumbers < 10) {
+            observations += "0";
+        }
+
+        observations += TriedNumbers + "... Nope.";
+
+        if (TriedNumbers > 9999) {
+            observations = "Did I miss a number?";
+            TriedNumbers = -1;
+        }
+
+        Observations.SetThought(observations);
 
         do {
-            tryCode = Random.Range(1000, 9999);
-        } while (tryCode == 4239);
-
-        observations += tryCode + "... Nope.";
-        Observations.SetThought(observations);
+            ++TriedNumbers;
+        } while (TriedNumbers == 4239);
     }
 }
