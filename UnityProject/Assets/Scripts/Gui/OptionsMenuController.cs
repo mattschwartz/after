@@ -4,6 +4,7 @@ using UnityEngine;
 using After.Scene.SceneManagement;
 using After.Journal;
 using System.Collections.Generic;
+using After.Interactable;
 
 namespace After.Gui
 {
@@ -23,6 +24,7 @@ namespace After.Gui
         public Texture MenuBackgroundTexture;
         public AudioClip ClickClip;
 
+        private bool TearDown = false;
         private bool Visible = false;
         private float hSliderValue;
         private Rect MenuBackgroundBounds;
@@ -67,8 +69,8 @@ namespace After.Gui
 
         void Update()
         {
-            if (SceneHandler.GUILock != this
-                && SceneHandler.GUILock != null) {
+            if (TearDown || (SceneHandler.GUILock != this
+                && SceneHandler.GUILock != null)) {
                 return;
             }
 
@@ -243,8 +245,18 @@ namespace After.Gui
 
         private void MenuButton_Click()
         {
+            TearDown = true;
+            List<GameObject> gObjects = new List<GameObject>(GameObject.FindObjectsOfType<GameObject>());
+
             PlayRandomClick();
             Hide();
+
+            gObjects.ForEach(t => {
+                if (t != gameObject) {
+                    Destroy(t);
+                }
+            });
+
             Application.LoadLevel("TitleScreenLevel");
         }
 
